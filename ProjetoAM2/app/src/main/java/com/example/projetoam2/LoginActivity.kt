@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.databinding.ActivityLoginBinding
 import com.example.projetoam2.databinding.ActivityUserRegisterBinding
@@ -21,8 +22,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val buttonRegister = findViewById<Button>(R.id.buttonRegister)
-
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -32,16 +31,20 @@ class LoginActivity : AppCompatActivity() {
         var database = FirebaseDatabase.getInstance("https://projetoam2-default-rtdb.europe-west1.firebasedatabase.app").reference
 
         binding.buttonLogin.setOnClickListener {
-            val email: String = binding.editTextEmail.text.toString()
-            val password: String = binding.editTextTextPassword.text.toString()
+            if(binding.editTextEmail.text.isNotEmpty() && binding.editTextTextPassword.text.isNotEmpty()) {
+                val email: String = binding.editTextEmail.text.toString()
+                val password: String = binding.editTextTextPassword.text.toString()
 
-            database.setValue(User(email, password))
+                database.setValue(User(email, password))
 
-            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-            finish()
+                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                finish()
+            }else{
+                Toast.makeText(applicationContext,"Insira os dados necessários",Toast.LENGTH_SHORT).show()
+            }
         }
 
-        buttonRegister.setOnClickListener {
+        binding.buttonRegister.setOnClickListener {
 
             startActivity(Intent(this@LoginActivity, UserRegister::class.java))
             finish()

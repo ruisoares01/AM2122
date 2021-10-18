@@ -3,6 +3,7 @@ package com.example.projetoam2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.databinding.ActivityLoginBinding
 import com.google.firebase.database.FirebaseDatabase
@@ -22,13 +23,17 @@ class UserRegister : AppCompatActivity() {
 
         binding.buttonRegister.setOnClickListener {
 
-            val email: String = binding.editTextEmail.text.toString()
-            val password: String = binding.editTextTextPassword.text.toString()
+            if (binding.editTextEmail.text.isNotEmpty() && binding.editTextTextPassword.text.isNotEmpty()) {
+                val email: String = binding.editTextEmail.text.toString()
+                val password: String = binding.editTextTextPassword.text.toString()
 
-            database.setValue(User(email, password))
+                database.setValue(User(email, password))
 
-            startActivity(Intent(this@UserRegister, MainActivity::class.java))
-            finish()
+                startActivity(Intent(this@UserRegister, MainActivity::class.java))
+                finish()
+            }else{
+                Toast.makeText(applicationContext,"Insira os dados necessários", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
