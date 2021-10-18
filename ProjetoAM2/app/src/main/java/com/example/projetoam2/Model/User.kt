@@ -1,12 +1,5 @@
 package com.example.projetoam2.Model
 
-class User {
+data class User (val nome : String? = null, val email : String? = null, val password : String? = null){
 
-    var email = ""
-    var password = ""
-
-    constructor(email:String,password:String){
-        this.email = email
-        this.password = password
-    }
 }
