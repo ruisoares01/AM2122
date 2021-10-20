@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.databinding.ActivityLoginBinding
-import com.example.projetoam2.databinding.ActivityUserRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -33,23 +32,21 @@ class LoginActivity : AppCompatActivity() {
         //var database = FirebaseDatabase.getInstance("https://projetoam2-default-rtdb.europe-west1.firebasedatabase.app").reference
 
         binding.buttonLogin.setOnClickListener {
-            if(binding.editTextNome.text.isNotEmpty() && binding.editTextEmail.text.isNotEmpty() && binding.editTextTextPassword.text.isNotEmpty()) {
-                val nome: String = binding.editTextNome.text.toString()
+            if(binding.editTextEmail.text.isNotEmpty() && binding.editTextTextPassword.text.isNotEmpty()) {
                 val email: String = binding.editTextEmail.text.toString()
                 val password: String = binding.editTextTextPassword.text.toString()
 
 
                 database = FirebaseDatabase.getInstance().getReference("Usuários")
 
-                val User = User(nome,email,password)
+                val User = User(email,password)
 
-                database.child(nome).setValue(User).addOnSuccessListener {
+                database.child(email).setValue(User).addOnSuccessListener {
 
-                    binding.editTextNome.text.clear()
                     binding.editTextEmail.text.clear()
                     binding.editTextTextPassword.text.clear()
 
-                    Toast.makeText(this,"Bem vindo " + binding.editTextNome.text,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Bem vindo",Toast.LENGTH_SHORT).show()
                 } .addOnCanceledListener {
                     Toast.makeText(this,"Erro",Toast.LENGTH_SHORT).show()
                 }
@@ -60,13 +57,6 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"Insira os dados necessários",Toast.LENGTH_SHORT).show()
             }
         }
-
-        binding.buttonRegister.setOnClickListener {
-
-            startActivity(Intent(this@LoginActivity, UserRegister::class.java))
-            finish()
-        }
-
             /*auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
