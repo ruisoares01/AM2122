@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoAM2">
         <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
