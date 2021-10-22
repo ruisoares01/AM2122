@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash_screen.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_dashboard.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\navigation_my_nav.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\navigation\\my_nav.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_register.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_notifications.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_background1.jpg.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\background1.jpg"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_assignment_returned_24.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_baseline_assignment_returned_24.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    }
+]

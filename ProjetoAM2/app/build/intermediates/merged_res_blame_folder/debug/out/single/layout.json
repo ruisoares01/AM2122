@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notifications.xml",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash_screen.xml",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_dashboard.xml",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+    }
+]
