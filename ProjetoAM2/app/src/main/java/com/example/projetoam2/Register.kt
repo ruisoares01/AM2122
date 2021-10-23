@@ -8,8 +8,6 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import com.example.projetoam2.Model.User
-import com.example.projetoam2.databinding.ActivityLoginBinding
-import com.example.projetoam2.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
@@ -76,7 +74,6 @@ class Register : AppCompatActivity() {
                         val intent = Intent(this@Register, MainActivity::class.java)
                         startActivity(intent)
                     }
-
 
                 } else {
                     Toast.makeText(this@Register, "Ocorreu um erro", Toast.LENGTH_SHORT).show()

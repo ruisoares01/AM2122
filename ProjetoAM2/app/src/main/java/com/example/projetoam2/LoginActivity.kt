@@ -35,8 +35,6 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-
-
         editEmail = findViewById(R.id.editTextEmail)
         editPass = findViewById(R.id.editTextTextPassword)
 
@@ -71,11 +69,7 @@ class LoginActivity : AppCompatActivity() {
                         startActivity(intent)
 
                     } else {
-                        Toast.makeText(
-                            this@LoginActivity,
-                            "O utilizador não existe",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        Toast.makeText(this@LoginActivity,"O utilizador não existe",Toast.LENGTH_SHORT).show()
                     }
                 }
         }else{

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
 MERGED from [androidx.databinding:viewbinding:7.0.3] C:\Users\soare\.gradle\caches\transforms-3\157d92d4863206c3c9b16f53530e6411\transformed\jetified-viewbinding-7.0.3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\.gradle\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\.gradle\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:17:1-40:12
@@ -90,25 +90,25 @@ MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\soar
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\soare\.gradle\caches\transforms-3\9a11367b4c372edb8c4e8a80ab0d3338\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\soare\.gradle\caches\transforms-3\3b9f82768ffd10dfe205c85fc56d49e1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\soare\.gradle\caches\transforms-3\a4afedf8a39a596e383b921d3cb53d74\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-34:12
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-37:12
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:5:5-32:19
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:5:5-35:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\.gradle\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\.gradle\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\.gradle\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:22:5-38:19
@@ -175,44 +175,50 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\
 		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:11:9-48
-activity#com.example.projetoam2.Register
+activity#com.example.projetoam2.ListarPerfis
 ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:12:9-14:40
 	android:exported
 		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:14:13-37
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:13:13-37
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:13:13-41
+activity#com.example.projetoam2.Register
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:15:9-17:40
+	android:exported
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:17:13-37
+	android:name
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:16:13-37
 activity#com.example.projetoam2.SplashScreen
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:15:9-24:20
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:exported
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:17:13-36
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:20:13-36
 	android:theme
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:18:13-63
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:21:13-63
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:16:13-41
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:25:27-74
 activity#com.example.projetoam2.LoginActivity
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:25:9-27:39
-	android:exported
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:27:13-36
-	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:26:13-42
-activity#com.example.projetoam2.MainActivity
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:28:9-31:48
-	android:label
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:31:13-45
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:28:9-30:39
 	android:exported
 		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:30:13-36
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:29:13-41
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:29:13-42
+activity#com.example.projetoam2.MainActivity
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:31:9-34:48
+	android:label
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:34:13-45
+	android:exported
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:33:13-36
+	android:name
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:32:13-41
 uses-sdk
 INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml

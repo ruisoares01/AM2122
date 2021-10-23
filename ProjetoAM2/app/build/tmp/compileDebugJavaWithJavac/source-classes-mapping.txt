@@ -2,6 +2,10 @@ com/example/projetoam2/databinding/FragmentHomeBinding.java
  com.example.projetoam2.databinding.FragmentHomeBinding
 com/example/projetoam2/BuildConfig.java
  com.example.projetoam2.BuildConfig
+com/example/projetoam2/databinding/ActivityListarPerfisBinding.java
+ com.example.projetoam2.databinding.ActivityListarPerfisBinding
+com/example/projetoam2/databinding/RowPerfisBinding.java
+ com.example.projetoam2.databinding.RowPerfisBinding
 com/example/projetoam2/databinding/ActivityRegisterBinding.java
  com.example.projetoam2.databinding.ActivityRegisterBinding
 com/example/projetoam2/databinding/ActivityLoginBinding.java

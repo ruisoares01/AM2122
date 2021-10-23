@@ -2013,6 +2013,7 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id button
 id buttonBack
 id buttonLogin
 id buttonPanel
@@ -2155,6 +2156,7 @@ id line1
 id line3
 id linear
 id listMode
+id listViewPerfis
 id list_item
 id loginActivity
 id mainActivity
@@ -2255,6 +2257,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id photoPerfil
 id pin
 id position
 id postLayout
@@ -2352,6 +2355,7 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textNome
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -2476,6 +2480,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_listar_perfis
 layout activity_login
 layout activity_main
 layout activity_register
@@ -2550,6 +2555,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout row_perfis
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2710,6 +2716,8 @@ string path_password_strike_through
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_activity_aaaa
+string title_activity_main2
 string title_dashboard
 string title_home
 string title_notifications
