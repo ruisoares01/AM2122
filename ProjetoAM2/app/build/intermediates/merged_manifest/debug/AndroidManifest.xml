@@ -26,6 +26,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.ProjetoAM2" >
         <activity
+            android:name="com.example.projetoam2.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.projetoam2.ListarPerfis"
             android:exported="false" />
         <activity

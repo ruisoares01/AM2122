@@ -29,17 +29,22 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //hide action bar
+        supportActionBar?.hide()
 
         // Initialize Firebase Auth
         auth = Firebase.auth
 
         auth = FirebaseAuth.getInstance()
 
+
+        // find the view created in the xml files
         editEmail = findViewById(R.id.editTextEmail)
         editPass = findViewById(R.id.editTextTextPassword)
 
         buttonLogin = findViewById(R.id.buttonLogin)
 
+        // logic to make the login button log the user in the app
         buttonLogin.setOnClickListener {
 
             register()
@@ -54,11 +59,14 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    // function for login
     private fun register() {
 
+        // declaring the variables for the views
         val email = editEmail.text.toString()
         val password = editPass.text.toString()
 
+        // in this validation we are allowing the login method using an email and password
         if (editEmail.text.isNotEmpty() && editPass.text.isNotEmpty()) {
 
             auth.signInWithEmailAndPassword(email, password)
@@ -69,10 +77,15 @@ class LoginActivity : AppCompatActivity() {
                         startActivity(intent)
 
                     } else {
-                        Toast.makeText(this@LoginActivity,"O utilizador não existe",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this@LoginActivity,
+                            "O utilizador não existe",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
         }else{
+            // if there are unfilled fields, the user gets a warning to fill it
             Toast.makeText(this@LoginActivity,"Preencha os campos", Toast.LENGTH_SHORT).show()
         }
     }

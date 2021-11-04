@@ -1197,6 +1197,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1882,6 +1883,8 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable message_layout
+drawable message_layout_received
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1905,7 +1908,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable send
 drawable test_custom_background
+drawable text_box_layout
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -2013,7 +2018,6 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
-id button
 id buttonBack
 id buttonLogin
 id buttonPanel
@@ -2027,6 +2031,7 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id chatRecyclerView
 id checkbox
 id checked
 id chip
@@ -2155,10 +2160,11 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
-id listViewPerfis
 id list_item
 id loginActivity
+id logout
 id mainActivity
 id masked
 id match_constraint
@@ -2183,6 +2189,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id message
+id messageBox
 id middle
 id mini
 id mobile_navigation
@@ -2257,7 +2264,6 @@ id path
 id pathRelative
 id peekHeight
 id percent
-id photoPerfil
 id pin
 id position
 id postLayout
@@ -2296,6 +2302,8 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id sendButton
+id sendMsg
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2355,7 +2363,6 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
-id textNome
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -2365,7 +2372,10 @@ id text_home
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_name
 id text_notifications
+id text_received_message
+id text_sent_message
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2393,6 +2403,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userRecyclerVieww
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -2480,6 +2491,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_chat
 layout activity_listar_perfis
 layout activity_login
 layout activity_main
@@ -2555,10 +2567,11 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout row_perfis
+layout received
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout sent
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -2575,12 +2588,15 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout user_layout
 menu bottom_nav_menu
+menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
 navigation my_nav
 plurals mtrl_badge_content_description
+raw typing_animation
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2716,8 +2732,6 @@ string path_password_strike_through
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
-string title_activity_aaaa
-string title_activity_main2
 string title_dashboard
 string title_home
 string title_notifications
