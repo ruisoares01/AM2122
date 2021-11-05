@@ -1,34 +1,32 @@
 package com.example.projetoam2
 
+import android.content.ContentValues.TAG
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
 import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.Model.User
-import com.example.projetoam2.Model.UserAdapter
+import com.example.projetoam2.Adapter.UserAdapter
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class ListarPerfis : AppCompatActivity() {
 
     private lateinit var backButton: ImageButton
 
+    var user = arrayListOf<User>()
+
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
 
     private lateinit var userRecyclerView: RecyclerView
-    private lateinit var userList: ArrayList<User>
     private lateinit var adapter: UserAdapter
 
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,42 +36,40 @@ class ListarPerfis : AppCompatActivity() {
         supportActionBar?.hide()
 
         auth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance().getReference()
 
-        userList = ArrayList()
-        adapter = UserAdapter(this,userList)
+        user = ArrayList()
+        adapter = UserAdapter(this, user)
 
         userRecyclerView = findViewById(R.id.userRecyclerVieww)
 
         userRecyclerView.layoutManager = LinearLayoutManager(this)
         userRecyclerView.adapter = adapter
 
-        database.child("Usuarios").addValueEventListener(object: ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
+        db.collection("usuarios")
+            .addSnapshotListener { documents, e ->
 
-                for(postSnapshot in snapshot.children){
+                documents?.let {
+                    user.clear()
+                    for (document in it) {
+                        Log.d(TAG, "${document.id} => ${document.data}")
+                        val userr = User.fromHash(document)
 
-                    val currentUser = postSnapshot.getValue(User::class.java)
+                        //hide your own name within the application
+                        if(auth.currentUser?.uid != userr.uid) {
+                            user.add(userr)
+                        }
 
-                    //hide your own name within the application
-                    if(auth.currentUser?.uid != currentUser?.uid) {
-                        userList.add(currentUser!!)
+                        adapter?.notifyDataSetChanged()
                     }
                 }
-                adapter.notifyDataSetChanged()
+
+                backButton = findViewById(R.id.buttonBack)
+
+                //back to the main activity
+                backButton.setOnClickListener {
+                    val intent = Intent(this@ListarPerfis, MainActivity::class.java)
+                    startActivity(intent)
+                }
             }
-
-            override fun onCancelled(error: DatabaseError) {
-            }
-
-        })
-
-        backButton = findViewById(R.id.buttonBack)
-
-        //back to the main activity
-        backButton.setOnClickListener {
-            val intent = Intent(this@ListarPerfis, MainActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

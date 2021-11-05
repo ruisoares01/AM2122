@@ -1,4 +1,4 @@
-package com.example.projetoam2.Model
+package com.example.projetoam2.Adapter
 
 import android.content.Context
 import android.content.Intent
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.ChatActivity
+import com.example.projetoam2.Model.User
 import com.example.projetoam2.R
-import com.google.firebase.auth.FirebaseAuth
 
 class UserAdapter(val context: Context, val userList: ArrayList<User>):
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {

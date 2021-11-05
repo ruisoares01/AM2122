@@ -12,12 +12,16 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
+
+    var user = arrayListOf<User>()
 
     private lateinit var editEmail : EditText
     private lateinit var editPass : EditText
@@ -35,9 +39,6 @@ class LoginActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-        auth = FirebaseAuth.getInstance()
-
-
         // find the view created in the xml files
         editEmail = findViewById(R.id.editTextEmail)
         editPass = findViewById(R.id.editTextTextPassword)
@@ -49,6 +50,11 @@ class LoginActivity : AppCompatActivity() {
 
             register()
         }
+
+        //val storage = Firebase.storage
+        //var storageRef = storage.reference
+        //val userFireBase = storageRef.child("user/${Firebase.auth.currentUser?.uid}")
+
 
 
         buttonUserRegister = findViewById(R.id.buttonUserRegister)

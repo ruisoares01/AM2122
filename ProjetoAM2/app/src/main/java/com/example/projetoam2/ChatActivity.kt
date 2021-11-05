@@ -1,19 +1,19 @@
 package com.example.projetoam2
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetoam2.Adapter.MessageAdapter
+import com.example.projetoam2.Model.Message
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class ChatActivity : AppCompatActivity() {
 
+    //variaveis
     private lateinit var chatRecyclerView: RecyclerView
     private lateinit var messageBox: EditText
     private lateinit var sendButton: ImageView

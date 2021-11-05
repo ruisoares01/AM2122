@@ -1,4 +1,4 @@
-package com.example.projetoam2
+package com.example.projetoam2.Model
 
 class Message {
 
