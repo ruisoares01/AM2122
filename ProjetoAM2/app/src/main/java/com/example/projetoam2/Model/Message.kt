@@ -1,15 +1,6 @@
 package com.example.projetoam2.Model
 
-class Message {
-
-    var message: String? = null
-    var senderId: String? = null
-
-    constructor(){}
-
-    constructor(message: String?, senderId: String?){
-        this.message = message
-        this.senderId = senderId
-
-    }
+class Message(val message: String, val senderUid : String, val receiverUid : String){
+    constructor() : this("","","")
 }
+

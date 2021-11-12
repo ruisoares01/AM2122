@@ -1,15 +1,19 @@
 package com.example.projetoam2
 
+import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.Adapter.MessageAdapter
 import com.example.projetoam2.Model.Message
+import com.example.projetoam2.Model.UserId
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class ChatActivity : AppCompatActivity() {
 
@@ -19,24 +23,30 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var sendButton: ImageView
     private lateinit var messageAdapter: MessageAdapter
     private lateinit var messageList: ArrayList<Message>
-    private lateinit var mDbRef: DatabaseReference
 
     var receiverRoom: String? = null
     var senderRoom: String? = null
+
+    lateinit var name: String
+    lateinit var receiverUid: String
+
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
-        val name = intent.getStringExtra("name")
-        val receiverUid = intent.getStringExtra("uid")
-
+        //id da pessoa que envia a menssagem
         val senderUid = FirebaseAuth.getInstance().currentUser?.uid
-        mDbRef = FirebaseDatabase.getInstance().getReference()
+
+        var bundle : Bundle? = intent.extras
+         name = bundle?.getString("name").toString()
+         receiverUid = bundle?.getString("uid").toString()
 
         senderRoom = receiverUid + senderUid
         receiverRoom = senderUid + receiverUid
 
+        //show the name on the bar
         supportActionBar?.title = name
 
         chatRecyclerView = findViewById(R.id.chatRecyclerView)
@@ -48,50 +58,22 @@ class ChatActivity : AppCompatActivity() {
         chatRecyclerView.layoutManager = LinearLayoutManager(this)
         chatRecyclerView.adapter = messageAdapter
 
-        // logic for adding data to recyclerView
-        mDbRef.child("chats").child(senderRoom!!).child("messages")
-            .addValueEventListener(object: ValueEventListener{
-                override fun onDataChange(snapshot: DataSnapshot) {
-
-                    // clear message box when a message is sent
-                    messageList.clear()
-
-                    for(postSnapshot in snapshot.children){
-
-                        val message = postSnapshot.getValue(Message::class.java)
-                        messageList.add(message!!)
-
-                    }
-                    messageAdapter.notifyDataSetChanged()
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-
-                }
-
-            })
-
-
-        // adding the message to the database
-        sendButton.setOnClickListener {
-
-            val message = messageBox.text.toString()
-            val messageObject = Message(message,senderUid)
-
-            mDbRef.child("chats").child(senderRoom!!).child("messages").push()
-                .setValue(messageObject).addOnSuccessListener {
-
-                    mDbRef.child("chats").child(receiverRoom!!).child("messages").push()
-                        .setValue(messageObject)
-
-                }
-
-            messageBox.setText("")
-
+            // adding the message to the database
+            sendButton.setOnClickListener {
+                enviar()
+            }
         }
 
+        //function to add the message to the database
+        fun enviar(){
 
-    }
+            var uid = FirebaseAuth.getInstance().uid.toString()
+            val message = messageBox.text.toString()
+            val messageObject = Message(message, uid.toString(),receiverUid.toString())
 
+            val novochat =  db.collection("chat").document()
+            novochat.set(UserId(mutableListOf(uid,receiverUid.toString())))
 
+            messageBox.setText("")
+        }
 }
