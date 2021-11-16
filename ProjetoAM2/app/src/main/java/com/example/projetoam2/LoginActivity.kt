@@ -12,12 +12,17 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.util.*
+import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
+
+    var user = arrayListOf<User>()
 
     private lateinit var editEmail : EditText
     private lateinit var editPass : EditText
@@ -35,8 +40,12 @@ class LoginActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-        auth = FirebaseAuth.getInstance()
-
+        val EMAIL_ADDRESS_PATTERN = Pattern.compile(
+            "[a0-9]{1,256}@alunos.ipca.pt"
+        )
+        fun isValidString(str: String): Boolean{
+            return EMAIL_ADDRESS_PATTERN.matcher(str.toString()).matches()
+        }
 
         // find the view created in the xml files
         editEmail = findViewById(R.id.editTextEmail)
@@ -66,24 +75,26 @@ class LoginActivity : AppCompatActivity() {
         val email = editEmail.text.toString()
         val password = editPass.text.toString()
 
+        val emails = arrayOf<String>(editEmail.text.toString())
+
         // in this validation we are allowing the login method using an email and password
         if (editEmail.text.isNotEmpty() && editPass.text.isNotEmpty()) {
 
-            auth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        // code to login user
-                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                        startActivity(intent)
+                auth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // code to login user
+                            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                            startActivity(intent)
 
-                    } else {
-                        Toast.makeText(
-                            this@LoginActivity,
-                            "O utilizador não existe",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        } else {
+                            Toast.makeText(
+                                this@LoginActivity,
+                                "O utilizador não existe",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }
-                }
         }else{
             // if there are unfilled fields, the user gets a warning to fill it
             Toast.makeText(this@LoginActivity,"Preencha os campos", Toast.LENGTH_SHORT).show()

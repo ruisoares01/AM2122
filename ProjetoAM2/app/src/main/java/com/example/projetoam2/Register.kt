@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class Register : AppCompatActivity() {
@@ -28,6 +29,9 @@ class Register : AppCompatActivity() {
 
     private lateinit var buttonRegister : Button
     private lateinit var backButton : ImageButton
+
+    val db = Firebase.firestore
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +74,7 @@ class Register : AppCompatActivity() {
         val email = editEmail.text.toString()
         val password = editPass.text.toString()
 
+
         // in this validation we are allowing the register method using an email, name and password
         if (editEmail.text.isNotEmpty() && editPass.text.isNotEmpty()) {
 
@@ -77,9 +82,6 @@ class Register : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val uid = FirebaseAuth.getInstance().uid
-                    database =
-                        FirebaseDatabase.getInstance("https://projetoam2-default-rtdb.europe-west1.firebasedatabase.app/")
-                            .getReference("/Usuarios/$uid")
 
                      addUserToDatabase(nome, email, auth.currentUser?.uid!!)
 
@@ -97,9 +99,11 @@ class Register : AppCompatActivity() {
     }
 
     private fun addUserToDatabase(nome: String, email: String, uid:String){
+        var user : User
 
-        database = FirebaseDatabase.getInstance().getReference()
-        database.child("Usuarios").child(uid).setValue(User(nome,email,uid))
+        user = User(nome,email,uid)
+        db.collection("usuarios").document(uid).set(user)
+
     }
 
 }
