@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid
         database =
             FirebaseDatabase.getInstance("https://projetoam2-default-rtdb.europe-west1.firebasedatabase.app/")
-                .getReference("/Usuarios/$uid")
+                .getReference("/usuarios/$uid")
 
 
         binding = ActivityMainBinding.inflate(layoutInflater)

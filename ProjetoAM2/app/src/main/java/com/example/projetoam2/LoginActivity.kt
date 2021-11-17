@@ -24,11 +24,11 @@ class LoginActivity : AppCompatActivity() {
 
     var user = arrayListOf<User>()
 
-    private lateinit var editEmail : EditText
-    private lateinit var editPass : EditText
+    private lateinit var editEmail: EditText
+    private lateinit var editPass: EditText
 
-    private lateinit var buttonLogin : Button
-    private lateinit var buttonUserRegister : Button
+    private lateinit var buttonLogin: Button
+    private lateinit var buttonUserRegister: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +43,8 @@ class LoginActivity : AppCompatActivity() {
         val EMAIL_ADDRESS_PATTERN = Pattern.compile(
             "[a0-9]{1,256}@alunos.ipca.pt"
         )
-        fun isValidString(str: String): Boolean{
+
+        fun isValidString(str: String): Boolean {
             return EMAIL_ADDRESS_PATTERN.matcher(str.toString()).matches()
         }
 
@@ -66,19 +67,19 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this@LoginActivity, Register::class.java))
             finish()
         }
+
     }
+        // function for login
+        private fun register() {
 
-    // function for login
-    private fun register() {
+            // declaring the variables for the views
+            val email = editEmail.text.toString()
+            val password = editPass.text.toString()
 
-        // declaring the variables for the views
-        val email = editEmail.text.toString()
-        val password = editPass.text.toString()
+            val emails = arrayOf<String>(editEmail.text.toString())
 
-        val emails = arrayOf<String>(editEmail.text.toString())
-
-        // in this validation we are allowing the login method using an email and password
-        if (editEmail.text.isNotEmpty() && editPass.text.isNotEmpty()) {
+            // in this validation we are allowing the login method using an email and password
+            if (editEmail.text.isNotEmpty() && editPass.text.isNotEmpty()) {
 
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
@@ -95,9 +96,9 @@ class LoginActivity : AppCompatActivity() {
                             ).show()
                         }
                     }
-        }else{
-            // if there are unfilled fields, the user gets a warning to fill it
-            Toast.makeText(this@LoginActivity,"Preencha os campos", Toast.LENGTH_SHORT).show()
+            } else {
+                // if there are unfilled fields, the user gets a warning to fill it
+                Toast.makeText(this@LoginActivity, "Preencha os campos", Toast.LENGTH_SHORT).show()
+            }
         }
     }
-}

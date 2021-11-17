@@ -12,13 +12,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.Adapter.UserAdapter
+import com.example.projetoam2.Model.ChatChannel
+import com.google.android.gms.safetynet.VerifyAppsConstants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
+import com.xwray.groupie.OnItemClickListener
 
 class ListarPerfis : AppCompatActivity() {
 
@@ -29,6 +34,7 @@ class ListarPerfis : AppCompatActivity() {
     lateinit var chats : String
 
     private val adapter = GroupAdapter<GroupieViewHolder>()
+
 
     //firestore
     val db = Firebase.firestore
@@ -67,18 +73,6 @@ class ListarPerfis : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
-        db.collection("salaChat").get().addOnSuccessListener {
-            documents ->
-
-            adapter.setOnItemClickListener{ item, view ->
-                val chat = item as Sender
-
-                var bundle : Bundle? = intent.extras
-                chats = bundle?.getString("chat").toString()
-            }
-        }
-
         backButton = findViewById(R.id.buttonBack)
         //back to the main activity
         backButton.setOnClickListener {
@@ -86,6 +80,8 @@ class ListarPerfis : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
 
 }
 class Users(val user : User) : Item<GroupieViewHolder>() {
@@ -95,14 +91,4 @@ class Users(val user : User) : Item<GroupieViewHolder>() {
     }
 
     override fun getLayout() = R.layout.user_layout
-}
-
-class Sender (val chat : Message) : Item<GroupieViewHolder>() {
-    override fun bind(viewHolder: GroupieViewHolder, position: Int) {
-
-    }
-
-    override fun getLayout(): Int {
-        TODO("Not yet implemented")
-    }
 }
