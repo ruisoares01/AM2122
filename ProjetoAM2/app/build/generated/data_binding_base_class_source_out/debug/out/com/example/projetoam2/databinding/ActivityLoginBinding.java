@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -32,14 +33,18 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final EditText editTextTextPassword;
 
+  @NonNull
+  public final ImageView imageView;
+
   private ActivityLoginBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLogin,
       @NonNull Button buttonUserRegister, @NonNull EditText editTextEmail,
-      @NonNull EditText editTextTextPassword) {
+      @NonNull EditText editTextTextPassword, @NonNull ImageView imageView) {
     this.rootView = rootView;
     this.buttonLogin = buttonLogin;
     this.buttonUserRegister = buttonUserRegister;
     this.editTextEmail = editTextEmail;
     this.editTextTextPassword = editTextTextPassword;
+    this.imageView = imageView;
   }
 
   @Override
@@ -93,8 +98,14 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageView;
+      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
+      if (imageView == null) {
+        break missingId;
+      }
+
       return new ActivityLoginBinding((ConstraintLayout) rootView, buttonLogin, buttonUserRegister,
-          editTextEmail, editTextTextPassword);
+          editTextEmail, editTextTextPassword, imageView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

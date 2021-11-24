@@ -1287,6 +1287,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1725,6 +1726,10 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen test_mtrl_calendar_day_cornerSize
 dimen test_navigation_bar_active_item_max_width
 dimen test_navigation_bar_active_item_min_width
@@ -1835,6 +1840,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_style
+drawable calendarioicon
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1873,6 +1880,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable imagesplash
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1885,6 +1893,7 @@ drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable message_layout
 drawable message_layout_received
+drawable msgicon
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1908,6 +1917,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable perfilicon
 drawable send
 drawable test_custom_background
 drawable text_box_layout
@@ -1961,6 +1971,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id action0
 id actionDown
 id actionDownUp
 id actionUp
@@ -2009,6 +2020,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottom_navigation
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2024,6 +2036,7 @@ id buttonPanel
 id buttonRegister
 id buttonUserRegister
 id cache_measures
+id cancel_action
 id cancel_button
 id carryVelocity
 id center
@@ -2031,7 +2044,6 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id chatRecyclerView
 id checkbox
 id checked
 id chip
@@ -2103,6 +2115,7 @@ id edit_query
 id elastic
 id end
 id endToStart
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -2118,6 +2131,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container
 id fragment_container_view_tag
 id frost
 id ghost_view
@@ -2135,6 +2149,9 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id ic_calendario
+id ic_home
+id ic_perfil
 id icon
 id icon_group
 id icon_only
@@ -2142,6 +2159,9 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageIpca
+id imageView
+id imageView3
 id immediateStop
 id included
 id info
@@ -2160,7 +2180,6 @@ id light
 id line1
 id line3
 id linear
-id linearLayout
 id listMode
 id list_item
 id loginActivity
@@ -2188,8 +2207,8 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id media_actions
 id message
-id messageBox
 id middle
 id mini
 id mobile_navigation
@@ -2226,17 +2245,13 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id my_nav
 id nav_controller_view_tag
-id nav_host_fragment_activity_main
 id nav_host_fragment_container
-id nav_view
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
-id navigation_dashboard
 id navigation_header_container
 id navigation_home
-id navigation_notifications
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -2302,8 +2317,6 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
-id sendButton
-id sendMsg
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2337,6 +2350,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
@@ -2367,15 +2381,10 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id text_dashboard
-id text_home
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_name
-id text_notifications
-id text_received_message
-id text_sent_message
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2492,7 +2501,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chat
-layout activity_listar_perfis
 layout activity_login
 layout activity_main
 layout activity_register
@@ -2515,9 +2523,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_dashboard
+layout fragment_calendario
 layout fragment_home
-layout fragment_notifications
+layout fragment_perfil
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2563,15 +2571,22 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout received
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
-layout sent
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -2589,8 +2604,8 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout user_layout
-menu bottom_nav_menu
 menu menu
+menu menu_navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
@@ -2664,6 +2679,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3091,9 +3107,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow

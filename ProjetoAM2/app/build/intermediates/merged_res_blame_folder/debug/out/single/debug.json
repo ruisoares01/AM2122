@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_perfil.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_perfil.xml"
+    },
+    {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash_screen.xml.flat",
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
@@ -10,10 +14,6 @@
     {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_message_layout.xml.flat",
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\message_layout.xml"
-    },
-    {
-        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_sent.xml.flat",
-        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\sent.xml"
     },
     {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
@@ -40,12 +40,12 @@
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_message_layout_received.xml.flat",
-        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable-v24\\message_layout_received.xml"
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_navigation.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\menu\\menu_navigation.xml"
     },
     {
-        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_dashboard.xml.flat",
-        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_message_layout_received.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable-v24\\message_layout_received.xml"
     },
     {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\navigation_my_nav.xml.flat",
@@ -56,16 +56,12 @@
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\menu_bottom_nav_menu.xml.flat",
-        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
-    },
-    {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\raw_typing_animation.json.flat",
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\raw\\typing_animation.json"
     },
     {
-        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_listar_perfis.xml.flat",
-        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_listar_perfis.xml"
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_msgicon.png.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\msgicon.png"
     },
     {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -84,16 +80,28 @@
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_notifications.xml.flat",
-        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_perfilicon.png.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\perfilicon.png"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_calendario.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_calendario.xml"
     },
     {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
     },
     {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_calendarioicon.png.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\calendarioicon.png"
+    },
+    {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_chat.xml.flat",
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_imagesplash.png.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\imagesplash.png"
     },
     {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_user_layout.xml.flat",
@@ -140,6 +148,10 @@
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_style.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\button_style.xml"
+    },
+    {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_send.png.flat",
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable-v24\\send.png"
     },
@@ -150,10 +162,6 @@
     {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_received.xml.flat",
-        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\received.xml"
     },
     {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\menu_menu.xml.flat",

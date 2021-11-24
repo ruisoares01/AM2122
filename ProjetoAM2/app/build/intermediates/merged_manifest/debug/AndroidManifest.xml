@@ -29,9 +29,6 @@
             android:name="com.example.projetoam2.ChatActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.projetoam2.ListarPerfis"
-            android:exported="false" />
-        <activity
             android:name="com.example.projetoam2.Register"
             android:exported="false" />
         <activity

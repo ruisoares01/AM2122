@@ -4,20 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreen">
+    android:background="#FFFEFE"
+    tools:context=".SplashScreen" >
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:backgroundTint="#F0D30808"
-        android:src="@drawable/ic_baseline_assignment_returned_24"
+        android:id="@+id/imageIpca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499">
-
-    </ImageView>
-
+        app:srcCompat="@drawable/imagesplash" />
 </androidx.constraintlayout.widget.ConstraintLayout>
