@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="90dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="5dp">
 
-    <TextView
-        android:id="@+id/text_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="José"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="10dp"/>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <View
-        android:layout_below="@+id/text_name"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black"/>
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="156dp"
+            android:layout_height="62dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:text="José"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="81dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="9dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

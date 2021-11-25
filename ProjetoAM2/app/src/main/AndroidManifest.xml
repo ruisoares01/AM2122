@@ -13,9 +13,6 @@
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".ListarPerfis"
-            android:exported="false" />
-        <activity
             android:name=".Register"
             android:exported="false" />
         <activity
