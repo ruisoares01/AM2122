@@ -1,9 +1,14 @@
 package com.example.projetoam2.Utils
 
-import com.example.projetoam2.Model.ChatChannel
+import android.content.ClipData
+import android.content.Context
+import android.util.Log
+import com.example.projetoam2.Model.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
+import com.xwray.groupie.kotlinandroidextensions.Item
 import java.lang.NullPointerException
 
 object FirestoreUtil {
@@ -50,5 +55,27 @@ object FirestoreUtil {
         onComplete(newChannel.id)
     }
 
-   // fun addChatMessagesListener
+    //list for all the messages inside a channel
+    fun addChatMessagesListener(channelId: String, context: Context,
+                                onListen: (List<Item>) -> Unit): ListenerRegistration {
+        //get the document with name channel Id and get the collection of messages to order the messages by time
+        return chatChannelIsCollectionRef.document(channelId).collection("messages")
+            .orderBy("time")
+            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+                if (firebaseFirestoreException != null) {
+                    Log.e("FIRESTORE", "ChatMessagesListener error", firebaseFirestoreException)
+                    return@addSnapshotListener
+                }
+
+                val items = mutableListOf<Item>()
+                querySnapshot!!.documents.forEach {
+                    if (it["type"] == MessageType.TEXT) {
+                        items.add(TextMessageItem(it.toObject(TextMessage::class.java)!!, context))
+                    } else {
+                        //add image message
+                    }
+                }
+                onListen(items)
+            }
+    }
 }
