@@ -1,9 +1,9 @@
 package com.example.projetoam2.Utils
 
-import android.content.ClipData
 import android.content.Context
 import android.util.Log
 import com.example.projetoam2.Model.*
+import com.example.projetoam2.item.TextMessageItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore

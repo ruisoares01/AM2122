@@ -64,6 +64,10 @@
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\msgicon.png"
     },
     {
+        "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_item_text_message.xml.flat",
+        "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\item_text_message.xml"
+    },
+    {
         "merged": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
     },

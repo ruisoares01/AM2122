@@ -2526,6 +2526,7 @@ layout design_text_input_start_icon
 layout fragment_calendario
 layout fragment_home
 layout fragment_perfil
+layout item_text_message
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

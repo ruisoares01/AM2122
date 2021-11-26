@@ -11,7 +11,11 @@
         android:theme="@style/Theme.ProjetoAM2">
         <activity
             android:name=".ChatActivity"
-            android:exported="false" />
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
         <activity
             android:name=".Register"
             android:exported="false" />
