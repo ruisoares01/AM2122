@@ -8,5 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#14A500</color>
+    <color name="ipca1">#0F4F33</color>
+    <color name="ipca2">#037B4A</color>
+
 
 </resources>

@@ -10,16 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoAM2">
         <activity
-            android:name=".ChatActivity"
+            android:name=".DashBoard"
             android:exported="false" />
         <activity
-            android:name=".ListarPerfis"
+            android:name=".Activities.Profile"
             android:exported="false" />
         <activity
-            android:name=".Register"
+            android:name=".EditPassword"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".Activities.profile"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ListarPerfis"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Register"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
@@ -29,10 +41,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true"
             android:label="@string/app_name" />
     </application>

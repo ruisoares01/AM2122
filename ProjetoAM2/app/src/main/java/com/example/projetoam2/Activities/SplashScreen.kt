@@ -1,9 +1,10 @@
-package com.example.projetoam2
+package com.example.projetoam2.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.projetoam2.R
 
 class SplashScreen : AppCompatActivity() {
 
@@ -15,7 +16,7 @@ class SplashScreen : AppCompatActivity() {
 
         Handler().postDelayed({
 
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         },SPLASH_TIME)

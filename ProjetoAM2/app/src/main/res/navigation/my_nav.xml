@@ -7,11 +7,11 @@
 
     <activity
         android:id="@+id/mainActivity"
-        android:name="com.example.projetoam2.MainActivity"
+        android:name="com.example.projetoam2.Activities.MainActivity"
         android:label="MainActivity" />
     <activity
         android:id="@+id/loginActivity"
-        android:name="com.example.projetoam2.LoginActivity"
+        android:name="com.example.projetoam2.Activities.LoginActivity"
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
 </navigation>

@@ -1,25 +1,21 @@
-package com.example.projetoam2
+package com.example.projetoam2.Activities
 
-import android.content.BroadcastReceiver
-import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.projetoam2.R
 import com.example.projetoam2.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
@@ -28,8 +24,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
 
     private lateinit var binding: ActivityMainBinding
-
-    private lateinit var buttonListarperfis : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -78,6 +72,12 @@ class MainActivity : AppCompatActivity() {
         }
         if(item.itemId == R.id.sendMsg){
             val intent = Intent(this@MainActivity, ListarPerfis::class.java)
+            startActivity(intent)
+            finish()
+            return true
+        }
+        if(item.itemId == R.id.viewProfile){
+            val intent = Intent(this@MainActivity, Profile::class.java)
             startActivity(intent)
             finish()
             return true

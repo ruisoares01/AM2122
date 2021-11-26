@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetoam2.ChatActivity
+import com.example.projetoam2.Activities.ChatActivity
 import com.example.projetoam2.R
-import com.google.firebase.auth.FirebaseAuth
 
 class UserAdapter(val context: Context, val userList: ArrayList<User>):
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
@@ -28,7 +27,7 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>):
 
             holder.itemView.setOnClickListener {
 
-                val intent = Intent(context,ChatActivity::class.java)
+                val intent = Intent(context, ChatActivity::class.java)
 
                 intent.putExtra("name", currentUser.nome)
                 intent.putExtra("uid", currentUser.uid)

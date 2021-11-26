@@ -1,14 +1,14 @@
-package com.example.projetoam2
+package com.example.projetoam2.Activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetoam2.Model.Message
+import com.example.projetoam2.Model.MessageAdapter
+import com.example.projetoam2.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 

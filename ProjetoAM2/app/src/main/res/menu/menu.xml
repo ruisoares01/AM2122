@@ -8,4 +8,10 @@
     <item
         android:id="@+id/sendMsg"
         android:title="New Message"/>
+
+    <item
+        android:id="@+id/viewProfile"
+        android:title="Profile"/>
+
+
 </menu>
