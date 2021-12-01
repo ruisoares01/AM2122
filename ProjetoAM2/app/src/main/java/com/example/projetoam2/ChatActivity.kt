@@ -31,13 +31,13 @@ class ChatActivity : AppCompatActivity() {
             otherUserName = it.getString("name").toString()
             otherUserId = it.getString("uid").toString()
 
-            val otherUserID = intent.getStringExtra(otherUserId)
-            //get the chat channel
-            FirestoreUtil.getOrCreateChatChannel(otherUserID.toString()) { channelId ->
-                messagesListenerRegistration =
-                    FirestoreUtil.addChatMessagesListener(channelId, this, this::onMessagesChanged)
-            }
         }
+        //get the chat channel
+        FirestoreUtil.getOrCreateChatChannel(otherUserId) { channelId ->
+            messagesListenerRegistration =
+                FirestoreUtil.addChatMessagesListener(channelId, this, this::onMessagesChanged)
+        }
+
         //action bar title, name of the user
         supportActionBar?.title = otherUserName
     }

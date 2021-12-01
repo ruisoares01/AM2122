@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+            "outputFile": "C:\\Users\\User\\Desktop\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\85d28c44b86a0d7daf82e0bd918708c8\\transformed\\material-1.4.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "C:\\Users\\User\\Desktop\\codigoo\\caches\\transforms-3\\85d28c44b86a0d7daf82e0bd918708c8\\transformed\\material-1.4.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

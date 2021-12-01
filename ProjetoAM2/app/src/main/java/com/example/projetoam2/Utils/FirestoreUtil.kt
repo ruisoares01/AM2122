@@ -19,13 +19,12 @@ object FirestoreUtil {
         get() = firestoreInstance.document("usuarios/${FirebaseAuth.getInstance().currentUser?.uid
             ?: throw  NullPointerException("UID is null")}")
 
-    private val chatChannelIsCollectionRef = firestoreInstance.collection("ChatChannels")
-
+    private val chatChannelIsCollectionRef = firestoreInstance.collection("Chat")
 
     fun getOrCreateChatChannel(otherUserId: String, onComplete: (channelId: String) -> Unit) {
 
         //check which chat the user is in
-        currentUserDocRef.collection("engagedChatChannels")
+        currentUserDocRef.collection("Salas de chat")
         //user we are chating... is the other user
             .document(otherUserId).get().addOnSuccessListener {
                 //means we already chating
@@ -42,13 +41,13 @@ object FirestoreUtil {
 
         //save the channel id in users who will chat together
         currentUserDocRef
-            .collection("engagedChatChannels")
+            .collection("Salas de chat")
             .document(otherUserId)
             .set(mapOf("channelId" to newChannel.id))
 
         //get the others users document
         firestoreInstance.collection("usuarios").document(otherUserId)
-            .collection("engagedChatChannels")
+            .collection("Salas de chat")
             .document(currentUserId)
             .set(mapOf("channelId" to newChannel.id))
 
