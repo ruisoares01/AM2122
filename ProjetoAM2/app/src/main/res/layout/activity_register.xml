@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1"
+    android:background="@color/white"
     tools:context=".Register">
 
     <EditText
@@ -15,7 +15,7 @@
         android:ems="10"
         android:hint="E-mail"
         android:textSize="20dp"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

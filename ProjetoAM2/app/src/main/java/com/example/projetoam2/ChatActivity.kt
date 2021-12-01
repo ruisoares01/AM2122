@@ -2,8 +2,18 @@ package com.example.projetoam2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AdapterView
+import android.widget.Toast
+import com.example.projetoam2.Utils.AppUtils
+import com.example.projetoam2.Utils.FirestoreUtil
+import com.example.projetoam2.item.UserItem
+import com.google.firebase.firestore.ListenerRegistration
+import com.xwray.groupie.OnItemClickListener
+import com.xwray.groupie.kotlinandroidextensions.Item
 
 class ChatActivity : AppCompatActivity() {
+
+    private lateinit var messagesListenerRegistration : ListenerRegistration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -12,18 +22,26 @@ class ChatActivity : AppCompatActivity() {
         //action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        //action bar title, name of the user
-
         var otherUserName = ""
         var otherUserId = ""
         val bundle = intent.extras
 
+        //collect data
         bundle?.let {
             otherUserName = it.getString("name").toString()
             otherUserId = it.getString("uid").toString()
+
+            val otherUserID = intent.getStringExtra(otherUserId)
+            //get the chat channel
+            FirestoreUtil.getOrCreateChatChannel(otherUserID.toString()) { channelId ->
+                messagesListenerRegistration =
+                    FirestoreUtil.addChatMessagesListener(channelId, this, this::onMessagesChanged)
+            }
         }
+        //action bar title, name of the user
         supportActionBar?.title = otherUserName
-
-
+    }
+    private fun onMessagesChanged(messages: List<Item>){
+        Toast.makeText(this, "onMessagesChangedRunning!", Toast.LENGTH_SHORT).show()
     }
 }
