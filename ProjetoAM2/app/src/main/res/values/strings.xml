@@ -1,16 +1,10 @@
 <resources>
     <string name="app_name">ProjetoAM2</string>
     <string name="title_home">Home</string>
-<<<<<<< HEAD
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="default_notification_channel_id" />
-=======
     <string name="title_dashboard">Calendario</string>
     <string name="title_notifications">Perfil</string>
     <string name="default_notification_channel_id" />
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
->>>>>>> Rui
 </resources>

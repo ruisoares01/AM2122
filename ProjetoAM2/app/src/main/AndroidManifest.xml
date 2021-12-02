@@ -11,18 +11,11 @@
         android:theme="@style/Theme.ProjetoAM2">
         <activity
             android:name=".ChatActivity"
-<<<<<<< HEAD
-            android:exported="false" />
-        <activity
-            android:name=".ListarPerfis"
-            android:exported="false" />
-=======
             android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
->>>>>>> Rui
         <activity
             android:name=".Register"
             android:exported="false" />

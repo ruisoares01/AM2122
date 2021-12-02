@@ -7,18 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.projetoam2.Model.User
-<<<<<<< HEAD
-import com.example.projetoam2.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-=======
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
->>>>>>> Rui
 import com.google.firebase.ktx.Firebase
 import java.util.*
 import java.util.regex.Pattern
@@ -29,19 +19,11 @@ class LoginActivity : AppCompatActivity() {
 
     var user = arrayListOf<User>()
 
-<<<<<<< HEAD
-    private lateinit var editEmail : EditText
-    private lateinit var editPass : EditText
-
-    private lateinit var buttonLogin : Button
-    private lateinit var buttonUserRegister : Button
-=======
     private lateinit var editEmail: EditText
     private lateinit var editPass: EditText
 
     private lateinit var buttonLogin: Button
     private lateinit var buttonUserRegister: Button
->>>>>>> Rui
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,12 +38,8 @@ class LoginActivity : AppCompatActivity() {
         val EMAIL_ADDRESS_PATTERN = Pattern.compile(
             "[a0-9]{1,256}@alunos.ipca.pt"
         )
-<<<<<<< HEAD
-        fun isValidString(str: String): Boolean{
-=======
 
         fun isValidString(str: String): Boolean {
->>>>>>> Rui
             return EMAIL_ADDRESS_PATTERN.matcher(str.toString()).matches()
         }
 
@@ -84,21 +62,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this@LoginActivity, Register::class.java))
             finish()
         }
-<<<<<<< HEAD
-    }
-
-    // function for login
-    private fun register() {
-
-        // declaring the variables for the views
-        val email = editEmail.text.toString()
-        val password = editPass.text.toString()
-
-        val emails = arrayOf<String>(editEmail.text.toString())
-
-        // in this validation we are allowing the login method using an email and password
-        if (editEmail.text.isNotEmpty() && editPass.text.isNotEmpty()) {
-=======
 
     }
         // function for login
@@ -112,7 +75,6 @@ class LoginActivity : AppCompatActivity() {
 
             // in this validation we are allowing the login method using an email and password
             if (editEmail.text.isNotEmpty() && editPass.text.isNotEmpty()) {
->>>>>>> Rui
 
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
@@ -129,18 +91,9 @@ class LoginActivity : AppCompatActivity() {
                             ).show()
                         }
                     }
-<<<<<<< HEAD
-        }else{
-            // if there are unfilled fields, the user gets a warning to fill it
-            Toast.makeText(this@LoginActivity,"Preencha os campos", Toast.LENGTH_SHORT).show()
-        }
-    }
-}
-=======
             } else {
                 // if there are unfilled fields, the user gets a warning to fill it
                 Toast.makeText(this@LoginActivity, "Preencha os campos", Toast.LENGTH_SHORT).show()
             }
         }
     }
->>>>>>> Rui

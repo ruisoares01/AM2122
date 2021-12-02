@@ -4,11 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    android:background="@drawable/background1"
-=======
     android:background="@color/white"
->>>>>>> Rui
     tools:context=".Register">
 
     <EditText
@@ -19,11 +15,7 @@
         android:ems="10"
         android:hint="E-mail"
         android:textSize="20dp"
-<<<<<<< HEAD
-        android:textColorHint="@color/white"
-=======
         android:textColorHint="@color/black"
->>>>>>> Rui
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,11 +30,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-<<<<<<< HEAD
-        android:textColorHint="@color/white"
-=======
         android:textColorHint="@color/black"
->>>>>>> Rui
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,11 +60,7 @@
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
-<<<<<<< HEAD
-        android:textColorHint="@color/white"
-=======
         android:textColorHint="@color/black"
->>>>>>> Rui
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

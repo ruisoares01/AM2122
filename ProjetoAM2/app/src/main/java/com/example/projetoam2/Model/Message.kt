@@ -1,11 +1,5 @@
 package com.example.projetoam2.Model
 
-<<<<<<< HEAD
-class Message(val message: String, val senderUid : String, val receiverUid : String){
-    constructor() : this("","","")
-}
-
-=======
 import java.util.*
 
 object MessageType{
@@ -18,4 +12,3 @@ interface Message {
     val senderId : String
     val type: String
 }
->>>>>>> Rui

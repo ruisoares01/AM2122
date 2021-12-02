@@ -4,28 +4,6 @@
             "outputFile": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\soare\\.gradle\\caches\\transforms-3\\85d28c44b86a0d7daf82e0bd918708c8\\transformed\\material-1.4.0\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2,6",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,320",
-                        "endLines": "5,9",
-                        "endColumns": "10,10",
-                        "endOffsets": "315,588"
-                    },
-                    "to": {
-                        "startLines": "53,57",
-                        "startColumns": "4,4",
-                        "startOffsets": "3674,3939",
-                        "endLines": "56,60",
-                        "endColumns": "10,10",
-                        "endOffsets": "3934,4207"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\soare\\.gradle\\caches\\transforms-3\\9a6d2f2d4c80d275f325f86bc9c2ae54\\transformed\\appcompat-1.3.1\\res\\values-v23\\values-v23.xml",
-=======
                     "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\d9e358f3f874d608e5296688d226fe92\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
@@ -46,7 +24,6 @@
                 },
                 {
                     "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\9a6d2f2d4c80d275f325f86bc9c2ae54\\transformed\\appcompat-1.3.1\\res\\values-v23\\values-v23.xml",
->>>>>>> Rui
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,24 +34,6 @@
                     }
                 },
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\soare\\.gradle\\caches\\transforms-3\\d9e358f3f874d608e5296688d226fe92\\transformed\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "50",
-                        "startColumns": "4",
-                        "startOffsets": "3524",
-                        "endLines": "52",
-                        "endColumns": "12",
-                        "endOffsets": "3669"
-=======
                     "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\85d28c44b86a0d7daf82e0bd918708c8\\transformed\\material-1.4.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,6",
@@ -91,7 +50,6 @@
                         "endLines": "56,60",
                         "endColumns": "10,10",
                         "endOffsets": "3934,4207"
->>>>>>> Rui
                     }
                 }
             ]
