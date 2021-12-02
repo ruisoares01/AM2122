@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\User\\Desktop\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+            "outputFile": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\User\\Desktop\\codigoo\\caches\\transforms-3\\9a6d2f2d4c80d275f325f86bc9c2ae54\\transformed\\appcompat-1.3.1\\res\\values-v25\\values-v25.xml",
+                    "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\9a6d2f2d4c80d275f325f86bc9c2ae54\\transformed\\appcompat-1.3.1\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

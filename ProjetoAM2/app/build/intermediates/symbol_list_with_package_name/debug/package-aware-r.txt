@@ -1089,6 +1089,7 @@ attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
+color Ipca
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1869,6 +1870,8 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_assignment_returned_24
+drawable ic_baseline_image_24
+drawable ic_baseline_send_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
@@ -1918,6 +1921,8 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable perfilicon
+drawable rect_round_primary_color
+drawable rounded_corners
 drawable send
 drawable test_custom_background
 drawable text_box_layout
@@ -2112,6 +2117,7 @@ id editTextName
 id editTextPassword
 id editTextTextPassword
 id edit_query
+id edit_text
 id elastic
 id end
 id endToStart
@@ -2209,6 +2215,7 @@ id material_timepicker_view
 id material_value_index
 id media_actions
 id message
+id message_root
 id middle
 id mini
 id mobile_navigation
@@ -2287,6 +2294,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerview_messages
+id relativelayout_message
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2317,6 +2326,8 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id send_image
+id send_msg_button
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2381,6 +2392,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView_message_time
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2391,6 +2403,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id textview_message_text
 id time
 id title
 id titleDividerNoCustom
@@ -2684,6 +2697,7 @@ string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+string lorem_ipsum
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection

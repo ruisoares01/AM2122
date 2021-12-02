@@ -1088,6 +1088,7 @@ int attr yearTodayStyle 0x7f0303fc
 int bool abc_action_bar_embed_tabs 0x7f040000
 int bool abc_config_actionMenuItemAllCaps 0x7f040001
 int bool mtrl_btn_textappearance_all_caps 0x7f040002
+int color Ipca 0x7f0500e6
 int color abc_background_cache_hint_selector_material_dark 0x7f050000
 int color abc_background_cache_hint_selector_material_light 0x7f050001
 int color abc_btn_colored_borderless_text_material 0x7f050002
@@ -1868,6 +1869,8 @@ int drawable design_snackbar_background 0x7f07007a
 int drawable googleg_disabled_color_18 0x7f07007b
 int drawable googleg_standard_color_18 0x7f07007c
 int drawable ic_baseline_assignment_returned_24 0x7f07007d
+int drawable ic_baseline_image_24 0x7f0700b4
+int drawable ic_baseline_send_24 0x7f0700b6
 int drawable ic_clock_black_24dp 0x7f07007e
 int drawable ic_dashboard_black_24dp 0x7f07007f
 int drawable ic_home_black_24dp 0x7f070080
@@ -1917,6 +1920,8 @@ int drawable notification_template_icon_low_bg 0x7f0700ab
 int drawable notification_tile_bg 0x7f0700ac
 int drawable notify_panel_notification_icon_bg 0x7f0700ad
 int drawable perfilicon 0x7f0700ae
+int drawable rect_round_primary_color 0x7f0700b7
+int drawable rounded_corners 0x7f0700b5
 int drawable send 0x7f0700af
 int drawable test_custom_background 0x7f0700b0
 int drawable text_box_layout 0x7f0700b1
@@ -2111,6 +2116,7 @@ int id editTextName 0x7f0800b9
 int id editTextPassword 0x7f0800ba
 int id editTextTextPassword 0x7f0800bb
 int id edit_query 0x7f0800bc
+int id edit_text 0x7f0801fe
 int id elastic 0x7f0800bd
 int id end 0x7f0800be
 int id endToStart 0x7f0800bf
@@ -2208,6 +2214,7 @@ int id material_timepicker_view 0x7f08011a
 int id material_value_index 0x7f08011b
 int id media_actions 0x7f08011c
 int id message 0x7f08011d
+int id message_root 0x7f080200
 int id middle 0x7f08011e
 int id mini 0x7f08011f
 int id mobile_navigation 0x7f080120
@@ -2286,6 +2293,8 @@ int id progress_horizontal 0x7f080168
 int id radio 0x7f080169
 int id ratio 0x7f08016a
 int id rectangles 0x7f08016b
+int id recyclerview_messages 0x7f080201
+int id relativelayout_message 0x7f0801ff
 int id reverseSawtooth 0x7f08016c
 int id right 0x7f08016d
 int id rightToLeft 0x7f08016e
@@ -2316,6 +2325,8 @@ int id search_voice_btn 0x7f080186
 int id select_dialog_listview 0x7f080187
 int id selected 0x7f080188
 int id selection_type 0x7f080189
+int id send_image 0x7f0801fc
+int id send_msg_button 0x7f0801fd
 int id sharedValueSet 0x7f08018a
 int id sharedValueUnset 0x7f08018b
 int id shortcut 0x7f08018c
@@ -2380,6 +2391,7 @@ int id textSpacerNoButtons 0x7f0801c6
 int id textSpacerNoTitle 0x7f0801c7
 int id textStart 0x7f0801c8
 int id textTop 0x7f0801c9
+int id textView_message_time 0x7f080202
 int id text_input_end_icon 0x7f0801ca
 int id text_input_error_icon 0x7f0801cb
 int id text_input_start_icon 0x7f0801cc
@@ -2390,6 +2402,7 @@ int id textinput_helper_text 0x7f0801d0
 int id textinput_placeholder 0x7f0801d1
 int id textinput_prefix_text 0x7f0801d2
 int id textinput_suffix_text 0x7f0801d3
+int id textview_message_text 0x7f080203
 int id time 0x7f0801d4
 int id title 0x7f0801d5
 int id titleDividerNoCustom 0x7f0801d6
@@ -2683,6 +2696,7 @@ int string hello_blank_fragment 0x7f110043
 int string hide_bottom_view_on_scroll_behavior 0x7f110044
 int string icon_content_description 0x7f110045
 int string item_view_role_description 0x7f110046
+int string lorem_ipsum 0x7f11008b
 int string material_clock_display_divider 0x7f110047
 int string material_clock_toggle_content_description 0x7f110048
 int string material_hour_selection 0x7f110049

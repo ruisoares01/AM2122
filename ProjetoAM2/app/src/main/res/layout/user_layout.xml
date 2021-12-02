@@ -7,9 +7,9 @@
     android:layout_height="90dp"
     android:clickable="true"
     android:focusable="true"
-    android:backgroundTint="#F0FBED"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="10dp">
+    android:backgroundTint="#F5FFF5"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="30dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
