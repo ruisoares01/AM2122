@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com/example/projetoam2/databinding/ReceivedBinding.java
  com.example.projetoam2.databinding.ReceivedBinding
 com/example/projetoam2/databinding/FragmentHomeBinding.java
@@ -10,17 +11,39 @@ com/example/projetoam2/databinding/UserLayoutBinding.java
  com.example.projetoam2.databinding.UserLayoutBinding
 com/example/projetoam2/databinding/ActivityListarPerfisBinding.java
  com.example.projetoam2.databinding.ActivityListarPerfisBinding
+=======
+com/example/projetoam2/BuildConfig.java
+ com.example.projetoam2.BuildConfig
+com/example/projetoam2/databinding/FragmentHomeBinding.java
+ com.example.projetoam2.databinding.FragmentHomeBinding
+com/example/projetoam2/databinding/FragmentCalendarioBinding.java
+ com.example.projetoam2.databinding.FragmentCalendarioBinding
+com/example/projetoam2/databinding/UserLayoutBinding.java
+ com.example.projetoam2.databinding.UserLayoutBinding
+>>>>>>> Rui
 com/example/projetoam2/databinding/ActivityChatBinding.java
  com.example.projetoam2.databinding.ActivityChatBinding
 com/example/projetoam2/databinding/ActivityRegisterBinding.java
  com.example.projetoam2.databinding.ActivityRegisterBinding
+<<<<<<< HEAD
+=======
+com/example/projetoam2/databinding/ItemTextMessageBinding.java
+ com.example.projetoam2.databinding.ItemTextMessageBinding
+>>>>>>> Rui
 com/example/projetoam2/databinding/ActivityLoginBinding.java
  com.example.projetoam2.databinding.ActivityLoginBinding
 com/example/projetoam2/databinding/ActivityMainBinding.java
  com.example.projetoam2.databinding.ActivityMainBinding
+<<<<<<< HEAD
 com/example/projetoam2/databinding/FragmentDashboardBinding.java
  com.example.projetoam2.databinding.FragmentDashboardBinding
 com/example/projetoam2/databinding/ActivitySplashScreenBinding.java
  com.example.projetoam2.databinding.ActivitySplashScreenBinding
 com/example/projetoam2/databinding/FragmentNotificationsBinding.java
  com.example.projetoam2.databinding.FragmentNotificationsBinding
+=======
+com/example/projetoam2/databinding/FragmentPerfilBinding.java
+ com.example.projetoam2.databinding.FragmentPerfilBinding
+com/example/projetoam2/databinding/ActivitySplashScreenBinding.java
+ com.example.projetoam2.databinding.ActivitySplashScreenBinding
+>>>>>>> Rui

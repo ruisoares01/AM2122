@@ -13,6 +13,7 @@
 11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<<<<<<< HEAD
 13-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\.gradle\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:5-79
 13-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\.gradle\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:22-76
 14    <uses-permission android:name="android.permission.INTERNET" />
@@ -31,6 +32,26 @@
 19-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:6:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 20-->[androidx.core:core:1.6.0] C:\Users\soare\.gradle\caches\transforms-3\bc45a61edf56957ab466c3cc91727254\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+=======
+13-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:5-79
+13-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:26:5-67
+14-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:26:22-64
+15    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+15-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:23:5-68
+15-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:23:22-65
+16    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+16-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:25:5-82
+16-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:25:22-79
+17
+18    <application
+18-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:5:5-39:19
+19        android:allowBackup="true"
+19-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:6:9-35
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.6.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\bc45a61edf56957ab466c3cc91727254\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+>>>>>>> Rui
 21        android:debuggable="true"
 22        android:icon="@mipmap/ic_launcher"
 22-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:7:9-43
@@ -44,6 +65,7 @@
 27        android:theme="@style/Theme.ProjetoAM2" >
 27-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:11:9-48
 28        <activity
+<<<<<<< HEAD
 28-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:12:9-14:40
 29            android:name="com.example.projetoam2.ChatActivity"
 29-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:13:13-41
@@ -384,3 +406,346 @@
 210    </application>
 211
 212</manifest>
+=======
+28-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:12:9-18:20
+29            android:name="com.example.projetoam2.ChatActivity"
+29-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:13:13-41
+30            android:exported="false" >
+30-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:14:13-37
+31            <meta-data
+31-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:15:13-17:48
+32                android:name="android.support.PARENT_ACTIVITY"
+32-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:16:17-63
+33                android:value=".MainActivity" />
+33-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:17:17-46
+34        </activity>
+35        <activity
+35-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:19:9-21:40
+36            android:name="com.example.projetoam2.Register"
+36-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:20:13-37
+37            android:exported="false" />
+37-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:21:13-37
+38        <activity
+38-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:22:9-31:20
+39            android:name="com.example.projetoam2.SplashScreen"
+39-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:23:13-41
+40            android:exported="true"
+40-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:24:13-36
+41            android:theme="@style/Theme.AppCompat.NoActionBar" >
+41-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:25:13-63
+42            <intent-filter>
+42-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:26:13-30:29
+43                <action android:name="android.intent.action.MAIN" />
+43-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:27:17-69
+43-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:27:25-66
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:29:17-77
+45-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:29:27-74
+46            </intent-filter>
+47        </activity>
+48        <activity
+48-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:32:9-34:39
+49            android:name="com.example.projetoam2.LoginActivity"
+49-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:33:13-42
+50            android:exported="true" />
+50-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:34:13-36
+51        <activity
+51-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:35:9-38:48
+52            android:name="com.example.projetoam2.MainActivity"
+52-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:36:13-41
+53            android:exported="true"
+53-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:37:13-36
+54            android:label="@string/app_name" />
+54-->D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:38:13-45
+55
+56        <service
+56-->[com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:8:9-14:19
+57            android:name="com.google.firebase.components.ComponentDiscoveryService"
+57-->[com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:9:13-84
+58            android:directBootAware="true"
+58-->[com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+59            android:exported="false" >
+59-->[com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:10:13-37
+60            <meta-data
+60-->[com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:11:13-13:85
+61                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+61-->[com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:12:17-116
+62                android:value="com.google.firebase.components.ComponentRegistrar" />
+62-->[com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:13:17-82
+63            <meta-data
+63-->[com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:15:13-17:85
+64                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
+64-->[com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:16:17-124
+65                android:value="com.google.firebase.components.ComponentRegistrar" />
+65-->[com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:17:17-82
+66            <meta-data
+66-->[com.google.firebase:firebase-firestore-ktx:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cce055da59ef5c33490a68a3a7833c9c\transformed\jetified-firebase-firestore-ktx-24.0.0\AndroidManifest.xml:15:13-17:85
+67                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
+67-->[com.google.firebase:firebase-firestore-ktx:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cce055da59ef5c33490a68a3a7833c9c\transformed\jetified-firebase-firestore-ktx-24.0.0\AndroidManifest.xml:16:17-126
+68                android:value="com.google.firebase.components.ComponentRegistrar" />
+68-->[com.google.firebase:firebase-firestore-ktx:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cce055da59ef5c33490a68a3a7833c9c\transformed\jetified-firebase-firestore-ktx-24.0.0\AndroidManifest.xml:17:17-82
+69            <meta-data
+69-->[com.google.firebase:firebase-messaging-ktx:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\0e62db302f5fbcbe95683e12811dde69\transformed\jetified-firebase-messaging-ktx-22.0.0\AndroidManifest.xml:29:13-31:85
+70                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar"
+70-->[com.google.firebase:firebase-messaging-ktx:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\0e62db302f5fbcbe95683e12811dde69\transformed\jetified-firebase-messaging-ktx-22.0.0\AndroidManifest.xml:30:17-126
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[com.google.firebase:firebase-messaging-ktx:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\0e62db302f5fbcbe95683e12811dde69\transformed\jetified-firebase-messaging-ktx-22.0.0\AndroidManifest.xml:31:17-82
+72            <meta-data
+72-->[com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\893ba6dc734555805e60b1c9b09ff832\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:15:13-17:85
+73                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+73-->[com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\893ba6dc734555805e60b1c9b09ff832\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:16:17-113
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\893ba6dc734555805e60b1c9b09ff832\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:17:17-82
+75            <meta-data
+75-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
+76                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+76-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
+78            <meta-data
+78-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:77:13-79:85
+79                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+79-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:78:17-109
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:79:17-82
+81            <meta-data
+81-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:20:13-22:85
+82                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+82-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:21:17-111
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:22:17-82
+84            <meta-data
+84-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:52:13-54:85
+85                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+85-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:53:17-119
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:54:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\044d24b3a148b647c6efe58040dafdf7\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:28:13-30:85
+88                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+88-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\044d24b3a148b647c6efe58040dafdf7\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:29:17-115
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\044d24b3a148b647c6efe58040dafdf7\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:30:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+91                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+91-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+93        </service>
+94
+95        <activity
+95-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:23:9-27:75
+96            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+96-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:24:13-93
+97            android:excludeFromRecents="true"
+97-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:25:13-46
+98            android:exported="false"
+98-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:26:13-37
+99            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+99-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:27:13-72
+100        <!--
+101            Service handling Google Sign-In user revocation. For apps that do not integrate with
+102            Google Sign-In, this service will never be started.
+103        -->
+104        <service
+104-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:33:9-37:51
+105            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+105-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:34:13-89
+106            android:exported="true"
+106-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:35:13-36
+107            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+107-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:36:13-107
+108            android:visibleToInstantApps="true" />
+108-->[com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:37:13-48
+109
+110        <activity
+110-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:27:9-44:20
+111            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+111-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:28:13-80
+112            android:excludeFromRecents="true"
+112-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:29:13-46
+113            android:exported="true"
+113-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:30:13-36
+114            android:launchMode="singleTask"
+114-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:31:13-44
+115            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+115-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:32:13-72
+116            <intent-filter>
+116-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:33:13-43:29
+117                <action android:name="android.intent.action.VIEW" />
+117-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
+117-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
+118
+119                <category android:name="android.intent.category.DEFAULT" />
+119-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+119-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+120                <category android:name="android.intent.category.BROWSABLE" />
+120-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
+120-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
+121
+122                <data
+122-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
+123                    android:host="firebase.auth"
+123-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
+124                    android:path="/"
+124-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
+125                    android:scheme="genericidp" />
+125-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
+126            </intent-filter>
+127        </activity>
+128        <activity
+128-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:45:9-62:20
+129            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+129-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:46:13-79
+130            android:excludeFromRecents="true"
+130-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:47:13-46
+131            android:exported="true"
+131-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:48:13-36
+132            android:launchMode="singleTask"
+132-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:49:13-44
+133            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+133-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:50:13-72
+134            <intent-filter>
+134-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:51:13-61:29
+135                <action android:name="android.intent.action.VIEW" />
+135-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:17-69
+135-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:34:25-66
+136
+137                <category android:name="android.intent.category.DEFAULT" />
+137-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+137-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+138                <category android:name="android.intent.category.BROWSABLE" />
+138-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
+138-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
+139
+140                <data
+140-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
+141                    android:host="firebase.auth"
+141-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
+142                    android:path="/"
+142-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
+143                    android:scheme="recaptcha" />
+143-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
+144            </intent-filter>
+145        </activity>
+146
+147        <service
+147-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:64:9-73:19
+148            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+148-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:65:13-101
+149            android:enabled="true"
+149-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:66:13-35
+150            android:exported="false" >
+150-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:67:13-37
+151            <intent-filter>
+151-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:68:13-72:29
+152                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+152-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:17-89
+152-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:25-86
+153
+154                <category android:name="android.intent.category.DEFAULT" />
+154-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+154-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+155            </intent-filter>
+156        </service>
+157
+158        <receiver
+158-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:28:9-35:20
+159            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+159-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:29:13-78
+160            android:exported="true"
+160-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:30:13-36
+161            android:permission="com.google.android.c2dm.permission.SEND" >
+161-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:31:13-73
+162            <intent-filter>
+162-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:32:13-34:29
+163                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+163-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:33:17-81
+163-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:33:25-78
+164            </intent-filter>
+165        </receiver>
+166        <!--
+167             FirebaseMessagingService performs security checks at runtime,
+168             but set to not exported to explicitly avoid allowing another app to call it.
+169        -->
+170        <service
+170-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:41:9-48:19
+171            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+171-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:42:13-82
+172            android:directBootAware="true"
+172-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:43:13-43
+173            android:exported="false" >
+173-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:44:13-37
+174            <intent-filter android:priority="-500" >
+174-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:45:13-47:29
+174-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:45:28-51
+175                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+175-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:46:17-78
+175-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:46:25-75
+176            </intent-filter>
+177        </service>
+178        <service
+178-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:29:9-35:19
+179            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+179-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:30:13-103
+180            android:exported="false" >
+180-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:31:13-37
+181            <meta-data
+181-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:32:13-34:39
+182                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+182-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:33:17-94
+183                android:value="cct" />
+183-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:34:17-36
+184        </service>
+185
+186        <provider
+186-->[com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+187            android:name="com.google.firebase.provider.FirebaseInitProvider"
+187-->[com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+188            android:authorities="com.example.projetoam2.firebaseinitprovider"
+188-->[com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+189            android:directBootAware="true"
+189-->[com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+190            android:exported="false"
+190-->[com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+191            android:initOrder="100" />
+191-->[com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+192
+193        <activity
+193-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3e05de34d1589a42ebd1e1b8b4938744\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+194            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+194-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3e05de34d1589a42ebd1e1b8b4938744\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+195            android:exported="false"
+195-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3e05de34d1589a42ebd1e1b8b4938744\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+196            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+196-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3e05de34d1589a42ebd1e1b8b4938744\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+197
+198        <meta-data
+198-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6a8240edafc5611026bfcc1a45c99584\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+199            android:name="com.google.android.gms.version"
+199-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6a8240edafc5611026bfcc1a45c99584\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+200            android:value="@integer/google_play_services_version" />
+200-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6a8240edafc5611026bfcc1a45c99584\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+201
+202        <service
+202-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fae3e52dcf52e82826438feee3deed0e\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:26:9-30:19
+203            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+203-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fae3e52dcf52e82826438feee3deed0e\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:27:13-117
+204            android:exported="false"
+204-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fae3e52dcf52e82826438feee3deed0e\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:28:13-37
+205            android:permission="android.permission.BIND_JOB_SERVICE" >
+205-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fae3e52dcf52e82826438feee3deed0e\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:29:13-69
+206        </service>
+207
+208        <receiver
+208-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fae3e52dcf52e82826438feee3deed0e\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:32:9-34:40
+209            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+209-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fae3e52dcf52e82826438feee3deed0e\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:33:13-132
+210            android:exported="false" />
+210-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fae3e52dcf52e82826438feee3deed0e\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:34:13-37
+211    </application>
+212
+213</manifest>
+>>>>>>> Rui

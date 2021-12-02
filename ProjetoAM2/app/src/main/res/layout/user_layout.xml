@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -20,3 +21,52 @@
         android:background="@android:color/black"/>
 
 </RelativeLayout>
+=======
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:backgroundTint="#F5FFF5"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp">
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="250dp"
+            android:layout_height="57dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="60dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:text="José"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="77dp"
+            android:layout_height="67dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="39dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="60dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+>>>>>>> Rui

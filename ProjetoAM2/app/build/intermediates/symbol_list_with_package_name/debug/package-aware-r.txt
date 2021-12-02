@@ -1089,6 +1089,10 @@ attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
+<<<<<<< HEAD
+=======
+color Ipca
+>>>>>>> Rui
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1287,6 +1291,10 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+<<<<<<< HEAD
+=======
+color notification_material_background_media_default_color
+>>>>>>> Rui
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1725,6 +1733,13 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+<<<<<<< HEAD
+=======
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
+>>>>>>> Rui
 dimen test_mtrl_calendar_day_cornerSize
 dimen test_navigation_bar_active_item_max_width
 dimen test_navigation_bar_active_item_min_width
@@ -1835,6 +1850,11 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+<<<<<<< HEAD
+=======
+drawable button_style
+drawable calendarioicon
+>>>>>>> Rui
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1862,6 +1882,11 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_assignment_returned_24
+<<<<<<< HEAD
+=======
+drawable ic_baseline_image_24
+drawable ic_baseline_send_24
+>>>>>>> Rui
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
@@ -1873,6 +1898,10 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+<<<<<<< HEAD
+=======
+drawable imagesplash
+>>>>>>> Rui
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1885,6 +1914,10 @@ drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable message_layout
 drawable message_layout_received
+<<<<<<< HEAD
+=======
+drawable msgicon
+>>>>>>> Rui
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1908,6 +1941,12 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+<<<<<<< HEAD
+=======
+drawable perfilicon
+drawable rect_round_primary_color
+drawable rounded_corners
+>>>>>>> Rui
 drawable send
 drawable test_custom_background
 drawable text_box_layout
@@ -1961,6 +2000,10 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+<<<<<<< HEAD
+=======
+id action0
+>>>>>>> Rui
 id actionDown
 id actionDownUp
 id actionUp
@@ -2009,6 +2052,10 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+<<<<<<< HEAD
+=======
+id bottom_navigation
+>>>>>>> Rui
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2024,6 +2071,10 @@ id buttonPanel
 id buttonRegister
 id buttonUserRegister
 id cache_measures
+<<<<<<< HEAD
+=======
+id cancel_action
+>>>>>>> Rui
 id cancel_button
 id carryVelocity
 id center
@@ -2031,7 +2082,10 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+<<<<<<< HEAD
 id chatRecyclerView
+=======
+>>>>>>> Rui
 id checkbox
 id checked
 id chip
@@ -2100,9 +2154,17 @@ id editTextName
 id editTextPassword
 id editTextTextPassword
 id edit_query
+<<<<<<< HEAD
 id elastic
 id end
 id endToStart
+=======
+id edit_text
+id elastic
+id end
+id endToStart
+id end_padder
+>>>>>>> Rui
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -2118,6 +2180,10 @@ id fixed
 id flip
 id floating
 id forever
+<<<<<<< HEAD
+=======
+id fragment_container
+>>>>>>> Rui
 id fragment_container_view_tag
 id frost
 id ghost_view
@@ -2135,6 +2201,12 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+<<<<<<< HEAD
+=======
+id ic_calendario
+id ic_home
+id ic_perfil
+>>>>>>> Rui
 id icon
 id icon_group
 id icon_only
@@ -2142,6 +2214,12 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+<<<<<<< HEAD
+=======
+id imageIpca
+id imageView
+id imageView3
+>>>>>>> Rui
 id immediateStop
 id included
 id info
@@ -2160,7 +2238,10 @@ id light
 id line1
 id line3
 id linear
+<<<<<<< HEAD
 id linearLayout
+=======
+>>>>>>> Rui
 id listMode
 id list_item
 id loginActivity
@@ -2188,8 +2269,14 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+<<<<<<< HEAD
 id message
 id messageBox
+=======
+id media_actions
+id message
+id message_root
+>>>>>>> Rui
 id middle
 id mini
 id mobile_navigation
@@ -2226,17 +2313,26 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id my_nav
 id nav_controller_view_tag
+<<<<<<< HEAD
 id nav_host_fragment_activity_main
 id nav_host_fragment_container
 id nav_view
+=======
+id nav_host_fragment_container
+>>>>>>> Rui
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
+<<<<<<< HEAD
 id navigation_dashboard
 id navigation_header_container
 id navigation_home
 id navigation_notifications
+=======
+id navigation_header_container
+id navigation_home
+>>>>>>> Rui
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -2272,6 +2368,11 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+<<<<<<< HEAD
+=======
+id recyclerview_messages
+id relativelayout_message
+>>>>>>> Rui
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2302,8 +2403,13 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+<<<<<<< HEAD
 id sendButton
 id sendMsg
+=======
+id send_image
+id send_msg_button
+>>>>>>> Rui
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2337,6 +2443,10 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+<<<<<<< HEAD
+=======
+id status_bar_latest_event_content
+>>>>>>> Rui
 id stop
 id stretch
 id submenuarrow
@@ -2367,21 +2477,32 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+<<<<<<< HEAD
 id text_dashboard
 id text_home
+=======
+id textView_message_time
+>>>>>>> Rui
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_name
+<<<<<<< HEAD
 id text_notifications
 id text_received_message
 id text_sent_message
+=======
+>>>>>>> Rui
 id textinput_counter
 id textinput_error
 id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+<<<<<<< HEAD
+=======
+id textview_message_text
+>>>>>>> Rui
 id time
 id title
 id titleDividerNoCustom
@@ -2492,7 +2613,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chat
+<<<<<<< HEAD
 layout activity_listar_perfis
+=======
+>>>>>>> Rui
 layout activity_login
 layout activity_main
 layout activity_register
@@ -2515,9 +2639,16 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+<<<<<<< HEAD
 layout fragment_dashboard
 layout fragment_home
 layout fragment_notifications
+=======
+layout fragment_calendario
+layout fragment_home
+layout fragment_perfil
+layout item_text_message
+>>>>>>> Rui
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2563,6 +2694,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout notification_action
 layout notification_action_tombstone
+<<<<<<< HEAD
 layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
@@ -2572,6 +2704,24 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout sent
+=======
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
+layout notification_template_custom_big
+layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
+layout notification_template_part_chronometer
+layout notification_template_part_time
+layout select_dialog_item_material
+layout select_dialog_multichoice_material
+layout select_dialog_singlechoice_material
+>>>>>>> Rui
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -2589,8 +2739,13 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout user_layout
+<<<<<<< HEAD
 menu bottom_nav_menu
 menu menu
+=======
+menu menu
+menu menu_navigation
+>>>>>>> Rui
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
@@ -2664,9 +2819,17 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+<<<<<<< HEAD
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
+=======
+string hello_blank_fragment
+string hide_bottom_view_on_scroll_behavior
+string icon_content_description
+string item_view_role_description
+string lorem_ipsum
+>>>>>>> Rui
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -3091,9 +3254,20 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+<<<<<<< HEAD
 style TextAppearance_Compat_Notification_Line2
 style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
+=======
+style TextAppearance_Compat_Notification_Info_Media
+style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
+style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
+style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
+>>>>>>> Rui
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow

@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.vectordrawable:vectordrawable-animated:1.1.0@aar">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml" />
@@ -8,6 +9,24 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.vectordrawable/vectordrawable-animated/1.1.0/871a7705cd03bc246947638c712cdd11378233ff/vectordrawable-animated-1.1.0-sources.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/res" />
+      <root url="file://$PROJECT_DIR$/../../../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/res" />
+      <root url="file://$PROJECT_DIR$/../../../codigoo/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../../codigoo/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/../../../codigoo/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/19a30188ff4c0a9aa4b02503af7b5f38/transformed/vectordrawable-animated-1.1.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/androidx.vectordrawable/vectordrawable-animated/1.1.0/871a7705cd03bc246947638c712cdd11378233ff/vectordrawable-animated-1.1.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../codigoo/caches/modules-2/files-2.1/androidx.vectordrawable/vectordrawable-animated/1.1.0/871a7705cd03bc246947638c712cdd11378233ff/vectordrawable-animated-1.1.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/androidx.vectordrawable/vectordrawable-animated/1.1.0/871a7705cd03bc246947638c712cdd11378233ff/vectordrawable-animated-1.1.0-sources.jar!/" />
+>>>>>>> Rui
     </SOURCES>
   </library>
 </component>

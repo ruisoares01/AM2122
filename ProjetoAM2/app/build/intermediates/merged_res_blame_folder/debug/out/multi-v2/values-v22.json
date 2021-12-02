@@ -4,7 +4,11 @@
             "outputFile": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\soare\\.gradle\\caches\\transforms-3\\9a6d2f2d4c80d275f325f86bc9c2ae54\\transformed\\appcompat-1.3.1\\res\\values-v22\\values-v22.xml",
+=======
+                    "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\9a6d2f2d4c80d275f325f86bc9c2ae54\\transformed\\appcompat-1.3.1\\res\\values-v22\\values-v22.xml",
+>>>>>>> Rui
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

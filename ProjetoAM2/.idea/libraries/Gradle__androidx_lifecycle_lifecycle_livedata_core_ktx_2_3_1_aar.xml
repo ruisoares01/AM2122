@@ -1,6 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1@aar">
     <CLASSES>
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml" />
@@ -8,6 +9,24 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core-ktx/2.3.1/ec507705520b7ddccce7da52bbf5abd9ecd1808/lifecycle-livedata-core-ktx-2.3.1-sources.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/res" />
+      <root url="jar://$PROJECT_DIR$/../../../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/res" />
+      <root url="file://$PROJECT_DIR$/../../../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../../codigoo/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/res" />
+      <root url="jar://$PROJECT_DIR$/../../../codigoo/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../codigoo/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/res" />
+      <root url="file://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/8edb3de26349bc061096d4a1ef709a39/transformed/jetified-lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core-ktx/2.3.1/ec507705520b7ddccce7da52bbf5abd9ecd1808/lifecycle-livedata-core-ktx-2.3.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../codigoo/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core-ktx/2.3.1/ec507705520b7ddccce7da52bbf5abd9ecd1808/lifecycle-livedata-core-ktx-2.3.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core-ktx/2.3.1/ec507705520b7ddccce7da52bbf5abd9ecd1808/lifecycle-livedata-core-ktx-2.3.1-sources.jar!/" />
+>>>>>>> Rui
     </SOURCES>
   </library>
 </component>

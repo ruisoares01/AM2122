@@ -5,6 +5,7 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+<<<<<<< HEAD
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.projetoam2.ui.home.HomeFragment"
@@ -22,4 +23,6 @@
         android:name="com.example.projetoam2.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+=======
+>>>>>>> Rui
 </navigation>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@drawable/background1"
     tools:context=".LoginActivity">
 
@@ -17,10 +18,26 @@
         android:textColor="@color/white"
         android:inputType="textPersonName"
         android:textColorHint="@color/white"
+=======
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Password"
+        android:textColorHint="#222222"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+>>>>>>> Rui
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -39,25 +56,60 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="#222222"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+>>>>>>> Rui
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="Login"
         android:backgroundTint="@color/white"
         android:textColor="@android:color/background_dark"
+=======
+        android:background="@drawable/button_style"
+        android:backgroundTint="@color/white"
+        android:text="Login"
+        android:textColor="@color/white"
+>>>>>>> Rui
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.272" />
+=======
+        app:layout_constraintVertical_bias="0.25" />
+>>>>>>> Rui
 
     <Button
         android:id="@+id/buttonUserRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+        android:background="@drawable/button_style"
+>>>>>>> Rui
         android:backgroundTint="@android:color/background_dark"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,6 +117,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.266" />
+=======
+        app:layout_constraintVertical_bias="0.355" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="211dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagesplash" />
+>>>>>>> Rui
 
 </androidx.constraintlayout.widget.ConstraintLayout>
