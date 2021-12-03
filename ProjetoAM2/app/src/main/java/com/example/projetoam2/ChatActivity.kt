@@ -20,6 +20,7 @@ import com.xwray.groupie.ViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.item_text_message.*
 import java.util.*
 
 class ChatActivity : AppCompatActivity() {
@@ -51,8 +52,6 @@ class ChatActivity : AppCompatActivity() {
         //get the chat channel
         FirestoreUtil.getOrCreateChatChannel(otherUserId) { channelId ->
 
-            println(otherUserId)
-
             messagesListenerRegistration =
                 FirestoreUtil.addChatMessagesListener(channelId, this, this::updateRecyclerView)
 
@@ -64,10 +63,8 @@ class ChatActivity : AppCompatActivity() {
                 edit_text.setText("")
 
                 FirestoreUtil.sendMessage(messageTosend, channelId)
-
-                println(channelId)
-                println("AAAAAAAA")
             }
+
             send_image.setOnClickListener {
                 //send image
             }

@@ -1923,6 +1923,7 @@ drawable notify_panel_notification_icon_bg
 drawable perfilicon
 drawable rect_round_primary_color
 drawable rounded_corners
+drawable rounded_corners_msg
 drawable send
 drawable test_custom_background
 drawable text_box_layout

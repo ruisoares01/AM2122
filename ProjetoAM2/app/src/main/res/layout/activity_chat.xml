@@ -46,7 +46,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@+id/send_image"
-            android:background="@drawable/rounded_corners"
+            android:background="@drawable/rounded_corners_msg"
             android:elevation="2dp"
             android:hint="Enviar Mensagem"
             android:padding="9dp" />
