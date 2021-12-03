@@ -1,9 +1,9 @@
 package com.example.projetoam2.Utils
 
-import android.content.ClipData
 import android.content.Context
 import android.util.Log
 import com.example.projetoam2.Model.*
+import com.example.projetoam2.item.TextMessageItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
@@ -19,40 +19,43 @@ object FirestoreUtil {
         get() = firestoreInstance.document("usuarios/${FirebaseAuth.getInstance().currentUser?.uid
             ?: throw  NullPointerException("UID is null")}")
 
-    private val chatChannelIsCollectionRef = firestoreInstance.collection("ChatChannels")
+    private val chatChannelIsCollectionRef = firestoreInstance.collection("Chat")
 
 
     fun getOrCreateChatChannel(otherUserId: String, onComplete: (channelId: String) -> Unit) {
-
         //check which chat the user is in
-        currentUserDocRef.collection("engagedChatChannels")
+        currentUserDocRef.collection("Salachat")
         //user we are chating... is the other user
             .document(otherUserId).get().addOnSuccessListener {
                 //means we already chating
-                if(it.exists())
+                if(it.exists()){
                     onComplete(it["channelId"] as String)
-                return@addOnSuccessListener
+                    return@addOnSuccessListener
+                }
+                //if the chat channel doesn't exists we need to create it
+                val currentUserId = FirebaseAuth.getInstance().currentUser!!.uid
+
+                //stores a document ref to the new chat channel even before its created in Firestore
+                val newChannel = chatChannelIsCollectionRef.document()
+                newChannel.set(ChatChannel(mutableListOf(currentUserId, otherUserId)))
+
+                //save the channel id in users who will chat together
+                currentUserDocRef
+                    .collection("Salachat")
+                    .document(otherUserId)
+                    .set(mapOf("channelId" to newChannel.id))
+
+                //get the others users document
+                firestoreInstance.collection("usuarios").document(otherUserId)
+                    .collection("Salachat")
+                    .document(currentUserId)
+                    .set(mapOf("channelId" to newChannel.id))
+
+                onComplete(newChannel.id)
+
+
             }
-        //if the chat channel doesn't exists we need to create it
-        val currentUserId = FirebaseAuth.getInstance().currentUser!!.uid
 
-        //stores a document ref to the new chat channel even before its created in Firestore
-        val newChannel = chatChannelIsCollectionRef.document()
-        newChannel.set(ChatChannel(mutableListOf(currentUserId, otherUserId)))
-
-        //save the channel id in users who will chat together
-        currentUserDocRef
-            .collection("engagedChatChannels")
-            .document(otherUserId)
-            .set(mapOf("channelId" to newChannel.id))
-
-        //get the others users document
-        firestoreInstance.collection("usuarios").document(otherUserId)
-            .collection("engagedChatChannels")
-            .document(currentUserId)
-            .set(mapOf("channelId" to newChannel.id))
-
-        onComplete(newChannel.id)
     }
 
     //list for all the messages inside a channel
@@ -74,8 +77,15 @@ object FirestoreUtil {
                     } else {
                         //add image message
                     }
+                    return@forEach
                 }
                 onListen(items)
             }
+    }
+
+    fun sendMessage(message: Message, channelId: String) {
+        chatChannelIsCollectionRef.document(channelId)
+            .collection("messages")
+            .add(message)
     }
 }

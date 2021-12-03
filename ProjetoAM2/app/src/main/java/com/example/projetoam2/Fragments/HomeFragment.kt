@@ -7,19 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 import com.example.projetoam2.ChatActivity
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.R
+import com.example.projetoam2.item.UserItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.GroupieViewHolder
-import com.xwray.groupie.Item
+import com.xwray.groupie.*
 
 class HomeFragment : Fragment() {
 
@@ -27,7 +28,7 @@ class HomeFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
 
-    private val adapter = GroupAdapter<GroupieViewHolder>()
+    private val adapter = GroupAdapter<ViewHolder>()
 
     //firestore
     val db = Firebase.firestore
@@ -45,6 +46,9 @@ class HomeFragment : Fragment() {
 
         userRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         userRecyclerView.adapter = adapter
+
+        //clear the list
+        adapter.clear()
 
         db.collection("usuarios").get().addOnSuccessListener{
                 documents ->
@@ -69,10 +73,9 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         return view
     }
-
 }
-class Users(val user : User) : Item<GroupieViewHolder>() {
-    override fun bind(viewHolder: GroupieViewHolder, position: Int) {
+class Users(val user : User) : Item<ViewHolder>() {
+    override fun bind(viewHolder: ViewHolder, position: Int) {
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = user.nome
     }
