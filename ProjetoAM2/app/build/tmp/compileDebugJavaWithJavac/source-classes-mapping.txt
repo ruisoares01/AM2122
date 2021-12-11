@@ -18,5 +18,7 @@ com/example/projetoam2/databinding/ActivityMainBinding.java
  com.example.projetoam2.databinding.ActivityMainBinding
 com/example/projetoam2/databinding/FragmentPerfilBinding.java
  com.example.projetoam2.databinding.FragmentPerfilBinding
+com/example/projetoam2/databinding/RowCalendarioBinding.java
+ com.example.projetoam2.databinding.RowCalendarioBinding
 com/example/projetoam2/databinding/ActivitySplashScreenBinding.java
  com.example.projetoam2.databinding.ActivitySplashScreenBinding

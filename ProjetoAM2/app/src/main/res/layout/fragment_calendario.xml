@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.CalendarioFragment">
+
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="331dp"
+        android:layout_height="295dp"
+        android:layout_marginBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="50dp"
+        android:paddingRight="10dp"
+        android:soundEffectsEnabled="true"
+        app:compactCalendarBackgroundColor="@color/white"
+        app:compactCalendarCurrentDayBackgroundColor="@color/white"
+        app:compactCalendarCurrentDayTextColor="@color/black"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="@color/black"
+        app:compactCalendarCurrentSelectedDayTextColor="#FFFFFF"
+        app:compactCalendarMultiEventIndicatorColor="@color/black"
+        app:compactCalendarOtherMonthDaysTextColor="#FFFFFF"
+        app:compactCalendarShouldSelectFirstDayOfMonthOnScroll="false"
+        app:compactCalendarTargetHeight="340dp"
+        app:compactCalendarTextColor="@color/black"
+        app:compactCalendarTextSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/listViewCalendario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/leftArrowImage"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:background="@drawable/ic_baseline_chevron_left_24"
+        android:backgroundTint="@color/Ipca"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/compactcalendar_view"
+        app:layout_constraintEnd_toStartOf="@+id/compactcalendar_view"
+        app:layout_constraintTop_toTopOf="@+id/mesdocalendario"
+        app:layout_constraintVertical_bias="0.494" />
+
+    <ImageView
+        android:id="@+id/rightArrowImage"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:background="@drawable/ic_baseline_chevron_right_24"
+        android:backgroundTint="@color/Ipca"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/compactcalendar_view"
+        app:layout_constraintStart_toEndOf="@+id/compactcalendar_view"
+        app:layout_constraintTop_toTopOf="@+id/mesdocalendario"
+        app:layout_constraintVertical_bias="0.494"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/mesdocalendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="XXXX-XXXX"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/compactcalendar_view"
+        app:layout_constraintEnd_toEndOf="@+id/compactcalendar_view"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/compactcalendar_view" />
+
+    <ListView
+        android:id="@+id/listViewCalendario"
+        android:layout_width="418dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
