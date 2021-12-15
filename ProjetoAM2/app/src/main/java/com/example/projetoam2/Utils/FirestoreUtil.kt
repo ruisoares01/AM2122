@@ -21,6 +21,8 @@ object FirestoreUtil {
 
     private val chatChannelIsCollectionRef = firestoreInstance.collection("Chat")
 
+    private val groupChannelIsCollectionRef = firestoreInstance.collection("grupos")
+
 
     fun getOrCreateChatChannel(otherUserId: String, onComplete: (channelId: String) -> Unit) {
         //check which chat the user is in
@@ -52,10 +54,30 @@ object FirestoreUtil {
                     .set(mapOf("channelId" to newChannel.id))
 
                 onComplete(newChannel.id)
-
-
             }
 
+    }
+
+    fun createGroupChannel(userIds: MutableList<String>, onComplete: (grupoId: String) -> Unit) {
+        //check which chat the user is in
+
+        //if the chat channel doesn't exists we need to create it
+        val currentUserId = FirebaseAuth.getInstance().currentUser!!.uid
+
+        //stores a document ref to the new chat channel even before its created in Firestore
+        val newGroupChannel = groupChannelIsCollectionRef.document()
+        newGroupChannel.set(GroupChannel(userIds))
+
+        userIds.forEach {
+
+            firestoreInstance.collection("usuarios")
+                .document(it)
+                .collection("grupo")
+                .document(newGroupChannel.id)
+
+        }
+
+        onComplete(newGroupChannel.id)
     }
 
     //list for all the messages inside a channel
@@ -83,9 +105,40 @@ object FirestoreUtil {
             }
     }
 
+    //list for all the messages inside a channel
+    fun addGroupMessagesListener(groupId: String, context: Context,
+                                onListen: (List<Item>) -> Unit): ListenerRegistration {
+        //get the document with name channel Id and get the collection of messages to order the messages by time
+        return groupChannelIsCollectionRef.document(groupId).collection("mensagens")
+            .orderBy("time")
+            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+                if (firebaseFirestoreException != null) {
+                    Log.e("FIRESTORE", "GroupMessagesListener error", firebaseFirestoreException)
+                    return@addSnapshotListener
+                }
+
+                val items = mutableListOf<Item>()
+                querySnapshot!!.documents.forEach {
+                    if (it["type"] == MessageType.TEXT) {
+                        items.add(TextMessageItem(it.toObject(TextMessage::class.java)!!, context))
+                    } else {
+                        //add image message
+                    }
+                    return@forEach
+                }
+                onListen(items)
+            }
+    }
+
     fun sendMessage(message: Message, channelId: String) {
         chatChannelIsCollectionRef.document(channelId)
             .collection("messages")
+            .add(message)
+    }
+
+    fun sendGroupMessage(message: Message, groupId: String) {
+        groupChannelIsCollectionRef.document(groupId)
+            .collection("mensagens")
             .add(message)
     }
 }
