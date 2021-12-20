@@ -1,6 +1,7 @@
 package com.example.projetoam2.Fragments
 
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.transition.AutoTransition
 import android.transition.TransitionManager
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
@@ -15,11 +17,20 @@ import com.example.projetoam2.Model.Eventos
 import com.example.projetoam2.R
 import com.github.sundeepk.compactcalendarview.CompactCalendarView
 import com.github.sundeepk.compactcalendarview.domain.Event
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.firestoreSettings
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.row_calendario.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import org.jetbrains.anko.backgroundColor
 import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class CalendarioFragment : Fragment() {
@@ -29,6 +40,9 @@ class CalendarioFragment : Fragment() {
     lateinit var adapterlisteventos : CalendarioEventosAdapter
     private val dateFormatMonth = SimpleDateFormat("MMMM- yyyy", Locale.getDefault())
     var compactCalendar: CompactCalendarView? = null
+    val db = Firebase.firestore
+    var arrayChats : MutableList<String> = arrayListOf()
+
 
     fun Events() {
         // Required empty public constructor
@@ -38,6 +52,7 @@ class CalendarioFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -49,7 +64,6 @@ class CalendarioFragment : Fragment() {
 
         //Por o primeiro dia da semana como Domingo
         compactCalendar!!.setFirstDayOfWeek(2)
-
 
 
         val text = view.findViewById<TextView>(R.id.mesdocalendario)
@@ -79,6 +93,39 @@ class CalendarioFragment : Fragment() {
             Color.parseColor("#37474F"),
         )
 
+        //Começar parte do Firebase aqui <---------------------
+        var x=0;
+        var stringdocument = ""
+        arrayChats.clear()
+        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("Salachat").get()
+            .addOnSuccessListener { document ->
+                while(x<document.documents.size){
+                    if (document != null) {
+                        arrayChats.add(x,document.documents.get(x).data?.values.toString().replace("[","").replace("]",""))
+                        println( "DocumentSnapshot data: ${document.documents.get(x).data?.values.toString()}")
+                    }
+                    println("x : $x")
+                    println("On While , List of chats --> " +arrayChats)
+                    x += 1
+                }
+            }
+            .addOnFailureListener { exception ->
+                println("Had expection when searching for salachats in usuarios , error info: $exception")
+            }
+
+        for(arrayChat in arrayChats){
+            db.collection("Chat").document(arrayChat).collection("Salachat").get()
+                .addOnSuccessListener {
+                    println("On for , each chat --> "+arrayChat)
+                }
+                .addOnFailureListener { exception ->
+                    println("Had expection when searching for events on Chat , error info: $exception")
+                }
+        }
+
+
+
+
         //Escolhe um item (neste caso cor) aleatorio do array
         var coraleatoria = coreslist.random()
 
@@ -92,6 +139,10 @@ class CalendarioFragment : Fragment() {
             Event(coraleatoria, 1626562800000, "Inicio Sao Joao * Um mes atrasado"),
             Event(coraleatoria, 1626822000000, "Fim Sao Joao * Um mes atrasado")
         )
+
+
+
+
 
         for(Event in eventosapagar){
             var coranterior = coraleatoria
@@ -112,6 +163,34 @@ class CalendarioFragment : Fragment() {
             compactCalendar!!.scrollRight()
         }
 
+        //Obtem a data atual no formato ISO
+        val firstDate = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE)
+
+        //Converte a data atual para Ano-Mes-Dia
+        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+        val date = formatter.parse(firstDate)
+
+        //Verifica qual é o mês atual em numero e converte o mesmo para extenso
+        var mesinicial = ""
+        when (DateTimeFormatter.ofPattern("MM").format(date)) {
+            "01" -> mesinicial = "January"
+            "02" -> mesinicial = "February"
+            "03" -> mesinicial = "March"
+            "04" -> mesinicial = "April"
+            "05" -> mesinicial = "May"
+            "06" -> mesinicial = "June"
+            "07" -> mesinicial = "July"
+            "08" -> mesinicial = "August"
+            "09" -> mesinicial = "September"
+            "10" -> mesinicial = "October"
+            "11" -> mesinicial = "November"
+            "12" -> mesinicial = "December"
+        }
+        //Declara diferentes formatações da data
+        val anoinicial = DateTimeFormatter.ofPattern("yyyy").format(date)
+
+        //Declara o texto do mesdocalendario mes em extenso e o ano
+        view.findViewById<TextView>(R.id.mesdocalendario).text = "$mesinicial- $anoinicial"
 
 
 
@@ -292,7 +371,7 @@ class CalendarioFragment : Fragment() {
             dateEventlist.text = formatterhour.format(Date(eventoscalendario[position].timeInMillis))
             titleEventList.text = datadescricaotitulo[0]
             descEventList.text = datadescricaotitulo[1]
-            cardView.setBackgroundColor(eventoscalendario[position].color)
+            //cardView.setBackgroundColor(eventoscalendario[position].color)
 
 
             return rowView
