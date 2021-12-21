@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\c1fc5149baa9ea4cc87631d70e7d3f65\\transformed\\jetified-firebase-messaging-22.0.0\\res\\values-de\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "73",
-                        "endOffsets": "280"
-                    },
-                    "to": {
-                        "startLines": "57",
-                        "startColumns": "4",
-                        "startOffsets": "6403",
-                        "endColumns": "77",
-                        "endOffsets": "6476"
-                    }
-                },
-                {
                     "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\3e05de34d1589a42ebd1e1b8b4938744\\transformed\\jetified-play-services-base-17.5.0\\res\\values-de\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -71,6 +54,23 @@
                         "endLines": "5,33,34,35,36,55,56,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,107",
                         "endColumns": "12,83,100,121,80,65,93,69,58,107,68,57,71,63,53,127,59,61,53,77,136,91,83,114,83,85,89,66,65,73,81,92,73,77,71,73,91,81,88,88,73,77,85,54,66,79,83,61,63,62,106,103,98,105,81",
                         "endOffsets": "283,3094,3195,3317,3398,6304,6398,6546,6605,6713,6782,6840,6912,6976,7030,7158,7218,7280,7334,7412,7549,7641,7725,7840,7924,8010,8100,8167,8233,8307,8389,8482,8556,8634,8706,8780,8872,8954,9043,9132,9206,9284,9370,9425,9492,9572,9656,9718,9782,9845,9952,10056,10155,10261,10566"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\c9e17c9569dc674c19e73edabc7a711a\\transformed\\jetified-firebase-messaging-23.0.0\\res\\values-de\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "73",
+                        "endOffsets": "280"
+                    },
+                    "to": {
+                        "startLines": "57",
+                        "startColumns": "4",
+                        "startOffsets": "6403",
+                        "endColumns": "77",
+                        "endOffsets": "6476"
                     }
                 },
                 {

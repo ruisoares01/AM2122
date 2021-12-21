@@ -6,12 +6,16 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.projetoam2.Model.Dados
 import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 import java.util.regex.Pattern
+
+lateinit var dados : Dados
 
 class LoginActivity : AppCompatActivity() {
 
@@ -24,6 +28,8 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var buttonLogin: Button
     private lateinit var buttonUserRegister: Button
+
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,6 +85,12 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
+                            val uid = FirebaseAuth.getInstance().uid
+                            db.collection("usuarios").document(uid!!).get()
+                                .addOnSuccessListener { document ->
+                                    dados = document.toObject(Dados::class.java)!!
+                                }
+
                             // code to login user
                             val intent = Intent(this@LoginActivity, MainActivity::class.java)
                             startActivity(intent)

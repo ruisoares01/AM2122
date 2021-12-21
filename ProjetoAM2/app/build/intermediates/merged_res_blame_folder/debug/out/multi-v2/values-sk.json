@@ -4,6 +4,23 @@
             "outputFile": "D:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\c9e17c9569dc674c19e73edabc7a711a\\transformed\\jetified-firebase-messaging-23.0.0\\res\\values-sk\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "69",
+                        "endOffsets": "276"
+                    },
+                    "to": {
+                        "startLines": "59",
+                        "startColumns": "4",
+                        "startOffsets": "6392",
+                        "endColumns": "73",
+                        "endOffsets": "6461"
+                    }
+                },
+                {
                     "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\6a8240edafc5611026bfcc1a45c99584\\transformed\\jetified-play-services-basement-17.5.0\\res\\values-sk\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -88,23 +105,6 @@
                         "endLines": "7,35,36,37,38,57,58,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,109",
                         "endColumns": "12,77,91,127,80,64,98,75,64,89,65,53,68,59,53,116,59,61,53,71,129,86,91,108,68,77,87,66,65,71,76,82,71,76,72,70,87,71,91,95,73,73,95,51,66,86,86,61,63,62,105,95,97,97,78",
                         "endOffsets": "378,3168,3260,3388,3469,6288,6387,6537,6602,6692,6758,6812,6881,6941,6995,7112,7172,7234,7288,7360,7490,7577,7669,7778,7847,7925,8013,8080,8146,8218,8295,8378,8450,8527,8600,8671,8759,8831,8923,9019,9093,9167,9263,9315,9382,9469,9556,9618,9682,9745,9851,9947,10045,10143,10455"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\c1fc5149baa9ea4cc87631d70e7d3f65\\transformed\\jetified-firebase-messaging-22.0.0\\res\\values-sk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "69",
-                        "endOffsets": "276"
-                    },
-                    "to": {
-                        "startLines": "59",
-                        "startColumns": "4",
-                        "startOffsets": "6392",
-                        "endColumns": "73",
-                        "endOffsets": "6461"
                     }
                 },
                 {

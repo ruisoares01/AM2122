@@ -252,6 +252,10 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
 attr clearsTag
 attr clickAction
 attr clockFaceBackgroundColor
@@ -1201,6 +1205,7 @@ color foreground_material_light
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ipca1
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1872,6 +1877,7 @@ drawable googleg_standard_color_18
 drawable ic_baseline_assignment_returned_24
 drawable ic_baseline_image_24
 drawable ic_baseline_send_24
+drawable ic_camera
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
@@ -1882,6 +1888,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_notifications
 drawable ic_notifications_black_24dp
 drawable imagesplash
 drawable material_cursor_drawable
@@ -2036,7 +2043,6 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
-id buttonBack
 id buttonLogin
 id buttonPanel
 id buttonRegister
@@ -2044,6 +2050,7 @@ id buttonUserRegister
 id cache_measures
 id cancel_action
 id cancel_button
+id cardName
 id carryVelocity
 id center
 id center_horizontal
@@ -2169,6 +2176,8 @@ id image
 id imageIpca
 id imageView
 id imageView3
+id imgPickImage
+id imgProfile
 id immediateStop
 id included
 id info
@@ -2290,6 +2299,9 @@ id percent
 id pin
 id position
 id postLayout
+id profileEmail
+id profileName
+id profileUid
 id progress_circular
 id progress_horizontal
 id radio
@@ -2421,6 +2433,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtProfileName
 id unchecked
 id uniform
 id unlabeled
@@ -3525,6 +3538,7 @@ styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCo
 styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carousel_firstView carousel_forwardTransition carousel_infinite carousel_nextState carousel_previousState carousel_touchUpMode carousel_touchUp_dampeningFactor carousel_touchUp_velocityThreshold
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize

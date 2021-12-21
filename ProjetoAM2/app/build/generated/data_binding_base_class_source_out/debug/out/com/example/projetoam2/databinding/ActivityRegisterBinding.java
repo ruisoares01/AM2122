@@ -6,13 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.projetoam2.R;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,9 +21,6 @@ import java.lang.String;
 public final class ActivityRegisterBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final ImageButton buttonBack;
 
   @NonNull
   public final Button buttonRegister;
@@ -36,16 +34,23 @@ public final class ActivityRegisterBinding implements ViewBinding {
   @NonNull
   public final EditText editTextPassword;
 
+  @NonNull
+  public final ImageView imgPickImage;
+
+  @NonNull
+  public final CircleImageView imgProfile;
+
   private ActivityRegisterBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton buttonBack, @NonNull Button buttonRegister,
-      @NonNull EditText editTextEmail, @NonNull EditText editTextName,
-      @NonNull EditText editTextPassword) {
+      @NonNull Button buttonRegister, @NonNull EditText editTextEmail,
+      @NonNull EditText editTextName, @NonNull EditText editTextPassword,
+      @NonNull ImageView imgPickImage, @NonNull CircleImageView imgProfile) {
     this.rootView = rootView;
-    this.buttonBack = buttonBack;
     this.buttonRegister = buttonRegister;
     this.editTextEmail = editTextEmail;
     this.editTextName = editTextName;
     this.editTextPassword = editTextPassword;
+    this.imgPickImage = imgPickImage;
+    this.imgProfile = imgProfile;
   }
 
   @Override
@@ -75,12 +80,6 @@ public final class ActivityRegisterBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.buttonBack;
-      ImageButton buttonBack = ViewBindings.findChildViewById(rootView, id);
-      if (buttonBack == null) {
-        break missingId;
-      }
-
       id = R.id.buttonRegister;
       Button buttonRegister = ViewBindings.findChildViewById(rootView, id);
       if (buttonRegister == null) {
@@ -105,8 +104,20 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRegisterBinding((ConstraintLayout) rootView, buttonBack, buttonRegister,
-          editTextEmail, editTextName, editTextPassword);
+      id = R.id.imgPickImage;
+      ImageView imgPickImage = ViewBindings.findChildViewById(rootView, id);
+      if (imgPickImage == null) {
+        break missingId;
+      }
+
+      id = R.id.imgProfile;
+      CircleImageView imgProfile = ViewBindings.findChildViewById(rootView, id);
+      if (imgProfile == null) {
+        break missingId;
+      }
+
+      return new ActivityRegisterBinding((ConstraintLayout) rootView, buttonRegister, editTextEmail,
+          editTextName, editTextPassword, imgPickImage, imgProfile);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
