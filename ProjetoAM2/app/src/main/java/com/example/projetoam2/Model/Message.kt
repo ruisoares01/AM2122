@@ -1,15 +1,14 @@
 package com.example.projetoam2.Model
 
-class Message {
+import java.util.*
 
-    var message: String? = null
-    var senderId: String? = null
+object MessageType{
+    const val TEXT = "TEXT"
+    const val IMAGE = "IMAGE"
+}
 
-    constructor(){}
-
-    constructor(message: String?, senderId: String?){
-        this.message = message
-        this.senderId = senderId
-
-    }
+interface Message {
+    val time: Date
+    val senderId : String
+    val type: String
 }

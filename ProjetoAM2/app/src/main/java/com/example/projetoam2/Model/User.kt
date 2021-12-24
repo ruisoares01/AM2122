@@ -1,21 +1,12 @@
 package com.example.projetoam2.Model
 
-class User{
+import android.app.DownloadManager
+import android.graphics.Bitmap
+import com.google.firebase.firestore.QueryDocumentSnapshot
 
-    var uid : String? = null
-    var nome : String? = null
-    var email : String? = null
-    var linkfoto : String? = null
+class User(val nome : String, val email: String,val uid : String, val linkfoto: String){
 
-
-    constructor(uid: String,nome: String,email: String,linkfoto: String){
-
-        this.uid = uid
-        this.nome = nome
-        this.email = email
-        this.linkfoto = linkfoto
-
+    constructor() : this("","","", ""){
     }
-
 
 }
