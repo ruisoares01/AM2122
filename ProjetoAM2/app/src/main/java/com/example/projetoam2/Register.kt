@@ -88,7 +88,7 @@ class Register : AppCompatActivity() {
 
                         addUserToDatabase(nome, email, auth.currentUser?.uid!!)
 
-                        val intent = Intent(this@Register, MainActivity::class.java)
+                        val intent = Intent(this@Register, LoginActivity::class.java)
                         startActivity(intent)
 
                     } else {
@@ -101,10 +101,10 @@ class Register : AppCompatActivity() {
         }
     }
 
-    private fun addUserToDatabase(nome: String, email: String, uid:String){
+    private fun addUserToDatabase(nome: String, email: String, uid: String){
         var user : User
 
-        user = User(nome,email,uid, "https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/Avatar_icon_green.png?alt=media&token=8e6d8680-d431-4a98-a6a8-60b8000bb3da")
+        user = User(uid,nome,email, "https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/Avatar_icon_green.png?alt=media&token=8e6d8680-d431-4a98-a6a8-60b8000bb3da")
         db.collection("usuarios").document(uid).set(user)
 
     }
@@ -142,6 +142,7 @@ class Register : AppCompatActivity() {
                     val user = User(uid, dados.nome, dados.email, linkfoto)
 
                     db.collection("usuarios").document(uid).set(user).addOnSuccessListener {
+                        println("deu")
                     }
 
                 }

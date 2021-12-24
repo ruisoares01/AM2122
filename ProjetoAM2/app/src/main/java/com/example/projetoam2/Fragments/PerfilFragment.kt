@@ -22,6 +22,10 @@ import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
+import androidx.appcompat.app.AppCompatActivity
+
+
+
 
 
 class PerfilFragment : Fragment() {
@@ -41,7 +45,7 @@ class PerfilFragment : Fragment() {
     ): View? {
 
         //hide action bar
-        //supportActionBar?.hide()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         val resolver = activity?.contentResolver
 

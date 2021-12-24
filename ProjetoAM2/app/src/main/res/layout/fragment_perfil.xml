@@ -10,11 +10,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
         tools:context=".Fragment.ProfileFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
             android:orientation="vertical"
             android:weightSum="2">
 
@@ -53,8 +57,8 @@
                     android:layout_gravity="center"
                     android:layout_weight=".3"
                     android:text="Nothing"
-                    android:textSize="20sp"
                     android:textColor="@color/white"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
 
@@ -81,8 +85,8 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Username"
-                            android:textSize="20sp"
                             android:textColor="@color/black"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -98,8 +102,8 @@
                                 android:layout_marginStart="5dp"
                                 android:layout_weight=".9"
                                 android:text="Nome"
-                                android:textSize="15sp"
                                 android:textColor="@color/black"
+                                android:textSize="15sp"
                                 android:textStyle="bold" />
 
 
@@ -122,8 +126,8 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Email"
-                            android:textSize="20sp"
                             android:textColor="@color/black"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -132,8 +136,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:text="Nothing"
-                            android:textSize="15sp"
                             android:textColor="@color/black"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -153,8 +157,8 @@
                             android:layout_height="wrap_content"
                             android:padding="10dp"
                             android:text="Uid"
-                            android:textSize="20sp"
                             android:textColor="@color/black"
+                            android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -163,8 +167,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:text="Nothing"
-                            android:textSize="15sp"
                             android:textColor="@color/black"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
