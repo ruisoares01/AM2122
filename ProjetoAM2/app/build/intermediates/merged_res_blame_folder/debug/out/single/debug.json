@@ -12,12 +12,20 @@
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_baseline_chevron_left_24.xml"
     },
     {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle_createevent_text_background.xml.flat",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\rectangle_createevent_text_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_text_box_layout.xml.flat",
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\text_box_layout.xml"
     },
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle_createevent_textview_background.xml.flat",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\rectangle_createevent_textview_background.xml"
     },
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_perfil.xml.flat",
@@ -30,6 +38,10 @@
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_down_24.xml.flat",
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_down_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_rectangle_createeevent_bigtext_background.xml.flat",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\rectangle_createeevent_bigtext_background.xml"
     },
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_up_24.xml.flat",
@@ -102,6 +114,10 @@
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_home_black_24dp.xml.flat",
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_create_event.xml.flat",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_create_event.xml"
     },
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_card_view.xml.flat",
@@ -194,6 +210,10 @@
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_image_24.xml.flat",
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\ic_baseline_image_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle.xml.flat",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\drawable\\circle.xml"
     },
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\merged_res\\debug\\menu_menu.xml.flat",

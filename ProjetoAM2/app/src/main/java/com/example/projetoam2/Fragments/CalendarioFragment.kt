@@ -114,7 +114,7 @@ class CalendarioFragment : Fragment() {
             }
 
         for(arrayChat in arrayChats){
-            db.collection("Chat").document(arrayChat).collection("Salachat").get()
+            db.collection("Chat").document(arrayChat).collection("events").get()
                 .addOnSuccessListener {
                     println("On for , each chat --> "+arrayChat)
                 }
@@ -137,9 +137,9 @@ class CalendarioFragment : Fragment() {
             Event(coraleatoria, 1624274932000, "Teste * MegaTest"),
             Event(coraleatoria, 1623082189198, "Dia 7 * Ja passou"),
             Event(coraleatoria, 1626562800000, "Inicio Sao Joao * Um mes atrasado"),
-            Event(coraleatoria, 1626822000000, "Fim Sao Joao * Um mes atrasado")
+            Event(coraleatoria, 1626822000000, "Fim Sao Joao * Um mes atrasado"),
+            Event(Color.RED,1640544916488,"Após Natal")
         )
-
 
 
 
@@ -235,81 +235,7 @@ class CalendarioFragment : Fragment() {
     }
 
 
-/*    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View {
 
-        val view: View = inflater.inflate(R.layout.row_calendario, container, false)
-
-        //Declara o calendario
-        val compactCalendar = view.findViewById(R.id.compactcalendar_view) as CompactCalendarView
-
-        //Por o primeiro dia da semana como Domingo
-        compactCalendar.setFirstDayOfWeek(2)
-
-        //Fazer com o calendario use somente a abriviação de 3 letras dos dias da semana
-        compactCalendar.setUseThreeLetterAbbreviation(true)
-
-        val listViewCalendarioEventos = view.findViewById<ListView>(R.id.listViewCalendario)
-
-        adapterlisteventos = CalendarioEventosAdapter()
-        if (listViewCalendarioEventos != null) {
-            listViewCalendarioEventos.adapter = adapterlisteventos
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-        //println(str)
-
-
-        //Para testes declara uma MutableList de tipo Evento que contem um array com eventos
-        /*       var eventosapagar : MutableList<Event> = arrayListOf(
-                   Event(coraleatoria, 1607040400000L, "Teachers' Professional Day * Welcome to Teachers Day"),
-                   Event(coraleatoria, 1624273932000, "Tessdate * Description Test"),
-                   Event(coraleatoria, 1624274932000, "Teste * MegaTest"),
-                   Event(coraleatoria, 1623082189198, "Dia 7 * Ja passou"),
-                   Event(coraleatoria, 1626562800000, "Inicio Sao Joao * Um mes a frente"),
-                   Event(coraleatoria, 1626822000000, "Fim Sao Joao * Um mes a frente")
-               )
-
-
-               //Vê se as cor aleatoria nao se repete a anterior
-               //e para cada item que esteja no array dos eventos adiciona um evento no calendario
-               for(Event in eventosapagar){
-                   var coranterior = coraleatoria
-                   coraleatoria = coreslist.random()
-                   if(coranterior==coraleatoria){coraleatoria = coreslist.random()}
-                   compactCalendar!!.addEvent(Event(coraleatoria,Event.timeInMillis,Event.data))
-               }*/
-
-
-
-
-            //Após ser mudado de mês , obtem qual é o primeiro dia do mes e formata o mesmo e insere o mesmo numa textview
-            override fun onMonthScroll(firstDayOfNewMonth: Date) {
-                view.findViewById<TextView>(R.id.mesdocalendario)?.text = dateFormatMonth.format(firstDayOfNewMonth)
-            }
-        })
-
-
-
-        // Inflate the layout for this fragment
-        return view
-    }
-
-
-
-*/
 
 
 

@@ -35,6 +35,8 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim zoom_out
+anim zoom_show
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -65,6 +67,11 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array beige_pallet
+array colorful_pallet
+array material_pallet
+array material_pallet_dark
+array material_pallet_light
 attr SharedValue
 attr SharedValueId
 attr action
@@ -252,6 +259,8 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr clearDrawable
+attr clearPosition
 attr clearsTag
 attr clickAction
 attr clockFaceBackgroundColor
@@ -531,6 +540,7 @@ attr ifTagSet
 attr imageAspectRatio
 attr imageAspectRatioAdjust
 attr imageButtonStyle
+attr imageDialogTheme
 attr imagePanX
 attr imagePanY
 attr imageRotate
@@ -644,6 +654,7 @@ attr layout_goneMarginRight
 attr layout_goneMarginStart
 attr layout_goneMarginTop
 attr layout_insetEdge
+attr layout_keep
 attr layout_keyline
 attr layout_marginBaseline
 attr layout_optimizationLevel
@@ -801,6 +812,16 @@ attr percentWidth
 attr percentX
 attr percentY
 attr perpendicularPath_percent
+attr pinAnimationType
+attr pinBackgroundDrawable
+attr pinBackgroundIsSquare
+attr pinCharacterMask
+attr pinCharacterSpacing
+attr pinLineColors
+attr pinLineStroke
+attr pinLineStrokeSelected
+attr pinRepeatedHint
+attr pinTextBottomPadding
 attr pivotAnchor
 attr placeholderText
 attr placeholderTextAppearance
@@ -877,6 +898,7 @@ attr showPaths
 attr showText
 attr showTitle
 attr shrinkMotionSpec
+attr simpleDialogTheme
 attr singleChoiceItemLayout
 attr singleLine
 attr singleSelection
@@ -1304,6 +1326,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color pin_normal
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1322,6 +1345,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color simpledialogfragment_error_color
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -1482,6 +1506,7 @@ dimen design_tab_scrollable_min_width
 dimen design_tab_text_size
 dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
+dimen dialog_color_item_size
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
 dimen fastscroll_default_thickness
@@ -1845,6 +1870,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable arrow_mark
 drawable avd_hide_password
 drawable avd_show_password
 drawable background1
@@ -1858,6 +1884,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_style
 drawable calendarioicon
+drawable circle
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1885,6 +1912,8 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_arrow_forward
+drawable ic_arrow_forward_accent
 drawable ic_baseline_arrow_down_24
 drawable ic_baseline_arrow_up_24
 drawable ic_baseline_assignment_returned_24
@@ -1892,6 +1921,8 @@ drawable ic_baseline_chevron_left_24
 drawable ic_baseline_chevron_right_24
 drawable ic_baseline_image_24
 drawable ic_baseline_send_24
+drawable ic_check_white
+drawable ic_clear_search
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_home_black_24dp
@@ -1903,6 +1934,8 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable ic_palette_color
+drawable ic_palette_white
 drawable imagesplash
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -1942,11 +1975,16 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable perfilicon
 drawable rect_round_primary_color
+drawable rectangle_createeevent_bigtext_background
+drawable rectangle_createevent_text_background
+drawable rectangle_createevent_textview_background
 drawable rounded_corner
 drawable rounded_corners
 drawable send
 drawable test_custom_background
 drawable text_box_layout
+drawable tile
+drawable tiles
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -2028,6 +2066,8 @@ id alertTitle
 id aligned
 id all
 id allStates
+id alpha
+id alphaLabel
 id always
 id animateToEnd
 id animateToStart
@@ -2058,6 +2098,9 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id buttonBack
+id buttonCancelEvent
+id buttonColorEvent
+id buttonCreateEvent
 id buttonExpand
 id buttonLogin
 id buttonPanel
@@ -2073,8 +2116,10 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id checkBox
 id checkbox
 id checked
+id checkmark
 id chip
 id chip1
 id chip2
@@ -2088,6 +2133,11 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id color
+id colorNew
+id colorOld
+id colorWheel
+id colors
 id compactcalendar_view
 id confirm_button
 id constraint
@@ -2101,10 +2151,14 @@ id cos
 id counterclockwise
 id currentState
 id custom
+id customMessage
 id customPanel
+id customView
 id cut
 id dark
+id date
 id dateEventList
+id dateLayout
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2140,13 +2194,17 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editText
+id editTextDescricaoEvento
 id editTextEmail
 id editTextName
 id editTextPassword
 id editTextTextPassword
+id editTextTituloEvento
 id edit_query
 id edit_text
 id elastic
+id emptyView
 id end
 id endToStart
 id end_padder
@@ -2162,6 +2220,7 @@ id fill_horizontal
 id fill_large_indicator
 id fill_vertical
 id filled
+id filter
 id fitToContents
 id fixed
 id flip
@@ -2169,17 +2228,23 @@ id floating
 id forever
 id fragment_container
 id fragment_container_view_tag
+id fromBottom
 id frost
 id ghost_view
 id ghost_view_holder
 id gone
 id graph
 id graph_wrap
+id gridView
 id group_divider
 id grouping
 id groups
 id guideline
 id header_title
+id height
+id hexEditText
+id hexLabel
+id hexLayout
 id hideable
 id home
 id homeAsUp
@@ -2201,12 +2266,15 @@ id imageView3
 id immediateStop
 id included
 id info
+id infoText
+id inputLayout
 id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
+id label
 id labeled
 id layout
 id left
@@ -2218,6 +2286,7 @@ id line1
 id line3
 id linear
 id listMode
+id listView
 id listViewCalendario
 id list_item
 id loginActivity
@@ -2321,8 +2390,13 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id pinEntry
+id popIn
 id position
 id postLayout
+id progress
+id progressBar
+id progressText
 id progress_circular
 id progress_horizontal
 id radio
@@ -2336,6 +2410,7 @@ id rightArrowImage
 id rightToLeft
 id right_icon
 id right_side
+id ripple
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -2381,6 +2456,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinner
 id spline
 id split_action_bar
 id spread
@@ -2428,6 +2504,15 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
+id textView3
+id textView4
+id textView5
+id textView7
+id textViewData
+id textViewHoraFim
+id textViewHoraInicio
 id textView_message_time
 id text_input_end_icon
 id text_input_error_icon
@@ -2441,6 +2526,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id textview_message_text
 id time
+id timeLayout
 id title
 id titleDividerNoCustom
 id titleEventList
@@ -2456,6 +2542,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id transparencyBox
 id triangle
 id unchecked
 id uniform
@@ -2473,6 +2560,7 @@ id visible
 id visible_removing_fragment_view_tag
 id west
 id wide
+id width
 id withText
 id withinBounds
 id wrap
@@ -2551,6 +2639,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chat
+layout activity_create_event
 layout activity_login
 layout activity_main
 layout activity_register
@@ -2639,6 +2728,31 @@ layout row_calendario
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout simple_list_item
+layout simple_list_item_action
+layout simple_list_item_multiple_choice
+layout simple_list_item_single_choice
+layout simpledialogfragment_check_box
+layout simpledialogfragment_color_item
+layout simpledialogfragment_color_wheel
+layout simpledialogfragment_custom_view
+layout simpledialogfragment_form
+layout simpledialogfragment_form_item_check
+layout simpledialogfragment_form_item_color
+layout simpledialogfragment_form_item_datetime
+layout simpledialogfragment_form_item_hint
+layout simpledialogfragment_form_item_input
+layout simpledialogfragment_form_item_spinner
+layout simpledialogfragment_grid
+layout simpledialogfragment_image
+layout simpledialogfragment_image_hor_scroll
+layout simpledialogfragment_image_vert_scroll
+layout simpledialogfragment_input
+layout simpledialogfragment_list
+layout simpledialogfragment_list_item
+layout simpledialogfragment_pin
+layout simpledialogfragment_progress
+layout simpledialogfragment_progress_circle
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -2662,6 +2776,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
 navigation my_nav
+plurals at_least_x_chars
 plurals mtrl_badge_content_description
 raw typing_animation
 string abc_action_bar_home_description
@@ -2691,6 +2806,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string alphanumeric_only_error
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2699,6 +2815,7 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
+string clear
 string clear_text_end_icon_content_description
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -2718,8 +2835,10 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string date
 string default_notification_channel_id
 string default_web_client_id
+string email_address
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2732,9 +2851,14 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hello_blank_fragment
+string hex
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string input_not_a_given_option
+string invalid_email_address
 string item_view_role_description
+string letters_only_error
+string login
 string lorem_ipsum
 string material_clock_display_divider
 string material_clock_toggle_content_description
@@ -2791,19 +2915,30 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string name
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string password
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string phone_number
+string pin
 string project_id
+string required
+string rrggbb
 string search_menu_title
 string status_bar_notification_info_overflow
+string strong_pw_requirements
+string time
 string title_dashboard
 string title_home
 string title_notifications
+string transparency
+string user
+string wrong_pin
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -3036,6 +3171,7 @@ style CardView
 style CardView_Dark
 style CardView_Light
 style EmptyTheme
+style ImageDialogTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
 style MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar
@@ -3046,6 +3182,7 @@ style MaterialAlertDialog_MaterialComponents_Title_Panel
 style MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked
 style MaterialAlertDialog_MaterialComponents_Title_Text
 style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
+style OverflowText
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
@@ -3098,6 +3235,9 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style SimpleDialogMaterialTextInputStyle
+style SimpleDialogTheme
+style SimpleDialogTheme_Material
 style SplashScreenTheme
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
@@ -3563,11 +3703,13 @@ styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carou
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
+styleable ClearableEditText clearDrawable clearPosition
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance extraMultilineHeightEnabled forceApplySystemWindowInsetTop maxLines scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleCollapseMode titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
+styleable ColorWheelView layout_keep
 styleable CompactCalendarView compactCalendarBackgroundColor compactCalendarCurrentDayBackgroundColor compactCalendarCurrentDayIndicatorStyle compactCalendarCurrentDayTextColor compactCalendarCurrentSelectedDayBackgroundColor compactCalendarCurrentSelectedDayIndicatorStyle compactCalendarCurrentSelectedDayTextColor compactCalendarDisplayOtherMonthDays compactCalendarEventIndicatorStyle compactCalendarMultiEventIndicatorColor compactCalendarOtherMonthDaysTextColor compactCalendarShouldSelectFirstDayOfMonthOnScroll compactCalendarTargetHeight compactCalendarTextColor compactCalendarTextSize
 styleable CompoundButton android_button buttonCompat buttonTint buttonTintMode
 styleable Constraint android_orientation android_id android_visibility android_layout_width android_layout_height android_layout_marginLeft android_layout_marginTop android_layout_marginRight android_layout_marginBottom android_maxWidth android_maxHeight android_minWidth android_minHeight android_alpha android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_layout_marginStart android_layout_marginEnd android_translationZ android_elevation animateCircleAngleTo animateRelativeTo barrierAllowsGoneWidgets barrierDirection barrierMargin chainUseRtl constraint_referenced_ids constraint_referenced_tags drawPath flow_firstHorizontalBias flow_firstHorizontalStyle flow_firstVerticalBias flow_firstVerticalStyle flow_horizontalAlign flow_horizontalBias flow_horizontalGap flow_horizontalStyle flow_lastHorizontalBias flow_lastHorizontalStyle flow_lastVerticalBias flow_lastVerticalStyle flow_maxElementsWrap flow_verticalAlign flow_verticalBias flow_verticalGap flow_verticalStyle flow_wrapMode layout_constrainedHeight layout_constrainedWidth layout_constraintBaseline_creator layout_constraintBaseline_toBaselineOf layout_constraintBaseline_toBottomOf layout_constraintBaseline_toTopOf layout_constraintBottom_creator layout_constraintBottom_toBottomOf layout_constraintBottom_toTopOf layout_constraintCircle layout_constraintCircleAngle layout_constraintCircleRadius layout_constraintDimensionRatio layout_constraintEnd_toEndOf layout_constraintEnd_toStartOf layout_constraintGuide_begin layout_constraintGuide_end layout_constraintGuide_percent layout_constraintHeight layout_constraintHeight_default layout_constraintHeight_max layout_constraintHeight_min layout_constraintHeight_percent layout_constraintHorizontal_bias layout_constraintHorizontal_chainStyle layout_constraintHorizontal_weight layout_constraintLeft_creator layout_constraintLeft_toLeftOf layout_constraintLeft_toRightOf layout_constraintRight_creator layout_constraintRight_toLeftOf layout_constraintRight_toRightOf layout_constraintStart_toEndOf layout_constraintStart_toStartOf layout_constraintTag layout_constraintTop_creator layout_constraintTop_toBottomOf layout_constraintTop_toTopOf layout_constraintVertical_bias layout_constraintVertical_chainStyle layout_constraintVertical_weight layout_constraintWidth layout_constraintWidth_default layout_constraintWidth_max layout_constraintWidth_min layout_constraintWidth_percent layout_editor_absoluteX layout_editor_absoluteY layout_goneMarginBaseline layout_goneMarginBottom layout_goneMarginEnd layout_goneMarginLeft layout_goneMarginRight layout_goneMarginStart layout_goneMarginTop layout_marginBaseline layout_wrapBehaviorInParent motionProgress motionStagger pathMotionArc pivotAnchor polarRelativeTo quantizeMotionInterpolator quantizeMotionPhase quantizeMotionSteps transformPivotTarget transitionEasing transitionPathRotate visibilityMode
@@ -3650,6 +3792,7 @@ styleable NavigationView android_background android_fitsSystemWindows android_ma
 styleable Navigator android_label android_id
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
+styleable PinEntryEditText pinAnimationType pinBackgroundDrawable pinBackgroundIsSquare pinCharacterMask pinCharacterSpacing pinLineColors pinLineStroke pinLineStrokeSelected pinRepeatedHint pinTextBottomPadding
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode

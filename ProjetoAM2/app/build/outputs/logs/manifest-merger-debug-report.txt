@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [androidx.databinding:viewbinding:7.0.3] C:\Users\Francisco\.gradle\caches\transforms-3\157d92d4863206c3c9b16f53530e6411\transformed\jetified-viewbinding-7.0.3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.xwray:groupie-kotlin-android-extensions:2.0.3] C:\Users\Francisco\.gradle\caches\transforms-3\bac0e96e6147fe6ca4642ee2e054b7da\transformed\jetified-groupie-kotlin-android-extensions-2.0.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Francisco\.gradle\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:2:1-17:12
@@ -19,6 +19,7 @@ MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\Francisc
 MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Francisco\.gradle\caches\transforms-3\e5286a1bb5860cf129293afdf5239075\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Francisco\.gradle\caches\transforms-3\c430cba1e2137cc21b98d3a1b6f1ed6e\transformed\jetified-activity-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Francisco\.gradle\caches\transforms-3\c5a43ecc38ba44dc8fd6c5e2b1286340\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:2:1-9:12
+MERGED from [io.github.eltos:simpledialogfragments:3.5] C:\Users\Francisco\.gradle\caches\transforms-3\0e2457f37a3d2ef78118bde9db672806\transformed\jetified-simpledialogfragments-3.5\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Francisco\.gradle\caches\transforms-3\b21f7a2a288182e1905f66e4f264a5a0\transformed\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Francisco\.gradle\caches\transforms-3\85d28c44b86a0d7daf82e0bd918708c8\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\Francisco\.gradle\caches\transforms-3\aaa19b2d0925cfddca39a975541dc22d\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
@@ -26,6 +27,7 @@ MERGED from [com.github.sundeepk:compact-calendar-view:3.0.0] C:\Users\Francisco
 MERGED from [org.jetbrains.anko:anko:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\04f41e3e30e9f843be6deb248bdec559\transformed\jetified-anko-0.10.8\AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\6d54c4da6a15373aeb6e0c0fdbb2c88a\transformed\jetified-anko-appcompat-v7-0.10.8\AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\3cb7b83f5ef6d0f94c742afcbb7982ef\transformed\jetified-anko-appcompat-v7-coroutines-0.10.8\AndroidManifest.xml:2:1-13:12
+MERGED from [com.alimuzaffar.lib:pinentryedittext:2.0.6] C:\Users\Francisco\.gradle\caches\transforms-3\37614fdfb04ac549f2903b52d42c0a29\transformed\jetified-pinentryedittext-2.0.6\AndroidManifest.xml:2:1-11:12
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\aca4c5bc4556949e3fc400f79879009a\transformed\jetified-anko-appcompat-v7-commons-0.10.8\AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\5a20050b21a4a7f03f8cdc6d5fa8f0e7\transformed\jetified-appcompatV7-base-0.10.8\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\Francisco\.gradle\caches\transforms-3\9a6d2f2d4c80d275f325f86bc9c2ae54\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
@@ -43,6 +45,7 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Francisco\.gradl
 MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:2:1-26:12
 MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\73a43ea4df0ef6a9f156dd0e84698f5f\transformed\jetified-supportV4-base-0.10.8\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\8a7ce4fed95aa20f96fff8fb17064094\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\d9e358f3f874d608e5296688d226fe92\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:17:1-58:12
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\044d24b3a148b647c6efe58040dafdf7\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:15:1-34:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:15:1-38:12
@@ -95,7 +98,6 @@ MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Francisco\.gradle\ca
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Francisco\.gradle\caches\transforms-3\eb4f2707cb26f15ddb1eb72e4829ae12\transformed\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Francisco\.gradle\caches\transforms-3\95428964b3b6259aa312ff12349fd9f6\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Francisco\.gradle\caches\transforms-3\53ba64e63468cfbb9a20e1447f742423\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\d9e358f3f874d608e5296688d226fe92\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\37b450664d9e0b6d5a117f8e6212aa11\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Francisco\.gradle\caches\transforms-3\5687bca4c01262c64ecdf36cb76476b7\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\45b6182279af2618e79bf6d01e57c296\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -115,25 +117,25 @@ MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\Francisco\.grad
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Francisco\.gradle\caches\transforms-3\a4afedf8a39a596e383b921d3cb53d74\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\49b1b4f01a3b51d13b47b15257c0fc89\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\Francisco\.gradle\caches\transforms-3\bfdf5b4a95dda39c8872c10fd49a60cd\transformed\jetified-grpc-android-1.41.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:5:5-39:19
+ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:5:5-43:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Francisco\.gradle\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\Francisco\.gradle\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\Francisco\.gradle\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:22:5-38:19
@@ -146,6 +148,8 @@ MERGED from [com.google.firebase:firebase-messaging-ktx:22.0.0] C:\Users\Francis
 MERGED from [com.google.firebase:firebase-messaging-ktx:22.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\0e62db302f5fbcbe95683e12811dde69\transformed\jetified-firebase-messaging-ktx-22.0.0\AndroidManifest.xml:25:5-33:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\893ba6dc734555805e60b1c9b09ff832\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\893ba6dc734555805e60b1c9b09ff832\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:11:5-19:19
+MERGED from [io.github.eltos:simpledialogfragments:3.5] C:\Users\Francisco\.gradle\caches\transforms-3\0e2457f37a3d2ef78118bde9db672806\transformed\jetified-simpledialogfragments-3.5\AndroidManifest.xml:11:5-12:19
+MERGED from [io.github.eltos:simpledialogfragments:3.5] C:\Users\Francisco\.gradle\caches\transforms-3\0e2457f37a3d2ef78118bde9db672806\transformed\jetified-simpledialogfragments-3.5\AndroidManifest.xml:11:5-12:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Francisco\.gradle\caches\transforms-3\85d28c44b86a0d7daf82e0bd918708c8\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Francisco\.gradle\caches\transforms-3\85d28c44b86a0d7daf82e0bd918708c8\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\Francisco\.gradle\caches\transforms-3\aaa19b2d0925cfddca39a975541dc22d\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
@@ -278,6 +282,14 @@ ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\s
 		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:37:13-36
 	android:name
 		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:36:13-41
+activity#com.example.projetoam2.CreateEventActivity
+ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:39:9-42:48
+	android:label
+		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:42:13-45
+	android:exported
+		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:41:13-36
+	android:name
+		ADDED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:40:13-48
 uses-sdk
 INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Francisco\Desktop\IPCA\21_22\Projeto\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
@@ -312,6 +324,8 @@ MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Francisco\.gradle\ca
 MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Francisco\.gradle\caches\transforms-3\c430cba1e2137cc21b98d3a1b6f1ed6e\transformed\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Francisco\.gradle\caches\transforms-3\c5a43ecc38ba44dc8fd6c5e2b1286340\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\Francisco\.gradle\caches\transforms-3\c5a43ecc38ba44dc8fd6c5e2b1286340\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:5:5-7:41
+MERGED from [io.github.eltos:simpledialogfragments:3.5] C:\Users\Francisco\.gradle\caches\transforms-3\0e2457f37a3d2ef78118bde9db672806\transformed\jetified-simpledialogfragments-3.5\AndroidManifest.xml:7:5-9:41
+MERGED from [io.github.eltos:simpledialogfragments:3.5] C:\Users\Francisco\.gradle\caches\transforms-3\0e2457f37a3d2ef78118bde9db672806\transformed\jetified-simpledialogfragments-3.5\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Francisco\.gradle\caches\transforms-3\b21f7a2a288182e1905f66e4f264a5a0\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Francisco\.gradle\caches\transforms-3\b21f7a2a288182e1905f66e4f264a5a0\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Francisco\.gradle\caches\transforms-3\85d28c44b86a0d7daf82e0bd918708c8\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
@@ -326,6 +340,8 @@ MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] C:\Users\Francisco\.gr
 MERGED from [org.jetbrains.anko:anko-appcompat-v7:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\6d54c4da6a15373aeb6e0c0fdbb2c88a\transformed\jetified-anko-appcompat-v7-0.10.8\AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\3cb7b83f5ef6d0f94c742afcbb7982ef\transformed\jetified-anko-appcompat-v7-coroutines-0.10.8\AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\3cb7b83f5ef6d0f94c742afcbb7982ef\transformed\jetified-anko-appcompat-v7-coroutines-0.10.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.alimuzaffar.lib:pinentryedittext:2.0.6] C:\Users\Francisco\.gradle\caches\transforms-3\37614fdfb04ac549f2903b52d42c0a29\transformed\jetified-pinentryedittext-2.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.alimuzaffar.lib:pinentryedittext:2.0.6] C:\Users\Francisco\.gradle\caches\transforms-3\37614fdfb04ac549f2903b52d42c0a29\transformed\jetified-pinentryedittext-2.0.6\AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\aca4c5bc4556949e3fc400f79879009a\transformed\jetified-anko-appcompat-v7-commons-0.10.8\AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\aca4c5bc4556949e3fc400f79879009a\transformed\jetified-anko-appcompat-v7-commons-0.10.8\AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\5a20050b21a4a7f03f8cdc6d5fa8f0e7\transformed\jetified-appcompatV7-base-0.10.8\AndroidManifest.xml:7:5-9:41
@@ -360,6 +376,8 @@ MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] C:\Users\Francisco\.gradl
 MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] C:\Users\Francisco\.gradle\caches\transforms-3\73a43ea4df0ef6a9f156dd0e84698f5f\transformed\jetified-supportV4-base-0.10.8\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\8a7ce4fed95aa20f96fff8fb17064094\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\8a7ce4fed95aa20f96fff8fb17064094\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\d9e358f3f874d608e5296688d226fe92\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\d9e358f3f874d608e5296688d226fe92\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\c1fc5149baa9ea4cc87631d70e7d3f65\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\044d24b3a148b647c6efe58040dafdf7\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:19:5-21:41
@@ -464,8 +482,6 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Francisco\.gra
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Francisco\.gradle\caches\transforms-3\95428964b3b6259aa312ff12349fd9f6\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Francisco\.gradle\caches\transforms-3\53ba64e63468cfbb9a20e1447f742423\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Francisco\.gradle\caches\transforms-3\53ba64e63468cfbb9a20e1447f742423\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\d9e358f3f874d608e5296688d226fe92\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\d9e358f3f874d608e5296688d226fe92\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\37b450664d9e0b6d5a117f8e6212aa11\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Francisco\.gradle\caches\transforms-3\37b450664d9e0b6d5a117f8e6212aa11\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Francisco\.gradle\caches\transforms-3\5687bca4c01262c64ecdf36cb76476b7\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41

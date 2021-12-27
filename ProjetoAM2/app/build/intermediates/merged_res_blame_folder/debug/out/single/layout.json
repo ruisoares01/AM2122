@@ -1,13 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_chat.xml",
-        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_chat.xml"
-    },
-    {
-        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_home.xml"
-    },
-    {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_perfil.xml",
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_perfil.xml"
     },
@@ -16,12 +8,24 @@
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\item_text_message.xml"
     },
     {
-        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\row_calendario.xml",
-        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\row_calendario.xml"
-    },
-    {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
         "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_chat.xml",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_create_event.xml",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\activity_create_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\row_calendario.xml",
+        "source": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\src\\main\\res\\layout\\row_calendario.xml"
     },
     {
         "merged": "C:\\Users\\Francisco\\Desktop\\IPCA\\21_22\\Projeto\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
