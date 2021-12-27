@@ -17,19 +17,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back_button"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgProfile"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="60dp" />
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/backButton" />
 
         <TextView
             android:id="@+id/textViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="130dp"
             android:layout_toEndOf="@+id/imgProfile"
             android:text="Nome"
             android:textColor="@color/white"
@@ -66,7 +77,7 @@
             android:layout_marginEnd="8dp"
             android:backgroundTint="@color/ipca1"
             android:src="@drawable/ic_baseline_image_24"
-            android:tint="@color/Ipca"
+            android:tint="@color/white"
             app:fabSize="mini" />
 
         <com.google.android.material.textfield.TextInputEditText

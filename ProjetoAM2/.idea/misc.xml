@@ -55,7 +55,10 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26458333333333334" />
         <entry key="app/src/main/res/drawable-v24/message_layout_received.xml" value="0.25277777777777777" />
         <entry key="app/src/main/res/drawable/button_style.xml" value="0.2630208333333333" />
+        <entry key="app/src/main/res/drawable/edittext_style.xml" value="0.2630208333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_assignment_returned_24.xml" value="0.26458333333333334" />
+        <entry key="app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.2630208333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.2630208333333333" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.26458333333333334" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2630208333333333" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.26458333333333334" />
@@ -68,8 +71,10 @@
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/activity_listar_perfis.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2484375" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13677536231884058" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_other_profile.xml" value="0.2351851851851852" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.2484375" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2351851851851852" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.13134057971014493" />
         <entry key="app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_text_message.xml" value="0.33" />

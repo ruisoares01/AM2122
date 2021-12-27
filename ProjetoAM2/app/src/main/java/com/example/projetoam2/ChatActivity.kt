@@ -1,9 +1,11 @@
 package com.example.projetoam2
 
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -43,6 +45,11 @@ class ChatActivity : AppCompatActivity() {
       //  supportActionBar?.setDisplayHomeAsUpEnabled(true)
           supportActionBar?.hide()
 
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            finish()
+        }
+
         var otherUserName = ""
         var otherUserId = ""
         var linkfoto = ""
@@ -60,6 +67,10 @@ class ChatActivity : AppCompatActivity() {
 
         val nameProfile = findViewById<TextView>(R.id.textViewName)
         nameProfile.text = otherUserName
+
+        nameProfile.setOnClickListener {
+            startActivity(Intent(this@ChatActivity, OtherProfile::class.java))
+        }
 
         //get the chat channel
         FirestoreUtil.getOrCreateChatChannel(otherUserId) { channelId ->
