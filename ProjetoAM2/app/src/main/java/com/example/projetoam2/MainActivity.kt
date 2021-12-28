@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
+        supportActionBar?.hide()
+
         //fragment function
         replaceFragment(homeFragment)
 

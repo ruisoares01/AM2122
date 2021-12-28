@@ -3,6 +3,7 @@ package com.example.projetoam2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,11 +14,13 @@ import com.example.projetoam2.Utils.FirestoreUtil
 import com.example.projetoam2.item.UserItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ListenerRegistration
+import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.OnItemClickListener
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
+import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.item_text_message.*
@@ -40,14 +43,21 @@ class ChatActivity : AppCompatActivity() {
 
         var otherUserName = ""
         var otherUserId = ""
+        var linkfoto = ""
         val bundle = intent.extras
-
         //collect data
         bundle?.let {
             otherUserName = it.getString("name").toString()
             otherUserId = it.getString("uid").toString()
+            linkfoto = it.getString("linkfoto").toString()
 
         }
+
+        val imgprofile = findViewById<CircleImageView>(R.id.imgProfile)
+        Picasso.get().load(linkfoto).into(imgprofile)
+
+        val nameProfile = findViewById<TextView>(R.id.textViewName)
+        nameProfile.text = otherUserName
 
         //get the chat channel
         FirestoreUtil.getOrCreateChatChannel(otherUserId) { channelId ->
@@ -71,7 +81,7 @@ class ChatActivity : AppCompatActivity() {
         }
 
         //action bar title, name of the user
-        supportActionBar?.title = otherUserName
+       // supportActionBar?.title = otherUserName
 
     }
     private fun updateRecyclerView(messages: List<Item>) {

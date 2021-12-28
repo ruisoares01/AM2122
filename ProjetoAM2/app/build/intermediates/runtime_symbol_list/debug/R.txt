@@ -2307,6 +2307,7 @@ int id radio 0x7f080170
 int id ratio 0x7f080171
 int id rectangles 0x7f080172
 int id recyclerview_messages 0x7f080173
+int id relativelayout_actionbar 0x7f08020a
 int id relativelayout_message 0x7f080174
 int id reverseSawtooth 0x7f080175
 int id right 0x7f080176
@@ -2404,6 +2405,7 @@ int id textSpacerNoButtons 0x7f0801d1
 int id textSpacerNoTitle 0x7f0801d2
 int id textStart 0x7f0801d3
 int id textTop 0x7f0801d4
+int id textViewName 0x7f08020b
 int id textView_message_time 0x7f0801d5
 int id text_input_end_icon 0x7f0801d6
 int id text_input_error_icon 0x7f0801d7

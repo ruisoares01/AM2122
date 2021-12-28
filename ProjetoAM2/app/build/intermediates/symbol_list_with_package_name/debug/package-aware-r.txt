@@ -2308,6 +2308,7 @@ id radio
 id ratio
 id rectangles
 id recyclerview_messages
+id relativelayout_actionbar
 id relativelayout_message
 id reverseSawtooth
 id right
@@ -2405,6 +2406,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textViewName
 id textView_message_time
 id text_input_end_icon
 id text_input_error_icon

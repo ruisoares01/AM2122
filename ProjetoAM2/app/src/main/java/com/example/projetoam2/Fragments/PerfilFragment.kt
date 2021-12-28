@@ -32,6 +32,10 @@ class PerfilFragment : Fragment() {
     lateinit var linkfoto: String
     private val db = Firebase.firestore
 
+    private lateinit var perfilName : TextView
+    private lateinit var perfilEmail : TextView
+    private lateinit var uid : TextView
+
     lateinit var circleImageView: CircleImageView
 
 
@@ -45,29 +49,28 @@ class PerfilFragment : Fragment() {
 
         val resolver = activity?.contentResolver
 
-
         val view = inflater.inflate(R.layout.fragment_perfil, container, false)
 
         auth = FirebaseAuth.getInstance()
         var imgprofile = view.findViewById<CircleImageView>(R.id.imgProfile)
         Picasso.get().load(dados.linkfoto).into(imgprofile)
 
-        val profileName = view.findViewById<TextView>(R.id.profileName)
-        val profileEmail = view.findViewById<TextView>(R.id.profileEmail)
-        val uid = view.findViewById<TextView>(R.id.profileUid)
+
+        perfilName = view.findViewById<TextView>(R.id.profileName)
+        perfilEmail = view.findViewById<TextView>(R.id.profileEmail)
+        uid = view.findViewById<TextView>(R.id.profileUid)
+
         botaofoto = view.findViewById(R.id.imgPickImage)
-        profileName.text = dados.nome
-        profileEmail.text = dados.email
+        perfilName.text = dados.nome
+        perfilEmail.text = dados.email
         uid.text = dados.uid
-
-
 
         botaofoto.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
             startActivityForResult(intent, 0)
 
-            val getResult =
+          val getResult =
                 registerForActivityResult(ActivityResultContracts.StartActivityForResult()
                 ){
                     if (it.resultCode == Activity.RESULT_OK) {
@@ -86,9 +89,6 @@ class PerfilFragment : Fragment() {
 
             getResult.launch(intent)
         }
-
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_perfil, container, false)
 
         return view
     }
