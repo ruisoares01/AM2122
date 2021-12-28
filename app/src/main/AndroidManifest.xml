@@ -10,11 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoAM2">
         <activity
+            android:name=".OtherProfile"
+            android:exported="false" />
+        <activity
             android:name=".ChatActivity"
             android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".Register"

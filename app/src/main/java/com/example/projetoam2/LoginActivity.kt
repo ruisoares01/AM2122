@@ -21,8 +21,6 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
-    var user = arrayListOf<User>()
-
     private lateinit var editEmail: EditText
     private lateinit var editPass: EditText
 
@@ -86,14 +84,15 @@ class LoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             val uid = FirebaseAuth.getInstance().uid
+                            println("UId" +  uid)
                             db.collection("usuarios").document(uid!!).get()
                                 .addOnSuccessListener { document ->
                                     dados = document.toObject(Dados::class.java)!!
                                 }
-
                             // code to login user
                             val intent = Intent(this@LoginActivity, MainActivity::class.java)
                             startActivity(intent)
+                            finish()
 
                         } else {
                             Toast.makeText(

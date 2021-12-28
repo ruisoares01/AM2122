@@ -11,28 +11,39 @@
         android:id="@+id/relativelayout_actionbar"
         android:layout_width="411dp"
         android:layout_height="63dp"
-        android:background="@color/purple_500"
+        android:background="@color/Ipca"
         android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back_button"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgProfile"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginStart="60dp"
-            android:background="@drawable/perfilicon" />
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/backButton" />
 
         <TextView
             android:id="@+id/textViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="130dp"
             android:layout_toEndOf="@+id/imgProfile"
             android:text="Nome"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="30dp" />
 
     </RelativeLayout>
@@ -40,7 +51,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_messages"
         android:layout_width="match_parent"
-        android:layout_height="610dp"
+        android:layout_height="580dp"
+        android:layout_marginTop="38dp"
         app:layout_constraintBottom_toTopOf="@+id/relativelayout_message"
         app:layout_constraintTop_toBottomOf="@+id/relativelayout_actionbar" />
 
@@ -63,9 +75,9 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="#20C809"
+            android:backgroundTint="@color/ipca1"
             android:src="@drawable/ic_baseline_image_24"
-            android:tint="@color/green"
+            android:tint="@color/white"
             app:fabSize="mini" />
 
         <com.google.android.material.textfield.TextInputEditText

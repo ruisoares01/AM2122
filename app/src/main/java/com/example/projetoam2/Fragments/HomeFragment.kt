@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,19 +15,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.ChatActivity
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.R
+import com.example.projetoam2.dados
 import com.example.projetoam2.item.UserItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
 import com.xwray.groupie.*
+import de.hdodenhof.circleimageview.CircleImageView
+import org.jetbrains.anko.image
+import org.jetbrains.anko.imageURI
 
 class HomeFragment : Fragment() {
 
     //variaveis
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
 
     private val adapter = GroupAdapter<ViewHolder>()
 
@@ -65,6 +70,11 @@ class HomeFragment : Fragment() {
 
                 intent.putExtra("name", utilizador.user.nome)
                 intent.putExtra("uid", utilizador.user.uid)
+                intent.putExtra("email", utilizador.user.email)
+                intent.putExtra("linkfoto", utilizador.user.linkfoto)
+                intent.putExtra("nAluno", utilizador.user.naluno)
+                intent.putExtra("curso", utilizador.user.curso)
+                intent.putExtra("morada", utilizador.user.morada)
 
                 startActivity(intent)
             }
@@ -78,6 +88,10 @@ class Users(val user : User) : Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = user.nome
+
+        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageView3)
+        Picasso.get().load(user.linkfoto).into(imgprofile)
+
     }
 
     override fun getLayout() = R.layout.user_layout

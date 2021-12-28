@@ -25,6 +25,9 @@ class Register : AppCompatActivity() {
     private lateinit var editName : EditText
     private lateinit var editEmail : EditText
     private lateinit var editPass : EditText
+    private lateinit var editnAluno : EditText
+    private lateinit var editCurso : EditText
+    private lateinit var editMorada : EditText
 
     private lateinit var buttonRegister : Button
     lateinit var botaofoto : ImageView
@@ -71,11 +74,17 @@ class Register : AppCompatActivity() {
         editName = findViewById(R.id.editTextName)
         editEmail = findViewById(R.id.editTextEmail)
         editPass = findViewById(R.id.editTextPassword)
+        editnAluno = findViewById(R.id.editTextNaluno)
+        editCurso = findViewById(R.id.editTextCurso)
+        editMorada = findViewById(R.id.editTextMorada)
 
         // declaring the variables for the views
         val nome = editName.text.toString()
         val email = editEmail.text.toString()
         val password = editPass.text.toString()
+        val nAluno = editnAluno.text.toString()
+        val curso = editCurso.text.toString()
+        val morada = editMorada.text.toString()
 
 
         // in this validation we are allowing the register method using an email, name and password
@@ -86,9 +95,9 @@ class Register : AppCompatActivity() {
                     if (task.isSuccessful) {
                         val uid = FirebaseAuth.getInstance().uid
 
-                        addUserToDatabase(nome, email, auth.currentUser?.uid!!)
+                        addUserToDatabase(nome, email, nAluno, curso, morada, auth.currentUser?.uid!!)
 
-                        val intent = Intent(this@Register, MainActivity::class.java)
+                        val intent = Intent(this@Register, LoginActivity::class.java)
                         startActivity(intent)
 
                     } else {
@@ -101,10 +110,10 @@ class Register : AppCompatActivity() {
         }
     }
 
-    private fun addUserToDatabase(nome: String, email: String, uid:String){
+    private fun addUserToDatabase(nome: String, email: String, nAluno: String, curso: String, morada: String, uid: String){
         var user : User
 
-        user = User(nome,email,uid, "https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/Avatar_icon_green.png?alt=media&token=8e6d8680-d431-4a98-a6a8-60b8000bb3da")
+        user = User(uid,nome,email,nAluno,curso,morada, "https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/Avatar_icon_green.png?alt=media&token=8e6d8680-d431-4a98-a6a8-60b8000bb3da")
         db.collection("usuarios").document(uid).set(user)
 
     }
@@ -139,9 +148,10 @@ class Register : AppCompatActivity() {
                 ref.downloadUrl.addOnSuccessListener {
                     linkfoto = it.toString()
 
-                    val user = User(uid, dados.nome, dados.email, linkfoto)
+                    val user = User(uid, dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, linkfoto)
 
                     db.collection("usuarios").document(uid).set(user).addOnSuccessListener {
+                        println("deu")
                     }
 
                 }

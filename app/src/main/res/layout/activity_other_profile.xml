@@ -37,14 +37,6 @@
                         android:layout_height="100dp"
                         android:layout_gravity="center" />
 
-                    <ImageView
-                        android:id="@+id/imgPickImage"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:src="@drawable/ic_camera"
-                        app:layout_anchor="@id/imgProfile"
-                        app:layout_anchorGravity="end|center" />
-
                     <TextView
                         android:id="@+id/txtProfileName"
                         android:layout_width="wrap_content"

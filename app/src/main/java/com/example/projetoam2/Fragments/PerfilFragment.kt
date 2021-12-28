@@ -22,21 +22,21 @@ import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
+import androidx.appcompat.app.AppCompatActivity
+
+
+
 
 
 class PerfilFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
     lateinit var botaofoto : ImageView
-    lateinit var selectedPhotoUri: Uri
-    lateinit var linkfoto: String
-    private val db = Firebase.firestore
+    var selectedPhotoUri: Uri? = null
+    var linkfoto : String = ""
+    val db = Firebase.firestore
 
-    private lateinit var perfilName : TextView
-    private lateinit var perfilEmail : TextView
-    private lateinit var uid : TextView
-
-    lateinit var circleImageView: CircleImageView
+    private lateinit var circleImageView: CircleImageView
 
 
     override fun onCreateView(
@@ -45,32 +45,35 @@ class PerfilFragment : Fragment() {
     ): View? {
 
         //hide action bar
-        //supportActionBar?.hide()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         val resolver = activity?.contentResolver
 
         val view = inflater.inflate(R.layout.fragment_perfil, container, false)
 
         auth = FirebaseAuth.getInstance()
-        var imgprofile = view.findViewById<CircleImageView>(R.id.imgProfile)
+        val imgprofile = view.findViewById<CircleImageView>(R.id.imgProfile)
         Picasso.get().load(dados.linkfoto).into(imgprofile)
 
-
-        perfilName = view.findViewById<TextView>(R.id.profileName)
-        perfilEmail = view.findViewById<TextView>(R.id.profileEmail)
-        uid = view.findViewById<TextView>(R.id.profileUid)
-
+        val profileName = view.findViewById<TextView>(R.id.txtProfileName)
+        val profileEmail = view.findViewById<TextView>(R.id.profileEmail)
+        val profileAluno = view.findViewById<TextView>(R.id.profilenAluno)
+        val profileCurso = view.findViewById<TextView>(R.id.profileCurso)
+        val profileMorada = view.findViewById<TextView>(R.id.profileMorada)
         botaofoto = view.findViewById(R.id.imgPickImage)
-        perfilName.text = dados.nome
-        perfilEmail.text = dados.email
-        uid.text = dados.uid
+        profileName.text = dados.nome
+        profileEmail.text = dados.email
+        profileAluno.text = dados.naluno
+        profileCurso.text = dados.curso
+        profileMorada.text = dados.morada
+
 
         botaofoto.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
             startActivityForResult(intent, 0)
 
-          val getResult =
+            val getResult =
                 registerForActivityResult(ActivityResultContracts.StartActivityForResult()
                 ){
                     if (it.resultCode == Activity.RESULT_OK) {
@@ -90,6 +93,7 @@ class PerfilFragment : Fragment() {
             getResult.launch(intent)
         }
 
+
         return view
     }
 
@@ -108,7 +112,7 @@ class PerfilFragment : Fragment() {
 
                     Picasso.get().load(linkfoto).into(circleImageView)
 
-                    val user = User(dados.uid,  dados.nome, dados.email, linkfoto)
+                    val user = User(dados.uid,  dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, linkfoto)
 
                     db.collection("usuarios").document(uid).set(user).addOnSuccessListener {
 
