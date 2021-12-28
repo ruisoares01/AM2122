@@ -1,7 +1,8 @@
 # APP IPCAme
 
 Aplicação realizada no 1ºsemestre do 2ºano do curso CTeSP (Curso Tecnico Superior Professional) de Aplicações Moveis para a Instituição Politecnica do Cávado e Ave (IPCA)
-<a href="https://ipca.pt" target="_blank" rel="noreferrer"> <img src="https://etcetaljornal.pt/j/wp-content/uploads/2019/07/ipca-logo.jpg" alt="android" width="95" height="60"/> </a>
+
+<p> <a href="https://ipca.pt" target="_blank" rel="noreferrer"> <img src="https://etcetaljornal.pt/j/wp-content/uploads/2019/07/ipca-logo.jpg" alt="android" width="95" height="60"/> </a></p>
 
 
 ## Languagens e Ferramentas utilizadas:
@@ -21,11 +22,11 @@ Aplicação realizada no 1ºsemestre do 2ºano do curso CTeSP (Curso Tecnico Sup
 
 ## Desenvolvidores da aplicação:
 
-Francisco Simão
+* Francisco Simão
 
-Rui Soares
+* Rui Soares
 
-Gonçalo Costa
+* Gonçalo Costa
 
-Romeu Costa
+* Romeu Costa
 
