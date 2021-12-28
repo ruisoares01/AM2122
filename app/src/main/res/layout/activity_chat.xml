@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,14 +7,43 @@
     android:background="#EEEEEE"
     tools:context=".ChatActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_messages"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/relativelayout_message"
+    <RelativeLayout
+        android:id="@+id/relativelayout_actionbar"
+        android:layout_width="411dp"
+        android:layout_height="63dp"
+        android:background="@color/purple_500"
+        android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/perfilicon" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:text="Nome"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_messages"
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativelayout_message"
+        app:layout_constraintTop_toBottomOf="@+id/relativelayout_actionbar" />
+
     <RelativeLayout
         android:id="@+id/relativelayout_message"
         android:layout_width="0dp"
@@ -46,7 +75,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@+id/send_image"
-            android:background="@drawable/rounded_corners"
+            android:background="@drawable/rounded_corners_msg"
             android:elevation="2dp"
             android:hint="Enviar Mensagem"
             android:padding="9dp" />

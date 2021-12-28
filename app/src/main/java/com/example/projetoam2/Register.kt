@@ -1,18 +1,20 @@
 package com.example.projetoam2
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.Toast
+import android.provider.MediaStore
+import android.widget.*
 import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import java.util.*
 
 class Register : AppCompatActivity() {
 
@@ -25,7 +27,10 @@ class Register : AppCompatActivity() {
     private lateinit var editPass : EditText
 
     private lateinit var buttonRegister : Button
-    private lateinit var backButton : ImageButton
+    lateinit var botaofoto : ImageView
+    var selectedPhotoUri: Uri? = null
+    var linkfoto : String = ""
+
 
     val db = Firebase.firestore
 
@@ -40,13 +45,6 @@ class Register : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-        backButton = findViewById(R.id.buttonBack)
-
-        // function to go back to the previous activity
-        backButton.setOnClickListener {
-            val intent = Intent(this@Register, LoginActivity::class.java)
-            startActivity(intent)
-        }
 
         buttonRegister = findViewById(R.id.buttonRegister)
 
@@ -54,6 +52,14 @@ class Register : AppCompatActivity() {
         // logic to make the register button register the user in the app
         buttonRegister.setOnClickListener {
             register()
+        }
+
+        botaofoto = findViewById(R.id.imgPickImage)
+
+        botaofoto.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type = "image/*"
+            startActivityForResult(intent, 0)
         }
 
     }
@@ -75,20 +81,20 @@ class Register : AppCompatActivity() {
         // in this validation we are allowing the register method using an email, name and password
         if (editEmail.text.isNotEmpty() && editPass.text.isNotEmpty()) {
 
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    val uid = FirebaseAuth.getInstance().uid
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val uid = FirebaseAuth.getInstance().uid
 
-                     addUserToDatabase(nome, email, auth.currentUser?.uid!!)
+                        addUserToDatabase(nome, email, auth.currentUser?.uid!!)
 
                         val intent = Intent(this@Register, MainActivity::class.java)
                         startActivity(intent)
 
-                } else {
-                    Toast.makeText(this@Register, "Ocorreu um erro", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this@Register, "Ocorreu um erro", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
         }else{
             // if there are unfilled fields, the user gets a warning to fill it
             Toast.makeText(this@Register,"Preencha os campos", Toast.LENGTH_SHORT).show()
@@ -98,9 +104,51 @@ class Register : AppCompatActivity() {
     private fun addUserToDatabase(nome: String, email: String, uid:String){
         var user : User
 
-        user = User(nome,email,uid)
+        user = User(nome,email,uid, "https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/Avatar_icon_green.png?alt=media&token=8e6d8680-d431-4a98-a6a8-60b8000bb3da")
         db.collection("usuarios").document(uid).set(user)
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        botaofoto = findViewById(R.id.imgPickImage)
+        if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null) {
+            selectedPhotoUri = data.data
+
+            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
+
+            botaofoto.setImageBitmap(bitmap)
+
+            botaofoto.alpha = 0f
+
+            uploadImageToFirebaseStorage()
+
+        }
+    }
+
+    private fun uploadImageToFirebaseStorage() {
+        if (selectedPhotoUri == null) return
+
+        val filename = UUID.randomUUID().toString()
+        val ref = FirebaseStorage.getInstance().getReference("/imagens/$filename")
+        val uid = dados.uid
+
+        ref.putFile(selectedPhotoUri!!)
+            .addOnSuccessListener {
+
+                ref.downloadUrl.addOnSuccessListener {
+                    linkfoto = it.toString()
+
+                    val user = User(uid, dados.nome, dados.email, linkfoto)
+
+                    db.collection("usuarios").document(uid).set(user).addOnSuccessListener {
+                    }
+
+                }
+            }
+            .addOnFailureListener {
+
+            }
     }
 
 }

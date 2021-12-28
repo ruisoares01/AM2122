@@ -3,6 +3,7 @@ package com.example.projetoam2.item
 import android.content.Context
 import android.view.Gravity
 import android.widget.FrameLayout
+import android.widget.TextView
 import com.example.projetoam2.Model.TextMessage
 import com.example.projetoam2.R
 import com.google.firebase.auth.FirebaseAuth
@@ -16,7 +17,6 @@ import org.w3c.dom.Text
 
 class TextMessageItem(val message: TextMessage,
                       val context: Context)
-
     : Item() {
 
         override fun bind(viewHolder: ViewHolder, position: Int){

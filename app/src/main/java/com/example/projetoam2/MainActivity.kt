@@ -45,15 +45,14 @@ class MainActivity : AppCompatActivity() {
     private val calendarioFragment = CalendarioFragment()
     private val perfilFragment = PerfilFragment()
 
-    //firestore
-    val db = Firebase.firestore
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         // Initialize Firebase Auth
         auth = Firebase.auth
+
+        supportActionBar?.hide()
 
         //fragment function
         replaceFragment(homeFragment)
@@ -76,7 +75,6 @@ class MainActivity : AppCompatActivity() {
             transaction.commit()
         }
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu,menu)
