@@ -45,7 +45,7 @@ class CalendarioFragment : Fragment() {
 
 
     fun Events() {
-        // Required empty public constructor
+        // Required empty public constructor!
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
