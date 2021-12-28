@@ -55,14 +55,17 @@ class PerfilFragment : Fragment() {
         val imgprofile = view.findViewById<CircleImageView>(R.id.imgProfile)
         Picasso.get().load(dados.linkfoto).into(imgprofile)
 
-        val profileName = view.findViewById<TextView>(R.id.profileName)
+        val profileName = view.findViewById<TextView>(R.id.txtProfileName)
         val profileEmail = view.findViewById<TextView>(R.id.profileEmail)
-        val uid = view.findViewById<TextView>(R.id.profileUid)
+        val profileAluno = view.findViewById<TextView>(R.id.profilenAluno)
+        val profileCurso = view.findViewById<TextView>(R.id.profileCurso)
+        val profileMorada = view.findViewById<TextView>(R.id.profileMorada)
         botaofoto = view.findViewById(R.id.imgPickImage)
         profileName.text = dados.nome
         profileEmail.text = dados.email
-        uid.text = dados.uid
-
+        profileAluno.text = dados.naluno
+        profileCurso.text = dados.curso
+        profileMorada.text = dados.morada
 
 
         botaofoto.setOnClickListener {
@@ -109,7 +112,7 @@ class PerfilFragment : Fragment() {
 
                     Picasso.get().load(linkfoto).into(circleImageView)
 
-                    val user = User(dados.uid,  dados.nome, dados.email, linkfoto)
+                    val user = User(dados.uid,  dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, linkfoto)
 
                     db.collection("usuarios").document(uid).set(user).addOnSuccessListener {
 

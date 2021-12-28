@@ -10,8 +10,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetoam2.Fragments.Users
 import com.example.projetoam2.Model.MessageType
 import com.example.projetoam2.Model.TextMessage
+import com.example.projetoam2.Model.User
 import com.example.projetoam2.Utils.AppUtils
 import com.example.projetoam2.Utils.FirestoreUtil
 import com.example.projetoam2.item.UserItem
@@ -53,13 +55,22 @@ class ChatActivity : AppCompatActivity() {
         var otherUserName = ""
         var otherUserId = ""
         var linkfoto = ""
+        var otherUserEmail = ""
+        var otherUserN = ""
+        var otherUserCurso = ""
+        var otherUserMorada = ""
         val bundle = intent.extras
 
         //collect data
         bundle?.let {
             otherUserName = it.getString("name").toString()
             otherUserId = it.getString("uid").toString()
+            otherUserEmail = it.getString("email").toString()
+            otherUserN = it.getString("nAluno").toString()
+            otherUserCurso = it.getString("curso").toString()
+            otherUserMorada = it.getString("morada").toString()
             linkfoto = it.getString("linkfoto").toString()
+
         }
 
         val imgprofile = findViewById<CircleImageView>(R.id.imgProfile)
@@ -69,7 +80,15 @@ class ChatActivity : AppCompatActivity() {
         nameProfile.text = otherUserName
 
         nameProfile.setOnClickListener {
-            startActivity(Intent(this@ChatActivity, OtherProfile::class.java))
+            val intent = Intent(this, OtherProfile::class.java)
+            intent.putExtra("name", otherUserName)
+            intent.putExtra("uid", otherUserId)
+            intent.putExtra("email", otherUserEmail)
+            intent.putExtra("nAluno", otherUserN)
+            intent.putExtra("curso", otherUserCurso)
+            intent.putExtra("morada", otherUserMorada)
+            intent.putExtra("linkfoto", linkfoto)
+            startActivity(intent)
         }
 
         //get the chat channel

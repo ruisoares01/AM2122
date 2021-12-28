@@ -70,7 +70,11 @@ class HomeFragment : Fragment() {
 
                 intent.putExtra("name", utilizador.user.nome)
                 intent.putExtra("uid", utilizador.user.uid)
+                intent.putExtra("email", utilizador.user.email)
                 intent.putExtra("linkfoto", utilizador.user.linkfoto)
+                intent.putExtra("nAluno", utilizador.user.naluno)
+                intent.putExtra("curso", utilizador.user.curso)
+                intent.putExtra("morada", utilizador.user.morada)
 
                 startActivity(intent)
             }
