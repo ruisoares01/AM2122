@@ -64,9 +64,14 @@ object FirestoreUtil {
         //if the chat channel doesn't exists we need to create it
         val currentUserId = FirebaseAuth.getInstance().currentUser!!.uid
 
+        val nome = "aspas"
+
+        val imagemUrl = "https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/imagens%2F0fd24a87-038a-4e3c-ab01-8b9087c8959c?alt=media&token=518b667b-c0e3-41cd-bae3-98cef40c9669"
+
+
         //stores a document ref to the new chat channel even before its created in Firestore
         val newGroupChannel = groupChannelIsCollectionRef.document()
-        newGroupChannel.set(GroupChannel(userIds))
+        newGroupChannel.set(GroupChannel(nome, imagemUrl, userIds))
 
         userIds.forEach {
 

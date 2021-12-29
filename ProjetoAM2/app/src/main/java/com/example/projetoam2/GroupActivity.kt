@@ -42,8 +42,11 @@ class GroupActivity : AppCompatActivity() {
 
         }
 
+        val userIds : MutableList<String> = mutableListOf()
+
+
         //get the chat channel
-        FirestoreUtil.getOrCreateGroupChannel(otherUserId) { groupId ->
+        FirestoreUtil.createGroupChannel(userIds) { groupId ->
 
             messagesListenerRegistration =
                 FirestoreUtil.addGroupMessagesListener(groupId, this, this::updateRecyclerView)

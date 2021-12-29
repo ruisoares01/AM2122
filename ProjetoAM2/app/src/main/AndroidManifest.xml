@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoAM2">
         <activity
+            android:name=".createGroup"
+            android:exported="false" />
+        <activity
             android:name=".GroupActivity"
             android:exported="false" />
         <activity
@@ -31,6 +34,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".LoginActivity"
