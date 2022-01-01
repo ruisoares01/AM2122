@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.anko:anko-support-v4-commons:0.10.8@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/aaa86bac0632e9bef4e3b1b3312a1791/transformed/jetified-anko-support-v4-commons-0.10.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/aaa86bac0632e9bef4e3b1b3312a1791/transformed/jetified-anko-support-v4-commons-0.10.8/res" />
+      <root url="file://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/aaa86bac0632e9bef4e3b1b3312a1791/transformed/jetified-anko-support-v4-commons-0.10.8/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Desktop/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/org.jetbrains.anko/anko-support-v4-commons/0.10.8/b358dbc75b511cbc20aa7ca162d8ed20295a7d8e/anko-support-v4-commons-0.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

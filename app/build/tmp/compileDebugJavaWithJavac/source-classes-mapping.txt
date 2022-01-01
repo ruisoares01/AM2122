@@ -1,0 +1,28 @@
+com/example/projetoam2/databinding/FragmentHomeBinding.java
+ com.example.projetoam2.databinding.FragmentHomeBinding
+com/example/projetoam2/databinding/ActivityChatBinding.java
+ com.example.projetoam2.databinding.ActivityChatBinding
+com/example/projetoam2/databinding/ItemTextMessageBinding.java
+ com.example.projetoam2.databinding.ItemTextMessageBinding
+com/example/projetoam2/databinding/ActivityLoginBinding.java
+ com.example.projetoam2.databinding.ActivityLoginBinding
+com/example/projetoam2/databinding/ActivityMainBinding.java
+ com.example.projetoam2.databinding.ActivityMainBinding
+com/example/projetoam2/databinding/RowCalendarioBinding.java
+ com.example.projetoam2.databinding.RowCalendarioBinding
+com/example/projetoam2/databinding/ActivityCreateEventBinding.java
+ com.example.projetoam2.databinding.ActivityCreateEventBinding
+com/example/projetoam2/databinding/ActivitySplashScreenBinding.java
+ com.example.projetoam2.databinding.ActivitySplashScreenBinding
+com/example/projetoam2/databinding/FragmentCalendarioBinding.java
+ com.example.projetoam2.databinding.FragmentCalendarioBinding
+com/example/projetoam2/BuildConfig.java
+ com.example.projetoam2.BuildConfig
+com/example/projetoam2/databinding/UserLayoutBinding.java
+ com.example.projetoam2.databinding.UserLayoutBinding
+com/example/projetoam2/databinding/ActivityRegisterBinding.java
+ com.example.projetoam2.databinding.ActivityRegisterBinding
+com/example/projetoam2/databinding/ActivityOtherProfileBinding.java
+ com.example.projetoam2.databinding.ActivityOtherProfileBinding
+com/example/projetoam2/databinding/FragmentPerfilBinding.java
+ com.example.projetoam2.databinding.FragmentPerfilBinding

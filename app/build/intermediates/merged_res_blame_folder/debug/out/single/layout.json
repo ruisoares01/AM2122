@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\user_layout.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\user_layout.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_text_message.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\item_text_message.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_chat.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash_screen.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_calendario.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\fragment_calendario.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_other_profile.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\activity_other_profile.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_perfil.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\fragment_perfil.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_create_event.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\activity_create_event.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\row_calendario.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\row_calendario.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "D:\\GitHub\\AM2122\\app\\src\\main\\res\\layout\\activity_register.xml"
+    }
+]

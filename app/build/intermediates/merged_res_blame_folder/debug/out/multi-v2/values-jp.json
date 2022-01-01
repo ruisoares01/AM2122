@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\GitHub\\AM2122\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-jp\\values-jp.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\soare\\Desktop\\firebase-firestore-chat-app-master\\firebase-firestore-chat-app-master\\caches\\transforms-3\\d1c199579d62acc1876842b3d5482bc7\\transformed\\jetified-simpledialogfragments-3.5\\res\\values-jp\\values-jp.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,113,163,233,294,351,390,426,469,515,550,590,676,721,759",
+                        "endColumns": "57,49,69,60,56,38,35,42,45,34,39,85,44,37,44",
+                        "endOffsets": "108,158,228,289,346,385,421,464,510,545,585,671,716,754,799"
+                    }
+                }
+            ]
+        }
+    ]
+}
