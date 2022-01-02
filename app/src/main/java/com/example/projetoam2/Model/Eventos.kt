@@ -7,14 +7,14 @@ class Eventos {
     var descricao       : String? = null
     var dataInicio      : Timestamp? = null
     var dataFim         : Timestamp? = null
-    var cor             : String? = null
+    var cor             : Long? = null
 
     constructor(
         titulo          : String?,
         descricao       : String?,
         dataInicio      : Timestamp?,
         dataFim         : Timestamp?,
-        cor             : String?
+        cor             : Long?
 
     ) {
         this.titulo         = titulo

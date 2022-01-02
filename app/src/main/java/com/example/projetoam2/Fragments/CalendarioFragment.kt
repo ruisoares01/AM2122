@@ -17,6 +17,7 @@ import com.example.projetoam2.Model.Eventos
 import com.example.projetoam2.R
 import com.github.sundeepk.compactcalendarview.CompactCalendarView
 import com.github.sundeepk.compactcalendarview.domain.Event
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.firestoreSettings
@@ -66,6 +67,8 @@ class CalendarioFragment : Fragment() {
         compactCalendar!!.setFirstDayOfWeek(2)
 
 
+        arrayChats.clear()
+
         val text = view.findViewById<TextView>(R.id.mesdocalendario)
         text.text = "AAAAA"
 
@@ -79,10 +82,10 @@ class CalendarioFragment : Fragment() {
 
 
 
-        var listevent: MutableList<String> = arrayListOf()
+  //      var listevent: MutableList<String> = arrayListOf()
 
         //Declara uma MutableList de tipo inteiro que contem um array com cores
-        val coreslist: MutableList<Int> = arrayListOf(
+ /*       val coreslist: MutableList<Int> = arrayListOf(
             Color.parseColor("#ff0000"), Color.parseColor("#000000"),
             Color.parseColor("#FF8F00"), Color.parseColor("#038a34"),
             Color.parseColor("#00ff00"), Color.parseColor("#8591ff"),
@@ -91,47 +94,75 @@ class CalendarioFragment : Fragment() {
             Color.parseColor("#ae00ff"), Color.parseColor("#97D6EC"),
             Color.parseColor("#ff0077"),
             Color.parseColor("#37474F"),
-        )
+        )*/
 
         //Começar parte do Firebase aqui <---------------------
         var x=0;
+        var z=0
         var stringdocument = ""
-        arrayChats.clear()
+
         db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").get()
             .addOnSuccessListener { document ->
                 while(x<document.documents.size){
                     if (document != null) {
-                        arrayChats.add(x,document.documents.get(x).data?.values.toString().replace("[","").replace("]",""))
+                        arrayChats.add(document.documents.get(x).id.replace("[","").replace("]",""))
                         println( "DocumentSnapshot data: ${document.documents.get(x).data?.values.toString()}")
                     }
                     println("x : $x")
                     println("On While , List of chats --> " +arrayChats)
                     x += 1
                 }
+                for(arrayChat in arrayChats){
+                    db.collection("grupos").document(arrayChat).collection("eventos").get()
+                        .addOnSuccessListener { eventos ->
+                            while(z<eventos.documents.size) {
+                                if (eventos != null) {
+                                    var titulo_descricao = "${eventos.documents.get(z).data?.get("titulo").toString()} * ${eventos.documents.get(z).data?.get("descricao").toString()} "
+
+                                    Eventos(eventos.documents.get(z).data?.get("titulo").toString(),
+                                        eventos.documents.get(z).data?.get("descricao").toString(),
+                                        eventos.documents.get(z).data?.get("dataInicio") as Timestamp,
+                                        eventos.documents.get(z).data?.get("dataFim") as Timestamp,
+                                        eventos.documents.get(z).data?.get("cor") as Long)
+
+                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataFim") as Timestamp).seconds * 1000),"Inicio de ${titulo_descricao}"))
+
+                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataInicio") as Timestamp).seconds * 1000),"Fim de ${titulo_descricao}"))
+
+                                    //arrayChats.add(x, eventos.documents.get(x).data?.values.toString().replace("[", "").replace("]", "") )
+                                    println("DocumentSnapshot data: ${eventos.documents.get(z).data?.toString()}")
+                                    println("DocumentSnapshot data values : ${eventos.documents.get(z).data?.values.toString()}")
+                                }
+                                println("x : $z")
+                                println("On While , List of chats --> " + arrayChats)
+                                z += 1
+                                println("${eventos.metadata} <------ metadata do IT a buscar os eventos")
+                                println("${eventos.documents} <------ documents do IT a buscar os eventos")
+                                println("On for , each chat --> " + arrayChat)
+                            }
+                        }
+                        .addOnFailureListener { exception ->
+                            println("Had expection when searching for events on Chat , error info: $exception")
+                        }
+                }
+
             }
             .addOnFailureListener { exception ->
                 println("Had expection when searching for salachats in usuarios , error info: $exception")
             }
 
-        for(arrayChat in arrayChats){
-            db.collection("Chat").document(arrayChat).collection("eventos").get()
-                .addOnSuccessListener {
-                    println("On for , each chat --> "+arrayChat)
-                }
-                .addOnFailureListener { exception ->
-                    println("Had expection when searching for events on Chat , error info: $exception")
-                }
-        }
+
+
 
 
 
 
         //Escolhe um item (neste caso cor) aleatorio do array
-        var coraleatoria = coreslist.random()
+ //       var coraleatoria = coreslist.random()
 
 
 
-        var eventosapagar : MutableList<Event> = arrayListOf(
+/*        var eventosapagar : MutableList<Event> = arrayListOf(
             Event(coraleatoria, 1607040400000L, "Teachers' Professional Day * Welcome to Teachers Day"),
             Event(coraleatoria, 1624273932000, "Tessdate * Description Test"),
             Event(coraleatoria, 1624274932000, "Teste * MegaTest"),
@@ -147,7 +178,7 @@ class CalendarioFragment : Fragment() {
         for(Event in eventosapagar){
             compactCalendar!!.addEvent(Event(Event.color,Event.timeInMillis,Event.data))
         }
-
+*/
 
 
 
@@ -188,6 +219,7 @@ class CalendarioFragment : Fragment() {
 
         //Declara o texto do mesdocalendario mes em extenso e o ano
         view.findViewById<TextView>(R.id.mesdocalendario).text = "$mesinicial- $anoinicial"
+
 
 
 
@@ -232,6 +264,10 @@ class CalendarioFragment : Fragment() {
     }
 
 
+    fun grabevents(){
+        var z = 0
+
+    }
 
 
 

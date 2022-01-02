@@ -83,6 +83,7 @@ class CreateEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListe
         }
         else if(dialogTag == "CorEvento" && which == -1){
             color = extras.getInt(SimpleColorDialog.COLOR)
+
             buttonColorEvent.setBackgroundTintList(ColorStateList.valueOf(extras.getInt(SimpleColorDialog.COLOR)))
 //        buttonColorEvent.setBackgroundColor(extras.getInt(SimpleColorDialog.COLOR))
         }
