@@ -1,118 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17573564-3eaa-4a53-ae8d-49427c28bcac" name="Default Changelist" comment="">
+    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/google-services.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/androidTest/java/com/example/projetoam2/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/ChatActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Fragments/PerfilFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/GroupActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/LoginActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Model/ChatChannel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Model/GroupChannel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Model/Message.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Model/TextMessage.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Model/User.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Model/UserId.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Register.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/SplashScreen.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Utils/AppUtils.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/Utils/FirestoreUtil.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/createGroup.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/item/TextMessageItem.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/java/com/example/projetoam2/item/UserItem.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable-v24/message_layout_received.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable-v24/send.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/background1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/button_style.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/calendarioicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/ic_baseline_assignment_returned_24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/ic_baseline_image_24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/ic_baseline_send_24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/imagesplash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/message_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/msgicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/perfilicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/rect_round_primary_color.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/rounded_corners.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/rounded_corners_msg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/drawable/text_box_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/activity_chat.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/activity_create_group.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/activity_group.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/activity_login.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/activity_register.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/activity_splash_screen.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/fragment_calendario.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/fragment_perfil.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/item_text_message.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/layout/user_layout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/menu/menu.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/menu/menu_navigation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/navigation/my_nav.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/raw/typing_animation.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/values-night/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/values/dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/app/src/test/java/com/example/projetoam2/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoAM2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Francisco\.android\avd\Nexus_5X_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ProjetoAM2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ProjetoAM2" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/beta_Romeu" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -122,7 +63,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="239Xih12mcL6nEdTuAn34JybG5W" />
+  <component name="ProjectId" id="22tCswrwOoMAXZy2v6LPAIwMpbe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -131,11 +72,11 @@
   <component name="PropertiesComponent">
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BetaBranch" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="ProjetoAM2.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -193,6 +134,32 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BetaBranch" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.BetaBranch" />
+        <item itemvalue="Gradle.BetaBranch" />
+        <item itemvalue="Gradle.BetaBranch" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -200,12 +167,60 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="17573564-3eaa-4a53-ae8d-49427c28bcac" name="Default Changelist" comment="" />
-      <created>1641147405258</created>
+      <changelist id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="" />
+      <created>1640647707074</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1641147405258</updated>
+      <updated>1640647707074</updated>
     </task>
+    <task id="LOCAL-00001" summary="Parte do Francisco (Sem Conexão a Firebase)">
+      <created>1640648132714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640648132714</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Parte do Francisco (Sem Conexão a Firebase)">
+      <created>1640648887179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640648887179</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Parte do Rui">
+      <created>1640718736768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1640718736768</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Parte do Gonçalo (codigo atualizado)">
+      <created>1640724246432</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640724246432</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Parte do Francisco (Sem Conexão a Firebase)" />
+    <MESSAGE value="Parte do Rui" />
+    <MESSAGE value="Parte do Gonçalo (codigo atualizado)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parte do Gonçalo (codigo atualizado)" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

@@ -97,7 +97,7 @@ class CalendarioFragment : Fragment() {
         var x=0;
         var stringdocument = ""
         arrayChats.clear()
-        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("Salachat").get()
+        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").get()
             .addOnSuccessListener { document ->
                 while(x<document.documents.size){
                     if (document != null) {
@@ -114,7 +114,7 @@ class CalendarioFragment : Fragment() {
             }
 
         for(arrayChat in arrayChats){
-            db.collection("Chat").document(arrayChat).collection("events").get()
+            db.collection("Chat").document(arrayChat).collection("eventos").get()
                 .addOnSuccessListener {
                     println("On for , each chat --> "+arrayChat)
                 }
