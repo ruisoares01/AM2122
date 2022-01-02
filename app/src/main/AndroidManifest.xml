@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoAM2">
         <activity
+            android:name=".createGroup"
+            android:exported="false" />
+        <activity
             android:name=".OtherProfile"
+            android:exported="false" />
+        <activity
+            android:name=".GroupActivity"
             android:exported="false" />
         <activity
             android:name=".ChatActivity"
