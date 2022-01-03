@@ -9,7 +9,9 @@ import kotlinx.android.synthetic.main.activity_create_event.*
 import android.os.Build
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import eltos.simpledialogfragment.SimpleDateDialog
@@ -18,9 +20,15 @@ import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.LocalDate.now
 import java.util.*
+import android.R.string
+import android.content.ContentValues.TAG
+import android.util.Log
+import android.widget.Button
+import com.google.firebase.Timestamp
+import java.time.format.DateTimeFormatter
 
 
-class CreateEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListener {
+class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListener {
 
 
     var color: Int = 0
@@ -28,6 +36,10 @@ class CreateEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListe
     var horafim = ""
     var dateLong = 0L
     val db = Firebase.firestore
+    var datainicio = ""
+    var datafim = ""
+
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,11 +47,14 @@ class CreateEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListe
         setContentView(R.layout.activity_create_event)
         supportActionBar?.hide()
 
+        val c = intent.extras?.getInt("c")
+
         val ColorEventButton = findViewById<ImageButton>(R.id.buttonColorEvent)
 
         val horaFimTextView = findViewById<TextView>(R.id.textViewHoraFim)
         val horaInicioTextView = findViewById<TextView>(R.id.textViewHoraInicio)
         val dataTextView = findViewById<TextView>(R.id.textViewData)
+        val createEventButton = findViewById<Button>(R.id.buttonCreateEvent)
 
         val date = Date(System.currentTimeMillis())
         val format = SimpleDateFormat("dd 'de' MMMM 'de' yyyy",Locale.forLanguageTag("PT"))
@@ -78,11 +93,48 @@ class CreateEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListe
                 .show(this, "Data");
         }
 
-        buttonCreateEvent.setOnClickListener {
-            if(horaFimTextView.text.toString() < horaInicioTextView.text.toString()){
 
 
 
+
+        createEventButton.setOnClickListener {
+            val dataprocessed = SimpleDateFormat("dd/MM/yyyy").format(Date(dateLong))
+            val datafimprocessed = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("${dataprocessed} ${horafim}:00").time / 1000
+            val datainicioprocessed = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("${dataprocessed} ${horainicio}:00").time / 1000
+            val datafimtimestamp = Timestamp(datafimprocessed,0)
+            val datainiciotimestamp = Timestamp(datainicioprocessed,0)
+
+
+            val evento = hashMapOf(
+                "titulo" to findViewById<TextView>(R.id.editTextTituloEvento).text.toString(),
+                "descricao" to findViewById<TextView>(R.id.editTextDescricaoEvento).text.toString(),
+                "dataInicio" to datainiciotimestamp,
+                "dataFim" to datafimtimestamp,
+                "cor" to color
+            )
+
+            if(datafimtimestamp < datainiciotimestamp)
+            {
+
+                println("data fim processed : ${datafimprocessed}")
+                println("data inicio processed : ${datainicioprocessed}")
+
+
+                println(datainicio)
+                println(datafim)
+
+
+                db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").add(evento)
+                  .addOnSuccessListener {
+                      Log.d(TAG, "Event created sucessfully with ID: ${it.id}")
+                  }
+                  .addOnFailureListener { erro ->
+                      Log.w(TAG, "Error when adding event : ", erro)
+                  }
+
+            }
+            else{
+                Toast.makeText(this,"Hora de Inicio tem que ser menor que a Hora de Fim do Evento",Toast.LENGTH_SHORT)
             }
         }
 

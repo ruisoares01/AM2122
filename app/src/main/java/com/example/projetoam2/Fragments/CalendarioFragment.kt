@@ -1,5 +1,6 @@
 package com.example.projetoam2.Fragments
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -17,11 +18,14 @@ import com.example.projetoam2.Model.Eventos
 import com.example.projetoam2.R
 import com.github.sundeepk.compactcalendarview.CompactCalendarView
 import com.github.sundeepk.compactcalendarview.domain.Event
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.firestoreSettings
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_create_group.*
+import kotlinx.android.synthetic.main.fragment_calendario.*
 import kotlinx.android.synthetic.main.row_calendario.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -32,6 +36,10 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
+import android.app.Activity
+
+import android.content.Intent
+import com.example.projetoam2.CreatePersonalEventActivity
 
 
 class CalendarioFragment : Fragment() {
@@ -43,7 +51,7 @@ class CalendarioFragment : Fragment() {
     var compactCalendar: CompactCalendarView? = null
     val db = Firebase.firestore
     var arrayChats : MutableList<String> = arrayListOf()
-
+    var c=0
 
     fun Events() {
         // Required empty public constructor!
@@ -99,6 +107,7 @@ class CalendarioFragment : Fragment() {
         //Começar parte do Firebase aqui <---------------------
         var x=0;
         var z=0
+
         var stringdocument = ""
 
         db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").get()
@@ -106,7 +115,7 @@ class CalendarioFragment : Fragment() {
                 while(x<document.documents.size){
                     if (document != null) {
                         arrayChats.add(document.documents.get(x).id.replace("[","").replace("]",""))
-                        println( "DocumentSnapshot data: ${document.documents.get(x).data?.values.toString()}")
+                        println( "DocumentSnapshot of GrupoIDS associated with user: ${document.documents.get(x).data?.values.toString()}")
                     }
                     println("x : $x")
                     println("On While , List of chats --> " +arrayChats)
@@ -117,42 +126,62 @@ class CalendarioFragment : Fragment() {
                         .addOnSuccessListener { eventos ->
                             while(z<eventos.documents.size) {
                                 if (eventos != null) {
-                                    var titulo_descricao = "${eventos.documents.get(z).data?.get("titulo").toString()} * ${eventos.documents.get(z).data?.get("descricao").toString()} "
+                                    var infoeventos = "${eventos.documents.get(z).data?.get("titulo").toString()} * ${eventos.documents.get(z).data?.get("descricao").toString()} * grupo * ${arrayChat} "
 
-                                    Eventos(eventos.documents.get(z).data?.get("titulo").toString(),
+/*                                    Eventos(eventos.documents.get(z).data?.get("titulo").toString(),
                                         eventos.documents.get(z).data?.get("descricao").toString(),
                                         eventos.documents.get(z).data?.get("dataInicio") as Timestamp,
                                         eventos.documents.get(z).data?.get("dataFim") as Timestamp,
-                                        eventos.documents.get(z).data?.get("cor") as Long)
+                                        eventos.documents.get(z).data?.get("cor") as Long)*/
 
-                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataFim") as Timestamp).seconds * 1000),"Inicio de ${titulo_descricao}"))
+                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataFim") as Timestamp).seconds * 1000),"Inicio de ${infoeventos}"))
 
-                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataInicio") as Timestamp).seconds * 1000),"Fim de ${titulo_descricao}"))
+                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataInicio") as Timestamp).seconds * 1000),"Fim de ${infoeventos}"))
 
                                     //arrayChats.add(x, eventos.documents.get(x).data?.values.toString().replace("[", "").replace("]", "") )
-                                    println("DocumentSnapshot data: ${eventos.documents.get(z).data?.toString()}")
-                                    println("DocumentSnapshot data values : ${eventos.documents.get(z).data?.values.toString()}")
+                                    println("DocumentSnapshot data of events on Groups: ${eventos.documents.get(z).data?.toString()}")
+                                    println("DocumentSnapshot data values of events on Groups : ${eventos.documents.get(z).data?.values.toString()}")
                                 }
-                                println("x : $z")
-                                println("On While , List of chats --> " + arrayChats)
+                                println("z : $z")
                                 z += 1
-                                println("${eventos.metadata} <------ metadata do IT a buscar os eventos")
-                                println("${eventos.documents} <------ documents do IT a buscar os eventos")
-                                println("On for , each chat --> " + arrayChat)
                             }
                         }
                         .addOnFailureListener { exception ->
-                            println("Had expection when searching for events on Chat , error info: $exception")
+                            println("Had expection when searching for events on Grupos , error info: $exception")
                         }
                 }
 
             }
             .addOnFailureListener { exception ->
-                println("Had expection when searching for salachats in usuarios , error info: $exception")
+                println("Had expection when searching for grupoIds in usuarios , error info: $exception")
             }
 
+        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").get()
+            .addOnSuccessListener { eventospessoais ->
+                if(eventospessoais.documents.size>0){
+                    while(c<eventospessoais.documents.size) {
+
+                        println("DocumentSnapshot data of Personal Events: ${eventospessoais.documents.get(c).data?.toString()}")
+                        println("DocumentSnapshot data values of Personal Events : ${eventospessoais.documents.get(c).data?.values.toString()}")
+
+                        var infopersonaleventos = "${eventospessoais.documents.get(c).data?.get("titulo").toString()} * ${eventospessoais.documents.get(c).data?.get("descricao").toString()} * pessoal * ${Firebase.auth.currentUser?.uid.toString()} "
+
+                        compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataFim") as Timestamp).seconds * 1000),"Inicio de ${infopersonaleventos}"))
+
+                        compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataInicio") as Timestamp).seconds * 1000),"Fim de ${infopersonaleventos}"))
 
 
+                        println("c : $c")
+                        c += 1
+                    }
+                }
+
+
+
+            }
+            .addOnFailureListener { exception ->
+                println("Had expection when searching for events in usuarios , error info: $exception")
+            }
 
 
 
@@ -260,15 +289,20 @@ class CalendarioFragment : Fragment() {
         adapterlisteventos.notifyDataSetChanged()
 
 
+        val buttonaddevent = view.findViewById<FloatingActionButton>(R.id.buttonAddPersonalEvent)
+
+        buttonaddevent.setOnClickListener {
+
+            val itt = Intent(activity, CreatePersonalEventActivity::class.java)
+            itt.extras?.putInt("c",c)
+            startActivity(itt)
+            (activity as Activity?)!!.overridePendingTransition(0, 0)
+
+        }
+
+
         return view
     }
-
-
-    fun grabevents(){
-        var z = 0
-
-    }
-
 
 
 
@@ -314,6 +348,7 @@ class CalendarioFragment : Fragment() {
             val expandableView = rowView.findViewById<ConstraintLayout>(R.id.expandableView);
             val buttonExpand = rowView.findViewById<Button>(R.id.buttonExpand);
             val cardView = rowView.findViewById<CardView>(R.id.card_view);
+            val buttonShowColor = rowView.findViewById<ImageButton>(R.id.buttonShowColorEvent)
 
             buttonExpand.setOnClickListener(View.OnClickListener {
                 if (expandableView.getVisibility() === View.GONE) {
@@ -330,7 +365,7 @@ class CalendarioFragment : Fragment() {
             dateEventlist.text = formatterhour.format(Date(eventoscalendario[position].timeInMillis))
             titleEventList.text = datadescricaotitulo[0]
             descEventList.text = datadescricaotitulo[1]
-            //cardView.setBackgroundColor(eventoscalendario[position].color)
+            buttonShowColor.setBackgroundTintList(ColorStateList.valueOf(eventoscalendario[position].color))
 
 
             return rowView
