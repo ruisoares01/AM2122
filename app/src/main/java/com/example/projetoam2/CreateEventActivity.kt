@@ -10,6 +10,8 @@ import android.os.Build
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import eltos.simpledialogfragment.SimpleDateDialog
 import eltos.simpledialogfragment.SimpleTimeDialog
 import java.text.SimpleDateFormat
@@ -25,6 +27,7 @@ class CreateEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListe
     var horainicio = ""
     var horafim = ""
     var dateLong = 0L
+    val db = Firebase.firestore
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,6 +77,15 @@ class CreateEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListe
                 .date(System.currentTimeMillis())
                 .show(this, "Data");
         }
+
+        buttonCreateEvent.setOnClickListener {
+            if(horaFimTextView.text.toString() < horaInicioTextView.text.toString()){
+
+
+
+            }
+        }
+
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
