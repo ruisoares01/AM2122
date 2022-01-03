@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
+
+
         //fragment function
         replaceFragment(homeFragment)
 
