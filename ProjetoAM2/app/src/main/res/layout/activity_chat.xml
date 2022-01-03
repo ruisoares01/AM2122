@@ -39,8 +39,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_messages"
-        android:layout_width="match_parent"
-        android:layout_height="610dp"
+        android:layout_width="411dp"
+        android:layout_height="461dp"
         app:layout_constraintBottom_toTopOf="@+id/relativelayout_message"
         app:layout_constraintTop_toBottomOf="@+id/relativelayout_actionbar" />
 
@@ -92,4 +92,16 @@
             android:src="@drawable/ic_baseline_send_24" />
 
     </RelativeLayout>
+
+    <EditText
+        android:id="@+id/text_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/relativelayout_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_messages" />
 </androidx.constraintlayout.widget.ConstraintLayout>

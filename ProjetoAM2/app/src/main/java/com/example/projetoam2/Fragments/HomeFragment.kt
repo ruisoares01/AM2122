@@ -17,7 +17,6 @@ import com.example.projetoam2.R
 import com.example.projetoam2.item.UserItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.xwray.groupie.*
@@ -26,7 +25,6 @@ class HomeFragment : Fragment() {
 
     //variaveis
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
 
     private val adapter = GroupAdapter<ViewHolder>()
 

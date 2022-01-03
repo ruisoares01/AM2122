@@ -1,12 +1,13 @@
-#Fri Dec 24 01:36:18 GMT 2021
+#Mon Jan 03 16:04:46 GMT 2022
 path.4=14/classes.dex
 path.3=12/classes.dex
 path.2=10/classes.dex
+renamed.9=classes10.dex
 path.1=0/classes.dex
 renamed.8=classes9.dex
-path.8=classes3.dex
-path.7=classes2.dex
-path.6=9/classes.dex
+path.8=classes2.dex
+path.7=9/classes.dex
+path.6=5/classes.dex
 path.5=1/classes.dex
 path.0=classes.dex
 base.4=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
@@ -18,11 +19,13 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+base.9=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+path.9=classes3.dex
 renamed.7=classes8.dex
-base.8=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+base.8=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 renamed.6=classes7.dex
-base.7=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.7=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 renamed.5=classes6.dex
-base.6=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.6=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
 renamed.4=classes5.dex
 base.5=D\:\\GitHub\\AM2122\\ProjetoAM2\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex

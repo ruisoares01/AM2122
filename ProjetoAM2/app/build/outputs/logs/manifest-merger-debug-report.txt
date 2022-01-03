@@ -1,14 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
 MERGED from [androidx.databinding:viewbinding:7.0.3] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\157d92d4863206c3c9b16f53530e6411\transformed\jetified-viewbinding-7.0.3\AndroidManifest.xml:17:1-22:12
 MERGED from [com.xwray:groupie-kotlin-android-extensions:2.0.3] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\bac0e96e6147fe6ca4642ee2e054b7da\transformed\jetified-groupie-kotlin-android-extensions-2.0.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ba3a3d8cdff0fb71e8931b69f64379f0\transformed\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cce055da59ef5c33490a68a3a7833c9c\transformed\jetified-firebase-firestore-ktx-24.0.0\AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-messaging-ktx:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\0e62db302f5fbcbe95683e12811dde69\transformed\jetified-firebase-messaging-ktx-22.0.0\AndroidManifest.xml:17:1-35:12
@@ -31,7 +30,6 @@ MERGED from [org.jetbrains.anko:appcompatV7-base:0.10.8] C:\Users\soare\Desktop\
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9a6d2f2d4c80d275f325f86bc9c2ae54\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\8a41c9d5ca7f8b5c5b246e5f540a3acb\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\854066fa19161a243f4e684d85024eac\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:15:1-38:12
 MERGED from [com.xwray:groupie:2.0.3] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6561f07dce9e5f9567700a96cb4d97aa\transformed\jetified-groupie-2.0.3\AndroidManifest.xml:2:1-14:12
 MERGED from [org.jetbrains.anko:anko-sqlite:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\860cf2776c4a9e9d861a5c91ba950bf2\transformed\jetified-anko-sqlite-0.10.8\AndroidManifest.xml:2:1-13:12
 MERGED from [org.jetbrains.anko:anko-sdk27:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6a1764d466cd237f9df987eed9ca190d\transformed\jetified-anko-sdk27-0.10.8\AndroidManifest.xml:2:1-13:12
@@ -44,21 +42,23 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\fi
 MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:2:1-26:12
 MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\32f8d2fe7d9d46799e48c2d097c7c3a3\transformed\jetified-supportV4-base-0.10.8\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\8a7ce4fed95aa20f96fff8fb17064094\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\eb4f2707cb26f15ddb1eb72e4829ae12\transformed\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\b605ff2081991f7b01b608768276da4c\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\629ec502890cdab2a037b58043d641b9\transformed\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\044d24b3a148b647c6efe58040dafdf7\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:15:1-34:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\72432658b09079fdb93c71b57d61c9db\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:15:1-39:12
-MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ff505daba1434dbf2c8373c18b349e40\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:15:1-40:12
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fce5b863c799a3b6bc40db1364292f2a\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c8328fda00802b41cbb5f1337d24237f\transformed\jetified-play-services-auth-base-17.0.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\582db73614e237f39a8f9d388997d8d8\transformed\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\42c4eecd215cce7f59a109ec5df5e214\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\93587ff250b5c7f2e3a7fcbbbd071528\transformed\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\582db73614e237f39a8f9d388997d8d8\transformed\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3e05de34d1589a42ebd1e1b8b4938744\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\154992118e98704ce06e45a2af63c457\transformed\jetified-play-services-stats-17.0.0\AndroidManifest.xml:2:1-9:12
@@ -95,7 +95,6 @@ MERGED from [androidx.core:core:1.6.0] C:\Users\soare\Desktop\firebase-firestore
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4068664b0d562ae77237cd4a4075f864\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9d9730b2327f27bd4affe505b7d15f23\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\03aadf8067201fc658533b0d65fa45d6\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\eb4f2707cb26f15ddb1eb72e4829ae12\transformed\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\95428964b3b6259aa312ff12349fd9f6\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\53ba64e63468cfbb9a20e1447f742423\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\d9e358f3f874d608e5296688d226fe92\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -115,35 +114,56 @@ MERGED from [org.jetbrains.anko:commons-base:0.10.8] C:\Users\soare\Desktop\fire
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9a11367b4c372edb8c4e8a80ab0d3338\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3b9f82768ffd10dfe205c85fc56d49e1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\62a6bccf824bf50a350f0804bbe2d9df\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a4afedf8a39a596e383b921d3cb53d74\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\49b1b4f01a3b51d13b47b15257c0fc89\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\bfdf5b4a95dda39c8872c10fd49a60cd\transformed\jetified-grpc-android-1.41.0\AndroidManifest.xml:2:1-13:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
+INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
 	package
 		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:1-53:12
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:6:5-82
+MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:5-82
+MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:11:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:6:22-79
 application
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:5:5-39:19
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:8:5-51:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:11:5-19:19
-MERGED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ba3a3d8cdff0fb71e8931b69f64379f0\transformed\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ba3a3d8cdff0fb71e8931b69f64379f0\transformed\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cce055da59ef5c33490a68a3a7833c9c\transformed\jetified-firebase-firestore-ktx-24.0.0\AndroidManifest.xml:11:5-19:19
@@ -164,8 +184,6 @@ MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] C:\Users\so
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ea68fec44ceb1d6173f850fe7a9fd12e\transformed\jetified-anko-appcompat-v7-coroutines-0.10.8\AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\aca4c5bc4556949e3fc400f79879009a\transformed\jetified-anko-appcompat-v7-commons-0.10.8\AndroidManifest.xml:11:5-20
 MERGED from [org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\aca4c5bc4556949e3fc400f79879009a\transformed\jetified-anko-appcompat-v7-commons-0.10.8\AndroidManifest.xml:11:5-20
-MERGED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:28:5-36:19
-MERGED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:28:5-36:19
 MERGED from [com.xwray:groupie:2.0.3] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6561f07dce9e5f9567700a96cb4d97aa\transformed\jetified-groupie-2.0.3\AndroidManifest.xml:11:5-12:19
 MERGED from [com.xwray:groupie:2.0.3] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6561f07dce9e5f9567700a96cb4d97aa\transformed\jetified-groupie-2.0.3\AndroidManifest.xml:11:5-12:19
 MERGED from [org.jetbrains.anko:anko-sqlite:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\860cf2776c4a9e9d861a5c91ba950bf2\transformed\jetified-anko-sqlite-0.10.8\AndroidManifest.xml:11:5-20
@@ -186,6 +204,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\fi
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:16:5-24:19
+MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:11:5-20
+MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:11:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\b605ff2081991f7b01b608768276da4c\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\b605ff2081991f7b01b608768276da4c\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\629ec502890cdab2a037b58043d641b9\transformed\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
@@ -196,12 +216,12 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Us
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:29:5-37:19
-MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:24:5-20
-MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:24:5-20
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ff505daba1434dbf2c8373c18b349e40\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ff505daba1434dbf2c8373c18b349e40\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:24:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:24:5-20
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:25:5-38:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\93587ff250b5c7f2e3a7fcbbbd071528\transformed\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
@@ -224,72 +244,88 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fae3e52dcf52e82826438feee3deed0e\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:25:5-39:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\5687bca4c01262c64ecdf36cb76476b7\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\5687bca4c01262c64ecdf36cb76476b7\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:11:5-20
-MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\bc45a61edf56957ab466c3cc91727254\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:11:9-48
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:14:9-48
+service#com.example.projetoam2.Notifications.FirebaseService
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:15:9-22:19
+	android:exported
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:17:13-36
+	android:permission
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:16:13-73
+	android:name
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:15:18-63
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE+action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:18:13-21:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:19:17-78
+	android:name
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:19:25-75
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:20:17-81
+	android:name
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:20:25-78
 activity#com.example.projetoam2.ChatActivity
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:24:9-30:20
 	android:exported
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:14:13-37
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:13:13-41
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:25:13-41
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:15:13-17:48
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:27:13-29:48
 	android:value
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:17:17-46
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:29:17-46
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:16:17-63
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:28:17-63
 activity#com.example.projetoam2.Register
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:19:9-21:40
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:31:9-33:40
 	android:exported
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:21:13-37
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:20:13-37
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:32:13-37
 activity#com.example.projetoam2.SplashScreen
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:22:9-31:20
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:34:9-43:20
 	android:exported
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:24:13-36
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:36:13-36
 	android:theme
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:25:13-63
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:37:13-63
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:23:13-41
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:35:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:26:13-30:29
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:38:13-42:29
 action#android.intent.action.MAIN
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:41:27-74
 activity#com.example.projetoam2.LoginActivity
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:32:9-34:39
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:44:9-46:39
 	android:exported
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:34:13-36
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:46:13-36
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:33:13-42
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:45:13-42
 activity#com.example.projetoam2.MainActivity
-ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:35:9-38:48
+ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:47:9-50:48
 	android:label
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:38:13-45
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:50:13-45
 	android:exported
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:37:13-36
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:36:13-41
+		ADDED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml:48:13-41
 uses-sdk
 INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
@@ -302,8 +338,6 @@ MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Deskto
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ba3a3d8cdff0fb71e8931b69f64379f0\transformed\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ba3a3d8cdff0fb71e8931b69f64379f0\transformed\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cce055da59ef5c33490a68a3a7833c9c\transformed\jetified-firebase-firestore-ktx-24.0.0\AndroidManifest.xml:6:5-8:41
@@ -348,8 +382,6 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\soare\Des
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\8a41c9d5ca7f8b5c5b246e5f540a3acb\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\854066fa19161a243f4e684d85024eac\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\854066fa19161a243f4e684d85024eac\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:19:5-21:41
 MERGED from [com.xwray:groupie:2.0.3] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6561f07dce9e5f9567700a96cb4d97aa\transformed\jetified-groupie-2.0.3\AndroidManifest.xml:7:5-9:41
 MERGED from [com.xwray:groupie:2.0.3] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6561f07dce9e5f9567700a96cb4d97aa\transformed\jetified-groupie-2.0.3\AndroidManifest.xml:7:5-9:41
 MERGED from [org.jetbrains.anko:anko-sqlite:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\860cf2776c4a9e9d861a5c91ba950bf2\transformed\jetified-anko-sqlite-0.10.8\AndroidManifest.xml:7:5-9:41
@@ -374,6 +406,10 @@ MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] C:\Users\soare\Desktop\fi
 MERGED from [org.jetbrains.anko:supportV4-base:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\32f8d2fe7d9d46799e48c2d097c7c3a3\transformed\jetified-supportV4-base-0.10.8\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\8a7ce4fed95aa20f96fff8fb17064094\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\8a7ce4fed95aa20f96fff8fb17064094\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:7:5-9:41
+MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\eb4f2707cb26f15ddb1eb72e4829ae12\transformed\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\eb4f2707cb26f15ddb1eb72e4829ae12\transformed\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\b605ff2081991f7b01b608768276da4c\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\b605ff2081991f7b01b608768276da4c\transformed\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\629ec502890cdab2a037b58043d641b9\transformed\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
@@ -386,24 +422,24 @@ MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\soare\D
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\72432658b09079fdb93c71b57d61c9db\transformed\jetified-firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ff505daba1434dbf2c8373c18b349e40\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ff505daba1434dbf2c8373c18b349e40\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta02] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\30336cbf58481debb4b461b0e783ff16\transformed\jetified-firebase-appcheck-interop-16.0.0-beta02\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-common:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ddf75874fb8fdb7126d3f279b4e541fa\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fce5b863c799a3b6bc40db1364292f2a\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\fce5b863c799a3b6bc40db1364292f2a\transformed\jetified-firebase-components-17.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c8328fda00802b41cbb5f1337d24237f\transformed\jetified-play-services-auth-base-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c8328fda00802b41cbb5f1337d24237f\transformed\jetified-play-services-auth-base-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\582db73614e237f39a8f9d388997d8d8\transformed\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\582db73614e237f39a8f9d388997d8d8\transformed\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\42c4eecd215cce7f59a109ec5df5e214\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\42c4eecd215cce7f59a109ec5df5e214\transformed\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\93587ff250b5c7f2e3a7fcbbbd071528\transformed\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\93587ff250b5c7f2e3a7fcbbbd071528\transformed\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\582db73614e237f39a8f9d388997d8d8\transformed\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\582db73614e237f39a8f9d388997d8d8\transformed\jetified-firebase-database-collection-18.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3e05de34d1589a42ebd1e1b8b4938744\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3e05de34d1589a42ebd1e1b8b4938744\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:5:5-44
@@ -476,8 +512,6 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\s
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9d9730b2327f27bd4affe505b7d15f23\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\03aadf8067201fc658533b0d65fa45d6\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\03aadf8067201fc658533b0d65fa45d6\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\eb4f2707cb26f15ddb1eb72e4829ae12\transformed\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\eb4f2707cb26f15ddb1eb72e4829ae12\transformed\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\95428964b3b6259aa312ff12349fd9f6\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\95428964b3b6259aa312ff12349fd9f6\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\53ba64e63468cfbb9a20e1447f742423\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
@@ -516,8 +550,6 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\soare\Desktop\firebase-firesto
 MERGED from [androidx.print:print:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\3b9f82768ffd10dfe205c85fc56d49e1\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\62a6bccf824bf50a350f0804bbe2d9df\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\62a6bccf824bf50a350f0804bbe2d9df\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:7:5-9:41
-MERGED from [org.jetbrains.anko:anko-coroutines:0.10.8] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a973027e9fd6d95ce04ca4ae39380d78\transformed\jetified-anko-coroutines-0.10.8\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a4afedf8a39a596e383b921d3cb53d74\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\a4afedf8a39a596e383b921d3cb53d74\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\49b1b4f01a3b51d13b47b15257c0fc89\transformed\jetified-protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
@@ -536,8 +568,6 @@ INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 		INJECTED from D:\GitHub\AM2122\ProjetoAM2\app\src\main\AndroidManifest.xml
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-auth-ktx:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\016411422652a7ce69c3bcec2d796ba7\transformed\jetified-firebase-auth-ktx-21.0.1\AndroidManifest.xml:8:9-14:19
-MERGED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:12:9-18:19
-MERGED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ba3a3d8cdff0fb71e8931b69f64379f0\transformed\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ba3a3d8cdff0fb71e8931b69f64379f0\transformed\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-firestore-ktx:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cce055da59ef5c33490a68a3a7833c9c\transformed\jetified-firebase-firestore-ktx-24.0.0\AndroidManifest.xml:12:9-18:19
@@ -546,8 +576,6 @@ MERGED from [com.google.firebase:firebase-messaging-ktx:22.0.0] C:\Users\soare\D
 MERGED from [com.google.firebase:firebase-messaging-ktx:22.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\0e62db302f5fbcbe95683e12811dde69\transformed\jetified-firebase-messaging-ktx-22.0.0\AndroidManifest.xml:26:9-32:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\893ba6dc734555805e60b1c9b09ff832\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\893ba6dc734555805e60b1c9b09ff832\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:12:9-18:19
-MERGED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:49:9-55:19
 MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:49:9-55:19
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:74:9-80:19
@@ -596,12 +624,6 @@ ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Des
 		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:36:13-107
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:19.2.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6b45abe01a8167e2a9a18a4828272485\transformed\jetified-play-services-auth-19.2.0\AndroidManifest.xml:34:13-89
-meta-data#com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar
-ADDED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:15:13-17:85
-	android:value
-		ADDED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:17:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-database-ktx:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\6495dd2ade9ad85dd1f5e0f5979597e5\transformed\jetified-firebase-database-ktx-20.0.2\AndroidManifest.xml:16:17-124
 meta-data#com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageKtxRegistrar
 ADDED from [com.google.firebase:firebase-storage-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\ba3a3d8cdff0fb71e8931b69f64379f0\transformed\jetified-firebase-storage-ktx-20.0.0\AndroidManifest.xml:15:13-17:85
 	android:value
@@ -627,9 +649,7 @@ ADDED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\soare\Deskt
 	android:name
 		ADDED from [com.google.firebase:firebase-common-ktx:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\893ba6dc734555805e60b1c9b09ff832\transformed\jetified-firebase-common-ktx-20.0.0\AndroidManifest.xml:16:17-113
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
+ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:13:5-79
@@ -647,41 +667,13 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\
 MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\bfdf5b4a95dda39c8872c10fd49a60cd\transformed\jetified-grpc-android-1.41.0\AndroidManifest.xml:11:5-79
 MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\bfdf5b4a95dda39c8872c10fd49a60cd\transformed\jetified-grpc-android-1.41.0\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:25:22-76
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\4634a8f64c6f2adc8431f5180b4ab8eb\transformed\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\23ada0dcf95d448423c38b8bdc433a59\transformed\jetified-firebase-firestore-24.0.0\AndroidManifest.xml:14:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\219a2ca0f6fa1cb8f9e9ad6693efdaf6\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:20.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9af129705d5cedb83c845937114a6756\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\9b5fa1ab1eb0f0e840025398ccdb34e7\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:8:5-67
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:8:5-67
-	android:name
-		ADDED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:26:22-64
-meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
-ADDED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
-	android:value
-		ADDED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-database:20.0.2] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\2430b0e62ac970f0e3970961cd0bcc1a\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
+		ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:22-76
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:23:5-68
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:9:5-68
 MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:9:5-68
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:23:22-65
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:5-82
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:11:5-82
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\cc7f6568a94eec15e31263a3f112effb\transformed\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:11:5-82
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:22-79
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
 ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:28:9-35:20
 	android:exported
@@ -692,10 +684,6 @@ ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Deskto
 		ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:29:13-78
 intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
 ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:32:13-34:29
-action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:33:17-81
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:33:25-78
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:41:9-48:19
 	android:exported
@@ -708,10 +696,6 @@ intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
 ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:45:13-47:29
 	android:priority
 		ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:45:28-51
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:46:17-78
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:46:25-75
 meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
 ADDED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\soare\Desktop\firebase-firestore-chat-app-master\firebase-firestore-chat-app-master\caches\transforms-3\c9e17c9569dc674c19e73edabc7a711a\transformed\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:52:13-54:85
 	android:value
