@@ -1,9 +1,13 @@
 package com.example.projetoam2
 
 import android.content.Intent
+import android.media.tv.TvContract.Programs.Genres.decode
 import android.net.Uri
+import android.net.Uri.decode
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Base64.*
+import android.webkit.URLUtil.decode
 import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
@@ -16,7 +20,6 @@ import com.example.projetoam2.Model.TextMessage
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.Utils.AppUtils
 import com.example.projetoam2.Utils.FirestoreUtil
-import com.example.projetoam2.item.UserItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ListenerRegistration
 import com.squareup.picasso.Picasso
@@ -30,6 +33,11 @@ import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.item_text_message.*
 import java.util.*
+import javax.crypto.Cipher
+import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.IvParameterSpec
+import javax.crypto.spec.PBEKeySpec
+import javax.crypto.spec.SecretKeySpec
 
 class ChatActivity : AppCompatActivity() {
 
