@@ -36,7 +36,7 @@ class InfoEventActivity : AppCompatActivity() {
         val horafimcutted =  horafim?.substringAfter("Timestamp(seconds=")
             ?.substringBefore(", nanoseconds=0)")
 
-        val formatterhour = SimpleDateFormat("hh:mm")
+        val formatterhour = SimpleDateFormat("HH:mm")
         val horafimconverted = formatterhour.format(Date(horafimcutted?.toLong()?.times(1000)!!))
 
         findViewById<TextView>(R.id.TituloEventoInfo).text = titulo

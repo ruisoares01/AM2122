@@ -48,7 +48,7 @@ class CalendarioFragment : Fragment() {
     var eventoscalendario: MutableList<Event> = arrayListOf()
     var eventoslista: MutableList<Eventos> = arrayListOf()
     lateinit var adapterlisteventos : CalendarioEventosAdapter
-    private val dateFormatMonth = SimpleDateFormat("MMMM- yyyy", Locale.getDefault())
+    private val dateFormatMonth = SimpleDateFormat("MMMM- yyyy", Locale.forLanguageTag("PT"))
     var compactCalendar: CompactCalendarView? = null
     val db = Firebase.firestore
     var arrayChats : MutableList<String> = arrayListOf()
@@ -233,25 +233,13 @@ class CalendarioFragment : Fragment() {
 
         //Verifica qual é o mês atual em numero e converte o mesmo para extenso
         var mesinicial = ""
-        when (DateTimeFormatter.ofPattern("MM").format(date)) {
-            "01" -> mesinicial = "January"
-            "02" -> mesinicial = "February"
-            "03" -> mesinicial = "March"
-            "04" -> mesinicial = "April"
-            "05" -> mesinicial = "May"
-            "06" -> mesinicial = "June"
-            "07" -> mesinicial = "July"
-            "08" -> mesinicial = "August"
-            "09" -> mesinicial = "September"
-            "10" -> mesinicial = "October"
-            "11" -> mesinicial = "November"
-            "12" -> mesinicial = "December"
-        }
+        mesinicial = DateTimeFormatter.ofPattern("MMMM",Locale.forLanguageTag("PT")).format(date)
+
         //Declara diferentes formatações da data
         val anoinicial = DateTimeFormatter.ofPattern("yyyy").format(date)
 
         //Declara o texto do mesdocalendario mes em extenso e o ano
-        view.findViewById<TextView>(R.id.mesdocalendario).text = "$mesinicial- $anoinicial"
+        view.findViewById<TextView>(R.id.mesdocalendario).text = "$mesinicial de $anoinicial"
 
 
 
@@ -339,7 +327,7 @@ class CalendarioFragment : Fragment() {
 
             val rowView = layoutInflater.inflate(R.layout.row_calendario, parent, false)
 
-            val formatterhour = SimpleDateFormat("hh:mm")
+            val formatterhour = SimpleDateFormat("HH:mm")
 
             val dateEventlist = rowView.findViewById<TextView>(R.id.dateEventList)
             val titleEventList = rowView.findViewById<TextView>(R.id.titleEventList)

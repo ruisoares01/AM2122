@@ -6,9 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.HomeFragment">
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/buttonAddChat"
+        android:id="@+id/buttonAddGrupo"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_gravity="end|bottom"
@@ -24,49 +23,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.86"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"/>
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/buttonHomeGrupos"
+        android:id="@+id/buttonHomeGruposGrupos"
         android:layout_width="0dp"
         android:layout_height="63dp"
         android:layout_weight="0.5"
         android:background="@color/Ipca"
         android:text="Grupos"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:theme="@style/Theme.ProjetoAM2"
         app:icon="@drawable/ic_baseline_group_24"
         app:iconGravity="top"
         app:iconPadding="0dp"
         app:iconSize="20dp"
+        app:iconTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonHomeChats"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/buttonHomeChatsGrupos"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/buttonHomeChats"
+        android:id="@+id/buttonHomeChatsGrupos"
         android:layout_width="0dp"
         android:layout_height="63dp"
         android:layout_weight="0.5"
         android:background="@color/Ipca"
         android:text="Chats"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
         android:textSize="18sp"
         app:icon="@drawable/msgicon"
         app:iconGravity="top"
         app:iconPadding="0dp"
         app:iconSize="20dp"
-        app:iconTint="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/buttonHomeGrupos"
+        app:layout_constraintEnd_toStartOf="@+id/buttonHomeGruposGrupos"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/userRecyclerVieww"
+        android:id="@+id/userRecyclerViewwGrupos"
         android:layout_width="match_parent"
         android:layout_height="655dp"
         android:layout_marginTop="16dp"
@@ -74,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHomeGrupos"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHomeGruposGrupos"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/user_layout" />
 

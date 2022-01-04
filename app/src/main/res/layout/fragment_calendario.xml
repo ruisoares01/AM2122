@@ -12,7 +12,7 @@
         android:id="@+id/compactcalendar_view"
         android:layout_width="331dp"
         android:layout_height="295dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="10dp"
         android:paddingLeft="10dp"
         android:paddingTop="50dp"
         android:paddingRight="10dp"
@@ -57,7 +57,8 @@
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="@+id/compactcalendar_view"
         app:layout_constraintEnd_toStartOf="@+id/compactcalendar_view"
-        app:layout_constraintTop_toTopOf="@+id/mesdocalendario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/compactcalendar_view"
         app:layout_constraintVertical_bias="0.494" />
 
     <ImageView
@@ -68,8 +69,9 @@
         android:backgroundTint="@color/Ipca"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="@+id/compactcalendar_view"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/compactcalendar_view"
-        app:layout_constraintTop_toTopOf="@+id/mesdocalendario"
+        app:layout_constraintTop_toTopOf="@+id/compactcalendar_view"
         app:layout_constraintVertical_bias="0.494"
         app:tint="@color/black" />
 
@@ -77,19 +79,21 @@
         android:id="@+id/mesdocalendario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="sans-serif"
-        android:text="XXXX-XXXX"
-        android:textSize="14sp"
+        android:text="----- de ----"
+        android:textColor="#000000"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/compactcalendar_view"
-        app:layout_constraintEnd_toEndOf="@+id/compactcalendar_view"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/compactcalendar_view" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listViewCalendario"
-        android:layout_width="418dp"
-        android:layout_height="170dp"
+        android:layout_width="410dp"
+        android:layout_height="249dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
