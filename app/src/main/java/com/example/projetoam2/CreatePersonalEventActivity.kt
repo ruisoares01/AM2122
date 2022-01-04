@@ -31,7 +31,7 @@ import java.time.format.DateTimeFormatter
 class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListener {
 
 
-    var color: Int = 0
+    var color: Int = -15100386
     var horainicio = ""
     var horafim = ""
     var dateLong = 0L
@@ -55,6 +55,8 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
         val horaInicioTextView = findViewById<TextView>(R.id.textViewHoraInicio)
         val dataTextView = findViewById<TextView>(R.id.textViewData)
         val createEventButton = findViewById<Button>(R.id.buttonCreateEvent)
+        val cancelEventButton = findViewById<Button>(R.id.buttonCancelEvent)
+
 
         val date = Date(System.currentTimeMillis())
         val format = SimpleDateFormat("dd 'de' MMMM 'de' yyyy",Locale.forLanguageTag("PT"))
@@ -95,7 +97,9 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
 
 
 
-
+        cancelEventButton.setOnClickListener {
+            finish()
+        }
 
         createEventButton.setOnClickListener {
             val dataprocessed = SimpleDateFormat("dd/MM/yyyy").format(Date(dateLong))
@@ -113,17 +117,13 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
                 "cor" to color
             )
 
-            if(datafimtimestamp < datainiciotimestamp)
+            println("data fim processed : ${datafimprocessed}")
+            println("data inicio processed : ${datainicioprocessed}")
+            println(datainicio)
+            println(datafim)
+
+            if(datafimprocessed > datainicioprocessed)
             {
-
-                println("data fim processed : ${datafimprocessed}")
-                println("data inicio processed : ${datainicioprocessed}")
-
-
-                println(datainicio)
-                println(datafim)
-
-
                 db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").add(evento)
                   .addOnSuccessListener {
                       Log.d(TAG, "Event created sucessfully with ID: ${it.id}")
@@ -131,7 +131,7 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
                   .addOnFailureListener { erro ->
                       Log.w(TAG, "Error when adding event : ", erro)
                   }
-
+                finish()
             }
             else{
                 Toast.makeText(this,"Hora de Inicio tem que ser menor que a Hora de Fim do Evento",Toast.LENGTH_SHORT)

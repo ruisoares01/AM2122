@@ -49,6 +49,13 @@
             android:name=".CreatePersonalEventActivity"
             android:exported="true"
             android:label="@string/app_name" />
+        <activity
+            android:name=".InfoEventActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

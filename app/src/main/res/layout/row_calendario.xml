@@ -25,7 +25,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="129dp"
             android:background="@drawable/custom_card_view"
             android:paddingBottom="12dp">
 
@@ -62,20 +62,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/buttonExpand"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/ic_baseline_arrow_down_24"
-                app:layout_constraintBottom_toBottomOf="@+id/titleEventList"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.727"
-                app:layout_constraintStart_toEndOf="@+id/titleEventList"
-                app:layout_constraintTop_toTopOf="@+id/titleEventList"
-                app:layout_constraintVertical_bias="0.0"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
             <ImageButton
                 android:id="@+id/buttonShowColorEvent"
                 android:layout_width="21dp"
@@ -94,39 +80,72 @@
                 android:id="@+id/expandableView"
                 android:layout_width="406dp"
                 android:layout_height="124dp"
-                android:layout_marginTop="16dp"
                 android:paddingBottom="12dp"
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.4"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonExpand">
+                app:layout_constraintTop_toBottomOf="@+id/buttonShowColorEvent">
 
                 <TextView
                     android:id="@+id/descEventList"
-                    android:layout_width="360dp"
-                    android:layout_height="62dp"
+                    android:layout_width="154dp"
+                    android:layout_height="25dp"
                     android:layout_gravity="bottom|right"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="16dp"
                     android:paddingStart="2dp"
                     android:text="TextView"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/descTitulo" />
-
-                <TextView
-                    android:id="@+id/descTitulo"
-                    style="@style/TextAppearance.AppCompat.Body1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Descricao "
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="8sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/typeEventList"
+                    android:layout_width="154dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginStart="16dp"
+                    android:paddingStart="2dp"
+                    android:text="TextView"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descEventList" />
+
+                <TextView
+                    android:id="@+id/infoTypeEventList"
+                    android:layout_width="154dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginStart="16dp"
+                    android:paddingStart="2dp"
+                    android:text="TextView"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/typeEventList" />
+
+                <TextView
+                    android:id="@+id/horaFimEventList"
+                    android:layout_width="154dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginStart="16dp"
+                    android:paddingStart="2dp"
+                    android:text="TextView"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/infoTypeEventList" />
+
+                <TextView
+                    android:id="@+id/dataEventList"
+                    android:layout_width="154dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="bottom|right"
+                    android:paddingStart="2dp"
+                    android:text="TextView"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/horaFimEventList"
+                    app:layout_constraintStart_toEndOf="@+id/horaFimEventList"
+                    app:layout_constraintTop_toBottomOf="@+id/infoTypeEventList" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

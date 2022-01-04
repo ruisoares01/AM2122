@@ -40,6 +40,7 @@ import android.app.Activity
 
 import android.content.Intent
 import com.example.projetoam2.CreatePersonalEventActivity
+import com.example.projetoam2.InfoEventActivity
 
 
 class CalendarioFragment : Fragment() {
@@ -51,7 +52,7 @@ class CalendarioFragment : Fragment() {
     var compactCalendar: CompactCalendarView? = null
     val db = Firebase.firestore
     var arrayChats : MutableList<String> = arrayListOf()
-    var c=0
+
 
     fun Events() {
         // Required empty public constructor!
@@ -107,8 +108,7 @@ class CalendarioFragment : Fragment() {
         //Começar parte do Firebase aqui <---------------------
         var x=0;
         var z=0
-
-        var stringdocument = ""
+        var c=0
 
         db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").get()
             .addOnSuccessListener { document ->
@@ -126,7 +126,9 @@ class CalendarioFragment : Fragment() {
                         .addOnSuccessListener { eventos ->
                             while(z<eventos.documents.size) {
                                 if (eventos != null) {
-                                    var infoeventos = "${eventos.documents.get(z).data?.get("titulo").toString()} * ${eventos.documents.get(z).data?.get("descricao").toString()} * grupo * ${arrayChat} "
+                                    var infoeventos = "${eventos.documents.get(z).data?.get("titulo").toString()}*" +
+                                            "${eventos.documents.get(z).data?.get("descricao").toString()}*grupo*" +
+                                            "${arrayChat}*${eventos.documents.get(z).data?.get("dataFim")}"
 
 /*                                    Eventos(eventos.documents.get(z).data?.get("titulo").toString(),
                                         eventos.documents.get(z).data?.get("descricao").toString(),
@@ -134,9 +136,9 @@ class CalendarioFragment : Fragment() {
                                         eventos.documents.get(z).data?.get("dataFim") as Timestamp,
                                         eventos.documents.get(z).data?.get("cor") as Long)*/
 
-                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataFim") as Timestamp).seconds * 1000),"Inicio de ${infoeventos}"))
+                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataInicio") as Timestamp).seconds * 1000),"${infoeventos}"))
 
-                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataInicio") as Timestamp).seconds * 1000),"Fim de ${infoeventos}"))
+                         //           compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataFim") as Timestamp).seconds * 1000),"Fim de ${infoeventos}"))
 
                                     //arrayChats.add(x, eventos.documents.get(x).data?.values.toString().replace("[", "").replace("]", "") )
                                     println("DocumentSnapshot data of events on Groups: ${eventos.documents.get(z).data?.toString()}")
@@ -156,6 +158,8 @@ class CalendarioFragment : Fragment() {
                 println("Had expection when searching for grupoIds in usuarios , error info: $exception")
             }
 
+        Thread.sleep(1000)
+
         db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").get()
             .addOnSuccessListener { eventospessoais ->
                 if(eventospessoais.documents.size>0){
@@ -164,20 +168,20 @@ class CalendarioFragment : Fragment() {
                         println("DocumentSnapshot data of Personal Events: ${eventospessoais.documents.get(c).data?.toString()}")
                         println("DocumentSnapshot data values of Personal Events : ${eventospessoais.documents.get(c).data?.values.toString()}")
 
-                        var infopersonaleventos = "${eventospessoais.documents.get(c).data?.get("titulo").toString()} * ${eventospessoais.documents.get(c).data?.get("descricao").toString()} * pessoal * ${Firebase.auth.currentUser?.uid.toString()} "
+                        var infopersonaleventos = "${eventospessoais.documents.get(c).data?.get("titulo").toString()}*" +
+                                "${eventospessoais.documents.get(c).data?.get("descricao").toString()}*" +
+                                "pessoal*${Firebase.auth.currentUser?.uid.toString()}" +
+                                "*${eventospessoais.documents.get(c).data?.get("dataFim")} "
 
-                        compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataFim") as Timestamp).seconds * 1000),"Inicio de ${infopersonaleventos}"))
+                        compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataInicio") as Timestamp).seconds * 1000),"${infopersonaleventos}"))
 
-                        compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataInicio") as Timestamp).seconds * 1000),"Fim de ${infopersonaleventos}"))
+                 //       compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataFim") as Timestamp).seconds * 1000),"Fim de ${infopersonaleventos}"))
 
 
                         println("c : $c")
                         c += 1
                     }
                 }
-
-
-
             }
             .addOnFailureListener { exception ->
                 println("Had expection when searching for events in usuarios , error info: $exception")
@@ -340,31 +344,46 @@ class CalendarioFragment : Fragment() {
             val dateEventlist = rowView.findViewById<TextView>(R.id.dateEventList)
             val titleEventList = rowView.findViewById<TextView>(R.id.titleEventList)
             val descEventList = rowView.findViewById<TextView>(R.id.descEventList)
+            val horaFimEventList = rowView.findViewById<TextView>(R.id.horaFimEventList)
+            val typeEventList = rowView.findViewById<TextView>(R.id.typeEventList)
+            val infoTypeEventList = rowView.findViewById<TextView>(R.id.infoTypeEventList)
+            val dataEventList = rowView.findViewById<TextView>(R.id.dataEventList)
 
             //Obtem a data do evento e separa-o em uma lista com 2 strings
             val datamaster = eventoscalendario[position].data.toString()
             val datadescricaotitulo : List<String> = datamaster.split("*")
 
             val expandableView = rowView.findViewById<ConstraintLayout>(R.id.expandableView);
-            val buttonExpand = rowView.findViewById<Button>(R.id.buttonExpand);
             val cardView = rowView.findViewById<CardView>(R.id.card_view);
             val buttonShowColor = rowView.findViewById<ImageButton>(R.id.buttonShowColorEvent)
 
-            buttonExpand.setOnClickListener(View.OnClickListener {
-                if (expandableView.getVisibility() === View.GONE) {
-                    TransitionManager.beginDelayedTransition(cardView, AutoTransition())
-                    expandableView.setVisibility(View.VISIBLE)
-                    buttonExpand.setBackgroundResource(R.drawable.ic_baseline_arrow_up_24)
-                } else {
-                    TransitionManager.beginDelayedTransition(cardView, AutoTransition())
-                    expandableView.setVisibility(View.GONE)
-                    buttonExpand.setBackgroundResource(R.drawable.ic_baseline_arrow_down_24)
-                }
-            })
+            val formatterdate = SimpleDateFormat("dd 'de' MMMM 'de' yyyy",Locale.forLanguageTag("PT"))
+
 
             dateEventlist.text = formatterhour.format(Date(eventoscalendario[position].timeInMillis))
             titleEventList.text = datadescricaotitulo[0]
             descEventList.text = datadescricaotitulo[1]
+            typeEventList.text = datadescricaotitulo[2]
+            infoTypeEventList.text = datadescricaotitulo[3]
+            horaFimEventList.text = datadescricaotitulo[4]
+            dataEventList.text = formatterdate.format(Date(eventoscalendario[position].timeInMillis))
+
+
+            cardView.setOnClickListener {
+                val intent = Intent(context, InfoEventActivity::class.java)
+                intent.putExtra("horainicio", dateEventlist.text as String)
+                intent.putExtra("titulo", titleEventList.text as String)
+                intent.putExtra("descricao", descEventList.text as String)
+                intent.putExtra("tipo", typeEventList.text as String)
+                intent.putExtra("infotipo", infoTypeEventList.text as String)
+                intent.putExtra("horafim", horaFimEventList.text as String)
+                intent.putExtra("data", dataEventList.text as String)
+                println("Dados da Intent :  ${dateEventlist.text} + ${titleEventList.text } + ${descEventList.text} + ${typeEventList.text} +${infoTypeEventList.text} + ${horaFimEventList.text} + ${dataEventList.text}")
+                startActivity(intent)
+            }
+
+            println(datadescricaotitulo)
+
             buttonShowColor.setBackgroundTintList(ColorStateList.valueOf(eventoscalendario[position].color))
 
 

@@ -16,14 +16,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/lato_thin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/font_certs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreateEventActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_calendario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_calendario.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_event.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_event.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_calendario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_calendario.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +69,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
+        <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -248,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641174387349</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Personal Events can now be created and viewed">
+      <created>1641249260521</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1641249260522</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,26 +283,42 @@
     <MESSAGE value="Parte do Romeu (codigo incompleto)" />
     <MESSAGE value="Calendario a funcionar com Firebase" />
     <MESSAGE value="Aprefeiçoações no Calendario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aprefeiçoações no Calendario" />
+    <MESSAGE value="Personal Events can now be created and viewed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Personal Events can now be created and viewed" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt</url>
-          <line>126</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt</url>
+          <line>36</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt</url>
+          <line>35</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt</url>
+          <line>33</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt</url>
+          <line>44</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt</url>
-          <line>129</line>
-          <option name="timeStamp" value="4" />
+          <line>124</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt</url>
-          <line>132</line>
-          <option name="timeStamp" value="5" />
+          <line>107</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
