@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -27,6 +28,10 @@ import com.xwray.groupie.*
 import de.hdodenhof.circleimageview.CircleImageView
 import org.jetbrains.anko.image
 import org.jetbrains.anko.imageURI
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 class HomeFragment : Fragment() {
 
@@ -43,8 +48,13 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view =inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
         var userRecyclerView = view.findViewById<RecyclerView>(R.id.userRecyclerVieww)
+
+        var buttonAddChat  = view.findViewById<FloatingActionButton>(R.id.buttonAddChat)
+
+        val buttonHomeGroups = view.findViewById<Button>(R.id.buttonHomeGrupos)
+        val buttonHomeHome = view.findViewById<Button>(R.id.buttonHomeChats)
 
         // Initialize Firebase Auth
         auth = Firebase.auth
@@ -55,16 +65,15 @@ class HomeFragment : Fragment() {
         //clear the list
         adapter.clear()
 
-        db.collection("usuarios").get().addOnSuccessListener{
-                documents ->
+        db.collection("usuarios").get().addOnSuccessListener { documents ->
             //get all the documents
             for (document in documents) {
                 val user = document.toObject(User::class.java)
-                if(auth.currentUser?.uid != user.uid) {
+                if (auth.currentUser?.uid != user.uid) {
                     adapter.add(Users(user))
                 }
             }
-            adapter.setOnItemClickListener{ item,view ->
+            adapter.setOnItemClickListener { item, view ->
                 val utilizador = item as Users
                 val intent = Intent(view.context, ChatActivity::class.java)
 
@@ -79,6 +88,16 @@ class HomeFragment : Fragment() {
                 startActivity(intent)
             }
         }
+
+        buttonHomeGroups.setOnClickListener {
+            val fragmenthomegrupos = HomeGruposFragment()
+            val fragmentManager = fragmentManager
+            val fragmentTransaction = fragmentManager!!.beginTransaction()
+            fragmentTransaction.replace(R.id.fragment_container, fragmenthomegrupos)
+            fragmentTransaction.commit()
+        }
+
+        buttonHomeHome.setOnClickListener{}
 
         // Inflate the layout for this fragment
         return view

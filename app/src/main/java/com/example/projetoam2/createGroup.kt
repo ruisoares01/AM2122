@@ -14,9 +14,11 @@ import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.example.projetoam2.Users
+import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
+import de.hdodenhof.circleimageview.CircleImageView
 import org.jetbrains.anko.db.TEXT
 import org.jetbrains.anko.toast
 
@@ -142,7 +144,11 @@ class Users(val user : User) : Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         val nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = user.nome
+
+        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageView3)
+        Picasso.get().load(user.linkfoto).into(imgprofile)
     }
+
 
     override fun getLayout() = R.layout.user_layout
 }
