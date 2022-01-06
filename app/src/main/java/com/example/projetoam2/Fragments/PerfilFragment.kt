@@ -23,9 +23,8 @@ import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
 import androidx.appcompat.app.AppCompatActivity
-
-
-
+import com.xwray.groupie.Item
+import com.xwray.groupie.ViewHolder
 
 
 class PerfilFragment : Fragment() {
@@ -52,50 +51,58 @@ class PerfilFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_perfil, container, false)
 
         auth = FirebaseAuth.getInstance()
+
+        circleImageView = view.findViewById(R.id.imgProfile)
         val imgprofile = view.findViewById<CircleImageView>(R.id.imgProfile)
         Picasso.get().load(dados.linkfoto).into(imgprofile)
+
+        botaofoto = view.findViewById(R.id.imgPickImage)
 
         val profileName = view.findViewById<TextView>(R.id.txtProfileName)
         val profileEmail = view.findViewById<TextView>(R.id.profileEmail)
         val profileAluno = view.findViewById<TextView>(R.id.profilenAluno)
         val profileCurso = view.findViewById<TextView>(R.id.profileCurso)
         val profileMorada = view.findViewById<TextView>(R.id.profileMorada)
-        botaofoto = view.findViewById(R.id.imgPickImage)
+
         profileName.text = dados.nome
         profileEmail.text = dados.email
         profileAluno.text = dados.naluno
         profileCurso.text = dados.curso
         profileMorada.text = dados.morada
 
+        val getResult =
+            registerForActivityResult(
+                ActivityResultContracts.StartActivityForResult()
+            ) {
+                if (it.resultCode == Activity.RESULT_OK) {
+
+                    selectedPhotoUri = it.data!!.data!!
+
+                    val bitmap = MediaStore.Images.Media.getBitmap(resolver, selectedPhotoUri)
+
+                    botaofoto.setImageBitmap(bitmap)
+
+                    botaofoto.alpha = 0f
+
+                    uploadImageToFirebaseStorage()
+                }
+            }
 
         botaofoto.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
             startActivityForResult(intent, 0)
 
-            val getResult =
-                registerForActivityResult(ActivityResultContracts.StartActivityForResult()
-                ){
-                    if (it.resultCode == Activity.RESULT_OK) {
-
-                        selectedPhotoUri = it.data!!.data!!
-
-                        val bitmap = MediaStore.Images.Media.getBitmap(resolver, selectedPhotoUri)
-
-                        botaofoto.setImageBitmap(bitmap)
-
-                        botaofoto.alpha = 0f
-
-                        uploadImageToFirebaseStorage()
-                    }
-                }
+            botaofoto = view.findViewById(R.id.imgPickImage)
 
             getResult.launch(intent)
+
         }
 
 
         return view
     }
+
 
     private fun uploadImageToFirebaseStorage() {
         if (selectedPhotoUri == null) return
@@ -110,9 +117,9 @@ class PerfilFragment : Fragment() {
                 ref.downloadUrl.addOnSuccessListener {
                     linkfoto = it.toString()
 
-                    Picasso.get().load(linkfoto).into(circleImageView)
-
                     val user = User(dados.uid,  dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, linkfoto)
+
+                    Picasso.get().load(linkfoto).into(circleImageView)
 
                     db.collection("usuarios").document(uid).set(user).addOnSuccessListener {
 

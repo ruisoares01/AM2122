@@ -1,27 +1,23 @@
 package com.example.projetoam2
 
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import javax.crypto.Cipher
+import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.IvParameterSpec
+import javax.crypto.spec.PBEKeySpec
+import javax.crypto.spec.SecretKeySpec
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.projetoam2.Fragments.Users
 import com.example.projetoam2.Model.MessageType
 import com.example.projetoam2.Model.TextMessage
-import com.example.projetoam2.Model.User
-import com.example.projetoam2.Utils.AppUtils
 import com.example.projetoam2.Utils.FirestoreUtil
-import com.example.projetoam2.item.UserItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ListenerRegistration
 import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.OnItemClickListener
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
@@ -30,8 +26,14 @@ import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.item_text_message.*
 import java.util.*
+import android.util.Base64
+
 
 class ChatActivity : AppCompatActivity() {
+
+    private val secretKey = "tK5UTui+DPh8lIlBxya5XVsmeDCoUl6vHhdIESMB6sQ="
+    private val salt = "QWlGNHNhMTJTQWZ2bGhpV3U="
+    private val iv = "bVQzNFNhRkQ1Njc4UUFaWA=="
 
     private lateinit var messagesListenerRegistration : ListenerRegistration
     private var shouldInitRecyclerView = true
@@ -94,12 +96,31 @@ class ChatActivity : AppCompatActivity() {
         //get the chat channel
         FirestoreUtil.getOrCreateChatChannel(otherUserId) { channelId ->
 
+
+
             messagesListenerRegistration =
                 FirestoreUtil.addChatMessagesListener(channelId, this, this::updateRecyclerView)
 
             send_msg_button.setOnClickListener {
+
+                val string1: String
+                val string: String
+                string = edit_text.getText().toString()
+
+
+                val ivParameterSpec = IvParameterSpec(Base64.decode(iv, Base64.DEFAULT))
+
+                val factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1")
+                val spec =  PBEKeySpec(secretKey.toCharArray(), Base64.decode(salt, Base64.DEFAULT), 10000, 256)
+                val tmp = factory.generateSecret(spec)
+                val secretKey =  SecretKeySpec(tmp.encoded, "AES")
+
+                val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding")
+                cipher.init(Cipher.ENCRYPT_MODE, secretKey, ivParameterSpec)
+                string1 = Base64.encodeToString(cipher.doFinal(string.toByteArray(Charsets.UTF_8)), Base64.DEFAULT)
+
                 val messageTosend =
-                    TextMessage(edit_text.text.toString(), Calendar.getInstance().time,
+                    TextMessage(string1.toString(), Calendar.getInstance().time,
                     FirebaseAuth.getInstance().currentUser!!.uid, MessageType.TEXT)
 
                 edit_text.setText("")
