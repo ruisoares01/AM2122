@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -58,6 +59,9 @@ class HomeFragment : Fragment() {
 
         // Initialize Firebase Auth
         auth = Firebase.auth
+
+        //hide action bar
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
         userRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         userRecyclerView.adapter = adapter

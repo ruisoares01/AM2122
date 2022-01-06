@@ -13,6 +13,9 @@ import java.lang.NullPointerException
 
 object FirestoreUtil {
 
+
+
+
     private val firestoreInstance: FirebaseFirestore by lazy { FirebaseFirestore.getInstance() }
 
     private val currentUserDocRef: DocumentReference
@@ -136,6 +139,8 @@ object FirestoreUtil {
     }
 
     fun sendMessage(message: Message, channelId: String) {
+
+
         chatChannelIsCollectionRef.document(channelId)
             .collection("messages")
             .add(message)
@@ -147,3 +152,4 @@ object FirestoreUtil {
             .add(message)
     }
 }
+
