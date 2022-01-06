@@ -17,9 +17,10 @@
   <component name="ChangeListManager">
     <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/createGroup.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/createGroup.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/item/TextMessageItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/item/TextMessageItem.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/beta_Romeu" />
+    <option name="BRANCH" value="origin/beta_Goncalo" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -272,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641329508457</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adicionado Home Grupos Fragment e GroupList, Adicionado Funcionalidades no Home Fragment e Alterações na createGroup">
+      <created>1641424704328</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1641424704328</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,7 +305,8 @@
     <MESSAGE value="Personal Events can now be created and viewed" />
     <MESSAGE value="InfoEventActivity criado (ver as informações de cada activity) e revamped todo o que tem a haver com eventos pessoais&#10;Adicionado font Lato" />
     <MESSAGE value="Atualizações no Design e em algumas funções no Calendario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizações no Design e em algumas funções no Calendario" />
+    <MESSAGE value="Adicionado Home Grupos Fragment e GroupList, Adicionado Funcionalidades no Home Fragment e Alterações na createGroup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionado Home Grupos Fragment e GroupList, Adicionado Funcionalidades no Home Fragment e Alterações na createGroup" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">

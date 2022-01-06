@@ -40,8 +40,8 @@ class TextMessageItem(val message: TextMessage,
             val tmp = factory.generateSecret(spec);
             val secretKey =  SecretKeySpec(tmp.encoded, "AES")
 
-            val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
-            cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
+           val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
+           cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
           //  string1 = String(cipher.doFinal(Base64.decode(message.text, Base64.DEFAULT)))
 
             viewHolder.textview_message_text.text = String(cipher.doFinal(Base64.decode(message.text, Base64.DEFAULT)))
