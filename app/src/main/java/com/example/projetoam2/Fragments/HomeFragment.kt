@@ -7,30 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.projetoam2.ChatActivity
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.R
-import com.example.projetoam2.dados
-import com.example.projetoam2.item.UserItem
+import com.example.projetoam2.UserListActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import com.xwray.groupie.*
 import de.hdodenhof.circleimageview.CircleImageView
-import org.jetbrains.anko.image
-import org.jetbrains.anko.imageURI
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -102,6 +94,11 @@ class HomeFragment : Fragment() {
         }
 
         buttonHomeHome.setOnClickListener{}
+
+        buttonAddChat.setOnClickListener {
+            val intent = Intent(view.context, UserListActivity::class.java)
+            startActivity(intent)
+        }
 
         // Inflate the layout for this fragment
         return view
