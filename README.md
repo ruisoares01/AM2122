@@ -30,3 +30,12 @@ Aplicação realizada no 1ºsemestre do 2ºano do curso CTeSP (Curso Tecnico Sup
 
 * Romeu Costa
 
+## Designers da aplicação:
+
+* Marcel Maia
+
+* Guilherme Dias
+
+* Eva Marques
+
+* José Salomão

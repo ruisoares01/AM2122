@@ -88,23 +88,6 @@ class CalendarioFragment : Fragment() {
             listViewCalendarioEventos.adapter = adapterlisteventos
         }
 
-
-
-
-  //      var listevent: MutableList<String> = arrayListOf()
-
-        //Declara uma MutableList de tipo inteiro que contem um array com cores
- /*       val coreslist: MutableList<Int> = arrayListOf(
-            Color.parseColor("#ff0000"), Color.parseColor("#000000"),
-            Color.parseColor("#FF8F00"), Color.parseColor("#038a34"),
-            Color.parseColor("#00ff00"), Color.parseColor("#8591ff"),
-            Color.parseColor("#00fff2"), Color.parseColor("#FFFF00"),
-            Color.parseColor("#0040ff"), Color.parseColor("#6AA84F"),
-            Color.parseColor("#ae00ff"), Color.parseColor("#97D6EC"),
-            Color.parseColor("#ff0077"),
-            Color.parseColor("#37474F"),
-        )*/
-
         //Começar parte do Firebase aqui <---------------------
         var x=0;
         var z=0
