@@ -113,11 +113,12 @@ class HomeFragment : Fragment() {
 
                                     latesttexttime.add(LatestMessageTime(otheruserstring,latest_message as String,latest_time))
 
-                                    latesttexttime.sortBy { latesttexttime -> latest_time }
                                     println("Latest Message : ${latest_message} from ${chat} , Other User UID : ${otheruserstring} ")
+                                    }
                                     c +=1
                                     if (c == chatscomhistorico.size - 1)
                                     {
+                                        //latesttexttime.sortBy {latesttexttime -> latesttexttime.latesttime }
                                         for(latest in latesttexttime)
                                         {
                                             println("latest : ${latest} and ${latest.latesttime} ${latest.latesttext} ${latest.otheruser}")
@@ -143,7 +144,6 @@ class HomeFragment : Fragment() {
                                             }
                                         }
                                     }
-                                }
                         }
                 }
 
