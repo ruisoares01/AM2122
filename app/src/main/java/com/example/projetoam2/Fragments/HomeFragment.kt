@@ -31,6 +31,7 @@ import com.google.firebase.Timestamp
 import com.google.firebase.firestore.ktx.getField
 import kotlinx.android.synthetic.main.item_text_message.*
 import java.sql.Array
+import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.crypto.Cipher
@@ -40,6 +41,7 @@ import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
+import kotlin.time.Duration.Companion.milliseconds
 
 class HomeFragment : Fragment() {
 
@@ -186,6 +188,7 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
         var secretKeyy = "tK5UTui+DPh8lIlBxya5XVsmeDCoUl6vHhdIESMB6sQ="
         var salt = "QWlGNHNhMTJTQWZ2bGhpV3U="
         var iv = "bVQzNFNhRkQ1Njc4UUFaWA=="
+        var miliday = 86400000
 
         val ivParameterSpec =  IvParameterSpec(Base64.decode(iv, Base64.DEFAULT))
 
@@ -196,11 +199,33 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
         val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
         cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
 
-        val dateFormat = SimpleDateFormat
-            .getDateTimeInstance(SimpleDateFormat.SHORT, SimpleDateFormat.SHORT, Locale.forLanguageTag("PT"))
+        lateinit var dateFormat : DateFormat
+
+        println("Inwholemiliseconds : ${texttime.time.milliseconds.inWholeMilliseconds}")
+
+       if((System.currentTimeMillis()-texttime.time.milliseconds.inWholeMilliseconds)>miliday){
+           dateFormat = SimpleDateFormat
+               .getDateInstance(SimpleDateFormat.SHORT,Locale.forLanguageTag("PT"))
+        }
+        else{
+           dateFormat = SimpleDateFormat
+               .getTimeInstance(SimpleDateFormat.SHORT,Locale.forLanguageTag("PT"))
+        }
+
+        var latestmessage = String(cipher.doFinal(Base64.decode(textmessage, Base64.DEFAULT)))
+
+
+        if(latestmessage.length>18){
+            latestmessage = latestmessage.substring(0,16) + "..."
+        }
+
 
         var latest = viewHolder.itemView.findViewById<TextView>(R.id.text_latest_message)
-        latest.text = String(cipher.doFinal(Base64.decode(textmessage, Base64.DEFAULT))) + " - " + dateFormat.format(texttime)
+
+        latest.text = latestmessage
+
+        var latesthour = viewHolder.itemView.findViewById<TextView>(R.id.text_latest_message_hour)
+        latesthour.text = dateFormat.format(texttime)
 
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = user.nome
