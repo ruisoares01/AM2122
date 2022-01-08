@@ -80,6 +80,7 @@ class HomeFragment : Fragment() {
 
         //clear the list
         adapter.clear()
+        chatscomhistorico.clear()
 
         var otheruserstring : String = ""
         var latest_message : Any?
