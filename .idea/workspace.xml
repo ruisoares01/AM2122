@@ -17,10 +17,10 @@
   <component name="ChangeListManager">
     <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Utils/FirestoreUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Utils/FirestoreUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_layout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +104,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Francisco\Desktop\IPCA\21_22\BetaBranch\app\src\main\res\layout" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.projetoam2.Model" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -295,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641526512303</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Atualização no Readme , latest_message agora enviado para o firebase">
+      <created>1641580764325</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1641580764325</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,7 +333,8 @@
     <MESSAGE value="Adicionado Home Grupos Fragment e GroupList, Adicionado Funcionalidades no Home Fragment e Alterações na createGroup" />
     <MESSAGE value="Parte do Gonnçalo (encriptação de mensagens)" />
     <MESSAGE value="Pesquisa de Users Adicionado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pesquisa de Users Adicionado" />
+    <MESSAGE value="Atualização no Readme , latest_message agora enviado para o firebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização no Readme , latest_message agora enviado para o firebase" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="XDebuggerManager">
