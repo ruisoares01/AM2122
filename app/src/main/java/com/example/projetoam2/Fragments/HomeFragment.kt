@@ -116,13 +116,16 @@ class HomeFragment : Fragment() {
                                     println("Latest Message : ${latest_message} from ${chat} , Other User UID : ${otheruserstring} ")
                                     }
                                     c +=1
-                                    if (c == chatscomhistorico.size - 1)
+                                    println("C: ${c}   vs ${chatscomhistorico.size}")
+                                    if (c == chatscomhistorico.size)
                                     {
-                                        //latesttexttime.sortBy {latesttexttime -> latesttexttime.latesttime }
+                                        println("latesttexttime size : ${latesttexttime.size} ")
+                                        latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime }
                                         for(latest in latesttexttime)
                                         {
                                             println("latest : ${latest} and ${latest.latesttime} ${latest.latesttext} ${latest.otheruser}")
-                                            db.collection("usuarios").document(latest.otheruser).get().addOnSuccessListener { documents ->
+                                            db.collection("usuarios").document(latest.otheruser).get()
+                                                .addOnSuccessListener { documents ->
                                                 val user = documents.toObject(User::class.java)
                                                 if (auth.currentUser?.uid != user!!.uid) {
                                                     adapter.add(Users(user,latest.latesttext,latest.latesttime))
