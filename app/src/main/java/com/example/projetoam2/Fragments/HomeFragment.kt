@@ -43,6 +43,8 @@ import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 import kotlin.time.Duration.Companion.milliseconds
 
+data class LatestMessageTime(val otheruser : String , val latesttext : String , val latesttime : Date )
+
 class HomeFragment : Fragment() {
 
     //variaveis
@@ -62,6 +64,7 @@ class HomeFragment : Fragment() {
     ): View? {
 
         var z = 0
+        var c = 0
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         var userRecyclerView = view.findViewById<RecyclerView>(R.id.userRecyclerVieww)
@@ -84,9 +87,12 @@ class HomeFragment : Fragment() {
         adapter.clear()
         chatscomhistorico.clear()
 
-        var otheruserstring : String = ""
+        var otheruserstring: String
+        var latesttexttime : ArrayList<LatestMessageTime> = arrayListOf()
         var latest_message : Any?
         var latest_time : Date
+
+        latesttexttime.clear()
 
         db.collection("usuarios").document(auth.currentUser!!.uid).collection("Salachat").get()
             .addOnSuccessListener { chatsexistentes ->
@@ -99,68 +105,50 @@ class HomeFragment : Fragment() {
                     println("CHAT : ${chat}")
                     db.collection("Chat").document(chat).get()
                         .addOnSuccessListener { chatcontent ->
-
                                 if(chatcontent.get("userIds")!=null && chatcontent.get("latest_message")!=null){
                                     otheruserstring = ((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid }
                                         .toString().replace("[","").replace("]",""))
                                     latest_message = (chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("text")
                                     latest_time = ((chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
 
+                                    latesttexttime.add(LatestMessageTime(otheruserstring,latest_message as String,latest_time))
+
+                                    latesttexttime.sortBy { latesttexttime -> latest_time }
                                     println("Latest Message : ${latest_message} from ${chat} , Other User UID : ${otheruserstring} ")
+                                    c +=1
+                                    if (c == chatscomhistorico.size - 1)
+                                    {
+                                        for(latest in latesttexttime)
+                                        {
+                                            println("latest : ${latest} and ${latest.latesttime} ${latest.latesttext} ${latest.otheruser}")
+                                            db.collection("usuarios").document(latest.otheruser).get().addOnSuccessListener { documents ->
+                                                val user = documents.toObject(User::class.java)
+                                                if (auth.currentUser?.uid != user!!.uid) {
+                                                    adapter.add(Users(user,latest.latesttext,latest.latesttime))
+                                                }
+                                                adapter.setOnItemClickListener { item, view ->
+                                                    val utilizador = item as Users
+                                                    val intent = Intent(view.context, ChatActivity::class.java)
 
-                                    db.collection("usuarios").document(otheruserstring).get().addOnSuccessListener { documents ->
-                                        //get all the documents
-                                        val user = documents.toObject(User::class.java)
-                                        if (auth.currentUser?.uid != user!!.uid) {
-                                            adapter.add(Users(user,latest_message.toString(),latest_time))
-                                        }
-                                        adapter.setOnItemClickListener { item, view ->
-                                            val utilizador = item as Users
-                                            val intent = Intent(view.context, ChatActivity::class.java)
+                                                    intent.putExtra("name", utilizador.user.nome)
+                                                    intent.putExtra("uid", utilizador.user.uid)
+                                                    intent.putExtra("email", utilizador.user.email)
+                                                    intent.putExtra("linkfoto", utilizador.user.linkfoto)
+                                                    intent.putExtra("nAluno", utilizador.user.naluno)
+                                                    intent.putExtra("curso", utilizador.user.curso)
+                                                    intent.putExtra("morada", utilizador.user.morada)
 
-                                            intent.putExtra("name", utilizador.user.nome)
-                                            intent.putExtra("uid", utilizador.user.uid)
-                                            intent.putExtra("email", utilizador.user.email)
-                                            intent.putExtra("linkfoto", utilizador.user.linkfoto)
-                                            intent.putExtra("nAluno", utilizador.user.naluno)
-                                            intent.putExtra("curso", utilizador.user.curso)
-                                            intent.putExtra("morada", utilizador.user.morada)
-
-                                            startActivity(intent)
+                                                    startActivity(intent)
+                                                }
+                                            }
                                         }
                                     }
                                 }
-
-
                         }
                 }
 
             }
 
-
-/*        db.collection("usuarios").get().addOnSuccessListener { documents ->
-            //get all the documents
-            for (document in documents) {
-                val user = document.toObject(User::class.java)
-                if (auth.currentUser?.uid != user.uid) {
-                    adapter.add(Users(user))
-                }
-            }
-            adapter.setOnItemClickListener { item, view ->
-                val utilizador = item as Users
-                val intent = Intent(view.context, ChatActivity::class.java)
-
-                intent.putExtra("name", utilizador.user.nome)
-                intent.putExtra("uid", utilizador.user.uid)
-                intent.putExtra("email", utilizador.user.email)
-                intent.putExtra("linkfoto", utilizador.user.linkfoto)
-                intent.putExtra("nAluno", utilizador.user.naluno)
-                intent.putExtra("curso", utilizador.user.curso)
-                intent.putExtra("morada", utilizador.user.morada)
-
-                startActivity(intent)
-            }
-       } */
 
         buttonHomeGroups.setOnClickListener {
             val fragmenthomegrupos = HomeGruposFragment()
