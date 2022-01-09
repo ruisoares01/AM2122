@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/text_latest_message"
-            android:layout_width="233dp"
+            android:layout_width="211dp"
             android:layout_height="29dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
@@ -43,7 +43,7 @@
             android:layout_marginStart="19dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="57dp"
-            android:layout_marginEnd="67dp"
+            android:layout_marginEnd="89dp"
             android:layout_marginBottom="58dp"
             android:layout_toEndOf="@+id/imageView3"
             android:textColor="#5E5E5E"
@@ -52,19 +52,20 @@
 
         <TextView
             android:id="@+id/text_latest_message_hour"
-            android:layout_width="54dp"
+            android:layout_width="77dp"
             android:layout_height="29dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="253dp"
+            android:layout_marginStart="231dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="57dp"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="58dp"
             android:layout_toEndOf="@+id/imageView3"
+            android:gravity="center"
             android:textColor="#5E5E5E"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <de.hdodenhof.circleimageview.CircleImageView
