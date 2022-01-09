@@ -1,44 +1,31 @@
 package com.example.projetoam2
 
-import android.content.BroadcastReceiver
-import android.content.Context
+
 import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.Fragments.CalendarioFragment
 import com.example.projetoam2.Fragments.HomeFragment
 import com.example.projetoam2.Fragments.PerfilFragment
+import com.example.projetoam2.Model.Dados
 import com.example.projetoam2.Model.User
-import com.example.projetoam2.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     //variaveis
     private lateinit var auth: FirebaseAuth
+
+    //firestore
+    val db = Firebase.firestore
 
     //variaveis fragment
     private val homeFragment = HomeFragment()
@@ -51,7 +38,6 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize Firebase Auth
         auth = Firebase.auth
-
 
 
         //fragment function
@@ -92,5 +78,25 @@ class MainActivity : AppCompatActivity() {
             return true
         }
         return true
+    }
+
+    override fun onPause() {
+        super.onPause()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
+    override fun onResume() {
+        super.onResume()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
     }
 }

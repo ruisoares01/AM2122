@@ -27,6 +27,9 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.item_text_message.*
 import java.util.*
 import android.util.Base64
+import com.example.projetoam2.Model.User
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 class ChatActivity : AppCompatActivity() {
@@ -40,6 +43,9 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var messagesSection : Section
 
     private val adapter = GroupAdapter<ViewHolder>()
+
+    //firestore
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +67,7 @@ class ChatActivity : AppCompatActivity() {
         var otherUserN = ""
         var otherUserCurso = ""
         var otherUserMorada = ""
+        var otherUserStatus = false
         val bundle = intent.extras
 
         //collect data
@@ -72,6 +79,7 @@ class ChatActivity : AppCompatActivity() {
             otherUserCurso = it.getString("curso").toString()
             otherUserMorada = it.getString("morada").toString()
             linkfoto = it.getString("linkfoto").toString()
+            otherUserStatus = it.getBoolean("status")
 
         }
 
@@ -80,6 +88,14 @@ class ChatActivity : AppCompatActivity() {
 
         val nameProfile = findViewById<TextView>(R.id.textViewName)
         nameProfile.text = otherUserName
+
+        val userStatus = findViewById<TextView>(R.id.textViewstatus)
+        if (otherUserStatus == true){
+            userStatus.text = "Online"
+        }else{
+            userStatus.text = "Offline"
+        }
+
 
         nameProfile.setOnClickListener {
             val intent = Intent(this, OtherProfile::class.java)
@@ -90,6 +106,7 @@ class ChatActivity : AppCompatActivity() {
             intent.putExtra("curso", otherUserCurso)
             intent.putExtra("morada", otherUserMorada)
             intent.putExtra("linkfoto", linkfoto)
+            intent.putExtra("status", otherUserStatus)
             startActivity(intent)
         }
 
@@ -156,5 +173,25 @@ class ChatActivity : AppCompatActivity() {
         } else {
             updateItems()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
+    override fun onResume() {
+        super.onResume()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
     }
 }

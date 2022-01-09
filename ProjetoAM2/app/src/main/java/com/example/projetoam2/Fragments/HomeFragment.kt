@@ -79,6 +79,7 @@ class HomeFragment : Fragment() {
                 intent.putExtra("nAluno", utilizador.user.naluno)
                 intent.putExtra("curso", utilizador.user.curso)
                 intent.putExtra("morada", utilizador.user.morada)
+                intent.putExtra("status", utilizador.user.online)
 
                 startActivity(intent)
             }
