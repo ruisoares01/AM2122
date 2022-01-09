@@ -2,6 +2,8 @@ package com.example.projetoam2.Fragments
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Base64
 import androidx.fragment.app.Fragment
@@ -9,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +32,8 @@ import de.hdodenhof.circleimageview.CircleImageView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.ktx.getField
+import eltos.simpledialogfragment.color.SimpleColorDialog
+import kotlinx.android.synthetic.main.activity_create_event.*
 import kotlinx.android.synthetic.main.item_text_message.*
 import java.sql.Array
 import java.text.DateFormat
@@ -134,14 +139,14 @@ class HomeFragment : Fragment() {
                                                     val utilizador = item as Users
                                                     val intent = Intent(view.context, ChatActivity::class.java)
 
-                intent.putExtra("name", utilizador.user.nome)
-                intent.putExtra("uid", utilizador.user.uid)
-                intent.putExtra("email", utilizador.user.email)
-                intent.putExtra("linkfoto", utilizador.user.linkfoto)
-                intent.putExtra("nAluno", utilizador.user.naluno)
-                intent.putExtra("curso", utilizador.user.curso)
-                intent.putExtra("morada", utilizador.user.morada)
-                intent.putExtra("status", utilizador.user.online)
+                                                     intent.putExtra("name", utilizador.user.nome)
+                                                     intent.putExtra("uid", utilizador.user.uid)
+                                                     intent.putExtra("email", utilizador.user.email)
+                                                     intent.putExtra("linkfoto", utilizador.user.linkfoto)
+                                                     intent.putExtra("nAluno", utilizador.user.naluno)
+                                                     intent.putExtra("curso", utilizador.user.curso)
+                                                     intent.putExtra("morada", utilizador.user.morada)
+                                                     intent.putExtra("status", utilizador.user.online)
 
                                                     startActivity(intent)
                                                 }
@@ -212,12 +217,25 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
         }
 
 
+
+
         var latest = viewHolder.itemView.findViewById<TextView>(R.id.text_latest_message)
 
         latest.text = latestmessage
 
         var latesthour = viewHolder.itemView.findViewById<TextView>(R.id.text_latest_message_hour)
         latesthour.text = dateFormat.format(texttime)
+
+        var online_status = viewHolder.itemView.findViewById<ImageButton>(R.id.online_status)
+
+        if(user.online == true){
+            online_status.setVisibility(View.VISIBLE)
+            online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN))}
+        else if(user.online == false){
+            online_status.setVisibility(View.VISIBLE)
+            online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))}
+        else{online_status.setVisibility(View.INVISIBLE)}
+
 
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = user.nome

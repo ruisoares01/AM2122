@@ -16,8 +16,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/UserListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/UserListActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_layout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -352,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641684963706</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Design Fix">
+      <created>1641749906750</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1641749906751</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -394,12 +403,11 @@
     <MESSAGE value="Ultima Mensagem Enviada a Mostrar" />
     <MESSAGE value="Bugfix da Lista de utilizadores" />
     <MESSAGE value="Mudanças no display de ultima mensagem : Data da ultima mensagem somente mostra apos um dia se , for menos , mostrará a Hora e string da ultima mensagem somente mostra até 16 digitos" />
-    <MESSAGE value="Design Fix" />
     <MESSAGE value="Mensagens agora estão ordenadas por tempo" />
     <MESSAGE value="Bugfix" />
     <MESSAGE value="Bugfixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bugfixes" />
-    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+    <MESSAGE value="Design Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Design Fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -423,16 +431,6 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt</url>
           <line>44</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt</url>
-          <line>124</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt</url>
-          <line>107</line>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
