@@ -113,8 +113,6 @@ class ChatActivity : AppCompatActivity() {
         //get the chat channel
         FirestoreUtil.getOrCreateChatChannel(otherUserId) { channelId ->
 
-
-
             messagesListenerRegistration =
                 FirestoreUtil.addChatMessagesListener(channelId, this, this::updateRecyclerView)
 

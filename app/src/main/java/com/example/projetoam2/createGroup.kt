@@ -74,9 +74,6 @@ class createGroup : AppCompatActivity() {
             }
 
             adapter.notifyDataSetChanged()
-
-            println(row.user.nome)
-
         }
 
         val refUsers = db.collection("usuarios")
@@ -112,10 +109,6 @@ class createGroup : AppCompatActivity() {
                 refCreateGroup.add(group).addOnSuccessListener { result ->
 
                     userIds.forEach {
-
-                        println(userIds)
-
-                        println(it)
 
                         if(it == auth.currentUser!!.uid)
                         {
