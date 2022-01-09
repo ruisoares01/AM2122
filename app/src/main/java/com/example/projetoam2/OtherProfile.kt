@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
-import org.w3c.dom.Text
 import java.util.*
 
 class OtherProfile : AppCompatActivity() {

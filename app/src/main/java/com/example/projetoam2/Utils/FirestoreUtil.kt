@@ -61,7 +61,7 @@ object FirestoreUtil {
 
     }
 
-    fun createGroupChannel(userIds: MutableList<String>, onComplete: (grupoId: String) -> Unit) {
+    /*fun createGroupChannel(userIds: MutableList<String>, onComplete: (grupoId: String) -> Unit) {
         //check which chat the user is in
 
         //if the chat channel doesn't exists we need to create it
@@ -86,7 +86,7 @@ object FirestoreUtil {
             }
 
         onComplete(newGroupChannel.id)
-    }
+    }*/
 
     //list for all the messages inside a channel
     fun addChatMessagesListener(channelId: String, context: Context,

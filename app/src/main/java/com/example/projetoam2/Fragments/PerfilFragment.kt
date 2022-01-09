@@ -23,8 +23,6 @@ import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
 import androidx.appcompat.app.AppCompatActivity
-import com.xwray.groupie.Item
-import com.xwray.groupie.ViewHolder
 
 
 class PerfilFragment : Fragment() {
