@@ -117,7 +117,7 @@ class PerfilFragment : Fragment() {
                 ref.downloadUrl.addOnSuccessListener {
                     linkfoto = it.toString()
 
-                    val user = User(dados.uid,  dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, linkfoto)
+                    val user = User(dados.uid,  dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, linkfoto, dados.online)
 
                     Picasso.get().load(linkfoto).into(circleImageView)
 
