@@ -1,8 +1,12 @@
 package com.example.projetoam2
 
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -100,6 +104,15 @@ class GroupUsers(val user : User) : Item<ViewHolder>() {
 
         var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageView3)
         Picasso.get().load(user.linkfoto).into(imgprofile)
+
+        var online_status = viewHolder.itemView.findViewById<ImageButton>(R.id.online_status)
+        if(user.online == true){
+            online_status.setVisibility(View.VISIBLE)
+            online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN))}
+        else if(user.online == false){
+            online_status.setVisibility(View.VISIBLE)
+            online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))}
+        else{online_status.setVisibility(View.INVISIBLE)}
 
     }
 
