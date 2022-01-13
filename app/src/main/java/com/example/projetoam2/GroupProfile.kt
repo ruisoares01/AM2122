@@ -16,6 +16,7 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import de.hdodenhof.circleimageview.CircleImageView
+import kotlinx.android.synthetic.main.activity_chat.*
 
 class GroupProfile : AppCompatActivity() {
 
@@ -88,6 +89,10 @@ class GroupProfile : AppCompatActivity() {
                 startActivity(intent)
             }
 
+        }
+
+        backButton.setOnClickListener() {
+            finish()
         }
 
     }

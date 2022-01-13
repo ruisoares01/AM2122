@@ -1,6 +1,7 @@
 package com.example.projetoam2
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetoam2.Fragments.HomeFragment
 import com.example.projetoam2.Model.GroupChannel
 import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
@@ -128,6 +130,8 @@ class createGroup : AppCompatActivity() {
                         }
                     }
                 }
+
+                finish()
             }
         }
     }
