@@ -230,7 +230,7 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
 
         if(user.online == true){
             online_status.setVisibility(View.VISIBLE)
-            online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN))}
+            online_status.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#097320")))}
         else if(user.online == false){
             online_status.setVisibility(View.VISIBLE)
             online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))}

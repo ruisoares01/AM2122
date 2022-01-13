@@ -168,7 +168,7 @@ class UserListActivity : AppCompatActivity() {
 
            if(usersLista[position].online == true){
                online_status.setVisibility(View.VISIBLE)
-               online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN))}
+               online_status.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#097320")))}
            else if(usersLista[position].online == false){
                online_status.setVisibility(View.VISIBLE)
                online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))}
@@ -195,4 +195,23 @@ class UserListActivity : AppCompatActivity() {
 
    }
 
+    override fun onPause() {
+        super.onPause()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
+    override fun onResume() {
+        super.onResume()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
 }

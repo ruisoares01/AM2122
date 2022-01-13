@@ -1,37 +1,33 @@
 package com.example.projetoam2
 
+import android.annotation.SuppressLint
+import android.content.ContentValues
 import android.content.res.ColorStateList
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import eltos.simpledialogfragment.color.SimpleColorDialog
-import eltos.simpledialogfragment.SimpleDialog
-import kotlinx.android.synthetic.main.activity_create_event.*
 import android.os.Build
+import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
+import com.example.projetoam2.Model.User
+import com.google.firebase.Timestamp
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import eltos.simpledialogfragment.SimpleDateDialog
+import eltos.simpledialogfragment.SimpleDialog
 import eltos.simpledialogfragment.SimpleTimeDialog
+import eltos.simpledialogfragment.color.SimpleColorDialog
+import kotlinx.android.synthetic.main.activity_create_event.*
 import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.LocalDate.now
 import java.util.*
-import android.R.string
-import android.content.ContentValues.TAG
-import android.util.Log
-import android.widget.Button
-import com.google.firebase.Timestamp
-import org.jetbrains.anko.support.v4.UI
-import java.time.format.DateTimeFormatter
 
-
-class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogResultListener {
-
-
+class EditEventActivity : AppCompatActivity(), SimpleDialog.OnDialogResultListener {
     var color: Int = -15100386
     var horainicio = ""
     var horafim = ""
@@ -39,34 +35,56 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
     val db = Firebase.firestore
     var datainicio = ""
     var datafim = ""
-    var groupOrPersonal = ""
 
 
+
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_event)
         supportActionBar?.hide()
 
-        Locale.setDefault(Locale("pt"))
+        val horainicio = intent.extras?.getString("horainicio")
+        val titulo = intent.extras?.getString("titulo")
+        val descricao = intent.extras?.getString("descricao")
+        val tipo = intent.extras?.getString("tipo")
+        val infotipo = intent.extras?.getString("infotipo")
+        val horafim = intent.extras?.getString("horafim")?.substringAfter("Timestamp(seconds=")
+            ?.substringBefore(", nanoseconds=0)")
+        val data = intent.extras?.getString("data")
+        val idevent = intent.extras?.getString("idevento")!!
+        var admin = intent.extras?.getString("admin")
+        color = intent.extras?.getInt("cor")!!
 
-        val ColorEventButton = findViewById<ImageButton>(R.id.buttonColorEvent)
+        val colorEventButton = findViewById<ImageButton>(R.id.buttonColorEvent)
 
         val horaFimTextView = findViewById<TextView>(R.id.textViewHoraFim)
         val horaInicioTextView = findViewById<TextView>(R.id.textViewHoraInicio)
         val dataTextView = findViewById<TextView>(R.id.textViewData)
-        val createEventButton = findViewById<Button>(R.id.buttonCreateEvent)
+        val editEventButton = findViewById<Button>(R.id.buttonCreateEvent)
         val cancelEventButton = findViewById<Button>(R.id.buttonCancelEvent)
+        val tituloTextView = findViewById<TextView>(R.id.editTextTituloEvento)
+        val descTextView = findViewById<TextView>(R.id.editTextDescricaoEvento)
+        editEventButton.text = "Ok"
+
+        dateLong = SimpleDateFormat("dd 'de' MMMM 'de' yyyy",Locale.forLanguageTag("PT")).parse(data).time
+        dataTextView.setText(data as String)
+
+        val formatterhour = SimpleDateFormat("HH:mm")
+        val horafimconverted = formatterhour.format(Date(horafim?.toLong()?.times(1000)!!))
 
 
-        val date = Date(System.currentTimeMillis())
-        val format = SimpleDateFormat("dd 'de' MMMM 'de' yyyy",Locale.forLanguageTag("PT"))
-        dataTextView.setText(format.format(date).toString())
+        colorEventButton.setBackgroundTintList(ColorStateList.valueOf(color))
 
 
-        intent.extras?.getString("groupOrPersonal",groupOrPersonal)
+        horaFimTextView.text = horafimconverted
+        horaInicioTextView.text = horainicio
+        tituloTextView.text = titulo
+        descTextView.text = descricao
 
-        ColorEventButton.setOnClickListener {
+
+        colorEventButton.setOnClickListener {
             SimpleColorDialog.build()
                 .title("Selecione a Cor do Evento")
                 .allowCustom(true)
@@ -104,17 +122,17 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
             finish()
         }
 
-        createEventButton.setOnClickListener {
+        editEventButton.setOnClickListener {
             val dataprocessed = SimpleDateFormat("dd/MM/yyyy").format(Date(dateLong))
-            val datafimprocessed = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("${dataprocessed} ${horafim}:00").time / 1000
+            val datafimprocessed = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("${dataprocessed} ${horafimconverted}:00").time / 1000
             val datainicioprocessed = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("${dataprocessed} ${horainicio}:00").time / 1000
             val datafimtimestamp = Timestamp(datafimprocessed,0)
             val datainiciotimestamp = Timestamp(datainicioprocessed,0)
 
 
             val evento = hashMapOf(
-                "titulo" to findViewById<TextView>(R.id.editTextTituloEvento).text.toString(),
-                "descricao" to findViewById<TextView>(R.id.editTextDescricaoEvento).text.toString(),
+                "titulo" to tituloTextView.text.toString(),
+                "descricao" to descTextView.text.toString(),
                 "dataInicio" to datainiciotimestamp,
                 "dataFim" to datafimtimestamp,
                 "cor" to color
@@ -127,26 +145,18 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
 
             if(datafimprocessed > datainicioprocessed)
             {
+                db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").document(idevent).set(evento)
+                    .addOnSuccessListener {
 
-               if(groupOrPersonal == "personal") {
-                   db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString())
-                       .collection("eventos").add(evento)
-                       .addOnSuccessListener {
-                           Log.d(TAG, "Event created sucessfully with ID: ${it.id}")
-                       }
-                       .addOnFailureListener { erro ->
-                           Log.w(TAG, "Error when adding event : ", erro)
-                       }
-                   finish()
-               }
-                else if(groupOrPersonal == "group"){
-                    val groupID = ""
-                   intent.extras?.getString("groupID", groupID)
-                    db.collection("grupos").document(groupID).collection("eventos").add(evento)
-               }
+                    }
+                    .addOnFailureListener { erro ->
+                        Log.w(ContentValues.TAG, "Error when editing event : ", erro)
+                    }
+                finish()
             }
             else{
-                Toast.makeText(this,"Hora de Inicio tem que ser menor que a Hora de Fim do Evento",Toast.LENGTH_SHORT)
+                Toast.makeText(this,"Hora de Inicio tem que ser menor que a Hora de Fim do Evento",
+                    Toast.LENGTH_SHORT)
             }
         }
 
@@ -181,4 +191,23 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
         return true
     }
 
+    override fun onPause() {
+        super.onPause()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
+    override fun onResume() {
+        super.onResume()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
 }

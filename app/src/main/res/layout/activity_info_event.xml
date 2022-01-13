@@ -197,4 +197,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
+    <Button
+        android:id="@+id/buttonEditEventHalf"
+        android:layout_width="206dp"
+        android:layout_height="66dp"
+        android:background="#000000"
+        android:text="Editar Evento"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonOkInfoEventHalf"
+        android:layout_width="206dp"
+        android:layout_height="66dp"
+        android:background="#000000"
+        android:text="Ok"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEditEventHalf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonEditEventHalf" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

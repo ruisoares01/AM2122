@@ -4,14 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projetoam2.Model.MessageType
 import com.example.projetoam2.Model.TextMessage
+import com.example.projetoam2.Model.User
 import com.example.projetoam2.Utils.FirestoreUtil
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
@@ -26,6 +31,7 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 
+
 class GroupActivity : AppCompatActivity() {
 
     private val secretKey = "tK5UTui+DPh8lIlBxya5XVsmeDCoUl6vHhdIESMB6sQ="
@@ -35,6 +41,9 @@ class GroupActivity : AppCompatActivity() {
     private lateinit var messagesListenerRegistration : ListenerRegistration
     private var shouldInitRecyclerView = true
     private lateinit var messagesSection : Section
+
+    val db = Firebase.firestore
+    val auth = Firebase.auth
 
     private val adapter = GroupAdapter<ViewHolder>()
 
@@ -55,6 +64,7 @@ class GroupActivity : AppCompatActivity() {
             finish()
         }
 
+        val groupOptionsButton = findViewById<ImageButton>(R.id.opcoesGruposButton)
 
         //collect data
         bundle?.let {
@@ -85,6 +95,13 @@ class GroupActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        groupOptionsButton.setOnClickListener {
+            val intent = Intent(this, GroupOptionsActivity::class.java)
+            intent.putExtra("name", groupName)
+            intent.putExtra("uid", groupId)
+            intent.putExtra("linkfoto", linkfoto)
+            startActivity(intent)
+        }
 
         val userIds : MutableList<String> = mutableListOf()
 
@@ -158,5 +175,25 @@ class GroupActivity : AppCompatActivity() {
         } else {
             updateItems()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
+    override fun onResume() {
+        super.onResume()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
     }
 }
