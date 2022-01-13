@@ -55,6 +55,8 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26458333333333334" />
         <entry key="app/src/main/res/drawable-v24/message_layout_received.xml" value="0.25277777777777777" />
         <entry key="app/src/main/res/drawable/button_style.xml" value="0.2630208333333333" />
+        <entry key="app/src/main/res/drawable/button_style2.xml" value="0.2609375" />
+        <entry key="app/src/main/res/drawable/button_style_2.xml" value="0.2609375" />
         <entry key="app/src/main/res/drawable/edittext_style.xml" value="0.2630208333333333" />
         <entry key="app/src/main/res/drawable/ic_baseline_assignment_returned_24.xml" value="0.26458333333333334" />
         <entry key="app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.2630208333333333" />
@@ -67,6 +69,7 @@
         <entry key="app/src/main/res/drawable/rect_round_primary_color.xml" value="0.2630208333333333" />
         <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.2630208333333333" />
         <entry key="app/src/main/res/drawable/rounded_corners_msg.xml" value="0.2630208333333333" />
+        <entry key="app/src/main/res/drawable/scrollview.xml" value="0.2609375" />
         <entry key="app/src/main/res/drawable/text_box_layout.xml" value="0.25277777777777777" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/activity_listar_perfis.xml" value="0.2484375" />
@@ -75,6 +78,7 @@
         <entry key="app/src/main/res/layout/activity_other_profile.xml" value="0.2351851851851852" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.2484375" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2351851851851852" />
+        <entry key="app/src/main/res/layout/fragment_calendario.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.13134057971014493" />
         <entry key="app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_text_message.xml" value="0.33" />
