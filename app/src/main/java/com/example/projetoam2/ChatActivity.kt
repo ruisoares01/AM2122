@@ -1,5 +1,7 @@
 package com.example.projetoam2
 
+import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -27,10 +29,20 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.item_text_message.*
 import java.util.*
 import android.util.Base64
+import android.util.Log
 import com.example.projetoam2.Model.User
+import com.example.projetoam2.Notifications.FirebaseService
+import com.example.projetoam2.Notifications.PushNotification
+import com.example.projetoam2.Notifications.RetrofitInstance
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.gson.Gson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
+
+const val TOPIC = "/topics/myTopic2"
 
 class ChatActivity : AppCompatActivity() {
 
@@ -47,12 +59,23 @@ class ChatActivity : AppCompatActivity() {
     //firestore
     val db = Firebase.firestore
 
+    val TAG = "MainActivity"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
+        //Notificacoes (em desenvolvimento)
+
+        /*FirebaseService.sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
+        FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
+            FirebaseService.token = it.token
+            etToken.setText(it.token)
+        }
+        FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)*/
+
         //action bar
-      //  supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
           supportActionBar?.hide()
 
         val backButton = findViewById<ImageView>(R.id.backButton)
@@ -141,6 +164,21 @@ class ChatActivity : AppCompatActivity() {
                 edit_text.setText("")
 
                 FirestoreUtil.sendMessage(messageTosend, channelId)
+
+
+                //Notificacoes (em desenvolvimento)
+
+           /*     val title = "CUCU"
+                val message = edit_text.text.toString()
+                val recipientToken = etToken.text.toString()
+                if(title.isNotEmpty() && message.isNotEmpty() && recipientToken.isNotEmpty()) {
+                    PushNotification(
+                        NotificationData(title, message),
+                        recipientToken
+                    ).also {
+                        sendNotification(it)
+                    }
+                }*/
             }
 
             send_image.setOnClickListener {
@@ -191,5 +229,18 @@ class ChatActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 println("Offline")
             }
+    }
+
+    private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {
+        try {
+            val response = RetrofitInstance.api.postNotification(notification)
+            if(response.isSuccessful) {
+                Log.d(ContentValues.TAG, "Response: ${Gson().toJson(response)}")
+            } else {
+                Log.e(ContentValues.TAG, response.errorBody().toString())
+            }
+        } catch(e: Exception) {
+            Log.e(ContentValues.TAG, e.toString())
+        }
     }
 }
