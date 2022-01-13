@@ -64,6 +64,7 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
                     if(admin != auth.currentUser!!.uid){
                         criarEventoOption2.visibility = View.GONE
                         eliminarGrupoOption5.visibility = View.GONE
+                        gerirGrupoOption6.visibility = View.GONE
                     }
                     else if(admin == auth.currentUser!!.uid){
                         sairGrupoOption4.visibility = View.GONE
@@ -115,6 +116,10 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
                 .neg("Nao")
                 .cancelable(false)
                 .show(this, "eliminarGrupo")
+        }
+
+        gerirGrupoOption6.setOnClickListener {
+
         }
 
         touchListener.isClickable = true
