@@ -15,10 +15,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="Novo Menu nos Grupos , Eliminar e Editar Eventos adicionado , Eliminar e Sair de Grupos adicionado , Criar Eventos para grupo Adicionado , Bugfixes e Revamps de coisas pelo projeto">
+    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="Gerir Grupo adicionado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupOptionsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupOptionsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_grupo_options.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_grupo_options.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -393,7 +392,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642105822880</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Gerir Grupo adicionado">
+      <created>1642109266095</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1642109266095</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Gerir Grupo adicionado">
+      <created>1642109361349</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1642109361349</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -442,7 +455,8 @@
     <MESSAGE value="Online Status agora dá display na RecyclerView dos utilizadores com historico e todos os utilizadores" />
     <MESSAGE value="Mostrar o online_status na lista no perfil do grupo" />
     <MESSAGE value="Novo Menu nos Grupos , Eliminar e Editar Eventos adicionado , Eliminar e Sair de Grupos adicionado , Criar Eventos para grupo Adicionado , Bugfixes e Revamps de coisas pelo projeto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Novo Menu nos Grupos , Eliminar e Editar Eventos adicionado , Eliminar e Sair de Grupos adicionado , Criar Eventos para grupo Adicionado , Bugfixes e Revamps de coisas pelo projeto" />
+    <MESSAGE value="Gerir Grupo adicionado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gerir Grupo adicionado" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
