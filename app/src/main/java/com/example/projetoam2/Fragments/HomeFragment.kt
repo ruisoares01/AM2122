@@ -152,6 +152,7 @@ class HomeFragment : Fragment() {
                                                 }
                                             }
                                         }
+                                        latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime.time }
                                     }
                         }
                 }
