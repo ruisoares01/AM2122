@@ -47,6 +47,7 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
         val verEventoOpinion3 = findViewById<ConstraintLayout>(R.id.opcaoGrupo3)
         val sairGrupoOption4 = findViewById<ConstraintLayout>(R.id.opcaoGrupo4)
         val eliminarGrupoOption5 = findViewById<ConstraintLayout>(R.id.opcaoGrupo5)
+        val gerirGrupoOption6 = findViewById<ConstraintLayout>(R.id.opcaoGrupo6)
 
         grupoOptionsConstraint.setBackgroundColor(Color.parseColor("#80000000"))
 
