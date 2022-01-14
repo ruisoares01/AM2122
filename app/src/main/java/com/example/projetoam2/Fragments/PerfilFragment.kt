@@ -2,6 +2,8 @@ package com.example.projetoam2.Fragments
 
 import android.app.Activity
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -10,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
@@ -65,12 +68,23 @@ class PerfilFragment : Fragment() {
         val profileAluno = view.findViewById<TextView>(R.id.profilenAluno)
         val profileCurso = view.findViewById<TextView>(R.id.profileCurso)
         val profileMorada = view.findViewById<TextView>(R.id.profileMorada)
+        val profileOnline = view.findViewById<ImageButton>(R.id.online_status_perfil)
 
         profileName.text = dados.nome
         profileEmail.text = dados.email
         profileAluno.text = dados.naluno
         profileCurso.text = dados.curso
         profileMorada.text = dados.morada
+
+        if(dados.online == true){
+            profileOnline.setVisibility(View.VISIBLE)
+            profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#00b026")))}
+            //profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#097320")))}
+        else if(dados.online == false){
+            profileOnline.setVisibility(View.VISIBLE)
+            profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))}
+
+
 
         val logOut = view.findViewById<Button>(R.id.buttonLogOut)
 
