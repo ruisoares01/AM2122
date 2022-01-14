@@ -87,7 +87,7 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
             }
 
 
-        db.collection("grupos").document(grupoID).collection("eventos").get()
+     /*   db.collection("grupos").document(grupoID).collection("eventos").get()
             .addOnSuccessListener { eventos ->
                 while(g<eventos.documents.size) {
                     if (eventos != null) {
@@ -104,11 +104,29 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
                                 println("g : $g")
                                 g += 1
                 }
-            }
+            }*/
 
-        Thread.sleep(1000)
-        adapterlisteventos.notifyDataSetChanged()
+        db.collection("grupos").document(grupoID).collection("eventos").addSnapshotListener { eventos, error ->
+                g=0
+                compactCalendar.removeAllEvents()
+                while(g< eventos!!.documents.size) {
+                        var infoeventos = "${eventos.documents.get(g).data?.get("titulo").toString()}*" +
+                                "${eventos.documents.get(g).data?.get("descricao").toString()}*" +
+                                "${eventos.documents.get(g).data?.get("dataFim")}*${eventos.documents.get(g).id}"
 
+                        compactCalendar.addEvent(Event((eventos.documents.get(g).data?.get("cor") as Long).toInt(),
+                            ((eventos.documents.get(g).data?.get("dataInicio") as Timestamp).seconds * 1000),
+                            infoeventos
+                        ))
+
+
+
+                    println("g : $g")
+                    g += 1
+                }
+            compactCalendar.callOnClick()
+            adapterlisteventos.notifyDataSetChanged()
+        }
 
         findViewById<ImageView>(R.id.leftArrowImageGrupo)?.setOnClickListener{
             compactCalendar!!.scrollLeft()
@@ -282,6 +300,13 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
         }
         else if(dialogTag == "EliminarEvento" && which == BUTTON_POSITIVE){
             db.collection("grupos").document(grupoID).collection("eventos").document(eventBeingRemoved).delete()
+            for(evento in eventoscalendario){
+                if(evento.data!!.toString().toLowerCase(Locale.getDefault()).contains(eventBeingRemoved)){
+                    eventoscalendario.remove(evento)
+                    adapterlisteventos.notifyDataSetChanged()
+                }
+
+            }
             return true
         }
         return false

@@ -431,9 +431,21 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
         else if(dialogTag == "EliminarEvento" && which == BUTTON_POSITIVE){
             if(typeofEventRemoval[0] == "pessoal"){
                 db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").document(typeofEventRemoval[1]).delete()
+                for(evento in eventoscalendario){
+                    if(evento.data!!.toString().toLowerCase(Locale.getDefault()).contains(typeofEventRemoval[1])){
+                        eventoscalendario.remove(evento)
+                        adapterlisteventos.notifyDataSetChanged()
+                    }
+                }
             }
             if(typeofEventRemoval[0]== "grupo"){
                 db.collection("grupos").document(typeofEventRemoval[2]).collection("eventos").document(typeofEventRemoval[1]).delete()
+                for(evento in eventoscalendario){
+                    if(evento.data!!.toString().toLowerCase(Locale.getDefault()).contains(typeofEventRemoval[1])){
+                        eventoscalendario.remove(evento)
+                        adapterlisteventos.notifyDataSetChanged()
+                    }
+                }
             }
             else{
                 Toast.makeText(context,"Nao foi possivel identificar o tipo deste evento",Toast.LENGTH_LONG)
