@@ -38,7 +38,7 @@ class InfoEventActivity : AppCompatActivity() {
         val data = intent.extras?.getString("data")
         val idevent = intent.extras?.getString("idevento")
         val cor = intent.extras?.getInt("cor")
-        var admin = ""
+        var admin = false
 
         val horafimcutted =  horafim?.substringAfter("Timestamp(seconds=")
             ?.substringBefore(", nanoseconds=0)")
@@ -65,7 +65,9 @@ class InfoEventActivity : AppCompatActivity() {
                 db.collection("grupos").document(infotipo).get()
                     .addOnSuccessListener {
                         infoTipoEventInfo.text = it.get("nome").toString()
-                        //admin = it.get("administrador").toString()
+
+
+                    //admin = it.get("administrador").toString()
                         /*
                         if(admin == auth.currentUser!!.uid){
                             okButtonHalf.visibility = View.VISIBLE
@@ -76,6 +78,15 @@ class InfoEventActivity : AppCompatActivity() {
                     }
                     .addOnFailureListener {
                         Toast.makeText(this,"Nao foi possivel buscar o nome do grupo no firebase",Toast.LENGTH_LONG)
+                    }
+                db.collection("usuarios").document(auth.currentUser!!.uid).collection("gruposIds").document(infotipo).get()
+                    .addOnSuccessListener { admin = it.getBoolean("admin")!!
+                        if(admin == true) {
+                            okButtonHalf.visibility = View.VISIBLE
+                            editButtonHalf.visibility = View.VISIBLE
+                            infoTipoEventInfo.visibility = View.GONE
+                            okButton.visibility = View.GONE
+                        }
                     }
             }
             else{

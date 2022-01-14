@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Base64
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -63,6 +64,7 @@ class HomeFragment : Fragment() {
     //firestore
     val db = Firebase.firestore
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -168,7 +170,30 @@ class HomeFragment : Fragment() {
             fragmentTransaction.commit()
         }
 
-        buttonHomeHome.setOnClickListener{}
+        var x1 = 0.0F
+        var x2 = 0.0F
+        val MIN_DISTANCE = 150
+
+        buttonHomeHome.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(v: View?, event: MotionEvent): Boolean {
+                when(event.action) {
+                    MotionEvent.ACTION_DOWN -> x1 = event.getX()
+                    MotionEvent.ACTION_UP -> {x2 = event.getX()
+                        var deltaX = x2 - x1
+                        if (Math.abs(deltaX) > MIN_DISTANCE) {
+                            val fragmenthomegrupos = HomeGruposFragment()
+                            val fragmentManager = fragmentManager
+                            val fragmentTransaction = fragmentManager!!.beginTransaction()
+                            fragmentTransaction.replace(R.id.fragment_container, fragmenthomegrupos)
+                            fragmentTransaction.commit()
+                            return true
+                        }
+                    }
+                }
+                return false
+            }
+        })
+
 
         buttonAddChat.setOnClickListener {
             val intent = Intent(view.context, UserListActivity::class.java)

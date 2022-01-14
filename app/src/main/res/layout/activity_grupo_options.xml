@@ -11,8 +11,8 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="483dp"
-        android:layout_marginBottom="350dp"
+        android:layout_height="478dp"
+        android:layout_marginBottom="400dp"
         android:background="@drawable/rounded_2_corners_menu"
         android:paddingTop="@dimen/activity_horizontal_margin"
         android:paddingEnd="@dimen/activity_horizontal_margin"
@@ -20,10 +20,9 @@
         android:paddingBottom="@dimen/activity_vertical_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.110000014" />
+        app:layout_constraintVertical_bias="0.07999998" />
 
     <View
         android:id="@+id/touchListener"

@@ -1,5 +1,6 @@
 package com.example.projetoam2
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -9,12 +10,14 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.updateLayoutParams
 import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import eltos.simpledialogfragment.SimpleDialog
+
 
 class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultListener {
 
@@ -25,6 +28,7 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
     var groupID = ""
     var groupPhotoLink = ""
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grupo_options)
@@ -42,6 +46,8 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
         grupoOptionsConstraint.startAnimation(AnimationUtils.loadAnimation(this,R.anim.slide_down))
         grupoOptionsConstraint.setBackgroundColor(Color.parseColor("#00bfbfbf"))
 
+        val viewgroupoptions = findViewById<View>(R.id.view)
+
         val verParticipantesOption1 = findViewById<ConstraintLayout>(R.id.opcaoGrupo1)
         val criarEventoOption2 = findViewById<ConstraintLayout>(R.id.opcaoGrupo2)
         val verEventoOpinion3 = findViewById<ConstraintLayout>(R.id.opcaoGrupo3)
@@ -51,23 +57,27 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
 
         grupoOptionsConstraint.setBackgroundColor(Color.parseColor("#80000000"))
 
-        var admin = ""
+        var admin: Boolean
         var y1 = 0.0F
         var y2 = 0.0F
         val MIN_DISTANCE = 150
 
-        if (groupID != null) {
-            db.collection("grupos").document(groupID).get()
-                .addOnSuccessListener {
-                    admin = it.get("administrador").toString()
 
-                    if(admin != auth.currentUser!!.uid){
+
+        if (groupID != null) {
+            db.collection("usuarios").document(auth.currentUser!!.uid).collection("gruposIds").document(groupID).get()
+                .addOnSuccessListener {
+                    admin = it.getBoolean("admin")!!
+
+                    if(admin == false){
                         criarEventoOption2.visibility = View.GONE
                         eliminarGrupoOption5.visibility = View.GONE
                         gerirGrupoOption6.visibility = View.GONE
+                        viewgroupoptions.updateLayoutParams<ConstraintLayout.LayoutParams> {verticalBias=1.0f}
                     }
-                    else if(admin == auth.currentUser!!.uid){
+                    else if(admin == true){
                         sairGrupoOption4.visibility = View.GONE
+                        viewgroupoptions.updateLayoutParams<ConstraintLayout.LayoutParams> {verticalBias=0.4f}
                     }
                 }
         }
@@ -90,7 +100,10 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
         }
 
         verEventoOpinion3.setOnClickListener {
-
+            val intentt = Intent(this, EventCalendarGroupActivity::class.java)
+            intentt.putExtra("groupID",groupID)
+            intentt.putExtra("groupName",groupName)
+            startActivity(intentt)
         }
 
         findViewById<ImageView>(R.id.closeOptions).setOnClickListener {

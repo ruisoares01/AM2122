@@ -58,9 +58,11 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
     private val dateFormatMonth = SimpleDateFormat("MMMM- yyyy", Locale.forLanguageTag("PT"))
     var compactCalendar: CompactCalendarView? = null
     val db = Firebase.firestore
+    val auth = Firebase.auth
     var arrayChats : MutableList<String> = arrayListOf()
-    //no typeofEventRemoval , 0 -> Tipo de Evento , 1-> ID do Evento
-    var typeofEventRemoval: Array<String> = arrayOf("","")
+    //no typeofEventRemoval , 0 -> Tipo de Evento , 1-> ID do Evento , 2-> ID do Grupo
+    var typeofEventRemoval: Array<String> = arrayOf("","","")
+    var adminGrupo = false
 
     fun Events() {
         // Required empty public constructor!
@@ -119,7 +121,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
                                 if (eventos != null) {
                                     var infoeventos = "${eventos.documents.get(z).data?.get("titulo").toString()}*" +
                                             "${eventos.documents.get(z).data?.get("descricao").toString()}*grupo*" +
-                                            "${arrayChat}*${eventos.documents.get(z).data?.get("dataFim")}*${eventos.documents.get(c).id}"
+                                            "${arrayChat}*${eventos.documents.get(z).data?.get("dataFim")}*${eventos.documents.get(z).id}"
 
 /*                                    Eventos(eventos.documents.get(z).data?.get("titulo").toString(),
                                         eventos.documents.get(z).data?.get("descricao").toString(),
@@ -354,13 +356,27 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
 
             buttonShowColor.setBackgroundTintList(ColorStateList.valueOf(eventoscalendario[position].color))
 
-
+            if(typeEventList.text == "grupo"){
+                db.collection("usuarios")
+                    .document(auth.currentUser!!.uid)
+                    .collection("gruposIds")
+                    .document(infoTypeEventList.text.toString())
+                    .get()
+                    .addOnSuccessListener {
+                        adminGrupo = it.getBoolean("admin")!!
+                    }
+            }
 
             if(typeEventList.text =="pessoal"){
                 removeEventList.visibility = View.VISIBLE
             }
             else if (typeEventList.text =="grupo"){
-                removeEventList.visibility = View.INVISIBLE
+                if(adminGrupo == true){
+                    removeEventList.visibility = View.VISIBLE
+                }
+                else if(adminGrupo == false){
+                    removeEventList.visibility = View.INVISIBLE
+                }
             }
             else{
                 removeEventList.visibility = View.INVISIBLE
@@ -369,7 +385,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
             removeEventList.setOnClickListener {
                 typeofEventRemoval[0] = typeEventList.text.toString()
                 typeofEventRemoval[1] = idEventList.text.toString()
-                if(typeEventList.text =="pessoal"){
+                typeofEventRemoval[2] = infoTypeEventList.text.toString()
                     SimpleDialog.build()
                         .title("Eliminar Evento")
                         .msgHtml("Tem mesmo a certeza que quer eliminar o evento " + "<b>" + titleEventList.text + "</b> ")
@@ -377,10 +393,6 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
                         .neg("Nao")
                         .cancelable(false)
                         .show(this@CalendarioFragment, "EliminarEvento")
-                }
-                else if (typeEventList.text =="grupo"){
-
-                }
             }
 
 
@@ -405,6 +417,8 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
             println(datadescricaotitulo)
             Thread.sleep(100)
 
+            adapterlisteventos.notifyDataSetChanged()
+
             return rowView
         }
     }
@@ -419,7 +433,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
                 db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").document(typeofEventRemoval[1]).delete()
             }
             if(typeofEventRemoval[0]== "grupo"){
-
+                db.collection("grupos").document(typeofEventRemoval[2]).collection("eventos").document(typeofEventRemoval[1]).delete()
             }
             else{
                 Toast.makeText(context,"Nao foi possivel identificar o tipo deste evento",Toast.LENGTH_LONG)

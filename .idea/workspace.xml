@@ -15,9 +15,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="Gerir Grupo adicionado">
+    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="Bugfix">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/CreatePersonalEventActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/CalendarioFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeGruposFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeGruposFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupOptionsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupOptionsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_grupo_options.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_grupo_options.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_calendario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_calendario.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,17 +114,19 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-viewD:/Documents/AndroidStudio/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="android-custom-viewD:/Documents/AndroidStudio/sources/android-31/android/widget/TextView.java_SELECTED" value="TextView" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Francisco\Desktop\IPCA\21_22\BetaBranch\app\src\main\res\drawable" />
       <recent name="C:\Users\Francisco\Desktop\IPCA\21_22\BetaBranch\app\src\main\res\layout" />
+      <recent name="C:\Users\Francisco\Desktop\IPCA\21_22\BetaBranch\app\src\main\res\drawable" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.projetoam2" />
       <recent name="com.example.projetoam2.Model" />
     </key>
   </component>
@@ -406,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642109361349</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Bugfix">
+      <created>1642111339882</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1642111339882</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -449,21 +467,29 @@
     <MESSAGE value="Bugfix da Lista de utilizadores" />
     <MESSAGE value="Mudanças no display de ultima mensagem : Data da ultima mensagem somente mostra apos um dia se , for menos , mostrará a Hora e string da ultima mensagem somente mostra até 16 digitos" />
     <MESSAGE value="Mensagens agora estão ordenadas por tempo" />
-    <MESSAGE value="Bugfix" />
     <MESSAGE value="Bugfixes" />
     <MESSAGE value="Design Fix" />
     <MESSAGE value="Online Status agora dá display na RecyclerView dos utilizadores com historico e todos os utilizadores" />
     <MESSAGE value="Mostrar o online_status na lista no perfil do grupo" />
     <MESSAGE value="Novo Menu nos Grupos , Eliminar e Editar Eventos adicionado , Eliminar e Sair de Grupos adicionado , Criar Eventos para grupo Adicionado , Bugfixes e Revamps de coisas pelo projeto" />
     <MESSAGE value="Gerir Grupo adicionado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gerir Grupo adicionado" />
+    <MESSAGE value="Bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugfix" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="com.example.projetoam2.CreatePersonalEventActivity" memberName="groupID" />
         <PinnedItemInfo parentTag="com.example.projetoam2.UserListActivity" memberName="usersLista" />
+        <PinnedItemInfo parentTag="com.example.projetoam2.CreatePersonalEventActivity" memberName="groupOrPersonal" />
         <PinnedItemInfo parentTag="com.example.projetoam2.UserListActivity" memberName="alluserslist" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="evento" />
+        <watch expression="groupID" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

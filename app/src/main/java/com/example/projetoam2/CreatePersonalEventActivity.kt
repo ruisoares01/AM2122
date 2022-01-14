@@ -40,6 +40,7 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
     var datainicio = ""
     var datafim = ""
     var groupOrPersonal = ""
+    var groupID = ""
 
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -64,7 +65,7 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
         dataTextView.setText(format.format(date).toString())
 
 
-        intent.extras?.getString("groupOrPersonal",groupOrPersonal)
+        groupOrPersonal = intent.extras?.getString("groupOrPersonal").toString()
 
         ColorEventButton.setOnClickListener {
             SimpleColorDialog.build()
@@ -127,7 +128,6 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
 
             if(datafimprocessed > datainicioprocessed)
             {
-
                if(groupOrPersonal == "personal") {
                    db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString())
                        .collection("eventos").add(evento)
@@ -140,9 +140,10 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
                    finish()
                }
                 else if(groupOrPersonal == "group"){
-                    val groupID = ""
-                   intent.extras?.getString("groupID", groupID)
+                   groupID = intent.extras?.getString("groupID").toString()
+                   println("AO PEGAR DA MERDA DO INTENT : " + groupID)
                     db.collection("grupos").document(groupID).collection("eventos").add(evento)
+                   finish()
                }
             }
             else{
