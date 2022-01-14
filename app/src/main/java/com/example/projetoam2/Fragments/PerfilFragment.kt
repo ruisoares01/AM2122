@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
@@ -23,6 +24,9 @@ import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projetoam2.LoginActivity
+import com.xwray.groupie.Item
+import com.xwray.groupie.ViewHolder
 
 
 class PerfilFragment : Fragment() {
@@ -67,6 +71,15 @@ class PerfilFragment : Fragment() {
         profileAluno.text = dados.naluno
         profileCurso.text = dados.curso
         profileMorada.text = dados.morada
+
+        val logOut = view.findViewById<Button>(R.id.buttonLogOut)
+
+        logOut.setOnClickListener {
+                //write the login for logout
+                auth.signOut()
+                val intent = Intent(activity, LoginActivity::class.java)
+                startActivity(intent)
+        }
 
         val getResult =
             registerForActivityResult(
