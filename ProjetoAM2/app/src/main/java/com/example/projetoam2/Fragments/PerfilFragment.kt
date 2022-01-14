@@ -75,7 +75,15 @@ class PerfilFragment : Fragment() {
         val logOut = view.findViewById<Button>(R.id.buttonLogOut)
 
         logOut.setOnClickListener {
-                //write the login for logout
+            super.onPause()
+            val uid = FirebaseAuth.getInstance().uid
+            val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+            db.collection("usuarios").document(uid.toString()).set(user)
+                .addOnSuccessListener {
+                    println("Offline")
+                }
+            //write the login for logout
                 auth.signOut()
                 val intent = Intent(activity, LoginActivity::class.java)
                 startActivity(intent)
@@ -113,6 +121,7 @@ class PerfilFragment : Fragment() {
 
         return view
     }
+
 
 
     private fun uploadImageToFirebaseStorage() {
