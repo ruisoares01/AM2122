@@ -39,10 +39,10 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
     private val dateFormatMonth = SimpleDateFormat("MMMM 'de' yyyy", Locale.forLanguageTag("PT"))
     val db = Firebase.firestore
     val auth = Firebase.auth
-    var arrayChats : MutableList<String> = arrayListOf()
     var eventBeingRemoved = ""
     var grupoID = ""
     var admin = false
+    var pos = 0
 
     @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
@@ -63,7 +63,7 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
 
         grupoID = intent.extras?.getString("groupID").toString()
 
-        arrayChats.clear()
+
 
         val listViewCalendarioEventos = findViewById<ListView>(R.id.listViewCalendarioGrupo)
 
@@ -108,6 +108,8 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
 
         db.collection("grupos").document(grupoID).collection("eventos").addSnapshotListener { eventos, error ->
                 g=0
+                eventoscalendario.clear()
+                adapterlisteventos.notifyDataSetChanged()
                 compactCalendar.removeAllEvents()
                 while(g< eventos!!.documents.size) {
                         var infoeventos = "${eventos.documents.get(g).data?.get("titulo").toString()}*" +
@@ -129,11 +131,11 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
         }
 
         findViewById<ImageView>(R.id.leftArrowImageGrupo)?.setOnClickListener{
-            compactCalendar!!.scrollLeft()
+            compactCalendar.scrollLeft()
         }
 
         findViewById<ImageView>(R.id.rightArrowImageGrupo)?.setOnClickListener{
-            compactCalendar!!.scrollRight()
+            compactCalendar.scrollRight()
         }
 
         //Obtem a data atual no formato ISO
@@ -257,6 +259,7 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
             }
 
             removeEventList.setOnClickListener {
+                pos = position
                 eventBeingRemoved = idEventList.text.toString()
                     SimpleDialog.build()
                         .title("Eliminar Evento")
@@ -279,6 +282,7 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
                 intent.putExtra("data", dataEventList.text as String)
                 intent.putExtra("idevento", idEventList.text as String)
                 intent.putExtra("cor", eventoscalendario[position].color)
+                intent.putExtra("sologroup", "is_solo")
                 println("Dados da Intent :  ${dateEventlist.text} + ${titleEventList.text } + ${descEventList.text} + ${typeEventList.text} +${infoTypeEventList.text} + ${horaFimEventList.text} + ${dataEventList.text}")
                 startActivity(intent)
             }
@@ -300,13 +304,8 @@ class EventCalendarGroupActivity : AppCompatActivity(),SimpleDialog.OnDialogResu
         }
         else if(dialogTag == "EliminarEvento" && which == BUTTON_POSITIVE){
             db.collection("grupos").document(grupoID).collection("eventos").document(eventBeingRemoved).delete()
-            for(evento in eventoscalendario){
-                if(evento.data!!.toString().toLowerCase(Locale.getDefault()).contains(eventBeingRemoved)){
-                    eventoscalendario.remove(evento)
-                    adapterlisteventos.notifyDataSetChanged()
-                }
-
-            }
+            eventoscalendario.removeAt(pos)
+            adapterlisteventos.notifyDataSetChanged()
             return true
         }
         return false

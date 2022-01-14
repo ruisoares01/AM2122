@@ -54,7 +54,7 @@ class EditEventActivity : AppCompatActivity(), SimpleDialog.OnDialogResultListen
             ?.substringBefore(", nanoseconds=0)")
         val data = intent.extras?.getString("data")
         val idevent = intent.extras?.getString("idevento")!!
-        var admin = intent.extras?.getString("admin")
+        var admin = intent.extras?.getBoolean("admin")
         color = intent.extras?.getInt("cor")!!
 
         val colorEventButton = findViewById<ImageButton>(R.id.buttonColorEvent)
@@ -123,18 +123,20 @@ class EditEventActivity : AppCompatActivity(), SimpleDialog.OnDialogResultListen
         }
 
         editEventButton.setOnClickListener {
-            val dataprocessed = SimpleDateFormat("dd/MM/yyyy").format(Date(dateLong))
-            val datafimprocessed = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("${dataprocessed} ${horafimconverted}:00").time / 1000
-            val datainicioprocessed = SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse("${dataprocessed} ${horainicio}:00").time / 1000
-            val datafimtimestamp = Timestamp(datafimprocessed,0)
-            val datainiciotimestamp = Timestamp(datainicioprocessed,0)
+            var horafimfinal = formatterhour.parse(horaFimTextView.text.toString()).time
+            var horainiciofinal = formatterhour.parse(horaInicioTextView.text.toString()).time
+            var dataprocessed = SimpleDateFormat("dd/MM/yyyy").format(Date(dateLong))
+            var datafimprocessed = (SimpleDateFormat("dd/MM/yyyy").parse("${dataprocessed}").time + horafimfinal )/ 1000
+            var datainicioprocessed = (SimpleDateFormat("dd/MM/yyyy").parse("${dataprocessed}").time + horainiciofinal )/ 1000
+            var datafimtimestamp = Timestamp(datafimprocessed,0)
+            var datainiciotimestamp = Timestamp(datainicioprocessed,0)
 
 
-            val evento = hashMapOf(
+            var evento = hashMapOf(
                 "titulo" to tituloTextView.text.toString(),
                 "descricao" to descTextView.text.toString(),
-                "dataInicio" to datainiciotimestamp,
-                "dataFim" to datafimtimestamp,
+                "dataInicio" to datainiciotimestamp.toDate(),
+                "dataFim" to datafimtimestamp.toDate(),
                 "cor" to color
             )
 
@@ -145,13 +147,25 @@ class EditEventActivity : AppCompatActivity(), SimpleDialog.OnDialogResultListen
 
             if(datafimprocessed > datainicioprocessed)
             {
-                db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").document(idevent).set(evento)
-                    .addOnSuccessListener {
+                if(tipo == "pessoal"){
+                    db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").document(idevent).set(evento)
+                        .addOnSuccessListener {
 
-                    }
-                    .addOnFailureListener { erro ->
-                        Log.w(ContentValues.TAG, "Error when editing event : ", erro)
-                    }
+                        }
+                        .addOnFailureListener { erro ->
+                            Log.w(ContentValues.TAG, "Error when editing event : ", erro)
+                        }
+                }
+                else if(tipo == "grupo"){
+                    db.collection("grupos").document(infotipo!!).collection("eventos").document(idevent).set(evento)
+                        .addOnSuccessListener {
+
+                        }
+                        .addOnFailureListener { erro ->
+                            Log.w(ContentValues.TAG, "Error when editing event : ", erro)
+                        }
+                }
+
                 finish()
             }
             else{
@@ -191,23 +205,5 @@ class EditEventActivity : AppCompatActivity(), SimpleDialog.OnDialogResultListen
         return true
     }
 
-    override fun onPause() {
-        super.onPause()
-        val uid = FirebaseAuth.getInstance().uid
-        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
 
-        db.collection("usuarios").document(uid.toString()).set(user)
-            .addOnSuccessListener {
-                println("Offline")
-            }
-    }
-    override fun onResume() {
-        super.onResume()
-        val uid = FirebaseAuth.getInstance().uid
-        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
-        db.collection("usuarios").document(uid.toString()).set(user)
-            .addOnSuccessListener {
-                println("Offline")
-            }
-    }
 }
