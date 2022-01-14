@@ -23,7 +23,7 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
 
     val db = Firebase.firestore
     val auth = Firebase.auth
-    var useringroup: ArrayList<String> = arrayListOf()
+    var useringroupp: ArrayList<String> = arrayListOf()
     var groupName = ""
     var groupID = ""
     var groupPhotoLink = ""
@@ -40,7 +40,6 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
 
         val touchListener = findViewById<View>(R.id.touchListener)
 
-        useringroup.clear()
         val grupoOptionsConstraint = findViewById<ConstraintLayout>(R.id.grupoOptionsConstraint)
 
         grupoOptionsConstraint.startAnimation(AnimationUtils.loadAnimation(this,R.anim.slide_down))
@@ -162,11 +161,11 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
         }
         else if(dialogTag == "sairGrupo" && which == SimpleDialog.OnDialogResultListener.BUTTON_POSITIVE) {
             db.collection("grupos").document(groupID).get().addOnSuccessListener { chatcontent ->
-                useringroup.addAll((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid })
+                useringroupp.addAll((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid })
                 val grupo = hashMapOf(
                     "imagemGrupo" to groupPhotoLink,
                     "nome" to groupName,
-                    "userIds" to useringroup
+                    "userIds" to useringroupp
                 )
 
                 db.collection("grupos").document(groupID)
@@ -187,15 +186,17 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
             }
         }
         else if(dialogTag == "eliminarGrupo" && which == SimpleDialog.OnDialogResultListener.BUTTON_POSITIVE){
-            db.collection("grupos")
-                .document(groupID).get()
-                .addOnSuccessListener { chatcontent ->
-                useringroup.addAll((chatcontent.get("userIds") as ArrayList<String>))
+            var gd = 0
+            db.collection("grupos").document(groupID).get().addOnSuccessListener { groupcontent ->
+                useringroupp.addAll((groupcontent.get("userIds") as ArrayList<String>))
+                for(user in useringroupp){
+                    db.collection("usuarios").document(user).collection("gruposIds").document(groupID).delete()
+                    gd +=1
+                }
+                if(gd == useringroupp.size) {
+                    db.collection("grupos").document(groupID).delete()
+                }
             }
-            for(user in useringroup){
-                db.collection("usuarios").document(user).collection("gruposIds").document(groupID).delete()
-            }
-            db.collection("grupos").document(groupID).delete()
             val intent = Intent(this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
