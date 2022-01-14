@@ -1,8 +1,10 @@
 package com.example.projetoam2
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -10,6 +12,8 @@ import com.example.projetoam2.Model.Dados
 import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
@@ -68,6 +72,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+
         // function for login
         private fun register() {
 
@@ -89,10 +94,24 @@ class LoginActivity : AppCompatActivity() {
                                 .addOnSuccessListener { document ->
                                     dados = document.toObject(Dados::class.java)!!
                                 }
-                            // code to login user
-                            val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                            startActivity(intent)
-                            finish()
+
+
+                            val progressDialog = ProgressDialog(this@LoginActivity)
+                            val intent = Intent(this,MainActivity::class.java)
+                            progressDialog.setTitle("A carregar mensagens...")
+                            progressDialog.setMessage("A carregar mensagens, Por favor aguarde...")
+                            progressDialog.show()
+                            val timer = object: CountDownTimer(2000, 1000) {
+                                override fun onTick(millisUntilFinished: Long) {
+                                }
+
+                                override fun onFinish() {
+                                    progressDialog.hide()
+                                    startActivity(intent)
+                                    finish()
+                                }
+                            }
+                            timer.start()
 
                         } else {
                             Toast.makeText(
@@ -107,4 +126,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this@LoginActivity, "Preencha os campos", Toast.LENGTH_SHORT).show()
             }
         }
-    }
+
+
+
+}

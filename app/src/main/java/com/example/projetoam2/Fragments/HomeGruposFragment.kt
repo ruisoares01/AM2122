@@ -1,8 +1,10 @@
 package com.example.projetoam2.Fragments
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -32,6 +34,7 @@ class HomeGruposFragment : Fragment() {
     var arrayGrupos : MutableList<String> = arrayListOf()
 
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -89,6 +92,30 @@ class HomeGruposFragment : Fragment() {
         }
 
         buttonHomeGroupsGrupos.setOnClickListener {}
+
+        var x1 = 0.0F
+        var x2 = 0.0F
+        val MIN_DISTANCE = 150
+
+        buttonHomeGroupsGrupos.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(v: View?, event: MotionEvent): Boolean {
+                when(event.action) {
+                    MotionEvent.ACTION_DOWN -> x1 = event.getX()
+                    MotionEvent.ACTION_UP -> {x2 = event.getX()
+                        var deltaX = x1 - x2
+                        if (Math.abs(deltaX) > MIN_DISTANCE) {
+                            val fragmenthome = HomeFragment()
+                            val fragmentManager = fragmentManager
+                            val fragmentTransaction = fragmentManager!!.beginTransaction()
+                            fragmentTransaction.replace(R.id.fragment_container, fragmenthome)
+                            fragmentTransaction.commit()
+                            return true
+                        }
+                    }
+                }
+                return false
+            }
+        })
 
         buttonAddGrupos.setOnClickListener {
             val intent = Intent(view.context, createGroup::class.java)

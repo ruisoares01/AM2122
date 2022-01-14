@@ -85,6 +85,7 @@ class Register : AppCompatActivity() {
         val nAluno = editnAluno.text.toString()
         val curso = editCurso.text.toString()
         val morada = editMorada.text.toString()
+        val online = false
 
 
         // in this validation we are allowing the register method using an email, name and password
@@ -95,7 +96,7 @@ class Register : AppCompatActivity() {
                     if (task.isSuccessful) {
                         val uid = FirebaseAuth.getInstance().uid
 
-                        addUserToDatabase(nome, email, nAluno, curso, morada, auth.currentUser?.uid!!)
+                        addUserToDatabase(nome, email, nAluno, curso, morada, online,auth.currentUser?.uid!!)
 
                         val intent = Intent(this@Register, LoginActivity::class.java)
                         startActivity(intent)
@@ -110,10 +111,10 @@ class Register : AppCompatActivity() {
         }
     }
 
-    private fun addUserToDatabase(nome: String, email: String, nAluno: String, curso: String, morada: String, uid: String){
+    private fun addUserToDatabase(nome: String, email: String, nAluno: String, curso: String, morada: String, online: Boolean, uid: String){
         var user : User
 
-        user = User(uid,nome,email,nAluno,curso,morada, "https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/Avatar_icon_green.png?alt=media&token=8e6d8680-d431-4a98-a6a8-60b8000bb3da")
+        user = User(uid,nome,email,nAluno,curso, morada, "https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/Avatar_icon_green.png?alt=media&token=8e6d8680-d431-4a98-a6a8-60b8000bb3da", online)
         db.collection("usuarios").document(uid).set(user)
 
     }
@@ -148,7 +149,7 @@ class Register : AppCompatActivity() {
                 ref.downloadUrl.addOnSuccessListener {
                     linkfoto = it.toString()
 
-                    val user = User(uid, dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, linkfoto)
+                    val user = User(uid, dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, linkfoto, dados.online)
 
                     db.collection("usuarios").document(uid).set(user).addOnSuccessListener {
                         println("deu")

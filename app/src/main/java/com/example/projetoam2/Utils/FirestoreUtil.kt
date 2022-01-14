@@ -144,6 +144,24 @@ object FirestoreUtil {
         chatChannelIsCollectionRef.document(channelId)
             .collection("messages")
             .add(message)
+
+
+        chatChannelIsCollectionRef.document(channelId).get()
+            .addOnSuccessListener {
+                if((it.get("latest_message"))!=null){
+                    chatChannelIsCollectionRef.document(channelId).update("latest_message",message)
+                }
+                else{
+                    //chatChannelIsCollectionRef.document(channelId).set("latest_message");
+                    chatChannelIsCollectionRef.document(channelId).update("latest_message",message)
+
+                }
+
+
+            }
+
+
+
     }
 
     fun sendGroupMessage(message: Message, groupId: String) {

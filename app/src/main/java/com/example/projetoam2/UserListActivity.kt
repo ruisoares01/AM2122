@@ -2,6 +2,7 @@ package com.example.projetoam2
 
 import android.content.Intent
 import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -74,7 +75,7 @@ class UserListActivity : AppCompatActivity() {
             for (document in documents) {
                 val user = document.toObject(User::class.java)
                 if (auth.currentUser?.uid != user.uid) {
-                    usersLista.add(User(user.uid,user.nome,user.email,user.naluno,user.curso,user.morada,user.linkfoto))
+                    usersLista.add(User(user.uid,user.nome,user.email,user.naluno,user.curso,user.morada,user.linkfoto,user.online))
                     adapterlistusers.notifyDataSetChanged()
                 }
             }
@@ -163,6 +164,15 @@ class UserListActivity : AppCompatActivity() {
            var photo = rowView.findViewById<CircleImageView>(R.id.imageView3)
            Picasso.get().load(usersLista[position].linkfoto).into(photo)
 
+           val online_status = rowView.findViewById<ImageButton>(R.id.online_status)
+
+           if(usersLista[position].online == true){
+               online_status.setVisibility(View.VISIBLE)
+               online_status.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#097320")))}
+           else if(usersLista[position].online == false){
+               online_status.setVisibility(View.VISIBLE)
+               online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))}
+           else{online_status.setVisibility(View.INVISIBLE)}
 
            rowView.setOnClickListener {
                val intent = Intent(baseContext, ChatActivity::class.java)
@@ -174,6 +184,7 @@ class UserListActivity : AppCompatActivity() {
                intent.putExtra("nAluno", usersLista[position].naluno)
                intent.putExtra("curso", usersLista[position].curso)
                intent.putExtra("morada", usersLista[position].morada)
+               intent.putExtra("status", usersLista[position].online)
 
                startActivity(intent)
            }
@@ -184,4 +195,23 @@ class UserListActivity : AppCompatActivity() {
 
    }
 
+    override fun onPause() {
+        super.onPause()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
+    override fun onResume() {
+        super.onResume()
+        val uid = FirebaseAuth.getInstance().uid
+        val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
+    }
 }

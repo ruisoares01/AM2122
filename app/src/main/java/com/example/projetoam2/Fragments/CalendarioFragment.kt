@@ -41,18 +41,28 @@ import android.app.Activity
 import android.content.Intent
 import com.example.projetoam2.CreatePersonalEventActivity
 import com.example.projetoam2.InfoEventActivity
+import eltos.simpledialogfragment.SimpleCheckDialog
+import eltos.simpledialogfragment.SimpleDateDialog
+import eltos.simpledialogfragment.SimpleDialog
+import eltos.simpledialogfragment.SimpleDialog.OnDialogResultListener.BUTTON_NEGATIVE
+import eltos.simpledialogfragment.SimpleDialog.OnDialogResultListener.BUTTON_POSITIVE
+import eltos.simpledialogfragment.SimpleTimeDialog
+import eltos.simpledialogfragment.color.SimpleColorDialog
+import kotlinx.android.synthetic.main.activity_create_event.*
 
 
-class CalendarioFragment : Fragment() {
+class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
 
     var eventoscalendario: MutableList<Event> = arrayListOf()
-    var eventoslista: MutableList<Eventos> = arrayListOf()
     lateinit var adapterlisteventos : CalendarioEventosAdapter
     private val dateFormatMonth = SimpleDateFormat("MMMM- yyyy", Locale.forLanguageTag("PT"))
     var compactCalendar: CompactCalendarView? = null
     val db = Firebase.firestore
+    val auth = Firebase.auth
     var arrayChats : MutableList<String> = arrayListOf()
-
+    //no typeofEventRemoval , 0 -> Tipo de Evento , 1-> ID do Evento , 2-> ID do Grupo
+    var typeofEventRemoval: Array<String> = arrayOf("","","")
+    var adminGrupo = false
 
     fun Events() {
         // Required empty public constructor!
@@ -67,6 +77,9 @@ class CalendarioFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
+
+        Locale.setDefault(Locale("pt"))
+
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_calendario, container, false)
         compactCalendar = view.findViewById<View>(R.id.compactcalendar_view) as CompactCalendarView
@@ -78,32 +91,12 @@ class CalendarioFragment : Fragment() {
 
         arrayChats.clear()
 
-        val text = view.findViewById<TextView>(R.id.mesdocalendario)
-        text.text = "AAAAA"
-
         val listViewCalendarioEventos = view.findViewById<ListView>(R.id.listViewCalendario)
 
         adapterlisteventos = CalendarioEventosAdapter()
         if (listViewCalendarioEventos != null) {
             listViewCalendarioEventos.adapter = adapterlisteventos
         }
-
-
-
-
-  //      var listevent: MutableList<String> = arrayListOf()
-
-        //Declara uma MutableList de tipo inteiro que contem um array com cores
- /*       val coreslist: MutableList<Int> = arrayListOf(
-            Color.parseColor("#ff0000"), Color.parseColor("#000000"),
-            Color.parseColor("#FF8F00"), Color.parseColor("#038a34"),
-            Color.parseColor("#00ff00"), Color.parseColor("#8591ff"),
-            Color.parseColor("#00fff2"), Color.parseColor("#FFFF00"),
-            Color.parseColor("#0040ff"), Color.parseColor("#6AA84F"),
-            Color.parseColor("#ae00ff"), Color.parseColor("#97D6EC"),
-            Color.parseColor("#ff0077"),
-            Color.parseColor("#37474F"),
-        )*/
 
         //Começar parte do Firebase aqui <---------------------
         var x=0;
@@ -128,7 +121,7 @@ class CalendarioFragment : Fragment() {
                                 if (eventos != null) {
                                     var infoeventos = "${eventos.documents.get(z).data?.get("titulo").toString()}*" +
                                             "${eventos.documents.get(z).data?.get("descricao").toString()}*grupo*" +
-                                            "${arrayChat}*${eventos.documents.get(z).data?.get("dataFim")}"
+                                            "${arrayChat}*${eventos.documents.get(z).data?.get("dataFim")}*${eventos.documents.get(z).id}"
 
 /*                                    Eventos(eventos.documents.get(z).data?.get("titulo").toString(),
                                         eventos.documents.get(z).data?.get("descricao").toString(),
@@ -171,7 +164,7 @@ class CalendarioFragment : Fragment() {
                         var infopersonaleventos = "${eventospessoais.documents.get(c).data?.get("titulo").toString()}*" +
                                 "${eventospessoais.documents.get(c).data?.get("descricao").toString()}*" +
                                 "pessoal*${Firebase.auth.currentUser?.uid.toString()}" +
-                                "*${eventospessoais.documents.get(c).data?.get("dataFim")} "
+                                "*${eventospessoais.documents.get(c).data?.get("dataFim")}*${eventospessoais.documents.get(c).id}"
 
                         compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataInicio") as Timestamp).seconds * 1000),"${infopersonaleventos}"))
 
@@ -286,7 +279,7 @@ class CalendarioFragment : Fragment() {
         buttonaddevent.setOnClickListener {
 
             val itt = Intent(activity, CreatePersonalEventActivity::class.java)
-            itt.extras?.putInt("c",c)
+            itt.putExtra("groupOrPersonal","personal")
             startActivity(itt)
             (activity as Activity?)!!.overridePendingTransition(0, 0)
 
@@ -309,6 +302,8 @@ class CalendarioFragment : Fragment() {
     }
 
     inner class CalendarioEventosAdapter : BaseAdapter() {
+
+
         override fun getCount(): Int {
             return eventoscalendario.size
         }
@@ -336,6 +331,8 @@ class CalendarioFragment : Fragment() {
             val typeEventList = rowView.findViewById<TextView>(R.id.typeEventList)
             val infoTypeEventList = rowView.findViewById<TextView>(R.id.infoTypeEventList)
             val dataEventList = rowView.findViewById<TextView>(R.id.dataEventList)
+            val idEventList = rowView.findViewById<TextView>(R.id.idEventList)
+            var removeEventList = rowView.findViewById<ImageView>(R.id.removeEvent)
 
             //Obtem a data do evento e separa-o em uma lista com 2 strings
             val datamaster = eventoscalendario[position].data.toString()
@@ -347,14 +344,56 @@ class CalendarioFragment : Fragment() {
 
             val formatterdate = SimpleDateFormat("dd 'de' MMMM 'de' yyyy",Locale.forLanguageTag("PT"))
 
-
+            //0 - Titulo do Evento , 1 - Descricao do Evento , 2 - Tipo de Evento , 3 - User/Grupo que criou, 4- Hora fim , 5- ID do Evento
             dateEventlist.text = formatterhour.format(Date(eventoscalendario[position].timeInMillis))
             titleEventList.text = datadescricaotitulo[0]
             descEventList.text = datadescricaotitulo[1]
             typeEventList.text = datadescricaotitulo[2]
             infoTypeEventList.text = datadescricaotitulo[3]
             horaFimEventList.text = datadescricaotitulo[4]
+            idEventList.text = datadescricaotitulo[5]
             dataEventList.text = formatterdate.format(Date(eventoscalendario[position].timeInMillis))
+
+            buttonShowColor.setBackgroundTintList(ColorStateList.valueOf(eventoscalendario[position].color))
+
+            if(typeEventList.text == "grupo"){
+                db.collection("usuarios")
+                    .document(auth.currentUser!!.uid)
+                    .collection("gruposIds")
+                    .document(infoTypeEventList.text.toString())
+                    .get()
+                    .addOnSuccessListener {
+                        adminGrupo = it.getBoolean("admin")!!
+                    }
+            }
+
+            if(typeEventList.text =="pessoal"){
+                removeEventList.visibility = View.VISIBLE
+            }
+            else if (typeEventList.text =="grupo"){
+                if(adminGrupo == true){
+                    removeEventList.visibility = View.VISIBLE
+                }
+                else if(adminGrupo == false){
+                    removeEventList.visibility = View.INVISIBLE
+                }
+            }
+            else{
+                removeEventList.visibility = View.INVISIBLE
+            }
+
+            removeEventList.setOnClickListener {
+                typeofEventRemoval[0] = typeEventList.text.toString()
+                typeofEventRemoval[1] = idEventList.text.toString()
+                typeofEventRemoval[2] = infoTypeEventList.text.toString()
+                    SimpleDialog.build()
+                        .title("Eliminar Evento")
+                        .msgHtml("Tem mesmo a certeza que quer eliminar o evento " + "<b>" + titleEventList.text + "</b> ")
+                        .pos("Sim")
+                        .neg("Nao")
+                        .cancelable(false)
+                        .show(this@CalendarioFragment, "EliminarEvento")
+            }
 
 
             cardView.setOnClickListener {
@@ -366,18 +405,43 @@ class CalendarioFragment : Fragment() {
                 intent.putExtra("infotipo", infoTypeEventList.text as String)
                 intent.putExtra("horafim", horaFimEventList.text as String)
                 intent.putExtra("data", dataEventList.text as String)
+                intent.putExtra("idevento", idEventList.text as String)
+                intent.putExtra("cor", eventoscalendario[position].color)
                 println("Dados da Intent :  ${dateEventlist.text} + ${titleEventList.text } + ${descEventList.text} + ${typeEventList.text} +${infoTypeEventList.text} + ${horaFimEventList.text} + ${dataEventList.text}")
                 startActivity(intent)
             }
 
+
+
+
             println(datadescricaotitulo)
+            Thread.sleep(100)
 
-            buttonShowColor.setBackgroundTintList(ColorStateList.valueOf(eventoscalendario[position].color))
-
+            adapterlisteventos.notifyDataSetChanged()
 
             return rowView
         }
     }
 
+
+    override fun onResult(dialogTag: String, which: Int, extras: Bundle): Boolean {
+        if(dialogTag == "EliminarEvento" && which == BUTTON_NEGATIVE){
+            return false
+        }
+        else if(dialogTag == "EliminarEvento" && which == BUTTON_POSITIVE){
+            if(typeofEventRemoval[0] == "pessoal"){
+                db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").document(typeofEventRemoval[1]).delete()
+            }
+            if(typeofEventRemoval[0]== "grupo"){
+                db.collection("grupos").document(typeofEventRemoval[2]).collection("eventos").document(typeofEventRemoval[1]).delete()
+            }
+            else{
+                Toast.makeText(context,"Nao foi possivel identificar o tipo deste evento",Toast.LENGTH_LONG)
+                return false
+            }
+            return true
+        }
+        return false
+    }
 
 }
