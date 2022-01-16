@@ -55,7 +55,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
 
     var eventoscalendario: MutableList<Event> = arrayListOf()
     lateinit var adapterlisteventos : CalendarioEventosAdapter
-    private val dateFormatMonth = SimpleDateFormat("MMMM- yyyy", Locale.forLanguageTag("PT"))
+    private val dateFormatMonth = SimpleDateFormat("MMMM 'de' yyyy", Locale.forLanguageTag("PT"))
     var compactCalendar: CompactCalendarView? = null
     val db = Firebase.firestore
     val auth = Firebase.auth
@@ -63,6 +63,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
     //no typeofEventRemoval , 0 -> Tipo de Evento , 1-> ID do Evento , 2-> ID do Grupo
     var typeofEventRemoval: Array<String> = arrayOf("","","")
     var adminGrupo = false
+    var pos = 0
 
     fun Events() {
         // Required empty public constructor!
@@ -90,6 +91,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
 
 
         arrayChats.clear()
+        eventoscalendario.clear()
 
         val listViewCalendarioEventos = view.findViewById<ListView>(R.id.listViewCalendario)
 
@@ -386,6 +388,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
                 typeofEventRemoval[0] = typeEventList.text.toString()
                 typeofEventRemoval[1] = idEventList.text.toString()
                 typeofEventRemoval[2] = infoTypeEventList.text.toString()
+                pos = position
                     SimpleDialog.build()
                         .title("Eliminar Evento")
                         .msgHtml("Tem mesmo a certeza que quer eliminar o evento " + "<b>" + titleEventList.text + "</b> ")
@@ -431,9 +434,13 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
         else if(dialogTag == "EliminarEvento" && which == BUTTON_POSITIVE){
             if(typeofEventRemoval[0] == "pessoal"){
                 db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").document(typeofEventRemoval[1]).delete()
+                eventoscalendario.removeAt(pos)
+                adapterlisteventos.notifyDataSetChanged()
             }
             if(typeofEventRemoval[0]== "grupo"){
                 db.collection("grupos").document(typeofEventRemoval[2]).collection("eventos").document(typeofEventRemoval[1]).delete()
+                eventoscalendario.removeAt(pos)
+                adapterlisteventos.notifyDataSetChanged()
             }
             else{
                 Toast.makeText(context,"Nao foi possivel identificar o tipo deste evento",Toast.LENGTH_LONG)

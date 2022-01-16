@@ -51,6 +51,17 @@ class LoginActivity : AppCompatActivity() {
             return EMAIL_ADDRESS_PATTERN.matcher(str.toString()).matches()
         }
 
+     /*   if(auth.currentUser!=null){
+            println("HA ALGUEM LOGADO , E O -> " + auth.currentUser!!.uid)
+            db.collection("usuarios").document(auth.currentUser!!.uid!!).get()
+                .addOnSuccessListener { document ->
+                    dados = document.toObject(Dados::class.java)!!
+                }
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }*/
+
         // find the view created in the xml files
         editEmail = findViewById(R.id.editTextEmail)
         editPass = findViewById(R.id.editTextTextPassword)
@@ -116,7 +127,7 @@ class LoginActivity : AppCompatActivity() {
                         } else {
                             Toast.makeText(
                                 this@LoginActivity,
-                                "O utilizador não existe",
+                                "Dados Invalidos",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
