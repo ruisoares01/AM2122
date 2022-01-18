@@ -141,7 +141,6 @@ class CreatePersonalEventActivity : AppCompatActivity(),SimpleDialog.OnDialogRes
                }
                 else if(groupOrPersonal == "group"){
                    groupID = intent.extras?.getString("groupID").toString()
-                   println("AO PEGAR DA MERDA DO INTENT : " + groupID)
                     db.collection("grupos").document(groupID).collection("eventos").add(evento)
                    finish()
                }

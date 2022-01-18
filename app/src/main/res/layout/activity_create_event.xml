@@ -39,7 +39,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:background="@drawable/rectangle_createevent_textview_background"
-        android:backgroundTint="#52715E5E"
         android:gravity="center"
         android:text="00:00"
         android:textAlignment="center"

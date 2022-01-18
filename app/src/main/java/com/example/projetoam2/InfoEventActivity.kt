@@ -38,13 +38,16 @@ class InfoEventActivity : AppCompatActivity() {
         val data = intent.extras?.getString("data")
         val idevent = intent.extras?.getString("idevento")
         val cor = intent.extras?.getInt("cor")
+        val sologroup = intent.extras?.getString("sologroup")
         var admin = false
+
 
         val horafimcutted =  horafim?.substringAfter("Timestamp(seconds=")
             ?.substringBefore(", nanoseconds=0)")
 
         val formatterhour = SimpleDateFormat("HH:mm")
         val horafimconverted = formatterhour.format(Date(horafimcutted?.toLong()?.times(1000)!!))
+
 
         findViewById<TextView>(R.id.TituloEventoInfo).text = titulo
         findViewById<TextView>(R.id.DescricaoEventoInfo).text = descricao
@@ -59,22 +62,19 @@ class InfoEventActivity : AppCompatActivity() {
         val tipoEventoInfo=  findViewById<TextView>(R.id.tipoEventoInfo)
         val infoTipoEventInfo = findViewById<TextView>(R.id.infoTipoEventInfo)
 
+        if(sologroup=="is_solo"){
+        tipoEventoInfo.visibility = View.INVISIBLE
+        infoTipoEventInfo.visibility = View.INVISIBLE
+        }
+
+        println("tipo : " + tipo)
         if(tipo == "grupo"){
             tipoEventoInfo.text = "Evento criado pelo grupo:"
             if (infotipo != null) {
+                println("infotipo :" + infotipo)
                 db.collection("grupos").document(infotipo).get()
                     .addOnSuccessListener {
-                        infoTipoEventInfo.text = it.get("nome").toString()
-
-
-                    //admin = it.get("administrador").toString()
-                        /*
-                        if(admin == auth.currentUser!!.uid){
-                            okButtonHalf.visibility = View.VISIBLE
-                            editButtonHalf.visibility = View.VISIBLE
-                            infoTipoEventInfo.visibility = View.GONE
-                            okButton.visibility = View.GONE
-                        }*/
+                        infoTipoEventInfo.text = it.getString("nome")
                     }
                     .addOnFailureListener {
                         Toast.makeText(this,"Nao foi possivel buscar o nome do grupo no firebase",Toast.LENGTH_LONG)
@@ -84,7 +84,6 @@ class InfoEventActivity : AppCompatActivity() {
                         if(admin == true) {
                             okButtonHalf.visibility = View.VISIBLE
                             editButtonHalf.visibility = View.VISIBLE
-                            infoTipoEventInfo.visibility = View.GONE
                             okButton.visibility = View.GONE
                         }
                     }

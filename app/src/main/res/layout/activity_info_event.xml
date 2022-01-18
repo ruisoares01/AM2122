@@ -34,11 +34,12 @@
         android:id="@+id/infoTipoEventInfo"
         android:layout_width="130dp"
         android:layout_height="33dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:gravity="center|start"
-        android:textColor="#CC949494"
+        android:textColor="@color/dark_green"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tipoEventoInfo"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipoEventoInfo" />
 
@@ -77,7 +78,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:background="@drawable/rectangle_createevent_textview_background"
-        android:backgroundTint="#52715E5E"
         android:gravity="center"
         android:text="00:00"
         android:textAlignment="center"
