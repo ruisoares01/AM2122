@@ -6,10 +6,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.HomeFragment">
 
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="26dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backbutton_black"
+        app:layout_constraintBottom_toTopOf="@+id/listViewwAll"
+        app:layout_constraintEnd_toStartOf="@+id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edittext_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

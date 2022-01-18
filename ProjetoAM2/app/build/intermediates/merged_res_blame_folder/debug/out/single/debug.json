@@ -1,0 +1,222 @@
+[
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_activity_register.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_register.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_button_style_2.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/button_style_2.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_text_box_layout.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/text_box_layout.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/navigation_mobile_navigation.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/navigation/mobile_navigation.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_activity_other_profile.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_other_profile.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_rounded_corners_msg.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/rounded_corners_msg.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_item_text_message.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/item_text_message.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_baseline_send_24.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_baseline_send_24.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_fragment_perfil.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/fragment_perfil.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_activity_splash_screen.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_scrollview.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/scrollview.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/raw_typing_animation.json.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/raw/typing_animation.json"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_message_layout.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/message_layout.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_home_black_24dp.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_activity_chat.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_chat.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_calendarioicon.png.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/calendarioicon.png"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_rounded_corners.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/rounded_corners.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_back_button.png.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/back_button.png"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_activity_login.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_msgicon.png.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/msgicon.png"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_camera.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable-v24_send.png.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable-v24/send.png"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_notifications.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_notifications.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_user_layout.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/user_layout.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_baseline_image_24.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_baseline_image_24.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_rect_round_primary_color.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/rect_round_primary_color.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/navigation_my_nav.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/navigation/my_nav.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_baseline_assignment_returned_24.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_baseline_assignment_returned_24.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_fragment_home.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable-v24_message_layout_received.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable-v24/message_layout_received.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_background1.jpg.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/background1.jpg"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_button_style.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/button_style.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/menu_menu.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/menu/menu.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/layout_fragment_calendario.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/fragment_calendario.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_perfilicon.png.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/perfilicon.png"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_imagesplash.png.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/imagesplash.png"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_edittext_style.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/edittext_style.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/drawable/ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/merged_res/debug/menu_menu_navigation.xml.flat",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/menu/menu_navigation.xml"
+    }
+]

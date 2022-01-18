@@ -5,8 +5,6 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Base64
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -15,9 +13,12 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SwitchCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.ChatActivity
+import com.example.projetoam2.MainActivity
 import com.example.projetoam2.Model.TextMessage
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.R
@@ -40,14 +41,15 @@ import java.sql.Array
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
+import kotlin.time.Duration.Companion.milliseconds
 import javax.crypto.Cipher
 import javax.crypto.SecretKeyFactory
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
-import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
-import kotlin.time.Duration.Companion.milliseconds
+import android.util.Base64
 
 data class LatestMessageTime(val otheruser : String , val latesttext : String , val latesttime : Date )
 
@@ -112,50 +114,50 @@ class HomeFragment : Fragment() {
                     println("CHAT : ${chat}")
                     db.collection("Chat").document(chat).get()
                         .addOnSuccessListener { chatcontent ->
-                                if(chatcontent.get("userIds")!=null && chatcontent.get("latest_message")!=null){
-                                    otheruserstring = ((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid }
-                                        .toString().replace("[","").replace("]",""))
-                                    latest_message = (chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("text")
-                                    latest_time = ((chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
+                            if(chatcontent.get("userIds")!=null && chatcontent.get("latest_message")!=null){
+                                otheruserstring = ((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid }
+                                    .toString().replace("[","").replace("]",""))
+                                latest_message = (chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("text")
+                                latest_time = ((chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
 
-                                    latesttexttime.add(LatestMessageTime(otheruserstring,latest_message as String,latest_time))
+                                latesttexttime.add(LatestMessageTime(otheruserstring,latest_message as String,latest_time))
 
-                                    println("Latest Message : ${latest_message} from ${chat} , Other User UID : ${otheruserstring} ")
-                                    }
-                                    c +=1
-                                    println("C: ${c}   vs ${chatscomhistorico.size}")
-                                    if (c == chatscomhistorico.size)
-                                    {
-                                        println("latesttexttime size : ${latesttexttime.size} ")
-                                        latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime }
-                                        for(latest in latesttexttime)
-                                        {
-                                            println("latest : ${latest} and ${latest.latesttime} ${latest.latesttext} ${latest.otheruser}")
-                                            db.collection("usuarios").document(latest.otheruser).get()
-                                                .addOnSuccessListener { documents ->
-                                                val user = documents.toObject(User::class.java)
-                                                if (auth.currentUser?.uid != user!!.uid) {
-                                                    adapter.add(Users(user,latest.latesttext,latest.latesttime))
-                                                }
-                                                adapter.setOnItemClickListener { item, view ->
-                                                    val utilizador = item as Users
-                                                    val intent = Intent(view.context, ChatActivity::class.java)
+                                println("Latest Message : ${latest_message} from ${chat} , Other User UID : ${otheruserstring} ")
+                            }
+                            c +=1
+                            println("C: ${c}   vs ${chatscomhistorico.size}")
+                            if (c == chatscomhistorico.size)
+                            {
+                                println("latesttexttime size : ${latesttexttime.size} ")
+                                latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime }
+                                for(latest in latesttexttime)
+                                {
+                                    println("latest : ${latest} and ${latest.latesttime} ${latest.latesttext} ${latest.otheruser}")
+                                    db.collection("usuarios").document(latest.otheruser).get()
+                                        .addOnSuccessListener { documents ->
+                                            val user = documents.toObject(User::class.java)
+                                            if (auth.currentUser?.uid != user!!.uid) {
+                                                adapter.add(Users(user,latest.latesttext,latest.latesttime))
+                                            }
+                                            adapter.setOnItemClickListener { item, view ->
+                                                val utilizador = item as Users
+                                                val intent = Intent(view.context, ChatActivity::class.java)
 
-                                                     intent.putExtra("name", utilizador.user.nome)
-                                                     intent.putExtra("uid", utilizador.user.uid)
-                                                     intent.putExtra("email", utilizador.user.email)
-                                                     intent.putExtra("linkfoto", utilizador.user.linkfoto)
-                                                     intent.putExtra("nAluno", utilizador.user.naluno)
-                                                     intent.putExtra("curso", utilizador.user.curso)
-                                                     intent.putExtra("morada", utilizador.user.morada)
-                                                     intent.putExtra("status", utilizador.user.online)
+                                                intent.putExtra("name", utilizador.user.nome)
+                                                intent.putExtra("uid", utilizador.user.uid)
+                                                intent.putExtra("email", utilizador.user.email)
+                                                intent.putExtra("linkfoto", utilizador.user.linkfoto)
+                                                intent.putExtra("nAluno", utilizador.user.naluno)
+                                                intent.putExtra("curso", utilizador.user.curso)
+                                                intent.putExtra("morada", utilizador.user.morada)
+                                                intent.putExtra("status", utilizador.user.online)
 
-                                                    startActivity(intent)
-                                                }
+                                                startActivity(intent)
                                             }
                                         }
-                                        latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime.time }
-                                    }
+                                }
+                                latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime.time }
+                            }
                         }
                 }
 
@@ -226,13 +228,13 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
 
         println("Inwholemiliseconds : ${texttime.time.milliseconds.inWholeMilliseconds}")
 
-       if((System.currentTimeMillis()-texttime.time.milliseconds.inWholeMilliseconds)>miliday){
-           dateFormat = SimpleDateFormat
-               .getDateInstance(SimpleDateFormat.SHORT,Locale.forLanguageTag("PT"))
+        if((System.currentTimeMillis()-texttime.time.milliseconds.inWholeMilliseconds)>miliday){
+            dateFormat = SimpleDateFormat
+                .getDateInstance(SimpleDateFormat.SHORT,Locale.forLanguageTag("PT"))
         }
         else{
-           dateFormat = SimpleDateFormat
-               .getTimeInstance(SimpleDateFormat.SHORT,Locale.forLanguageTag("PT"))
+            dateFormat = SimpleDateFormat
+                .getTimeInstance(SimpleDateFormat.SHORT,Locale.forLanguageTag("PT"))
         }
 
         var latestmessage = String(cipher.doFinal(Base64.decode(textmessage, Base64.DEFAULT)))

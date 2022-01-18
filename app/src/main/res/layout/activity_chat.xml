@@ -49,17 +49,34 @@
 
         <TextView
             android:id="@+id/textViewstatus"
-            android:layout_width="148dp"
+            android:layout_width="100dp"
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="6dp"
-            android:layout_marginEnd="140dp"
+            android:layout_marginEnd="225dp"
             android:layout_marginBottom="-4dp"
             android:layout_toEndOf="@+id/imgProfile"
             android:text="Online"
             android:textColor="@color/white"
             android:textSize="15dp" />
+
+        <ImageButton
+            android:id="@+id/online_status"
+            android:layout_width="17dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="200dp"
+            android:layout_marginBottom="0dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_disabled"
+            android:clickable="true"
+            android:cropToPadding="true"
+            android:visibility="invisible"
+            app:layout_constraintVertical_bias="0.526"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </RelativeLayout>
 

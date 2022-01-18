@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/aca4c5bc4556949e3fc400f79879009a/transformed/jetified-anko-appcompat-v7-commons-0.10.8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/aca4c5bc4556949e3fc400f79879009a/transformed/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/aca4c5bc4556949e3fc400f79879009a/transformed/jetified-anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/aca4c5bc4556949e3fc400f79879009a/transformed/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/34a1c40cc76129250047190893709a6e/transformed/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/733d89e0feba8a1a86d5aedf0c294025/transformed/jetified-anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/733d89e0feba8a1a86d5aedf0c294025/transformed/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/733d89e0feba8a1a86d5aedf0c294025/transformed/jetified-anko-appcompat-v7-commons-0.10.8/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/org.jetbrains.anko/anko-appcompat-v7-commons/0.10.8/3ae43f5caa019f634249ee004aa89704c2998e7e/anko-appcompat-v7-commons-0.10.8-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-appcompat-v7-commons/0.10.8/3ae43f5caa019f634249ee004aa89704c2998e7e/anko-appcompat-v7-commons-0.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_perfil.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/fragment_perfil.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_other_profile.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_other_profile.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/user_layout.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/user_layout.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_splash_screen.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_chat.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_chat.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_register.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_register.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_text_message.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/item_text_message.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_calendario.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/fragment_calendario.xml"
+    },
+    {
+        "merged": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
+        "source": "/Users/goncalo/Desktop/AM2122/ProjetoAM2/app/src/main/res/layout/activity_login.xml"
+    }
+]

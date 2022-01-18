@@ -1,10 +1,16 @@
 package com.example.projetoam2
 
+import android.app.Activity
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Bitmap
+import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.ImageView
 import android.widget.TextView
 import javax.crypto.Cipher
@@ -30,19 +36,30 @@ import kotlinx.android.synthetic.main.item_text_message.*
 import java.util.*
 import android.util.Base64
 import android.util.Log
+import android.view.View
+import android.widget.ImageButton
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import com.example.projetoam2.Fragments.HomeFragment
+import com.example.projetoam2.Model.ImageMessage
 import com.example.projetoam2.Model.User
 import com.example.projetoam2.Notifications.FirebaseService
 import com.example.projetoam2.Notifications.PushNotification
 import com.example.projetoam2.Notifications.RetrofitInstance
+import com.example.projetoam2.Utils.StorageUtil
+import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.io.ByteArrayOutputStream
 
 
 const val TOPIC = "/topics/myTopic2"
+private const val RC_SELECT_IMAGE = 2
 
 class ChatActivity : AppCompatActivity() {
 
@@ -53,6 +70,10 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var messagesListenerRegistration : ListenerRegistration
     private var shouldInitRecyclerView = true
     private lateinit var messagesSection : Section
+
+    private lateinit var currentChannelId: String
+    private lateinit var currentUser: User
+    private lateinit var otherUserId: String
 
     private val adapter = GroupAdapter<ViewHolder>()
 
@@ -78,10 +99,11 @@ class ChatActivity : AppCompatActivity() {
         //supportActionBar?.setDisplayHomeAsUpEnabled(true)
           supportActionBar?.hide()
 
-        val backButton = findViewById<ImageView>(R.id.backButton)
-        backButton.setOnClickListener {
-            finish()
+        FirestoreUtil.getCurrentUser {
+            currentUser = it
         }
+
+
 
         var otherUserName = ""
         var otherUserId = ""
@@ -119,6 +141,15 @@ class ChatActivity : AppCompatActivity() {
             userStatus.text = "Offline"
         }
 
+        val profileOnline = findViewById<ImageButton>(R.id.online_status)
+        if(otherUserStatus == true){
+            profileOnline.setVisibility(View.VISIBLE)
+            profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#00b026")))
+        }
+        else{
+            profileOnline.setVisibility(View.VISIBLE)
+            profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))
+        }
 
         nameProfile.setOnClickListener {
             val intent = Intent(this, OtherProfile::class.java)
@@ -133,9 +164,29 @@ class ChatActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        imgprofile.setOnClickListener {
+            val intent = Intent(this, OtherProfile::class.java)
+            intent.putExtra("name", otherUserName)
+            intent.putExtra("uid", otherUserId)
+            intent.putExtra("email", otherUserEmail)
+            intent.putExtra("nAluno", otherUserN)
+            intent.putExtra("curso", otherUserCurso)
+            intent.putExtra("morada", otherUserMorada)
+            intent.putExtra("linkfoto", linkfoto)
+            intent.putExtra("status", otherUserStatus)
+            startActivity(intent)
+        }
+
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            finish()
+            startActivity(intent)
+        }
+
         //get the chat channel
         FirestoreUtil.getOrCreateChatChannel(otherUserId) { channelId ->
-
+            currentChannelId = channelId
             messagesListenerRegistration =
                 FirestoreUtil.addChatMessagesListener(channelId, this, this::updateRecyclerView)
 
@@ -164,6 +215,10 @@ class ChatActivity : AppCompatActivity() {
                 edit_text.setText("")
 
                 FirestoreUtil.sendMessage(messageTosend, channelId)
+                FirestoreUtil.updateLastestMessage(messageTosend,channelId)
+
+
+
 
 
                 //Notificacoes (em desenvolvimento)
@@ -182,14 +237,47 @@ class ChatActivity : AppCompatActivity() {
             }
 
             send_image.setOnClickListener {
-                //send image
+                val intent = Intent().apply {
+                    type = "image/*"
+                    action = Intent.ACTION_GET_CONTENT
+                    putExtra(Intent.EXTRA_MIME_TYPES, arrayOf("image/jpeg", "image/png"))
+                }
+                startActivityForResult(Intent.createChooser(intent, "Select Image"), RC_SELECT_IMAGE)
             }
         }
+
+
 
         //action bar title, name of the user
      //   supportActionBar?.title = otherUserName
 
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RC_SELECT_IMAGE && resultCode == Activity.RESULT_OK &&
+            data != null && data.data != null) {
+            val selectedImagePath = data.data
+
+            val selectedImageBmp = MediaStore.Images.Media.getBitmap(contentResolver, selectedImagePath)
+
+            val outputStream = ByteArrayOutputStream()
+
+            selectedImageBmp.compress(Bitmap.CompressFormat.JPEG, 90, outputStream)
+            val selectedImageBytes = outputStream.toByteArray()
+
+            StorageUtil.uploadMessageImage(selectedImageBytes) { imagePath ->
+                val messageToSend =
+                    ImageMessage(imagePath, Calendar.getInstance().time,
+                        FirebaseAuth.getInstance().currentUser!!.uid)
+                FirestoreUtil.sendMessage(messageToSend, currentChannelId)
+                FirestoreUtil.updateLastestMessage(messageToSend,currentChannelId)
+            }
+        }
+    }
+
+
+
     private fun updateRecyclerView(messages: List<Item>) {
         fun init() {
             recyclerview_messages.apply {

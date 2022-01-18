@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-auth:19.2.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/res" />
+      <root url="jar://$USER_HOME$/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/codigoo/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/res" />
+      <root url="file://$USER_HOME$/codigoo/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/codigoo/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/res" />
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6b45abe01a8167e2a9a18a4828272485/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d22068ef1d3d6ce0d06fbea6ea24f04/transformed/jetified-play-services-auth-19.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3d22068ef1d3d6ce0d06fbea6ea24f04/transformed/jetified-play-services-auth-19.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3d22068ef1d3d6ce0d06fbea6ea24f04/transformed/jetified-play-services-auth-19.2.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/com.google.android.gms/play-services-auth/19.2.0/b3a08c387d1881fa68ba39bcfda91815bad81a46/play-services-auth-19.2.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/codigoo/caches/modules-2/files-2.1/com.google.android.gms/play-services-auth/19.2.0/b3a08c387d1881fa68ba39bcfda91815bad81a46/play-services-auth-19.2.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/com.google.android.gms/play-services-auth/19.2.0/b3a08c387d1881fa68ba39bcfda91815bad81a46/play-services-auth-19.2.0-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-auth/19.2.0/b3a08c387d1881fa68ba39bcfda91815bad81a46/play-services-auth-19.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

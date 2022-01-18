@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.anko:anko-support-v4:0.10.8@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/4ea45022ae592f126dd2399d473377db/transformed/jetified-anko-support-v4-0.10.8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/4ea45022ae592f126dd2399d473377db/transformed/jetified-anko-support-v4-0.10.8/res" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/4ea45022ae592f126dd2399d473377db/transformed/jetified-anko-support-v4-0.10.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dc6b64a669d3ccc1a044a9a80c997b76/transformed/jetified-anko-support-v4-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9fcfaf5759bc6839f874534b85d2d9e5/transformed/jetified-anko-support-v4-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0dd90702ac1ce82a337699f9fff2b4f3/transformed/jetified-anko-support-v4-0.10.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0dd90702ac1ce82a337699f9fff2b4f3/transformed/jetified-anko-support-v4-0.10.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0dd90702ac1ce82a337699f9fff2b4f3/transformed/jetified-anko-support-v4-0.10.8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/org.jetbrains.anko/anko-support-v4/0.10.8/d0057281963bf8b85127a0fc954f681244b6f4b7/anko-support-v4-0.10.8-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-support-v4/0.10.8/d0057281963bf8b85127a0fc954f681244b6f4b7/anko-support-v4-0.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

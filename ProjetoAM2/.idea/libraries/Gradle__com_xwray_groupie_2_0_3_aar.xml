@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.xwray:groupie:2.0.3@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6561f07dce9e5f9567700a96cb4d97aa/transformed/jetified-groupie-2.0.3/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6561f07dce9e5f9567700a96cb4d97aa/transformed/jetified-groupie-2.0.3/res" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/6561f07dce9e5f9567700a96cb4d97aa/transformed/jetified-groupie-2.0.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9523badf312aa1be31e06ce9e616d87b/transformed/jetified-groupie-2.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/47b2328c5f5b74af032f76154cbc5e8f/transformed/jetified-groupie-2.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/64576c637b2963451094bc5a96cd67b6/transformed/jetified-groupie-2.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/64576c637b2963451094bc5a96cd67b6/transformed/jetified-groupie-2.0.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/64576c637b2963451094bc5a96cd67b6/transformed/jetified-groupie-2.0.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/com.xwray/groupie/2.0.3/105cebd2d068226a78b710260ffcc5419384d80/groupie-2.0.3-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xwray/groupie/2.0.3/105cebd2d068226a78b710260ffcc5419384d80/groupie-2.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/com.xwray/groupie/2.0.3/6e399c38851056a9330c03394c34103b841acbfa/groupie-2.0.3-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xwray/groupie/2.0.3/6e399c38851056a9330c03394c34103b841acbfa/groupie-2.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

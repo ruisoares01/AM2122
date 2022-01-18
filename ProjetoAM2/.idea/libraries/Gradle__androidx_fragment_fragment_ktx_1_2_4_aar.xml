@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.fragment:fragment-ktx:1.2.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/res" />
+      <root url="jar://$USER_HOME$/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/res" />
+      <root url="file://$USER_HOME$/codigoo/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/codigoo/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/res" />
+      <root url="jar://$USER_HOME$/codigoo/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/37e1358468b1ea81c3e16a66789c950b/transformed/jetified-fragment-ktx-1.2.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dd9f4395c6b5fc110f61c81aecbc3e08/transformed/jetified-fragment-ktx-1.2.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ae516b8c0cd259d95fa3e4893985a004/transformed/jetified-fragment-ktx-1.2.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ae516b8c0cd259d95fa3e4893985a004/transformed/jetified-fragment-ktx-1.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ae516b8c0cd259d95fa3e4893985a004/transformed/jetified-fragment-ktx-1.2.4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/androidx.fragment/fragment-ktx/1.2.4/1ffa885329ceba2ceb2bea1253d2ca32a0c95fa7/fragment-ktx-1.2.4-sources.jar!/" />
+      <root url="jar://$USER_HOME$/codigoo/caches/modules-2/files-2.1/androidx.fragment/fragment-ktx/1.2.4/1ffa885329ceba2ceb2bea1253d2ca32a0c95fa7/fragment-ktx-1.2.4-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/androidx.fragment/fragment-ktx/1.2.4/1ffa885329ceba2ceb2bea1253d2ca32a0c95fa7/fragment-ktx-1.2.4-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment-ktx/1.2.4/1ffa885329ceba2ceb2bea1253d2ca32a0c95fa7/fragment-ktx-1.2.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

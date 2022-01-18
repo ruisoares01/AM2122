@@ -3,13 +3,16 @@ package com.example.projetoam2.Utils
 import android.content.Context
 import android.util.Log
 import com.example.projetoam2.Model.*
+import com.example.projetoam2.item.ImageMessageItem
 import com.example.projetoam2.item.TextMessageItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.xwray.groupie.kotlinandroidextensions.Item
+import kotlinx.android.synthetic.main.activity_chat.*
 import java.lang.NullPointerException
+
 
 object FirestoreUtil {
 
@@ -61,6 +64,13 @@ object FirestoreUtil {
 
     }
 
+    fun getCurrentUser(onComplete: (User) -> Unit) {
+        currentUserDocRef.get()
+            .addOnSuccessListener {
+                onComplete(it.toObject(User::class.java)!!)
+            }
+    }
+
     /*fun createGroupChannel(userIds: MutableList<String>, onComplete: (grupoId: String) -> Unit) {
         //check which chat the user is in
 
@@ -105,7 +115,7 @@ object FirestoreUtil {
                     if (it["type"] == MessageType.TEXT) {
                         items.add(TextMessageItem(it.toObject(TextMessage::class.java)!!, context))
                     } else {
-                        //add image message
+                        items.add(ImageMessageItem(it.toObject(ImageMessage::class.java)!!, context))
                     }
                     return@forEach
                 }
@@ -146,22 +156,29 @@ object FirestoreUtil {
             .add(message)
 
 
+    }
+
+    fun updateLastestMessage(message: Message,channelId: String){
+
         chatChannelIsCollectionRef.document(channelId).get()
             .addOnSuccessListener {
-                if((it.get("latest_message"))!=null){
+                if(message.type == "TEXT"){
                     chatChannelIsCollectionRef.document(channelId).update("latest_message",message)
+                        //chatChannelIsCollectionRef.document(channelId).set("latest_message");
                 }
-                else{
-                    //chatChannelIsCollectionRef.document(channelId).set("latest_message");
-                    chatChannelIsCollectionRef.document(channelId).update("latest_message",message)
-
+                else if(message.type == "IMAGE"){
+                   val imagemessage = "R3rbg89lSCebkBG/OcKHdQ=="
+                    val latestimagemessage = hashMapOf(
+                        "senderId" to message.senderId,
+                        "time" to message.time,
+                        "text" to imagemessage,
+                        "type" to message.type,
+                    )
+                    chatChannelIsCollectionRef.document(channelId).update("latest_message",latestimagemessage)
                 }
 
 
             }
-
-
-
     }
 
     fun sendGroupMessage(message: Message, groupId: String) {

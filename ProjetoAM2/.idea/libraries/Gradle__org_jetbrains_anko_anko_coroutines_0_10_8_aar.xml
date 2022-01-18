@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.anko:anko-coroutines:0.10.8@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/a973027e9fd6d95ce04ca4ae39380d78/transformed/jetified-anko-coroutines-0.10.8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/a973027e9fd6d95ce04ca4ae39380d78/transformed/jetified-anko-coroutines-0.10.8/res" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/a973027e9fd6d95ce04ca4ae39380d78/transformed/jetified-anko-coroutines-0.10.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a973027e9fd6d95ce04ca4ae39380d78/transformed/jetified-anko-coroutines-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0bcbb4f436cf9da081c54834b2ed2d83/transformed/jetified-anko-coroutines-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/63fd0e5fd1333472e911711db15cce8a/transformed/jetified-anko-coroutines-0.10.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/63fd0e5fd1333472e911711db15cce8a/transformed/jetified-anko-coroutines-0.10.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/63fd0e5fd1333472e911711db15cce8a/transformed/jetified-anko-coroutines-0.10.8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/org.jetbrains.anko/anko-coroutines/0.10.8/91cfd6a36cd717882e498db2f777328de12a0dbe/anko-coroutines-0.10.8-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-coroutines/0.10.8/91cfd6a36cd717882e498db2f777328de12a0dbe/anko-coroutines-0.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

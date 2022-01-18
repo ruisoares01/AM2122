@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.anko:sqlite-base:0.10.8@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/b47456ec38f07d766cba2b36345d2496/transformed/jetified-sqlite-base-0.10.8/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/b47456ec38f07d766cba2b36345d2496/transformed/jetified-sqlite-base-0.10.8/res" />
+      <root url="file://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/transforms-3/b47456ec38f07d766cba2b36345d2496/transformed/jetified-sqlite-base-0.10.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b47456ec38f07d766cba2b36345d2496/transformed/jetified-sqlite-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ee66afec5f088f651687b13ded4dfc49/transformed/jetified-sqlite-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7834ac89804e87f053a5f55ddee8b4ef/transformed/jetified-sqlite-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7834ac89804e87f053a5f55ddee8b4ef/transformed/jetified-sqlite-base-0.10.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7834ac89804e87f053a5f55ddee8b4ef/transformed/jetified-sqlite-base-0.10.8/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../firebase-firestore-chat-app-master/firebase-firestore-chat-app-master/caches/modules-2/files-2.1/org.jetbrains.anko/sqlite-base/0.10.8/a4ecb1c6e6298ac58b271a1dbe1b4d94c78e0d5d/sqlite-base-0.10.8-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/sqlite-base/0.10.8/a4ecb1c6e6298ac58b271a1dbe1b4d94c78e0d5d/sqlite-base-0.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

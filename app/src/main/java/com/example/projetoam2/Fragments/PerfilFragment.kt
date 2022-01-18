@@ -76,20 +76,22 @@ class PerfilFragment : Fragment() {
         profileCurso.text = dados.curso
         profileMorada.text = dados.morada
 
-        if(dados.online == true){
-            profileOnline.setVisibility(View.VISIBLE)
-            profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#00b026")))}
-            //profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#097320")))}
-        else if(dados.online == false){
-            profileOnline.setVisibility(View.VISIBLE)
-            profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))}
-
-
+        // showing user online status
+        profileOnline.setVisibility(View.VISIBLE)
+        profileOnline.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#00b026")))
 
         val logOut = view.findViewById<Button>(R.id.buttonLogOut)
 
         logOut.setOnClickListener {
-                //write the login for logout
+            super.onPause()
+            val uid = FirebaseAuth.getInstance().uid
+            val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+            db.collection("usuarios").document(uid.toString()).set(user)
+                .addOnSuccessListener {
+                    println("Offline")
+                }
+            //write the login for logout
                 auth.signOut()
                 val intent = Intent(activity, LoginActivity::class.java)
                 startActivity(intent)

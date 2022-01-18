@@ -184,7 +184,7 @@ class GroupActivity : AppCompatActivity() {
 
         db.collection("usuarios").document(uid.toString()).set(user)
             .addOnSuccessListener {
-                println("Offline")
+                println("Online")
             }
     }
     override fun onResume() {

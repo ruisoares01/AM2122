@@ -63,6 +63,11 @@ class UserListActivity : AppCompatActivity() {
         //hide action bar
         supportActionBar!!.hide()
 
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            finish()
+        }
+
         adapterlistusers = AllUsersAdapter()
         if (listView != null) {
             listView.adapter = adapterlistusers
@@ -169,10 +174,10 @@ class UserListActivity : AppCompatActivity() {
            if(usersLista[position].online == true){
                online_status.setVisibility(View.VISIBLE)
                online_status.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#097320")))}
-           else if(usersLista[position].online == false){
+           else{
                online_status.setVisibility(View.VISIBLE)
-               online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))}
-           else{online_status.setVisibility(View.INVISIBLE)}
+               online_status.setBackgroundTintList(ColorStateList.valueOf(Color.GRAY))
+           }
 
            rowView.setOnClickListener {
                val intent = Intent(baseContext, ChatActivity::class.java)

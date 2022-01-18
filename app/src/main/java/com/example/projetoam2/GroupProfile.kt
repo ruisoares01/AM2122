@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -64,6 +65,12 @@ class GroupProfile : AppCompatActivity() {
         val groupNameTextView = findViewById<TextView>(R.id.groupNames)
         groupNameTextView.text = groupName
 
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            //  val intent = Intent(this, ChatActivity::class.java)
+            finish()
+            //  startActivity(intent)
+        }
 
         db.collection("grupos").document(groupId).get().addOnSuccessListener { chatcontent ->
             useringroup.addAll((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid })

@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'com.google.gms.google-services'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -78,6 +79,7 @@ dependencies {
     def anko_version = "0.10.8"
     implementation "org.jetbrains.anko:anko:$anko_version"
 
+    implementation 'com.google.firebase:firebase-core:15.0.2'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.google.firebase:firebase-firestore:23.0.4'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.0.0'
@@ -93,11 +95,18 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
 
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+
     //circle image view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.firebaseui:firebase-ui-storage:3.3.1'
 }
 
 androidExtensions {

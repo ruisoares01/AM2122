@@ -19,7 +19,14 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 import android.util.Base64
+import com.example.projetoam2.dados
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.item_text_message.view.*
+import org.jetbrains.anko.matchParent
 
+val db = Firebase.firestore
 
 private val secretKey = "tK5UTui+DPh8lIlBxya5XVsmeDCoUl6vHhdIESMB6sQ="
 private val salt = "QWlGNHNhMTJTQWZ2bGhpV3U="
@@ -27,11 +34,9 @@ private val iv = "bVQzNFNhRkQ1Njc4UUFaWA=="
 
 class TextMessageItem(val message: TextMessage,
                       val context: Context)
-    : Item() {
+    : MessageItem(message) {
 
         override fun bind(viewHolder: ViewHolder, position: Int ){
-
-           // var string1 :String
 
             val ivParameterSpec =  IvParameterSpec(Base64.decode(iv, Base64.DEFAULT))
 
@@ -42,36 +47,41 @@ class TextMessageItem(val message: TextMessage,
 
            val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
            cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
-          //  string1 = String(cipher.doFinal(Base64.decode(message.text, Base64.DEFAULT)))
 
             viewHolder.textview_message_text.text = String(cipher.doFinal(Base64.decode(message.text, Base64.DEFAULT)))
-            setTimeText(viewHolder)
-            setMessageRootGravity(viewHolder)
-        }
+            super.bind(viewHolder, position)
 
-    private fun setTimeText(viewHolder: ViewHolder){
-        val dateFormat = SimpleDateFormat
-            .getDateTimeInstance(SimpleDateFormat.SHORT, SimpleDateFormat.SHORT)
-        viewHolder.textView_message_time.text = dateFormat.format(message.time)
+            val viewImgProfile = viewHolder.itemView.imgProfile
 
-    }
+            val refUser = db.collection("usuarios")
+                .document(message.senderId)
+            refUser.get().addOnSuccessListener {
 
-    private fun setMessageRootGravity(viewHolder: ViewHolder){
-        if (message.senderId == FirebaseAuth.getInstance().currentUser?.uid){
-            viewHolder.message_root.apply {
-                backgroundResource = R.drawable.rounded_corners
-                val lParams = FrameLayout.LayoutParams(wrapContent, wrapContent, Gravity.END)
-                this.layoutParams = lParams
+                if (message.senderId == FirebaseAuth.getInstance().currentUser?.uid){
+                    viewHolder.img_root.apply {
+                        Picasso.get().load(it.getString("linkfoto")).into(viewImgProfile)
+                        val lParams = FrameLayout.LayoutParams(wrapContent, wrapContent, Gravity.END or Gravity.CENTER_VERTICAL)
+                        this.layoutParams = lParams
+                    }
+                }
+                else{
+                    viewHolder.img_root.apply {
+                        Picasso.get().load(it.getString("linkfoto")).into(viewImgProfile)
+                        val lParams = FrameLayout.LayoutParams(wrapContent, wrapContent, Gravity.START or Gravity.CENTER_VERTICAL)
+                        this.layoutParams = lParams
+                    }
+                }
+
             }
         }
-        else{
-            viewHolder.message_root.apply {
-                backgroundResource = R.drawable.rect_round_primary_color
-                val lParams = FrameLayout.LayoutParams(wrapContent, wrapContent, Gravity.START)
-                this.layoutParams = lParams
-            }
+
+    /* private fun deleteMessage(viewHolder: ViewHolder){
+        viewHolder.layoutMessage.setOnClickListener {
+
         }
-    }
+
+    }   */
+
 
         override fun getLayout() = R.layout.item_text_message
 
@@ -81,6 +91,12 @@ class TextMessageItem(val message: TextMessage,
         if (this.message != other.message)
             return false
         return true
+    }
+
+    override fun hashCode(): Int {
+        var result = message.hashCode()
+        result = 31 * result + context.hashCode()
+        return result
     }
 
     override fun equals(other: Any?): Boolean{
