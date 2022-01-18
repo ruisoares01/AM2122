@@ -15,12 +15,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="mensagens feitas, profile do grupo tbm, e corrigido erro de duplicção de grupos, falta must haves como sair do grupo e expulsar alguem">
+    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="Remoção da Pasta ProjectAM2 dentro do projeto">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GerirGrupoActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_gerir_grupo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/usergerir.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupProfile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupProfile.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/createGroup.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/createGroup.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupOptionsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupOptionsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/UserListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/UserListActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_group.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_group.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_group_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_group_profile.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +66,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -106,6 +110,12 @@
       <recent name="C:\Users\Francisco\Desktop\IPCA\21_22\BetaBranch\app\src\main\res\layout" />
     </key>
     <key name="android.template.-1887097486">
+      <recent name="com.example.projetoam2" />
+    </key>
+    <key name="android.template.874974475">
+      <recent name="com.example.projetoam2.Fragments" />
+    </key>
+    <key name="android.template.-61129980">
       <recent name="com.example.projetoam2" />
     </key>
   </component>
@@ -189,6 +199,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BetaBranch" />
+        <item itemvalue="Gradle.BetaBranch" />
         <item itemvalue="Gradle.BetaBranch" />
         <item itemvalue="Gradle.BetaBranch" />
         <item itemvalue="Gradle.BetaBranch" />
@@ -443,7 +455,9 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="com.example.projetoam2.CreatePersonalEventActivity" memberName="groupID" />
         <PinnedItemInfo parentTag="com.example.projetoam2.UserListActivity" memberName="usersLista" />
+        <PinnedItemInfo parentTag="com.example.projetoam2.CreatePersonalEventActivity" memberName="groupOrPersonal" />
         <PinnedItemInfo parentTag="com.example.projetoam2.UserListActivity" memberName="alluserslist" />
       </pinned-members>
     </pin-to-top-manager>

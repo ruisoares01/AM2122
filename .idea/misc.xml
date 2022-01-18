@@ -10,7 +10,7 @@
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_create_event.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_group.xml" value="0.5928449744463373" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_grupo_options.xml" value="0.25" />
-        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_info_event.xml" value="0.5" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_info_event.xml" value="0.22" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_other_profile.xml" value="0.1" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_userlist.xml" value="0.25" />
@@ -27,10 +27,18 @@
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu_navigation.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu_userlist.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/Romeu/Desktop/AM2122/app/src/main/res/layout/activity_create_group.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/Romeu/Desktop/AM2122/app/src/main/res/layout/activity_gerir_grupo.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/Romeu/Desktop/AM2122/app/src/main/res/layout/activity_group.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/Romeu/Desktop/AM2122/app/src/main/res/layout/activity_grupo_options.xml" value="0.2" />
+        <entry key="..\:/Users/Romeu/Desktop/AM2122/app/src/main/res/layout/activity_userlist.xml" value="0.23777173913043478" />
+        <entry key="..\:/Users/Romeu/Desktop/AM2122/app/src/main/res/layout/fragment_perfil.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/Romeu/Desktop/AM2122/app/src/main/res/layout/user_layout.xml" value="0.23777173913043478" />
+        <entry key="..\:/Users/Romeu/Desktop/AM2122/app/src/main/res/layout/usergerir.xml" value="0.23777173913043478" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

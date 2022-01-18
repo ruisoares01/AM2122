@@ -131,7 +131,11 @@ class GroupOptionsActivity : AppCompatActivity(), SimpleDialog.OnDialogResultLis
         }
 
         gerirGrupoOption6.setOnClickListener {
-
+            val intentt = Intent(this, GerirGrupoActivity::class.java)
+            intentt.putExtra("groupID",groupID)
+            intentt.putExtra("groupName",groupName)
+            intentt.putExtra("linkfoto", groupPhotoLink)
+            startActivity(intentt)
         }
 
         touchListener.isClickable = true

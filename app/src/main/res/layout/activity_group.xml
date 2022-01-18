@@ -48,6 +48,19 @@
             android:textColor="@color/white"
             android:textSize="30dp" />
 
+        <ImageButton
+            android:id="@+id/opcoesGruposButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/textViewName1"
+            android:layout_alignBottom="@+id/textViewName1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/ic_baseline_more_vert_24"
+            android:backgroundTint="#FFFFFF" />
+
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
