@@ -70,14 +70,14 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/buttonRetirar"
+            android:layout_width="109dp"
+            android:layout_height="58dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="13dp"
-            android:layout_marginBottom="82dp"
-            android:text="Retirar do Grupo" />
+            android:layout_marginBottom="72dp"
+            android:text="Retirar" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
