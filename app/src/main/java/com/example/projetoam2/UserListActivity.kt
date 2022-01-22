@@ -196,8 +196,6 @@ class UserListActivity : AppCompatActivity() {
 
            return rowView
        }
-
-
    }
 
     override fun onPause() {
