@@ -91,6 +91,11 @@ class PerfilFragment : Fragment() {
                 .addOnSuccessListener {
                     println("Offline")
                 }
+
+            chatupdate.remove()
+            gruposListenerEventEdit?.remove()
+            privateListenerEventEdit?.remove()
+
             //write the login for logout
                 auth.signOut()
                 val intent = Intent(activity, LoginActivity::class.java)

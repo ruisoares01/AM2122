@@ -1,28 +1,48 @@
 package com.example.projetoam2
 
 
-import android.content.Intent
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.*
+import android.media.RingtoneManager
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.projetoam2.Fragments.CalendarioFragment
 import com.example.projetoam2.Fragments.HomeFragment
 import com.example.projetoam2.Fragments.PerfilFragment
 import com.example.projetoam2.Model.Dados
+import com.example.projetoam2.Model.Message
 import com.example.projetoam2.Model.User
+import com.example.projetoam2.Notifications.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.installations.FirebaseInstallations
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+const val TOPIC = "/notification/userid"
 
 class MainActivity : AppCompatActivity() {
 
     //variaveis
     private lateinit var auth: FirebaseAuth
+
 
     //firestore
     val db = Firebase.firestore
@@ -32,6 +52,19 @@ class MainActivity : AppCompatActivity() {
     private val calendarioFragment = CalendarioFragment()
     private val perfilFragment = PerfilFragment()
 
+
+    val TAG = "MainActivity"
+
+/*   var notificationReceiver : NotificationReceiver? = null
+
+    inner class NotificationReceiver : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            intent?.extras?.getString(FirebaseMessagingService.NOTIFICATION_MESSAGE)?.let {
+                Toast.makeText(context, it, Toast.LENGTH_LONG).show()
+            }
+        }
+    }*/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -39,6 +72,31 @@ class MainActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
+
+        FirebaseService.sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
+        FirebaseMessaging.getInstance().token.addOnSuccessListener {
+            FirebaseService.token = it
+            println("token : $it") //antes isto era edittexttoken.text
+        }
+            .addOnFailureListener{
+                println("exception -> $it")
+            }
+        FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)
+
+
+/*
+        val title = "CUCU"
+        val message = edit_text.text.toString()
+        val recipientToken = etToken.text.toString()
+        if(title.isNotEmpty() && message.isNotEmpty() && recipientToken.isNotEmpty()) {
+            PushNotification(
+                NotificationData(title, message),
+                recipientToken
+            ).also {
+                sendNotification(it)
+            }
+        }
+        */
 
         //fragment function
         replaceFragment(homeFragment)
@@ -80,6 +138,7 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+
     override fun onPause() {
         super.onPause()
         val uid = FirebaseAuth.getInstance().uid
@@ -89,6 +148,19 @@ class MainActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 println("Online")
             }
+
+        val title = "Update do Estado"
+        val message = "${dados.nome} esta offline"
+        PushNotification(
+            NotificationData(title, message),
+            TOPIC
+        ).also {
+            sendNotification(it)
+        }
+
+    //    notificationReceiver?.let {
+    //        this.unregisterReceiver(it)
+    //    }
     }
     override fun onResume() {
         super.onResume()
@@ -97,6 +169,31 @@ class MainActivity : AppCompatActivity() {
         db.collection("usuarios").document(uid.toString()).set(user)
             .addOnSuccessListener {
                 println("Offline")
+
+               val title = "Update do Estado"
+                val message = "${dados.nome} esta offline"
+                PushNotification(
+                    NotificationData(title, message),
+                    TOPIC
+                ).also {
+                    sendNotification(it)
+                }
             }
     }
+
+
+
+
+    private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {
+     try {
+         val response = RetrofitInstance.api.postNotification(notification)
+         if(response.isSuccessful) {
+             Log.d(ContentValues.TAG, "Response: ${Gson().toJson(response)}")
+         } else {
+             Log.e(ContentValues.TAG, response.errorBody().toString())
+         }
+     } catch(e: Exception) {
+         Log.e(ContentValues.TAG, e.toString())
+     }
+ }
 }

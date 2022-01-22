@@ -1,13 +1,18 @@
 package com.example.projetoam2
 
 import android.app.Activity
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.media.RingtoneManager
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
@@ -19,8 +24,6 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.projetoam2.Model.MessageType
-import com.example.projetoam2.Model.TextMessage
 import com.example.projetoam2.Utils.FirestoreUtil
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ListenerRegistration
@@ -40,12 +43,10 @@ import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.NotificationCompat
 import com.example.projetoam2.Fragments.HomeFragment
-import com.example.projetoam2.Model.ImageMessage
-import com.example.projetoam2.Model.User
-import com.example.projetoam2.Notifications.FirebaseService
-import com.example.projetoam2.Notifications.PushNotification
-import com.example.projetoam2.Notifications.RetrofitInstance
+import com.example.projetoam2.Model.*
+import com.example.projetoam2.Notifications.*
 import com.example.projetoam2.Utils.StorageUtil
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
@@ -58,7 +59,7 @@ import kotlinx.coroutines.launch
 import java.io.ByteArrayOutputStream
 
 
-const val TOPIC = "/topics/myTopic2"
+
 private const val RC_SELECT_IMAGE = 2
 
 class ChatActivity : AppCompatActivity() {
@@ -80,20 +81,12 @@ class ChatActivity : AppCompatActivity() {
     //firestore
     val db = Firebase.firestore
 
-    val TAG = "MainActivity"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
         //Notificacoes (em desenvolvimento)
 
-        /*FirebaseService.sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
-        FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
-            FirebaseService.token = it.token
-            etToken.setText(it.token)
-        }
-        FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)*/
 
         //action bar
         //supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -219,21 +212,6 @@ class ChatActivity : AppCompatActivity() {
 
 
 
-
-
-                //Notificacoes (em desenvolvimento)
-
-           /*     val title = "CUCU"
-                val message = edit_text.text.toString()
-                val recipientToken = etToken.text.toString()
-                if(title.isNotEmpty() && message.isNotEmpty() && recipientToken.isNotEmpty()) {
-                    PushNotification(
-                        NotificationData(title, message),
-                        recipientToken
-                    ).also {
-                        sendNotification(it)
-                    }
-                }*/
             }
 
             send_image.setOnClickListener {
@@ -319,16 +297,7 @@ class ChatActivity : AppCompatActivity() {
             }
     }
 
-    private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {
-        try {
-            val response = RetrofitInstance.api.postNotification(notification)
-            if(response.isSuccessful) {
-                Log.d(ContentValues.TAG, "Response: ${Gson().toJson(response)}")
-            } else {
-                Log.e(ContentValues.TAG, response.errorBody().toString())
-            }
-        } catch(e: Exception) {
-            Log.e(ContentValues.TAG, e.toString())
-        }
-    }
+
+
+
 }
