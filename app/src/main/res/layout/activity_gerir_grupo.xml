@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GerirGrupoActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonAddUserGroup"
+        android:layout_width="51dp"
+        android:layout_height="65dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:foreground="@drawable/ic_baseline_person_add_alt_1_24"
+        android:foregroundGravity="center"
+        android:foregroundTint="#FFFFFF"
+        android:theme="@style/ForgetPassword"
+        app:backgroundTint="@color/Ipca"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout2Gerir"
+        android:layout_width="match_parent"
+        android:layout_height="248dp"
+        android:layout_weight="1.5"
+        android:background="@color/Ipca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="67dp"
+            android:layout_height="55dp"
+            android:layout_gravity="start|top">
+
+            <ImageView
+                android:id="@+id/backButtonGerir"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/back_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgGroupProfileGerir"
+            android:layout_width="169dp"
+            android:layout_height="146dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="30dp" />
+
+        <ImageView
+            android:id="@+id/imgPickImageGerir"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_camera"
+            app:layout_anchor="@id/imgGroupProfileGerir"
+            app:layout_anchorGravity="end|center" />
+
+        <TextView
+            android:id="@+id/txtProfileGroupGerir"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="150dp"
+            android:layout_weight=".3"
+            android:text="Nothing"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaGerirRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout2Gerir"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

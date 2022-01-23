@@ -13,12 +13,13 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import com.example.projetoam2.ChatActivity
+import com.example.projetoam2.MainActivity
 import com.example.projetoam2.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import kotlin.random.Random
 
-private const val CHANNEL_ID = "my_channel"
+private const val CHANNEL_ID = "notificationchannel"
 
 class FirebaseService : FirebaseMessagingService() {
 
@@ -42,7 +43,7 @@ class FirebaseService : FirebaseMessagingService() {
     override fun onMessageReceived(message: RemoteMessage) {
         super.onMessageReceived(message)
 
-        val intent = Intent(this, ChatActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationID = Random.nextInt()
 
@@ -65,11 +66,11 @@ class FirebaseService : FirebaseMessagingService() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotificationChannel(notificationManager: NotificationManager) {
-        val channelName = "channelName"
+        val channelName = "IPCAme"
         val channel = NotificationChannel(CHANNEL_ID, channelName, IMPORTANCE_HIGH).apply {
-            description = "My channel description"
+            description = "chatdoipca"
             enableLights(true)
-            lightColor = Color.GREEN
+            lightColor = Color.parseColor("#097320")
         }
         notificationManager.createNotificationChannel(channel)
     }

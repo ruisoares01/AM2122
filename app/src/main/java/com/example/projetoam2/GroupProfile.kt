@@ -11,7 +11,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetoam2.Fragments.Users
 import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
@@ -21,6 +20,7 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import de.hdodenhof.circleimageview.CircleImageView
+import kotlinx.android.synthetic.main.activity_chat.*
 
 class GroupProfile : AppCompatActivity() {
 
@@ -101,6 +101,10 @@ class GroupProfile : AppCompatActivity() {
 
         }
 
+        backButton.setOnClickListener() {
+            finish()
+        }
+
     }
 }
 
@@ -109,7 +113,7 @@ class GroupUsers(val user : User) : Item<ViewHolder>() {
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = user.nome
 
-        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageView3)
+        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageViewUser)
         Picasso.get().load(user.linkfoto).into(imgprofile)
 
         var online_status = viewHolder.itemView.findViewById<ImageButton>(R.id.online_status)

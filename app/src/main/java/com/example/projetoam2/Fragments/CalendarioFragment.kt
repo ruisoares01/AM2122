@@ -41,6 +41,7 @@ import android.app.Activity
 import android.content.Intent
 import com.example.projetoam2.CreatePersonalEventActivity
 import com.example.projetoam2.InfoEventActivity
+import com.google.firebase.firestore.ListenerRegistration
 import eltos.simpledialogfragment.SimpleCheckDialog
 import eltos.simpledialogfragment.SimpleDateDialog
 import eltos.simpledialogfragment.SimpleDialog
@@ -50,7 +51,8 @@ import eltos.simpledialogfragment.SimpleTimeDialog
 import eltos.simpledialogfragment.color.SimpleColorDialog
 import kotlinx.android.synthetic.main.activity_create_event.*
 
-
+var gruposListenerEventEdit : ListenerRegistration? = null
+var privateListenerEventEdit : ListenerRegistration? = null
 class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
 
     var eventoscalendario: MutableList<Event> = arrayListOf()
@@ -64,6 +66,9 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
     var typeofEventRemoval: Array<String> = arrayOf("","","")
     var adminGrupo = false
     var pos = 0
+    var firstSearch = 0
+    var calendarlastDateClicked : Date = Date(0)
+    lateinit var listViewCalendarioEventos : ListView
 
     fun Events() {
         // Required empty public constructor!
@@ -93,7 +98,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
         arrayChats.clear()
         eventoscalendario.clear()
 
-        val listViewCalendarioEventos = view.findViewById<ListView>(R.id.listViewCalendario)
+        listViewCalendarioEventos = view.findViewById<ListView>(R.id.listViewCalendario)
 
         adapterlisteventos = CalendarioEventosAdapter()
         if (listViewCalendarioEventos != null) {
@@ -101,114 +106,60 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
         }
 
         //Começar parte do Firebase aqui <---------------------
-        var x=0;
-        var z=0
-        var c=0
 
-        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").get()
-            .addOnSuccessListener { document ->
-                while(x<document.documents.size){
-                    if (document != null) {
-                        arrayChats.add(document.documents.get(x).id.replace("[","").replace("]",""))
-                        println( "DocumentSnapshot of GrupoIDS associated with user: ${document.documents.get(x).data?.values.toString()}")
-                    }
-                    println("x : $x")
-                    println("On While , List of chats --> " +arrayChats)
-                    x += 1
-                }
-                for(arrayChat in arrayChats){
-                    db.collection("grupos").document(arrayChat).collection("eventos").get()
-                        .addOnSuccessListener { eventos ->
-                            while(z<eventos.documents.size) {
-                                if (eventos != null) {
-                                    var infoeventos = "${eventos.documents.get(z).data?.get("titulo").toString()}*" +
-                                            "${eventos.documents.get(z).data?.get("descricao").toString()}*grupo*" +
-                                            "${arrayChat}*${eventos.documents.get(z).data?.get("dataFim")}*${eventos.documents.get(z).id}"
+        //db.collection("grupos")
+        //    .addSnapshotListener { document,error ->
+        //        arrayChats.clear()
+        //        eventoscalendario.clear()
+        //        listViewCalendarioEventos!!.setAdapter(null)
 
-/*                                    Eventos(eventos.documents.get(z).data?.get("titulo").toString(),
-                                        eventos.documents.get(z).data?.get("descricao").toString(),
-                                        eventos.documents.get(z).data?.get("dataInicio") as Timestamp,
-                                        eventos.documents.get(z).data?.get("dataFim") as Timestamp,
-                                        eventos.documents.get(z).data?.get("cor") as Long)*/
-
-                                    compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataInicio") as Timestamp).seconds * 1000),"${infoeventos}"))
-
-                         //           compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataFim") as Timestamp).seconds * 1000),"Fim de ${infoeventos}"))
-
-                                    //arrayChats.add(x, eventos.documents.get(x).data?.values.toString().replace("[", "").replace("]", "") )
-                                    println("DocumentSnapshot data of events on Groups: ${eventos.documents.get(z).data?.toString()}")
-                                    println("DocumentSnapshot data values of events on Groups : ${eventos.documents.get(z).data?.values.toString()}")
-                                }
-                                println("z : $z")
-                                z += 1
-                            }
-                        }
-                        .addOnFailureListener { exception ->
-                            println("Had expection when searching for events on Grupos , error info: $exception")
-                        }
+                if(firstSearch < 2){
+                    searchGroupEvent()
+                    listViewCalendarioEventos.adapter = adapterlisteventos
+                    adapterlisteventos.notifyDataSetChanged()
                 }
 
+        //        else if(firstSearch == 2){
+        //            compactCalendar!!.removeAllEvents()
+        //            searchPersonalEvent()
+        //            searchGroupEvent()
+        //            obtainEventsfromDay()
+        //            listViewCalendarioEventos.adapter = adapterlisteventos
+        //           adapterlisteventos.notifyDataSetChanged()
+        //        }
+
+        //}
+
+        privateListenerEventEdit =
+        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString())
+            .collection("eventos")
+            .addSnapshotListener { document,error ->
+                arrayChats.clear()
+                eventoscalendario.clear()
+                listViewCalendarioEventos!!.setAdapter(null)
+                if(firstSearch < 2){
+                    searchPersonalEvent()
+                    listViewCalendarioEventos.adapter = adapterlisteventos
+                    adapterlisteventos.notifyDataSetChanged()
+                }
+                else if(firstSearch == 2){
+                    compactCalendar!!.removeAllEvents()
+                    searchGroupEvent()
+                    searchPersonalEvent()
+                    obtainEventsfromDay()
+                    listViewCalendarioEventos.adapter = adapterlisteventos
+                    adapterlisteventos.notifyDataSetChanged()
+                }
             }
-            .addOnFailureListener { exception ->
-                println("Had expection when searching for grupoIds in usuarios , error info: $exception")
-            }
+
 
         Thread.sleep(1000)
 
-        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").get()
-            .addOnSuccessListener { eventospessoais ->
-                if(eventospessoais.documents.size>0){
-                    while(c<eventospessoais.documents.size) {
-
-                        println("DocumentSnapshot data of Personal Events: ${eventospessoais.documents.get(c).data?.toString()}")
-                        println("DocumentSnapshot data values of Personal Events : ${eventospessoais.documents.get(c).data?.values.toString()}")
-
-                        var infopersonaleventos = "${eventospessoais.documents.get(c).data?.get("titulo").toString()}*" +
-                                "${eventospessoais.documents.get(c).data?.get("descricao").toString()}*" +
-                                "pessoal*${Firebase.auth.currentUser?.uid.toString()}" +
-                                "*${eventospessoais.documents.get(c).data?.get("dataFim")}*${eventospessoais.documents.get(c).id}"
-
-                        compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataInicio") as Timestamp).seconds * 1000),"${infopersonaleventos}"))
-
-                 //       compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataFim") as Timestamp).seconds * 1000),"Fim de ${infopersonaleventos}"))
-
-
-                        println("c : $c")
-                        c += 1
-                    }
-                }
-            }
-            .addOnFailureListener { exception ->
-                println("Had expection when searching for events in usuarios , error info: $exception")
-            }
-
-
-
-
-        //Escolhe um item (neste caso cor) aleatorio do array
- //       var coraleatoria = coreslist.random()
-
-
-
-/*        var eventosapagar : MutableList<Event> = arrayListOf(
-            Event(coraleatoria, 1607040400000L, "Teachers' Professional Day * Welcome to Teachers Day"),
-            Event(coraleatoria, 1624273932000, "Tessdate * Description Test"),
-            Event(coraleatoria, 1624274932000, "Teste * MegaTest"),
-            Event(coraleatoria, 1623082189198, "Dia 7 * Ja passou"),
-            Event(coraleatoria, 1626562800000, "Inicio Sao Joao * Um mes atrasado"),
-            Event(coraleatoria, 1626822000000, "Fim Sao Joao * Um mes atrasado"),
-            Event(Color.RED,1640544916488,"Após Natal * Apos Natal")
-        )
-
-
-
-
+/*
         for(Event in eventosapagar){
             compactCalendar!!.addEvent(Event(Event.color,Event.timeInMillis,Event.data))
         }
 */
-
-
 
 
         view.findViewById<ImageView>(R.id.leftArrowImage)?.setOnClickListener{
@@ -228,13 +179,17 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
 
         //Verifica qual é o mês atual em numero e converte o mesmo para extenso
         var mesinicial = ""
-        mesinicial = DateTimeFormatter.ofPattern("MMMM",Locale.forLanguageTag("PT")).format(date)
+        mesinicial = DateTimeFormatter.ofPattern("MMMM",
+            Locale.forLanguageTag("PT"))
+            .format(date)
 
         //Declara diferentes formatações da data
         val anoinicial = DateTimeFormatter.ofPattern("yyyy").format(date)
 
         //Declara o texto do mesdocalendario mes em extenso e o ano
         view.findViewById<TextView>(R.id.mesdocalendario).text = "$mesinicial de $anoinicial"
+
+
 
 
 
@@ -249,9 +204,10 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
 
                 //Cria uma formataçao separadamente para hora e data
                 //obtem a data selecionada e converte a mesma de milisegundos para uma data e aplica o mesmo num textview
-                var formatter = SimpleDateFormat("dd/MM/yyyy");
-                var dataAtualClickedString = formatter.format(Date(dateClicked.time))
+                //var formatter = SimpleDateFormat("dd/MM/yyyy");
+                //var dataAtualClickedString = formatter.format(Date(dateClicked.time))
 
+                calendarlastDateClicked = dateClicked
 
                 //Vê se as cor aleatoria nao se repete a anterior
                 //e para cada item que esteja no array dos eventos adiciona um evento no calendario
@@ -288,12 +244,121 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
         }
 
 
+
+
         return view
     }
 
+    fun obtainEventsfromDay(){
+        for (Event in compactCalendar!!.getEvents(calendarlastDateClicked.time)) {
+            eventoscalendario.add(Event(Event.color,Event.timeInMillis,Event.data))
+        }
+        adapterlisteventos.notifyDataSetChanged()
+    }
+
+    fun searchGroupEvent(){
+        var x=0;
+        var z=0
+        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").get().addOnSuccessListener {
+                document ->
+            while(x< document?.documents?.size!!){
+                if (document != null) {
+                    arrayChats.add(document.documents.get(x).id.replace("[","").replace("]",""))
+                    println( "DocumentSnapshot of GrupoIDS associated with user: ${document.documents.get(x).data?.values.toString()}")
+                }
+                println("x : $x")
+                println("On While , List of chats --> " +arrayChats)
+                x += 1
+            }
+            for(arrayChat in arrayChats){
+                db.collection("grupos").document(arrayChat).collection("eventos").get()
+                    .addOnSuccessListener { eventos ->
+                        while(z<eventos.documents.size) {
+                            if (eventos != null) {
+                                var infoeventos = "${eventos.documents.get(z).data?.get("titulo").toString()}*" +
+                                        "${eventos.documents.get(z).data?.get("descricao").toString()}*grupo*" +
+                                        "${arrayChat}*${eventos.documents.get(z).data?.get("dataFim")}*${eventos.documents.get(z).id}"
+
+/*                                    Eventos(eventos.documents.get(z).data?.get("titulo").toString(),
+                                        eventos.documents.get(z).data?.get("descricao").toString(),
+                                        eventos.documents.get(z).data?.get("dataInicio") as Timestamp,
+                                        eventos.documents.get(z).data?.get("dataFim") as Timestamp,
+                                        eventos.documents.get(z).data?.get("cor") as Long)*/
+
+                                compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataInicio") as Timestamp).seconds * 1000),"${infoeventos}"))
+
+                                //           compactCalendar!!.addEvent(Event((eventos.documents.get(z).data?.get("cor") as Long).toInt(),((eventos.documents.get(z).data?.get("dataFim") as Timestamp).seconds * 1000),"Fim de ${infoeventos}"))
+
+                                //arrayChats.add(x, eventos.documents.get(x).data?.values.toString().replace("[", "").replace("]", "") )
+                                println("DocumentSnapshot data of events on Groups: ${eventos.documents.get(z).data?.toString()}")
+                                println("DocumentSnapshot data values of events on Groups : ${eventos.documents.get(z).data?.values.toString()}")
+                            }
+                            println("z : $z")
+                            z += 1
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        println("Had expection when searching for events on Grupos , error info: $exception")
+                    }
+            }
+        }
+        if(firstSearch<2){
+            firstSearch += 1
+        }
+
+    }
+
+    fun searchPersonalEvent(){
+        var c=0
+        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").get()
+            .addOnSuccessListener { eventospessoais ->
+                if(eventospessoais.documents.size>0){
+                    while(c<eventospessoais.documents.size) {
+
+                        println("DocumentSnapshot data of Personal Events: ${eventospessoais.documents.get(c).data?.toString()}")
+                        println("DocumentSnapshot data values of Personal Events : ${eventospessoais.documents.get(c).data?.values.toString()}")
+
+                        var infopersonaleventos = "${eventospessoais.documents.get(c).data?.get("titulo").toString()}*" +
+                                "${eventospessoais.documents.get(c).data?.get("descricao").toString()}*" +
+                                "pessoal*${Firebase.auth.currentUser?.uid.toString()}" +
+                                "*${eventospessoais.documents.get(c).data?.get("dataFim")}*${eventospessoais.documents.get(c).id}"
+
+                        compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataInicio") as Timestamp).seconds * 1000),"${infopersonaleventos}"))
+
+                        //       compactCalendar!!.addEvent(Event((eventospessoais.documents.get(c).data?.get("cor") as Long).toInt(),((eventospessoais.documents.get(c).data?.get("dataFim") as Timestamp).seconds * 1000),"Fim de ${infopersonaleventos}"))
 
 
+                        println("c : $c")
+                        c += 1
+                    }
+                }
+            }
+            .addOnFailureListener { exception ->
+                println("Had expection when searching for events in usuarios , error info: $exception")
+            }
+        if(firstSearch<2){
+            firstSearch += 1
+        }
+    }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        if(gruposListenerEventEdit != null){
+            gruposListenerEventEdit!!.remove()
+        }
+        else if(privateListenerEventEdit != null){
+            privateListenerEventEdit!!.remove()
+        }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        if(gruposListenerEventEdit != null){
+            gruposListenerEventEdit!!.remove()
+        }
+        else if(privateListenerEventEdit != null){
+            privateListenerEventEdit!!.remove()
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -320,6 +385,9 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+            if(gruposListenerEventEdit != null){
+                gruposListenerEventEdit!!.remove()
+            }
 
 
             val rowView = layoutInflater.inflate(R.layout.row_calendario, parent, false)
@@ -366,22 +434,18 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
                     .get()
                     .addOnSuccessListener {
                         adminGrupo = it.getBoolean("admin")!!
+                        if(adminGrupo == true){
+                            removeEventList.visibility = View.VISIBLE
+                        }
+                        else if(adminGrupo == false){
+                            removeEventList.visibility = View.INVISIBLE
+                        }
                     }
-            }
 
-            if(typeEventList.text =="pessoal"){
+
+            }
+            else if(typeEventList.text =="pessoal"){
                 removeEventList.visibility = View.VISIBLE
-            }
-            else if (typeEventList.text =="grupo"){
-                if(adminGrupo == true){
-                    removeEventList.visibility = View.VISIBLE
-                }
-                else if(adminGrupo == false){
-                    removeEventList.visibility = View.INVISIBLE
-                }
-            }
-            else{
-                removeEventList.visibility = View.INVISIBLE
             }
 
             removeEventList.setOnClickListener {
@@ -399,6 +463,7 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
             }
 
 
+
             cardView.setOnClickListener {
                 val intent = Intent(context, InfoEventActivity::class.java)
                 intent.putExtra("horainicio", dateEventlist.text as String)
@@ -411,10 +476,22 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
                 intent.putExtra("idevento", idEventList.text as String)
                 intent.putExtra("cor", eventoscalendario[position].color)
                 println("Dados da Intent :  ${dateEventlist.text} + ${titleEventList.text } + ${descEventList.text} + ${typeEventList.text} +${infoTypeEventList.text} + ${horaFimEventList.text} + ${dataEventList.text}")
+
+                gruposListenerEventEdit =
+                    db.collection("grupos").document(infoTypeEventList.text as String).collection("eventos")
+                        .addSnapshotListener { document, error ->
+                                arrayChats.clear()
+                                eventoscalendario.clear()
+                                listViewCalendarioEventos!!.setAdapter(null)
+                                compactCalendar!!.removeAllEvents()
+                                listViewCalendarioEventos.adapter = adapterlisteventos
+                                searchPersonalEvent()
+                                searchGroupEvent()
+                                obtainEventsfromDay()
+                                adapterlisteventos.notifyDataSetChanged()
+                        }
                 startActivity(intent)
             }
-
-
 
 
             println(datadescricaotitulo)
@@ -434,12 +511,18 @@ class CalendarioFragment : Fragment(),SimpleDialog.OnDialogResultListener {
         else if(dialogTag == "EliminarEvento" && which == BUTTON_POSITIVE){
             if(typeofEventRemoval[0] == "pessoal"){
                 db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("eventos").document(typeofEventRemoval[1]).delete()
-                eventoscalendario.removeAt(pos)
                 adapterlisteventos.notifyDataSetChanged()
             }
-            if(typeofEventRemoval[0]== "grupo"){
+            else if(typeofEventRemoval[0] == "grupo"){
                 db.collection("grupos").document(typeofEventRemoval[2]).collection("eventos").document(typeofEventRemoval[1]).delete()
-                eventoscalendario.removeAt(pos)
+                arrayChats.clear()
+                eventoscalendario.clear()
+                listViewCalendarioEventos!!.setAdapter(null)
+                compactCalendar!!.removeAllEvents()
+                listViewCalendarioEventos.adapter = adapterlisteventos
+                searchPersonalEvent()
+                searchGroupEvent()
+                obtainEventsfromDay()
                 adapterlisteventos.notifyDataSetChanged()
             }
             else{

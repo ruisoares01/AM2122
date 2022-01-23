@@ -1,13 +1,18 @@
 package com.example.projetoam2
 
 import android.app.Activity
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.media.RingtoneManager
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
@@ -39,13 +44,13 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.NotificationCompat
 import com.example.projetoam2.Fragments.HomeFragment
-import com.example.projetoam2.Model.ImageMessage
-import com.example.projetoam2.Model.User
-import com.example.projetoam2.Notifications.FirebaseService
-import com.example.projetoam2.Notifications.PushNotification
-import com.example.projetoam2.Notifications.RetrofitInstance
+import com.example.projetoam2.Fragments.chatupdate
+import com.example.projetoam2.Model.*
+import com.example.projetoam2.Notifications.*
 import com.example.projetoam2.Utils.StorageUtil
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
@@ -58,7 +63,7 @@ import kotlinx.coroutines.launch
 import java.io.ByteArrayOutputStream
 
 
-const val TOPIC = "/topics/myTopic2"
+
 private const val RC_SELECT_IMAGE = 2
 
 class ChatActivity : AppCompatActivity() {
@@ -80,24 +85,20 @@ class ChatActivity : AppCompatActivity() {
     //firestore
     val db = Firebase.firestore
 
-    val TAG = "MainActivity"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
         //Notificacoes (em desenvolvimento)
 
-        /*FirebaseService.sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
-        FirebaseInstanceId.getInstance().instanceId.addOnSuccessListener {
-            FirebaseService.token = it.token
-            etToken.setText(it.token)
-        }
-        FirebaseMessaging.getInstance().subscribeToTopic(TOPIC)*/
 
         //action bar
         //supportActionBar?.setDisplayHomeAsUpEnabled(true)
-          supportActionBar?.hide()
+        supportActionBar?.hide()
+
+        chatupdate.remove()
+
+
 
         FirestoreUtil.getCurrentUser {
             currentUser = it
@@ -197,6 +198,11 @@ class ChatActivity : AppCompatActivity() {
             finish()
             startActivity(intent)
         }
+        val goToMainActivity = Intent(applicationContext,MainActivity::class.java)
+        this.onBackPressedDispatcher.addCallback(this) {
+            goToMainActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(goToMainActivity)
+        }
 
         //get the chat channel
         FirestoreUtil.getOrCreateChatChannel(otherUserId) { channelId ->
@@ -230,6 +236,8 @@ class ChatActivity : AppCompatActivity() {
 
                 FirestoreUtil.sendMessage(messageTosend, channelId)
                 FirestoreUtil.updateLastestMessage(messageTosend,channelId)
+
+
 
             }
 
@@ -300,23 +308,23 @@ class ChatActivity : AppCompatActivity() {
         super.onPause()
         val uid = FirebaseAuth.getInstance().uid
         val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
+
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
     }
     override fun onResume() {
         super.onResume()
         val uid = FirebaseAuth.getInstance().uid
         val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
+        db.collection("usuarios").document(uid.toString()).set(user)
+            .addOnSuccessListener {
+                println("Offline")
+            }
     }
 
-    private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {
-        try {
-            val response = RetrofitInstance.api.postNotification(notification)
-            if(response.isSuccessful) {
-                Log.d(ContentValues.TAG, "Response: ${Gson().toJson(response)}")
-            } else {
-                Log.e(ContentValues.TAG, response.errorBody().toString())
-            }
-        } catch(e: Exception) {
-            Log.e(ContentValues.TAG, e.toString())
-        }
-    }
+
+
+
 }

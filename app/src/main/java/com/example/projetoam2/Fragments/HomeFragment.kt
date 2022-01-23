@@ -1,6 +1,7 @@
 package com.example.projetoam2.Fragments
 
 import android.annotation.SuppressLint
+import android.content.ContentValues
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -15,17 +16,10 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SwitchCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetoam2.ChatActivity
-import com.example.projetoam2.MainActivity
-import com.example.projetoam2.Model.TextMessage
 import com.example.projetoam2.Model.User
-import com.example.projetoam2.R
-import com.example.projetoam2.UserListActivity
-import com.example.projetoam2.item.TextMessageItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -35,11 +29,6 @@ import com.xwray.groupie.*
 import de.hdodenhof.circleimageview.CircleImageView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.Timestamp
-import com.google.firebase.firestore.ktx.getField
-import eltos.simpledialogfragment.color.SimpleColorDialog
-import kotlinx.android.synthetic.main.activity_create_event.*
-import kotlinx.android.synthetic.main.item_text_message.*
-import java.sql.Array
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -53,11 +42,28 @@ import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 import android.util.Base64
 import android.util.Log
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.projetoam2.*
+import com.example.projetoam2.Notifications.*
+import com.example.projetoam2.Notifications.FirebaseService.Companion.token
+
+import com.example.projetoam2.R
+import com.google.firebase.firestore.DocumentChange
+import com.google.firebase.firestore.ListenerRegistration
+import com.google.gson.Gson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 data class LatestMessageTime(val otheruser : String , val latesttext : String , val latesttime : Date )
 
+
+lateinit var chatupdate : ListenerRegistration
+
 class HomeFragment : Fragment() {
+
+    private val secretKey = "tK5UTui+DPh8lIlBxya5XVsmeDCoUl6vHhdIESMB6sQ="
+    private val salt = "QWlGNHNhMTJTQWZ2bGhpV3U="
+    private val iv = "bVQzNFNhRkQ1Njc4UUFaWA=="
 
     //variaveis
     private lateinit var auth: FirebaseAuth
@@ -65,7 +71,6 @@ class HomeFragment : Fragment() {
     private val adapter = GroupAdapter<ViewHolder>()
 
     var chatscomhistorico : ArrayList<String> = arrayListOf()
-
 
     //firestore
     val db = Firebase.firestore
@@ -77,7 +82,6 @@ class HomeFragment : Fragment() {
     ): View? {
 
         Log.d(TAG, "carregar home fragment")
-
         var z = 0
         var c = 0
 
@@ -206,9 +210,128 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+
+        chatupdate = db.collection("Chat").addSnapshotListener { chats, error ->
+            c=0
+           latesttexttime.clear()
+
+
+            for (documents in chats!!.documentChanges) {
+                when (documents.type) {
+                    //             DocumentChange.Type.ADDED -> Log.d(TAG, "New city: ${dc.document.data}")
+                    DocumentChange.Type.MODIFIED -> {
+                        var modifiedchat = (documents.document.data.get("userIds") as ArrayList<String>)
+
+                        if(modifiedchat.contains(auth.currentUser!!.uid)){
+
+                            var modifieduser = ((documents.document.data.get("userIds") as ArrayList<String>).filter { it != auth.currentUser?.uid })
+                                .toString().replace("[","").replace("]","")
+
+
+                            var modifiedtime = ((documents.document.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
+                            var modifiedtextencrypted = ((documents.document.data!!.get("latest_message") as HashMap<String,String>).get("text"))
+
+                            var user = ""
+
+                            val ivParameterSpec =  IvParameterSpec(Base64.decode(iv, Base64.DEFAULT))
+                            val factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1")
+                            val spec =  PBEKeySpec(secretKey.toCharArray(), Base64.decode(salt, Base64.DEFAULT), 10000, 256)
+                            val tmp = factory.generateSecret(spec);
+                            val secretKey =  SecretKeySpec(tmp.encoded, "AES")
+                            val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
+                            cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
+                            var modifiedtext = String(cipher.doFinal(Base64.decode(modifiedtextencrypted, Base64.DEFAULT)))
+                            var title = ""
+                            val message = modifiedtext
+                            val token = token!!
+                            db.collection("usuarios").document(modifieduser).get().addOnSuccessListener { otheruser ->
+                                title = otheruser.getString("nome").toString()
+                                user = otheruser.getString("uid").toString()
+
+                                if(user != auth.currentUser!!.uid) {
+                                    PushNotification(
+                                        NotificationData(title, message),
+                                        token
+                                    ).also {
+                                        sendNotification(it)
+                                    }
+                                }
+                            }
+
+
+
+                            adapter.clear()
+                            for(chat in chatscomhistorico){
+                                println("CHAT : ${chat}")
+                                db.collection("Chat").document(chat).get()
+                                    .addOnSuccessListener { chatcontent ->
+                                        if(chatcontent.get("userIds")!=null && chatcontent.get("latest_message")!=null){
+                                            otheruserstring = ((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid }
+                                                .toString().replace("[","").replace("]",""))
+                                            latest_message = (chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("text")
+                                            latest_time = ((chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
+                                            latesttexttime.add(LatestMessageTime(otheruserstring,latest_message as String,latest_time))
+                                            println("Latest UPDATED Message : ${latest_message} from ${chat} , Other User UID : ${otheruserstring} ")
+                                        }
+                                        c +=1
+                                        println("C: ${c}   vs ${chatscomhistorico.size}")
+                                        if (c == chatscomhistorico.size)
+                                        {
+                                            println("latesttexttime size : ${latesttexttime.size} ")
+                                            latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime }
+                                            for(latest in latesttexttime)
+                                            {
+                                                println("latest : ${latest} and ${latest.latesttime} ${latest.latesttext} ${latest.otheruser}")
+                                                db.collection("usuarios").document(latest.otheruser).get()
+                                                    .addOnSuccessListener { documents ->
+                                                        val user = documents.toObject(User::class.java)
+                                                        if (auth.currentUser?.uid != user!!.uid) {
+                                                            adapter.add(Users(user,latest.latesttext,latest.latesttime))
+                                                        }
+                                                    }
+                                            }
+                                        }
+                                    }
+                            }
+                        }
+
+
+
+
+//                        FirebaseMessagingService().sendRecievingChatNotification(modifieduser,"$modifiedtext")
+                        }
+                    }
+                    //            DocumentChange.Type.REMOVED -> Log.d(TAG, "Removed city: ${dc.document.data}")
+            }
+
+
+        }
+
+
+
         // Inflate the layout for this fragment
         return view
+
+
     }
+    private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {
+        try {
+            val response = RetrofitInstance.api.postNotification(notification)
+            if(response.isSuccessful) {
+                Log.d(ContentValues.TAG, "Response: ${Gson().toJson(response)}")
+            } else {
+                Log.e(ContentValues.TAG, response.errorBody().toString())
+            }
+        } catch(e: Exception) {
+            Log.e(ContentValues.TAG, e.toString())
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        chatupdate.remove()
+    }
+
 }
 class Users(val user : User, val textmessage : String, val texttime : Date) : Item<ViewHolder>() {
     @SuppressLint("SetTextI18n")
@@ -244,7 +367,7 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
         var latestmessage = String(cipher.doFinal(Base64.decode(textmessage, Base64.DEFAULT)))
 
         if(latestmessage.length>18){
-            latestmessage = latestmessage.substring(0,16) + "..."
+            latestmessage = latestmessage.substring(0,15) + "..."
         }
 
         var latest = viewHolder.itemView.findViewById<TextView>(R.id.text_latest_message)
@@ -273,5 +396,8 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
 
     }
 
+
     override fun getLayout() = R.layout.user_layout
+
+
 }

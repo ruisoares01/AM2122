@@ -24,17 +24,6 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/back_button" />
 
-        <TextView
-            android:id="@+id/textViewName1"
-            android:layout_width="222dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="5dp"
-            android:layout_toEndOf="@+id/groupImg"
-            android:text="Grupo"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
-
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/groupImg"
             android:layout_width="60dp"
@@ -45,16 +34,30 @@
             android:layout_marginStart="64dp"
             android:layout_marginTop="4dp" />
 
+        <TextView
+            android:id="@+id/textViewName1"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:layout_toEndOf="@+id/groupImg"
+            android:text="Nome567890123"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
         <ImageButton
             android:id="@+id/opcoesGruposButton"
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="36dp"
             android:layout_alignTop="@+id/textViewName1"
             android:layout_alignBottom="@+id/textViewName1"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="1dp"
             android:background="@drawable/ic_baseline_more_vert_24"
             android:backgroundTint="#FFFFFF" />
 

@@ -90,22 +90,28 @@ class GroupActivity : AppCompatActivity() {
         Picasso.get().load(linkfoto).into(groupImg)
 
         val nameGroup = findViewById<TextView>(R.id.textViewName1)
-        nameGroup.text = groupName
+        if(groupName.length >13){
+            nameGroup.text = groupName.substring(0,10) + "..."
+        }
+        else{
+            nameGroup.text = groupName
+        }
+
 
         nameGroup.setOnClickListener {
-            val intent = Intent(this, GroupProfile::class.java)
+            /*val intent = Intent(this, GroupProfile::class.java)
             intent.putExtra("name", groupName)
             intent.putExtra("uid", groupId)
             intent.putExtra("linkfoto", linkfoto)
-            startActivity(intent)
+            startActivity(intent)*/
         }
 
         groupImg.setOnClickListener {
-            val intent = Intent(this, GroupProfile::class.java)
+          /*  val intent = Intent(this, GroupProfile::class.java)
             intent.putExtra("name", groupName)
             intent.putExtra("uid", groupId)
             intent.putExtra("linkfoto", linkfoto)
-            startActivity(intent)
+            startActivity(intent)*/
         }
 
         groupOptionsButton.setOnClickListener {
