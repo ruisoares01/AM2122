@@ -391,7 +391,7 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = user.nome
 
-        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageView3)
+        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageViewUser)
         Picasso.get().load(user.linkfoto).into(imgprofile)
 
     }

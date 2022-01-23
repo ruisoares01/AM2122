@@ -55,6 +55,8 @@ class createGroup : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_group)
 
+        supportActionBar?.hide()
+
         val buttonCreateGroup : Button = findViewById(R.id.buttonCreateGroup)
 
         val buttonCancelCreateGroup: Button = findViewById(R.id.buttonCancelCreateGroup)

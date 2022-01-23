@@ -28,6 +28,7 @@ class InfoEventActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info_event)
 
+        supportActionBar?.hide()
 
         val horainicio = intent.extras?.getString("horainicio")
         val titulo = intent.extras?.getString("titulo")

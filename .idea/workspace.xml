@@ -15,11 +15,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="Missing Code">
+    <list default="true" id="be5ffdf9-a9a4-49c4-9bfa-ba246f1a284f" name="Default Changelist" comment="Minor Code Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeGruposFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeGruposFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/PerfilFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/PerfilFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupOptionsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/GroupOptionsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/Fragments/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projetoam2/InfoEventActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -490,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642956905544</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Minor Code Changes">
+      <created>1642958824584</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1642958824584</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -546,7 +554,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionado Home Grupos Fragment e GroupList, Adicionado Funcionalidades no Home Fragment e Alterações na createGroup" />
     <MESSAGE value="Parte do Gonnçalo (encriptação de mensagens)" />
     <MESSAGE value="Pesquisa de Users Adicionado" />
     <MESSAGE value="Atualização no Readme , latest_message agora enviado para o firebase" />
@@ -571,7 +578,8 @@
     <MESSAGE value="Resto de &quot;Gerir Grupo&quot; realizado e &quot;Adicionar utilizador&quot; ao grupo , Adicionado botão de adicionar foto ao criar grupo" />
     <MESSAGE value="Aumentada a eficiencia das notificações e quando os chats individuais são atualizados" />
     <MESSAGE value="Missing Code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Missing Code" />
+    <MESSAGE value="Minor Code Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Code Changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
