@@ -65,15 +65,15 @@ class UserListActivity : AppCompatActivity() {
 
         val backButton = findViewById<ImageView>(R.id.backButton)
         backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             finish()
+            startActivity(intent)
         }
 
         adapterlistusers = AllUsersAdapter()
         if (listView != null) {
             listView.adapter = adapterlistusers
         }
-
-
 
         db.collection("usuarios").get().addOnSuccessListener { documents ->
             //get all the documents
@@ -88,7 +88,6 @@ class UserListActivity : AppCompatActivity() {
         }
 
         adapterlistusers.notifyDataSetChanged()
-
 
 
         searchView.queryHint = "Pesquisar por Utilizador"

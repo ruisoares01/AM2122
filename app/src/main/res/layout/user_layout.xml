@@ -11,12 +11,13 @@
     android:layout_marginStart="5dp"
     android:layout_marginEnd="5dp"
     android:backgroundTint="#F5FFF5"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="40dp"
     app:cardElevation="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="144dp"
+        android:theme="@style/pressed_color"
         android:elevation="30dp">
 
         <TextView

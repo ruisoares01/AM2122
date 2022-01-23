@@ -126,7 +126,6 @@ class PerfilFragment : Fragment() {
 
         }
 
-
         return view
     }
 

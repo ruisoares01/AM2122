@@ -15,6 +15,7 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
+        multiDexEnabled = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,6 +29,7 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled = true
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -39,6 +41,8 @@ android {
     dependencies {
         // Import the BoM for the Firebase platform
         implementation platform('com.google.firebase:firebase-bom:28.4.1')
+
+        coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 
         // Declare the dependency for the Firebase Authentication library
         // When using the BoM, you don't specify versions in Firebase library dependencies

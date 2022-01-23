@@ -6,38 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".createGroup">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Criar"
+    <RelativeLayout
+        android:id="@+id/relativelayout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@color/Ipca"
+        android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/back_button"
+            android:elevation="20dp" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center|top"
+            android:text="Criar Grupo"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="Nome do Grupo"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/rView"
+        app:layout_constraintStart_toStartOf="@+id/relativelayout_actionbar" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        android:text="Criar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/rView"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="413dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/scrollview"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toTopOf="@+id/relativelayout_actionbar"
+        tools:listitem="@layout/user_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

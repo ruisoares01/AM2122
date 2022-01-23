@@ -1,6 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.ProjetoAM2" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary text color. -->
+        <item name="android:editTextColor">@android:color/black</item>
         <!-- Primary brand color. -->
         <item name="actionBarSize">0dp</item>
         <item name="colorPrimary">@color/purple_500</item>
@@ -43,6 +45,28 @@
 
         <item name="android:backgroundDimEnabled">true</item>
 
+    </style>
+
+    <style name="buttonOccult" >
+
+        <item name="colorPrimary">@color/light_grey</item>
+        <item name="colorPrimaryVariant">@color/light_grey</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/light_grey</item>
+        <item name="colorSecondaryVariant">@color/light_grey</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+    </style>
+
+    <style name="buttonLogout">
+
+        <item name="colorPrimary">@color/red</item>
+    </style>
+
+    <style name="pressed_color">
+        android:state_selected="true"
+        android:drawable="@color/pressed_color"/>
     </style>
 
 </resources>

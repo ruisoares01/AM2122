@@ -10,11 +10,9 @@ import androidx.fragment.app.Fragment
 import com.example.projetoam2.Fragments.CalendarioFragment
 import com.example.projetoam2.Fragments.HomeFragment
 import com.example.projetoam2.Fragments.PerfilFragment
-import com.example.projetoam2.Model.Dados
 import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     val db = Firebase.firestore
 
     //variaveis fragment
-    private val homeFragment = HomeFragment()
+    private val mainFragment = HomeFragment()
     private val calendarioFragment = CalendarioFragment()
     private val perfilFragment = PerfilFragment()
 
@@ -39,13 +37,13 @@ class MainActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-
         //fragment function
-        replaceFragment(homeFragment)
+        replaceFragment(mainFragment)
+
 
         bottom_navigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.ic_home -> replaceFragment(homeFragment)
+                R.id.ic_home -> replaceFragment(mainFragment)
                 R.id.ic_calendario -> replaceFragment(calendarioFragment)
                 R.id.ic_perfil -> replaceFragment(perfilFragment)
             }
@@ -87,7 +85,7 @@ class MainActivity : AppCompatActivity() {
 
         db.collection("usuarios").document(uid.toString()).set(user)
             .addOnSuccessListener {
-                println("Online")
+                println("Offline")
             }
     }
     override fun onResume() {
@@ -96,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
         db.collection("usuarios").document(uid.toString()).set(user)
             .addOnSuccessListener {
-                println("Offline")
+                println("Online")
             }
     }
 }

@@ -177,6 +177,20 @@ class ChatActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val OptionsButton = findViewById<ImageButton>(R.id.opcoesButton)
+        OptionsButton.setOnClickListener {
+            val intent = Intent(this, privado_options::class.java)
+            intent.putExtra("name", otherUserName)
+            intent.putExtra("uid", otherUserId)
+            intent.putExtra("email", otherUserEmail)
+            intent.putExtra("nAluno", otherUserN)
+            intent.putExtra("curso", otherUserCurso)
+            intent.putExtra("morada", otherUserMorada)
+            intent.putExtra("linkfoto", linkfoto)
+            intent.putExtra("status", otherUserStatus)
+            startActivity(intent)
+        }
+
         val backButton = findViewById<ImageView>(R.id.backButton)
         backButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -217,23 +231,6 @@ class ChatActivity : AppCompatActivity() {
                 FirestoreUtil.sendMessage(messageTosend, channelId)
                 FirestoreUtil.updateLastestMessage(messageTosend,channelId)
 
-
-
-
-
-                //Notificacoes (em desenvolvimento)
-
-           /*     val title = "CUCU"
-                val message = edit_text.text.toString()
-                val recipientToken = etToken.text.toString()
-                if(title.isNotEmpty() && message.isNotEmpty() && recipientToken.isNotEmpty()) {
-                    PushNotification(
-                        NotificationData(title, message),
-                        recipientToken
-                    ).also {
-                        sendNotification(it)
-                    }
-                }*/
             }
 
             send_image.setOnClickListener {
@@ -303,20 +300,11 @@ class ChatActivity : AppCompatActivity() {
         super.onPause()
         val uid = FirebaseAuth.getInstance().uid
         val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
-
-        db.collection("usuarios").document(uid.toString()).set(user)
-            .addOnSuccessListener {
-                println("Offline")
-            }
     }
     override fun onResume() {
         super.onResume()
         val uid = FirebaseAuth.getInstance().uid
         val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
-        db.collection("usuarios").document(uid.toString()).set(user)
-            .addOnSuccessListener {
-                println("Offline")
-            }
     }
 
     private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {

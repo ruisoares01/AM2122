@@ -140,7 +140,7 @@ object FirestoreUtil {
                     if (it["type"] == MessageType.TEXT) {
                         items.add(TextMessageItem(it.toObject(TextMessage::class.java)!!, context))
                     } else {
-                        //add image message
+                        items.add(ImageMessageItem(it.toObject(ImageMessage::class.java)!!, context))
                     }
                     return@forEach
                 }

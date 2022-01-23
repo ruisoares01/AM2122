@@ -1,14 +1,13 @@
 package com.example.projetoam2
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetoam2.Fragments.HomeGruposFragment
 import com.example.projetoam2.Model.GroupChannel
 import com.example.projetoam2.Model.User
 import com.google.firebase.auth.FirebaseAuth
@@ -38,11 +37,21 @@ class createGroup : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_group)
 
+        //action bar
+        supportActionBar?.hide()
+
         val button :Button = findViewById(R.id.button)
 
         val text :EditText = findViewById(R.id.editText)
 
         val rView :RecyclerView = findViewById(R.id.rView)
+
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            finish()
+            startActivity(intent)
+        }
 
         rView.adapter = adapter
 
@@ -60,7 +69,6 @@ class createGroup : AppCompatActivity() {
             }
             else {
 
-                //view.setBackgroundColor(R.color.black)
                 view.setBackgroundColor(Color.parseColor("#F5FFF5"))
 
                 userIds.forEachIndexed { index, s ->
@@ -129,6 +137,10 @@ class createGroup : AppCompatActivity() {
                     }
                 }
             }
+
+            val intent = Intent(this, MainActivity::class.java)
+            finish()
+            startActivity(intent)
         }
     }
 }

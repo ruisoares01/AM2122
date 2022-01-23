@@ -1,10 +1,12 @@
 package com.example.projetoam2.Fragments
 
 import android.annotation.SuppressLint
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -50,6 +52,8 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 import android.util.Base64
+import android.util.Log
+import kotlinx.android.synthetic.main.fragment_home.*
 
 data class LatestMessageTime(val otheruser : String , val latesttext : String , val latesttime : Date )
 
@@ -72,16 +76,18 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        Log.d(TAG, "carregar home fragment")
+
         var z = 0
         var c = 0
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         var userRecyclerView = view.findViewById<RecyclerView>(R.id.userRecyclerVieww)
 
-        var buttonAddChat  = view.findViewById<FloatingActionButton>(R.id.buttonAddChat)
+        val buttonHomeGroups = view.findViewById<Button>(R.id.buttonGrupos)
+        val buttonHomeHome = view.findViewById<Button>(R.id.buttonMensagens)
 
-        val buttonHomeGroups = view.findViewById<Button>(R.id.buttonHomeGrupos)
-        val buttonHomeHome = view.findViewById<Button>(R.id.buttonHomeChats)
+        var buttonAddChat  = view.findViewById<FloatingActionButton>(R.id.buttonAddChat)
 
         // Initialize Firebase Auth
         auth = Firebase.auth
@@ -89,7 +95,7 @@ class HomeFragment : Fragment() {
         //hide action bar
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
 
-        userRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        userRecyclerView.layoutManager = LinearLayoutManager(requireActivity())
         userRecyclerView.adapter = adapter
 
         //clear the list
@@ -163,7 +169,6 @@ class HomeFragment : Fragment() {
 
             }
 
-
         buttonHomeGroups.setOnClickListener {
             val fragmenthomegrupos = HomeGruposFragment()
             val fragmentManager = fragmentManager
@@ -195,7 +200,6 @@ class HomeFragment : Fragment() {
                 return false
             }
         })
-
 
         buttonAddChat.setOnClickListener {
             val intent = Intent(view.context, UserListActivity::class.java)
@@ -239,13 +243,9 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
 
         var latestmessage = String(cipher.doFinal(Base64.decode(textmessage, Base64.DEFAULT)))
 
-
         if(latestmessage.length>18){
             latestmessage = latestmessage.substring(0,16) + "..."
         }
-
-
-
 
         var latest = viewHolder.itemView.findViewById<TextView>(R.id.text_latest_message)
 

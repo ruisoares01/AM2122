@@ -7,14 +7,12 @@ import com.example.projetoam2.R
 import com.google.firebase.auth.FirebaseAuth
 import com.xwray.groupie.kotlinandroidextensions.Item
 import com.xwray.groupie.kotlinandroidextensions.ViewHolder
-import eltos.simpledialogfragment.SimpleDialog
 import kotlinx.android.synthetic.main.item_text_message.*
 import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.wrapContent
 import java.text.SimpleDateFormat
 
-
-abstract class MessageItem(private val message: Message)
+abstract class ImageItem(private val message: Message)
     : Item() {
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
@@ -31,14 +29,14 @@ abstract class MessageItem(private val message: Message)
     private fun setMessageRootGravity(viewHolder: ViewHolder){
         if (message.senderId == FirebaseAuth.getInstance().currentUser?.uid){
             viewHolder.message_root.apply {
-                backgroundResource = R.drawable.rounded_corners
+                backgroundResource = R.drawable.rect_round_secondary_color
                 val lParams = FrameLayout.LayoutParams(wrapContent, wrapContent, Gravity.END)
                 this.layoutParams = lParams
             }
         }
         else{
             viewHolder.message_root.apply {
-                backgroundResource = R.drawable.rect_round_msg_received
+                backgroundResource = R.drawable.rect_round_secondary_color
                 val lParams = FrameLayout.LayoutParams(wrapContent, wrapContent, Gravity.START)
                 this.layoutParams = lParams
             }

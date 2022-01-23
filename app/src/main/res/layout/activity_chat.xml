@@ -22,7 +22,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/back_button" />
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -41,7 +41,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="6dp"
             android:layout_marginEnd="137dp"
-            android:layout_marginBottom="18dp"
+            android:layout_marginBottom="20dp"
             android:layout_toEndOf="@+id/imgProfile"
             android:text="Nome"
             android:textColor="@color/white"
@@ -53,9 +53,9 @@
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="6dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="225dp"
-            android:layout_marginBottom="-4dp"
+            android:layout_marginBottom="-2dp"
             android:layout_toEndOf="@+id/imgProfile"
             android:text="Online"
             android:textColor="@color/white"
@@ -63,12 +63,12 @@
 
         <ImageButton
             android:id="@+id/online_status"
-            android:layout_width="17dp"
-            android:layout_height="24dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="43dp"
             android:layout_marginEnd="200dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="2dp"
             android:adjustViewBounds="true"
             android:background="@drawable/circle"
             android:backgroundTint="@color/common_google_signin_btn_text_dark_disabled"
@@ -78,15 +78,34 @@
             app:layout_constraintVertical_bias="0.526"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <ImageButton
+            android:id="@+id/opcoesButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/ic_baseline_more_vert_24"
+            android:backgroundTint="#FFFFFF" />
+
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_messages"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="580dp"
-        android:layout_marginTop="38dp"
+        android:layout_height="555dp"
         app:layout_constraintBottom_toTopOf="@+id/relativelayout_message"
-        app:layout_constraintTop_toBottomOf="@+id/relativelayout_actionbar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativelayout_actionbar"
+        android:layout_marginTop="27dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
 
     <RelativeLayout
         android:id="@+id/relativelayout_message"
@@ -107,31 +126,33 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:backgroundTint="@color/ipca1"
-            android:src="@drawable/ic_baseline_image_24"
-            android:tint="@color/white"
+            android:backgroundTint="@color/light_grey"
+            android:src="@drawable/anexos"
+            android:tint="@color/ipca1"
+            android:elevation="5dp"
             app:fabSize="mini" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="60dp"
             android:layout_marginBottom="8dp"
             android:layout_toEndOf="@+id/send_image"
             android:background="@drawable/rounded_corners_msg"
             android:elevation="2dp"
             android:hint="Enviar Mensagem"
-            android:padding="9dp" />
+            android:padding="9dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
         <ImageView
             android:id="@+id/send_msg_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="24dp"
-            android:elevation="2dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="20dp"
             android:padding="8dp"
             android:src="@drawable/ic_baseline_send_24" />
 

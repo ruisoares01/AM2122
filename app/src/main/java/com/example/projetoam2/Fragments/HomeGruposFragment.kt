@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.*
+import com.example.projetoam2.Groups.GroupActivity
 import com.example.projetoam2.Model.GroupList
 import com.example.projetoam2.Users
 import com.github.sundeepk.compactcalendarview.domain.Event
@@ -43,10 +44,10 @@ class HomeGruposFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home_grupos, container, false)
         var userRecyclerViewGrupos = view.findViewById<RecyclerView>(R.id.userRecyclerViewwGrupos)
 
-        var buttonAddGrupos  = view.findViewById<FloatingActionButton>(R.id.buttonAddGrupo)
+        val buttonHomeGroupsGrupos = view.findViewById<Button>(R.id.buttonGrupos)
+        val buttonHomeHomeGrupos = view.findViewById<Button>(R.id.buttonMensagens)
 
-        val buttonHomeGroupsGrupos = view.findViewById<Button>(R.id.buttonHomeGruposGrupos)
-        val buttonHomeHomeGrupos = view.findViewById<Button>(R.id.buttonHomeChatsGrupos)
+        var buttonAddGrupos  = view.findViewById<FloatingActionButton>(R.id.buttonAddGrupo)
 
         userRecyclerViewGrupos.layoutManager = LinearLayoutManager(requireContext())
         userRecyclerViewGrupos.adapter = adapter

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2598958333333333" />
         <entry key="..\:/Downloads/AM2122/AM2122/app/src/main/res/layout/activity_create_event.xml" value="0.36666666666666664" />
         <entry key="..\:/Downloads/AM2122/AM2122/app/src/main/res/layout/activity_grupo_options.xml" value="0.36666666666666664" />
         <entry key="..\:/Downloads/AM2122/AM2122/app/src/main/res/layout/item_image_message.xml" value="0.1" />
@@ -31,26 +32,50 @@
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu_navigation.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu_userlist.xml" value="0.18333333333333332" />
+        <entry key="app/src/main/res/drawable/ListView.xml" value="0.2569230769230769" />
         <entry key="app/src/main/res/drawable/button_style.xml" value="0.2609375" />
         <entry key="app/src/main/res/drawable/button_style_2.xml" value="0.2609375" />
         <entry key="app/src/main/res/drawable/button_style_3.xml" value="0.2609375" />
         <entry key="app/src/main/res/drawable/edittext_style.xml" value="0.2609375" />
+        <entry key="app/src/main/res/drawable/edittext_style_2.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/edittext_style_3.xml" value="0.2609375" />
+        <entry key="app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/ic_camera.xml" value="0.2609375" />
+        <entry key="app/src/main/res/drawable/listview.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/rect_round_msg_received.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/rect_round_primary_color.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/rect_round_secondary_color.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/rounded_corners_msg.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/scrollview.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/tab_indicator.xml" value="0.2569230769230769" />
+        <entry key="app/src/main/res/drawable/tab_layout.xml" value="0.2569230769230769" />
         <entry key="app/src/main/res/drawable/thumb1.xml" value="0.2609375" />
         <entry key="app/src/main/res/drawable/track.xml" value="0.2609375" />
-        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_create_group.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/activity_group.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_group_profile.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_grupo_options.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/activity_other_profile.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/activity_privado_options.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/activity_userlist.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/fragment_calendario.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_home_grupos.xml" value="0.24479166666666666" />
-        <entry key="app/src/main/res/layout/fragment_perfil.xml" value="0.20277777777777778" />
-        <entry key="app/src/main/res/layout/item_image_message.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/item_text_message.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/fragment_home_home.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/fragment_perfil.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_deleted_message.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/item_image_message.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_text_message.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/row_calendario.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/user_layout.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/menu/menu_navigation.xml" value="0.24479166666666666" />
       </map>
     </option>
   </component>

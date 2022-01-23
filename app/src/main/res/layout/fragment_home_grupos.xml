@@ -1,10 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/Ipca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="IPCAme"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_style_3"
+        app:layout_constraintBottom_toTopOf="@+id/userRecyclerViewwGrupos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonMensagens"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style_2"
+            android:text="Mensagens"
+            android:textColor="@color/white"
+            android:theme="@style/buttonOccult"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonGrupos"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="170dp"
+            android:background="@drawable/button_style_2"
+            android:text="Grupos"
+            android:textColor="@color/white"
+            android:elevation="2dp"
+            app:layout_constraintStart_toEndOf="@+id/buttonMensagens"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/buttonAddGrupo"
@@ -25,56 +84,17 @@
         app:layout_constraintVertical_bias="0.86"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <Button
-        android:id="@+id/buttonHomeGruposGrupos"
-        android:layout_width="0dp"
-        android:layout_height="63dp"
-        android:layout_weight="0.5"
-        android:background="@color/grey"
-        android:text="Grupos"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:theme="@style/Theme.ProjetoAM2"
-        app:icon="@drawable/ic_baseline_group_24"
-        app:iconGravity="top"
-        app:iconPadding="0dp"
-        app:iconSize="20dp"
-        app:iconTint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonHomeChatsGrupos"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/buttonHomeChatsGrupos"
-        android:layout_width="0dp"
-        android:layout_height="63dp"
-        android:layout_weight="0.5"
-        android:background="@color/Ipca"
-        android:text="Chats"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="18sp"
-        app:icon="@drawable/msgicon"
-        app:iconGravity="top"
-        app:iconPadding="0dp"
-        app:iconSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/buttonHomeGruposGrupos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/userRecyclerViewwGrupos"
         android:layout_width="match_parent"
-        android:layout_height="655dp"
-        android:paddingTop="10dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:paddingTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHomeGruposGrupos"
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/user_layout" />
 
