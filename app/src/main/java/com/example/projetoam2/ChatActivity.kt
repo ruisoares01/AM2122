@@ -42,9 +42,11 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.NotificationCompat
 import com.example.projetoam2.Fragments.HomeFragment
+import com.example.projetoam2.Fragments.chatupdate
 import com.example.projetoam2.Model.*
 import com.example.projetoam2.Notifications.*
 import com.example.projetoam2.Utils.StorageUtil
@@ -90,7 +92,11 @@ class ChatActivity : AppCompatActivity() {
 
         //action bar
         //supportActionBar?.setDisplayHomeAsUpEnabled(true)
-          supportActionBar?.hide()
+        supportActionBar?.hide()
+
+        chatupdate.remove()
+
+
 
         FirestoreUtil.getCurrentUser {
             currentUser = it
@@ -175,6 +181,11 @@ class ChatActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             finish()
             startActivity(intent)
+        }
+        val goToMainActivity = Intent(applicationContext,MainActivity::class.java)
+        this.onBackPressedDispatcher.addCallback(this) {
+            goToMainActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(goToMainActivity)
         }
 
         //get the chat channel

@@ -220,37 +220,80 @@ class HomeFragment : Fragment() {
                 when (documents.type) {
                     //             DocumentChange.Type.ADDED -> Log.d(TAG, "New city: ${dc.document.data}")
                     DocumentChange.Type.MODIFIED -> {
-                        var modifieduser = ((documents.document.data.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid }
-                            .toString().replace("[","").replace("]",""))
-                        var modifiedtime = ((documents.document.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
-                        var modifiedtextencrypted = ((documents.document.data!!.get("latest_message") as HashMap<String,String>).get("text"))
+                        var modifiedchat = (documents.document.data.get("userIds") as ArrayList<String>)
 
-                        var user = ""
+                        if(modifiedchat.contains(auth.currentUser!!.uid)){
 
-                        val ivParameterSpec =  IvParameterSpec(Base64.decode(iv, Base64.DEFAULT))
-                        val factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1")
-                        val spec =  PBEKeySpec(secretKey.toCharArray(), Base64.decode(salt, Base64.DEFAULT), 10000, 256)
-                        val tmp = factory.generateSecret(spec);
-                        val secretKey =  SecretKeySpec(tmp.encoded, "AES")
-                        val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
-                        cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
-                        var modifiedtext = String(cipher.doFinal(Base64.decode(modifiedtextencrypted, Base64.DEFAULT)))
-                        var title = ""
-                        val message = modifiedtext
-                        val token = token!!
-                        db.collection("usuarios").document(modifieduser).get().addOnSuccessListener { otheruser ->
-                            title = otheruser.getString("nome").toString()
-                            user = otheruser.getString("uid").toString()
+                            var modifieduser = ((documents.document.data.get("userIds") as ArrayList<String>).filter { it != auth.currentUser?.uid })
+                                .toString().replace("[","").replace("]","")
 
-                            if(user != auth.currentUser!!.uid) {
-                                PushNotification(
-                                    NotificationData(title, message),
-                                    token
-                                ).also {
-                                    sendNotification(it)
+
+                            var modifiedtime = ((documents.document.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
+                            var modifiedtextencrypted = ((documents.document.data!!.get("latest_message") as HashMap<String,String>).get("text"))
+
+                            var user = ""
+
+                            val ivParameterSpec =  IvParameterSpec(Base64.decode(iv, Base64.DEFAULT))
+                            val factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1")
+                            val spec =  PBEKeySpec(secretKey.toCharArray(), Base64.decode(salt, Base64.DEFAULT), 10000, 256)
+                            val tmp = factory.generateSecret(spec);
+                            val secretKey =  SecretKeySpec(tmp.encoded, "AES")
+                            val cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
+                            cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
+                            var modifiedtext = String(cipher.doFinal(Base64.decode(modifiedtextencrypted, Base64.DEFAULT)))
+                            var title = ""
+                            val message = modifiedtext
+                            val token = token!!
+                            db.collection("usuarios").document(modifieduser).get().addOnSuccessListener { otheruser ->
+                                title = otheruser.getString("nome").toString()
+                                user = otheruser.getString("uid").toString()
+
+                                if(user != auth.currentUser!!.uid) {
+                                    PushNotification(
+                                        NotificationData(title, message),
+                                        token
+                                    ).also {
+                                        sendNotification(it)
+                                    }
                                 }
                             }
+
+                            adapter.clear()
+                            for(chat in chatscomhistorico){
+                                println("CHAT : ${chat}")
+                                db.collection("Chat").document(chat).get()
+                                    .addOnSuccessListener { chatcontent ->
+                                        if(chatcontent.get("userIds")!=null && chatcontent.get("latest_message")!=null){
+                                            otheruserstring = ((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid }
+                                                .toString().replace("[","").replace("]",""))
+                                            latest_message = (chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("text")
+                                            latest_time = ((chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
+                                            latesttexttime.add(LatestMessageTime(otheruserstring,latest_message as String,latest_time))
+                                            println("Latest UPDATED Message : ${latest_message} from ${chat} , Other User UID : ${otheruserstring} ")
+                                        }
+                                        c +=1
+                                        println("C: ${c}   vs ${chatscomhistorico.size}")
+                                        if (c == chatscomhistorico.size)
+                                        {
+                                            println("latesttexttime size : ${latesttexttime.size} ")
+                                            latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime }
+                                            for(latest in latesttexttime)
+                                            {
+                                                println("latest : ${latest} and ${latest.latesttime} ${latest.latesttext} ${latest.otheruser}")
+                                                db.collection("usuarios").document(latest.otheruser).get()
+                                                    .addOnSuccessListener { documents ->
+                                                        val user = documents.toObject(User::class.java)
+                                                        if (auth.currentUser?.uid != user!!.uid) {
+                                                            adapter.add(Users(user,latest.latesttext,latest.latesttime))
+                                                        }
+                                                    }
+                                            }
+                                        }
+                                    }
+                            }
                         }
+
+
 
 
 //                        FirebaseMessagingService().sendRecievingChatNotification(modifieduser,"$modifiedtext")
@@ -259,40 +302,7 @@ class HomeFragment : Fragment() {
                     //            DocumentChange.Type.REMOVED -> Log.d(TAG, "Removed city: ${dc.document.data}")
             }
 
-            adapter.clear()
-            for(chat in chatscomhistorico){
-                println("CHAT : ${chat}")
-                db.collection("Chat").document(chat).get()
-                    .addOnSuccessListener { chatcontent ->
-                        if(chatcontent.get("userIds")!=null && chatcontent.get("latest_message")!=null){
-                            otheruserstring = ((chatcontent.get("userIds") as ArrayList<String>).filter { it != auth.currentUser!!.uid }
-                                .toString().replace("[","").replace("]",""))
-                            latest_message = (chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("text")
-                            latest_time = ((chatcontent.data!!.get("latest_message") as HashMap<String,String>).get("time") as Timestamp).toDate()
-                            latesttexttime.add(LatestMessageTime(otheruserstring,latest_message as String,latest_time))
-                            println("Latest UPDATED Message : ${latest_message} from ${chat} , Other User UID : ${otheruserstring} ")
-                        }
-                        c +=1
-                        println("C: ${c}   vs ${chatscomhistorico.size}")
-                        if (c == chatscomhistorico.size)
-                        {
-                            println("latesttexttime size : ${latesttexttime.size} ")
-                            latesttexttime.sortByDescending {latesttexttime -> latesttexttime.latesttime }
-                            for(latest in latesttexttime)
-                            {
-                                println("latest : ${latest} and ${latest.latesttime} ${latest.latesttext} ${latest.otheruser}")
-                                db.collection("usuarios").document(latest.otheruser).get()
-                                    .addOnSuccessListener { documents ->
-                                        val user = documents.toObject(User::class.java)
-                                        if (auth.currentUser?.uid != user!!.uid) {
-                                            adapter.add(Users(user,latest.latesttext,latest.latesttime))
-                                        }
-                                    }
-                            }
 
-                        }
-                    }
-            }
         }
 
 

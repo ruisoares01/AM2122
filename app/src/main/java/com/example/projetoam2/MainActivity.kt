@@ -149,14 +149,14 @@ class MainActivity : AppCompatActivity() {
                 println("Online")
             }
 
-        val title = "Update do Estado"
+        /*val title = "Update do Estado"
         val message = "${dados.nome} esta offline"
         PushNotification(
             NotificationData(title, message),
             TOPIC
         ).also {
             sendNotification(it)
-        }
+        }*/
 
     //    notificationReceiver?.let {
     //        this.unregisterReceiver(it)
@@ -170,21 +170,21 @@ class MainActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 println("Offline")
 
-               val title = "Update do Estado"
+               /*val title = "Update do Estado"
                 val message = "${dados.nome} esta offline"
                 PushNotification(
                     NotificationData(title, message),
                     TOPIC
                 ).also {
                     sendNotification(it)
-                }
+                }*/
             }
     }
 
 
 
 
-    private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {
+   /* private fun sendNotification(notification: PushNotification) = CoroutineScope(Dispatchers.IO).launch {
      try {
          val response = RetrofitInstance.api.postNotification(notification)
          if(response.isSuccessful) {
@@ -195,5 +195,5 @@ class MainActivity : AppCompatActivity() {
      } catch(e: Exception) {
          Log.e(ContentValues.TAG, e.toString())
      }
- }
+ }*/
 }
