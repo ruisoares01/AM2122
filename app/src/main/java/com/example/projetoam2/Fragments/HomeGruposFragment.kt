@@ -16,6 +16,7 @@ import com.example.projetoam2.*
 import com.example.projetoam2.Model.GroupList
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
@@ -23,6 +24,8 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import de.hdodenhof.circleimageview.CircleImageView
+
+var chatgrupoupdate : ListenerRegistration? = null
 
 class HomeGruposFragment : Fragment() {
 
@@ -49,18 +52,17 @@ class HomeGruposFragment : Fragment() {
         userRecyclerViewGrupos.adapter = adapter
 
         //clear the list
-        adapter.clear()
-        arrayGrupos.clear()
 
-        var x=0
 
-        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").get()
-            .addOnSuccessListener { document ->
-                while(x<document.documents.size){
-                    if (document != null) {
-                        arrayGrupos.add(document.documents.get(x).id.replace("[","").replace("]",""))
-                    }
-                    x += 1
+
+        chatgrupoupdate =
+        db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").addSnapshotListener { document, error ->
+            adapter.clear()
+            arrayGrupos.clear()
+            var x=0
+                while(x< document!!.documents.size ){
+                     arrayGrupos.add(document.documents.get(x).id.replace("[","").replace("]",""))
+                     x += 1
                 }
                 for(arrayGrupo in arrayGrupos){
                     db.collection("grupos").document(arrayGrupo).get()

@@ -95,6 +95,7 @@ class PerfilFragment : Fragment() {
             chatupdate.remove()
             gruposListenerEventEdit?.remove()
             privateListenerEventEdit?.remove()
+            chatgrupoupdate?.remove()
 
             //write the login for logout
                 auth.signOut()
