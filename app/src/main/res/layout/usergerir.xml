@@ -87,41 +87,41 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
+            android:id="@+id/buttonRemoverAdmin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/buttonRetirar"
+            android:layout_alignBottom="@+id/buttonRetirar"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/buttonRetirar"
+            android:background="@drawable/ic_baseline_remove_moderator_24"
+            android:theme="@style/Remove" />
+
+        <Button
             android:id="@+id/buttonRetirar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="81dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="78dp"
             android:background="@drawable/ic_baseline_person_remove_24"
             android:backgroundTint="#CD5050"
             android:theme="@style/Remove" />
 
         <Button
             android:id="@+id/buttonAdicionarAdmin"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignTop="@+id/buttonRetirar"
             android:layout_alignBottom="@+id/buttonRetirar"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="17dp"
+            android:layout_marginEnd="18dp"
             android:layout_marginBottom="0dp"
             android:layout_toStartOf="@+id/buttonRetirar"
             android:background="@drawable/ic_baseline_add_moderator_24" />
-
-        <Button
-            android:id="@+id/buttonRemoverAdmin"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignTop="@+id/buttonRetirar"
-            android:layout_alignBottom="@+id/buttonRetirar"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="0dp"
-            android:layout_toStartOf="@+id/buttonRetirar"
-            android:background="@drawable/ic_baseline_remove_moderator_24"
-            android:theme="@style/Remove" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

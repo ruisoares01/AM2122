@@ -258,6 +258,8 @@ class HomeFragment : Fragment() {
                                 }
                             }
 
+
+
                             adapter.clear()
                             for(chat in chatscomhistorico){
                                 println("CHAT : ${chat}")

@@ -112,6 +112,7 @@ class GerirGrupoActivity : AppCompatActivity() {
 
 
         backbuttongerir.setOnClickListener {
+            gerirgrupoupdate.remove()
             finish()
         }
 
