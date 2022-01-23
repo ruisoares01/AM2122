@@ -4,36 +4,17 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.projetoam2.Fragments.CalendarioFragment
-import com.example.projetoam2.Fragments.Users
-import com.example.projetoam2.Model.Eventos
 import com.example.projetoam2.Model.User
-import com.github.sundeepk.compactcalendarview.CompactCalendarView
-import com.github.sundeepk.compactcalendarview.domain.Event
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.Item
-import com.xwray.groupie.ViewHolder
 import de.hdodenhof.circleimageview.CircleImageView
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
 import java.util.*
 
 class UserListActivity : AppCompatActivity() {
@@ -166,7 +147,7 @@ class UserListActivity : AppCompatActivity() {
 
            rowView.findViewById<TextView>(R.id.text_name).text = usersLista[position].nome
 
-           var photo = rowView.findViewById<CircleImageView>(R.id.imageView3)
+           var photo = rowView.findViewById<CircleImageView>(R.id.imageViewUser)
            Picasso.get().load(usersLista[position].linkfoto).into(photo)
 
            val online_status = rowView.findViewById<ImageButton>(R.id.online_status)

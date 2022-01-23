@@ -16,25 +16,42 @@
         android:layout_height="144dp">
 
         <TextView
-            android:id="@+id/text_name"
-            android:layout_width="140dp"
-            android:layout_height="43dp"
+            android:id="@+id/text_name_gerir"
+            android:layout_width="171dp"
+            android:layout_height="29dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="11dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginEnd="161dp"
-            android:layout_marginBottom="88dp"
-            android:layout_toEndOf="@+id/imageView3"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="137dp"
+            android:layout_marginBottom="101dp"
+            android:layout_toEndOf="@+id/imageViewUserGerir"
             android:text="José"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/text_status_gerir"
+            android:layout_width="171dp"
+            android:layout_height="29dp"
+            android:layout_alignEnd="@+id/text_name_gerir"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="63dp"
+            android:layout_toEndOf="@+id/imageViewUserGerir"
+            android:text="Status"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imageViewUserGerir"
             android:layout_width="77dp"
             android:layout_height="67dp"
             android:layout_alignParentStart="true"
@@ -46,12 +63,12 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageButton
-            android:id="@+id/online_status"
+            android:id="@+id/online_status_gerir"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_alignTop="@+id/imageView3"
-            android:layout_alignEnd="@+id/imageView3"
-            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignTop="@+id/imageViewUserGerir"
+            android:layout_alignEnd="@+id/imageViewUserGerir"
+            android:layout_alignBottom="@+id/imageViewUserGerir"
             android:layout_alignParentStart="true"
             android:layout_marginStart="68dp"
             android:layout_marginTop="58dp"
@@ -63,21 +80,48 @@
             android:clickable="true"
             android:cropToPadding="true"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/textView"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintBottom_toBottomOf="@+id/text_name_gerir"
+            app:layout_constraintStart_toEndOf="@+id/text_name_gerir"
+            app:layout_constraintTop_toTopOf="@+id/text_name_gerir"
             app:layout_constraintVertical_bias="0.526"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/buttonRetirar"
-            android:layout_width="109dp"
-            android:layout_height="58dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="13dp"
-            android:layout_marginBottom="72dp"
-            android:text="Retirar" />
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="81dp"
+            android:background="@drawable/ic_baseline_person_remove_24"
+            android:backgroundTint="#CD5050"
+            android:theme="@style/Remove" />
+
+        <Button
+            android:id="@+id/buttonAdicionarAdmin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/buttonRetirar"
+            android:layout_alignBottom="@+id/buttonRetirar"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/buttonRetirar"
+            android:background="@drawable/ic_baseline_add_moderator_24" />
+
+        <Button
+            android:id="@+id/buttonRemoverAdmin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/buttonRetirar"
+            android:layout_alignBottom="@+id/buttonRetirar"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/buttonRetirar"
+            android:background="@drawable/ic_baseline_remove_moderator_24"
+            android:theme="@style/Remove" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

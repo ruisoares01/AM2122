@@ -2,7 +2,7 @@
 <resources>
 
     <style name="LocalePT" />
-    <style name="ForgetPassword" parent="Theme.AppCompat.Dialog.Alert">
+    <style name="ForgetPassword">
         <item name="simpleDialogTheme">@style/SimpleDialogTheme.Material</item>
         <item name="textInputStyle">@style/SimpleDialogTheme.Material</item>
         <item name="colorPrimary">@color/Ipca</item>

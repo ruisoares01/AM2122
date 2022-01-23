@@ -1,17 +1,10 @@
 package com.example.projetoam2.Fragments
 
 import android.annotation.SuppressLint
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.content.BroadcastReceiver
 import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.media.RingtoneManager
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MotionEvent
@@ -21,13 +14,10 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SwitchCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projetoam2.Model.TextMessage
 import com.example.projetoam2.Model.User
-import com.example.projetoam2.item.TextMessageItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -37,11 +27,6 @@ import com.xwray.groupie.*
 import de.hdodenhof.circleimageview.CircleImageView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.Timestamp
-import com.google.firebase.firestore.ktx.getField
-import eltos.simpledialogfragment.color.SimpleColorDialog
-import kotlinx.android.synthetic.main.activity_create_event.*
-import kotlinx.android.synthetic.main.item_text_message.*
-import java.sql.Array
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -55,9 +40,6 @@ import javax.crypto.spec.PBEKeySpec
 import javax.crypto.spec.SecretKeySpec
 import android.util.Base64
 import android.util.Log
-import android.widget.Toast
-import androidx.core.app.NotificationCompat
-import androidx.core.content.ContextCompat.getSystemService
 import com.example.projetoam2.*
 import com.example.projetoam2.Notifications.*
 import com.example.projetoam2.Notifications.FirebaseService.Companion.token
@@ -69,10 +51,6 @@ import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import org.jetbrains.anko.custom.async
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.notificationManager
-import org.jetbrains.anko.support.v4.ctx
 
 data class LatestMessageTime(val otheruser : String , val latesttext : String , val latesttime : Date )
 
@@ -85,11 +63,7 @@ class HomeFragment : Fragment() {
     private val salt = "QWlGNHNhMTJTQWZ2bGhpV3U="
     private val iv = "bVQzNFNhRkQ1Njc4UUFaWA=="
 
-
     //variaveis
-
-
-
     private lateinit var auth: FirebaseAuth
 
     private val adapter = GroupAdapter<ViewHolder>()
@@ -382,7 +356,7 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
 
 
         if(latestmessage.length>18){
-            latestmessage = latestmessage.substring(0,16) + "..."
+            latestmessage = latestmessage.substring(0,15) + "..."
         }
 
 
@@ -409,7 +383,7 @@ class Users(val user : User, val textmessage : String, val texttime : Date) : It
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = user.nome
 
-        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageView3)
+        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageViewUser)
         Picasso.get().load(user.linkfoto).into(imgprofile)
 
     }

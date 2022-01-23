@@ -14,10 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projetoam2.*
 import com.example.projetoam2.Model.GroupList
-import com.example.projetoam2.Users
-import com.github.sundeepk.compactcalendarview.domain.Event
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.firebase.Timestamp
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -133,7 +130,7 @@ class GroupLista(val group : GroupList) : Item<ViewHolder>() {
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
         nome.text = group.nome
 
-        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageView3)
+        var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageViewUser)
         Picasso.get().load(group.imagemGrupo).into(imgprofile)
 
     }

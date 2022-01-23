@@ -7,9 +7,14 @@
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/leave_icon.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/rounded_2_corners_menu.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_add_user_group.xml" value="0.18" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_calendario_groups.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_chat.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_create_event.xml" value="0.21770833333333334" />
-        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_group.xml" value="0.5928449744463373" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_create_group.xml" value="0.33" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_gerir_grupo.xml" value="0.33" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_group.xml" value="0.5326842837273992" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_group_profile.xml" value="0.33" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_grupo_options.xml" value="0.25" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_info_event.xml" value="0.5" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_login.xml" value="0.36186594202898553" />
@@ -26,14 +31,22 @@
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/item_text_message.xml" value="0.1" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/row_calendario.xml" value="0.33" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/row_calendario_grupo.xml" value="0.22" />
-        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/user_layout.xml" value="0.8679927667269439" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/user_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/usergerir.xml" value="0.67" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu_navigation.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu_userlist.xml" value="0.18333333333333332" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.5" />
+      </ProjectState>
+    </option>
   </component>
 </project>
