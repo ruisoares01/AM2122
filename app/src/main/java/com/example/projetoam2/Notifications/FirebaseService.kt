@@ -12,6 +12,7 @@ import android.graphics.Color
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
+import com.bumptech.glide.Glide
 import com.example.projetoam2.ChatActivity
 import com.example.projetoam2.MainActivity
 import com.example.projetoam2.R
@@ -40,6 +41,8 @@ class FirebaseService : FirebaseMessagingService() {
         token = newToken
     }
 
+
+
     override fun onMessageReceived(message: RemoteMessage) {
         super.onMessageReceived(message)
 
@@ -51,12 +54,18 @@ class FirebaseService : FirebaseMessagingService() {
             createNotificationChannel(notificationManager)
         }
 
+        val bitmap = Glide.with(this)
+            .asBitmap()
+            .load(message.data["largeiconurl"])
+            .submit().get()
+
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, FLAG_ONE_SHOT)
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(message.data["title"])
             .setContentText(message.data["message"])
             .setSmallIcon(R.drawable.ic_baseline_android_24)
+            .setLargeIcon(bitmap)
             .setAutoCancel(true)
             .setContentIntent(pendingIntent)
             .build()

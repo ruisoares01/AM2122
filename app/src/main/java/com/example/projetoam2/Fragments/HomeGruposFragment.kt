@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.MarginLayoutParams
 import android.widget.Button
+import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,8 +28,16 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import de.hdodenhof.circleimageview.CircleImageView
+import org.jetbrains.anko.horizontalMargin
+import org.jetbrains.anko.padding
+import org.jetbrains.anko.verticalMargin
+import android.util.DisplayMetrics
+
+
+
 
 var chatgrupoupdate : ListenerRegistration? = null
+var displayMetrics : DisplayMetrics? = null
 
 class HomeGruposFragment : Fragment() {
 
@@ -54,7 +65,7 @@ class HomeGruposFragment : Fragment() {
 
         //clear the list
 
-
+        displayMetrics = requireContext().resources.displayMetrics
 
         chatgrupoupdate =
         db.collection("usuarios").document(Firebase.auth.currentUser?.uid.toString()).collection("gruposIds").addSnapshotListener { document, error ->
@@ -97,6 +108,7 @@ class HomeGruposFragment : Fragment() {
         var x2 = 0.0F
         val MIN_DISTANCE = 150
 
+
         buttonHomeGroupsGrupos.setOnTouchListener(object : View.OnTouchListener {
             override fun onTouch(v: View?, event: MotionEvent): Boolean {
                 when(event.action) {
@@ -130,8 +142,17 @@ class HomeGruposFragment : Fragment() {
 
 class GroupLista(val group : GroupList) : Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
+
+        var relativeuserlayout = viewHolder.itemView.findViewById<RelativeLayout>(R.id.relativeuserlayout)
+
         var nome = viewHolder.itemView.findViewById<TextView>(R.id.text_name)
-        nome.text = group.nome
+
+        val dpheight = Math.round(10 * (displayMetrics?.xdpi?.div(DisplayMetrics.DENSITY_DEFAULT)!!))
+
+        nome.translationY = dpheight.toFloat()
+
+        if(group.nome?.length!! > 17){ nome.text = group.nome?.substring(0,14) + "..." }
+        else{ nome.text = group.nome }
 
         var imgprofile = viewHolder.itemView.findViewById<CircleImageView>(R.id.imageViewUser)
         Picasso.get().load(group.imagemGrupo).into(imgprofile)

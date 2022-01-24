@@ -242,15 +242,17 @@ class HomeFragment : Fragment() {
                             cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
                             var modifiedtext = String(cipher.doFinal(Base64.decode(modifiedtextencrypted, Base64.DEFAULT)))
                             var title = ""
+                            var photourl = ""
                             val message = modifiedtext
                             val token = token!!
                             db.collection("usuarios").document(modifieduser).get().addOnSuccessListener { otheruser ->
                                 title = otheruser.getString("nome").toString()
                                 user = otheruser.getString("uid").toString()
+                                photourl = otheruser.getString("linkfoto").toString()
 
                                 if(user != auth.currentUser!!.uid) {
                                     PushNotification(
-                                        NotificationData(title, message),
+                                        NotificationData(title, message, photourl),
                                         token
                                     ).also {
                                         sendNotification(it)
