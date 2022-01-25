@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/ic_baseline_mode_edit_24.xml" value="0.23177083333333334" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/ipcame_logo_background.xml" value="0.2574074074074074" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/leave_icon.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/drawable/rounded_2_corners_menu.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_add_user_group.xml" value="0.18" />
@@ -20,6 +23,7 @@
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_login.xml" value="0.36186594202898553" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_other_profile.xml" value="0.1" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_splash_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/activity_userlist.xml" value="0.25" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/dialog_forgotpassword.xml" value="0.18960244648318042" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/layout/fragment_calendario.xml" value="0.36666666666666664" />
@@ -36,6 +40,9 @@
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu.xml" value="0.1" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu_navigation.xml" value="0.18333333333333332" />
         <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/menu/menu_userlist.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/mipmap-anydpi-v26/ipcame_logo.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/Francisco/Desktop/IPCA/21_22/BetaBranch/app/src/main/res/mipmap-anydpi-v26/ipcame_logo_round.xml" value="0.221875" />
       </map>
     </option>
   </component>
