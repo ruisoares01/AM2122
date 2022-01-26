@@ -1,8 +1,11 @@
-# APP IPCAme <a href="https://github.com/ruisoares01/AM2122/" target="_blank" rel="noreferrer"> <img src="https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/logo.png?alt=media&token=99f874cd-e500-49b9-ac39-77d834f55b7a" alt="android" width="94" height="87"/>
 
-Aplicação realizada no 1ºsemestre do 2ºano do curso CTeSP (Curso Tecnico Superior Professional) de Aplicações Moveis para a Instituição Politecnica do Cávado e Ave (IPCA) no âmbito da disciplina de Projeto de Computação Móvel Avançada
+<p align="center"><a href="https://github.com/ruisoares01/AM2122/" align="center" target="_blank" rel="noreferrer"> <img src="https://firebasestorage.googleapis.com/v0/b/projetoam2.appspot.com/o/logo.png?alt=media&token=99f874cd-e500-49b9-ac39-77d834f55b7a" alt="android" width="194" height="187"/></p>
+  
+# <p align="center"> APP IPCA ME </p> 
 
-<p> <a href="https://ipca.pt" target="_blank" rel="noreferrer"> <img src="https://etcetaljornal.pt/j/wp-content/uploads/2019/07/ipca-logo.jpg" alt="android" width="95" height="60"/> </a></p>
+Aplicação realizada no 1ºsemestre do 2ºano do curso CTeSP (Curso Tecnico Superior Professional) de Aplicações Moveis para a Instituição Politecnica do Cávado e Ave (IPCA) no âmbito da disciplina de Projeto de Computação Móvel Avançada.
+
+<p align="center"> <a href="https://ipca.pt" target="_blank" rel="noreferrer"> <img src="https://etcetaljornal.pt/j/wp-content/uploads/2019/07/ipca-logo.jpg" alt="android" width="95" height="60"/> </a></p>
 
 
 ## Languagens e Ferramentas utilizadas:
