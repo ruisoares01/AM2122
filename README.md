@@ -22,7 +22,7 @@ Aplicação realizada no 1ºsemestre do 2ºano do curso CTeSP (Curso Tecnico Sup
 #### Base de dados utilizada:
 <p align="left"><a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> </p>
   
-#### Website Programado em:
+#### Backend Programado em:
 <p align="left"><a href="https://www.javascript.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" alt="firebase" width="40" height="40"/> </a> </p>
 
 
