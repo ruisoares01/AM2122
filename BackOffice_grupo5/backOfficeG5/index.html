@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <title>Document</title>
+    <!-- <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    /> -->
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script type="module" src="appthatimports.js"></script> -->
+  </head>
+  
+  <body>
+    <form id="alunoForm" class="wrapper">
+      <div class="box a">
+        <label for="number">- Numero</label>
+        <input
+          type="text"
+          class="form-control"
+          id="number"
+          required
+          placeholder="Enter numero"
+        />
+      </div>
+      <div class="box b">
+        - Tabela de alunos - 
+        <div class="list">
+          <ul id="list"></ul>
+        </div>
+      </div>
+      <div class="box c">
+        <label for="nome">- Nome</label>
+        <input type="text" id="name" required placeholder="Enter nome" />
+      </div>
+      <div class="box u">
+        <label for="nome">- Morada</label>
+        <input type="text" id="morada" required placeholder="Enter morada" />
+      </div>
+      <div class="box d">
+        <label for="name">- Curso</label>
+        <input type="text" id="curse" required placeholder="Enter curso" />
+        <!-- <select name="curse" id="curse" required></select> -->
+      </div>
+      <div class="box g">
+        <label for="nome">- Email</label>
+        <input type="text" id="email" required placeholder="Enter email" />
+        <!-- <select name="curse" id="curse" required></select> -->
+      </div>
+      <div class="box h">
+        <label for="nome">- Password</label>
+        <div class="btnSeePass" id="btnSeePass">
+        <input type="password" id="password" required placeholder="Enter password" />
+        <span class="lnr lnr-eye"></span>
+      </div>
+      </div>
+      <div class="box o">
+        <button id="addAluno" type="submit" value="new">Salvar</button>
+      </div>
+    </form>
+    
+
+    <button>
+      <a href="indexLogin.html" class="btn">Logout</a>
+    </button>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+    <script src="./js/configDB.js" defer></script>
+    <script src="./js/Alunos/crud.js" defer></script>
+  </body>
+</html>

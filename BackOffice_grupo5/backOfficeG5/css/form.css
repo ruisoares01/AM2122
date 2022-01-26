@@ -1,0 +1,112 @@
+:root {
+  --form-bg: white;
+  --form-border: rgb(44, 36, 36);
+  --form-shadow: #dfae4b;
+  --form-focus: rgb(123, 121, 121);
+  --font-size: 12pt;
+  --font-face: Arial, sans-serif;
+  --font-color: #2a293e;
+}
+
+form input,
+select,
+button{
+  display: inline-block;
+  margin: 10px 0px 10px 0px;
+}
+
+
+
+input {
+  width: 100%;
+  font-size: var(--font-size);
+  line-height: var(--font-size);
+  font-family: var(--font-face);
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: var(--form-bg);
+}
+ul li {
+  width: 100%;
+  font-family: var(--font-face);
+  font-size: var(--font-size);
+  color: #a4a4a9;
+  margin-top: 20px;
+  list-style: none;
+  /* border: 1px solid black; */
+}
+
+select {
+  /* A reset of styles, including removing the default dropdown arrow */
+  /*appearance: none;*/
+  padding: 20px;
+  /* height: 60px; */
+  width: 100%;
+  cursor: inherit;
+  font-size: var(--font-size);
+  line-height: var(--font-size);
+  font-family: var(--font-face);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: var(--form-bg);
+  color: var(--font-color);
+}
+/* select::-ms-expand {
+  display: none;
+} */
+
+input:focus,
+select:focus {
+  outline: none; /*Para retirar a linha azul*/
+  border: 2px solid var(--form-focus);
+}
+
+button {
+  float: right;
+  font-size: var(--font-size);
+  line-height: var(--font-size * 2);
+  padding: 15px 60px;
+  border: none;
+  background-color: var(--form-border);
+  color: rgb(255, 255, 255);
+  letter-spacing: 4px;
+}
+
+button:hover {
+  background: inherit; /* herda do pai */
+  color: var(--form-border);
+  border-bottom: 3px solid var(--form-border);
+}
+
+.descPar{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+hr{
+    margin-top: 10px;
+    border-top: 0.5px solid var(--form-focus);
+}
+
+.rem, .edit{
+    position: relative;
+    float: right;
+    background-color: var(--form-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 10px; */
+    /* height: 30px; */
+    padding: 5px;
+    margin-left: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    align-content: center;
+ } 
+
+ #rem:hover, #edit:hover {
+    background-color: var(--form-bg);
+}
+ 
+ 
