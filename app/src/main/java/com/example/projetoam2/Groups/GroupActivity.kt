@@ -230,7 +230,7 @@ class GroupActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid
         val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
 
-        db.collection("usuarios").document(uid.toString()).set(user)
+        db.collection("usuarios").document(uid.toString()).update("online",false)
             .addOnSuccessListener {
                 println("Online")
             }
@@ -239,7 +239,7 @@ class GroupActivity : AppCompatActivity() {
         super.onResume()
         val uid = FirebaseAuth.getInstance().uid
         val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, true)
-        db.collection("usuarios").document(uid.toString()).set(user)
+        db.collection("usuarios").document(uid.toString()).update("online",true)
             .addOnSuccessListener {
                 println("Offline")
             }

@@ -87,20 +87,22 @@ class PerfilFragment : Fragment() {
             val uid = FirebaseAuth.getInstance().uid
             val user = User(uid.toString(), dados.nome, dados.email, dados.naluno, dados.curso, dados.morada, dados.linkfoto, false)
 
-            db.collection("usuarios").document(uid.toString()).set(user)
+            db.collection("usuarios").document(uid.toString()).update("online",false)
                 .addOnSuccessListener {
                     println("Offline")
+
+                    chatupdate.remove()
+                    gruposListenerEventEdit?.remove()
+                    privateListenerEventEdit?.remove()
+                    chatgrupoupdate?.remove()
+
+                    //write the login for logout
+                    auth.signOut()
+                    val intent = Intent(activity, LoginActivity::class.java)
+                    startActivity(intent)
                 }
 
-            chatupdate.remove()
-            gruposListenerEventEdit?.remove()
-            privateListenerEventEdit?.remove()
-            chatgrupoupdate?.remove()
 
-            //write the login for logout
-                auth.signOut()
-                val intent = Intent(activity, LoginActivity::class.java)
-                startActivity(intent)
         }
 
         val getResult =
